@@ -1,0 +1,844 @@
+/* =============================================================
+   CONSULT PAGE — Page-Specific Styles
+   Extends style.css (shared tokens, base, components)
+   Tone: serious, trustworthy, calm, personal, premium
+============================================================= */
+
+
+/* -------------------------------------------------------
+   HERO — full-bleed image with overlay copy
+------------------------------------------------------- */
+.consult-hero {
+  overflow: hidden;
+}
+
+.consult-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: clamp(520px, 75vh, 760px);
+}
+
+/* ── Copy column ── */
+.consult-hero-copy-col {
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(var(--space-12), 6vw, var(--space-20)) clamp(var(--space-8), 5vw, var(--space-16));
+}
+
+.consult-hero-eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.consult-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  margin-bottom: var(--space-5);
+  max-width: 22ch;
+}
+
+.consult-hero-sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.78;
+  margin-bottom: var(--space-8);
+  max-width: 52ch;
+}
+
+.consult-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.consult-hero-micro {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* ── Image column ── */
+.consult-hero-img-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.consult-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+
+/* ── Mobile: stack vertically ── */
+@media (max-width: 768px) {
+  .consult-hero-split {
+    grid-template-columns: 1fr;
+  }
+  .consult-hero-img-col {
+    height: 300px;
+    position: relative;
+  }
+}
+
+
+/* -------------------------------------------------------
+   FEATURED REVIEW — P1 (between hero and VSL)
+------------------------------------------------------- */
+.consult-featured-review {
+  padding-block: var(--space-12);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.consult-featured-figure {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.consult-featured-figure img {
+  width: 100%;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.consult-featured-figure figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  font-style: italic;
+}
+
+
+/* -------------------------------------------------------
+   VSL PLACEHOLDER BLOCK
+------------------------------------------------------- */
+.vsl-placeholder-block {
+  padding-block: clamp(var(--space-12), 6vw, var(--space-20));
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.vsl-placeholder-inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.vsl-16-9 {
+  aspect-ratio: 16/9;
+  background: #1a1a1a;
+  border: 2px dashed #d4a843;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vsl-placeholder-content {
+  text-align: center;
+  color: #d4a843;
+}
+
+.vsl-label {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.vsl-sublabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+  opacity: 0.7;
+}
+
+
+/* -------------------------------------------------------
+   WHAT HAPPENS ON THE CALL — STEPS
+------------------------------------------------------- */
+.consult-steps {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.consult-steps-intro {
+  margin-bottom: var(--space-4);
+}
+
+.consult-steps-honest {
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: var(--space-10);
+}
+
+.consult-step-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-block: var(--space-10);
+  list-style: none;
+  padding: 0;
+}
+
+.consult-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-2);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.consult-step-item:first-child {
+  border-top: 1px solid var(--color-divider);
+}
+
+.consult-step-num {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+}
+
+.consult-step-copy h3 {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.consult-step-copy p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.consult-reassurance {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: var(--space-6);
+  font-style: italic;
+}
+
+
+/* -------------------------------------------------------
+   PRICING CONTEXT
+------------------------------------------------------- */
+.consult-pricing {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.consult-pricing-note {
+  margin-top: var(--space-8);
+  padding: var(--space-7) var(--space-8);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-xl);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.9;
+}
+
+.consult-pricing-note p {
+  margin: 0;
+}
+
+.consult-pricing-note p + p {
+  margin-top: var(--space-4);
+}
+
+
+/* -------------------------------------------------------
+   POSSIBLE PATHS / NEXT STEPS
+------------------------------------------------------- */
+.consult-paths {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-bg);
+}
+
+.consult-paths-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-block: var(--space-10);
+}
+
+@media (min-width: 640px) {
+  .consult-paths-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consult-paths-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.consult-path-card {
+  padding: clamp(var(--space-7), 3vw, var(--space-9));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.consult-path-card--linked {
+  border-color: var(--color-primary-border);
+  background: var(--color-primary-subtle);
+}
+
+.consult-path-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface-card);
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.consult-path-card h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.consult-path-card p {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.consult-path-link {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.consult-path-link:hover {
+  text-decoration: underline;
+}
+
+.consult-paths-note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-6);
+  font-style: italic;
+}
+
+
+/* -------------------------------------------------------
+   PROOF / TESTIMONIALS
+------------------------------------------------------- */
+.consult-proof {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.consult-proof-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  margin-block: var(--space-10);
+}
+
+@media (min-width: 640px) {
+  .consult-proof-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .consult-proof-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonial cards */
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  background: var(--color-surface-card);
+  margin: 0;
+}
+
+.testimonial-card p {
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-style: italic;
+  flex: 1;
+  margin: 0 0 var(--space-5);
+}
+
+.testimonial-card cite {
+  font-size: var(--text-sm);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* Review image cards */
+.review-card--image {
+  margin: 0;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.review-card--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.consult-trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-top: var(--space-10);
+}
+
+.consult-trust-pill {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+
+/* -------------------------------------------------------
+   FIT / NOT FIT
+------------------------------------------------------- */
+.consult-fit {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-bg);
+}
+
+.consult-fit-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-block: var(--space-10);
+}
+
+@media (min-width: 768px) {
+  .consult-fit-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+}
+
+.consult-fit-card {
+  padding: clamp(var(--space-8), 4vw, var(--space-10));
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--color-border);
+}
+
+.consult-fit-card--yes {
+  background: var(--color-primary-subtle);
+  border-color: var(--color-primary-border);
+}
+
+.consult-fit-card--no {
+  background: var(--color-surface-card);
+}
+
+.consult-fit-card-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-5);
+}
+
+.consult-fit-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+  list-style: none;
+}
+
+.consult-fit-cards-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.65;
+}
+
+.consult-fit-card--yes .consult-fit-cards-list li::before {
+  content: '\2713';
+  color: var(--color-success);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.consult-fit-card--no .consult-fit-cards-list li::before {
+  content: '\2715';
+  color: var(--color-error);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.consult-fit-note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-6);
+}
+
+
+/* -------------------------------------------------------
+   FAQ — inherits from shared .faq styles
+------------------------------------------------------- */
+.consult-faq {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+
+/* -------------------------------------------------------
+   SCHEDULER BLOCK
+------------------------------------------------------- */
+.consult-scheduler {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-divider);
+}
+
+.consult-scheduler-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+  line-height: 1.15;
+}
+
+.consult-scheduler-sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-8);
+  max-width: 50ch;
+  margin-inline: auto;
+}
+
+/* New canonical calendar wrapper (matches command sheet spec) */
+.consult-calendar-wrapper {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  border-radius: var(--radius-2xl);
+  overflow: visible;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.consult-calendar-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 750px;
+  height: auto;
+  border: none;
+  border-radius: var(--radius-2xl);
+}
+
+/* Legacy alias — keep in case old JS references it */
+.consult-calendar-wrap {
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+  border-radius: var(--radius-2xl);
+  overflow: visible;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.consult-calendar-wrap iframe {
+  display: block;
+  width: 100%;
+  min-height: 750px;
+  height: auto;
+  border: none;
+  border-radius: var(--radius-2xl);
+}
+
+.consult-scheduler-micro {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  font-weight: 500;
+  margin-top: var(--space-6);
+  font-style: italic;
+}
+
+
+/* -------------------------------------------------------
+   FINAL CTA / REASSURANCE
+------------------------------------------------------- */
+.consult-final {
+  padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-divider);
+}
+
+.consult-final-heading {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.15;
+  margin-bottom: var(--space-5);
+}
+
+.consult-final-sub {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.78;
+  margin-bottom: var(--space-8);
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+.consult-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.consult-final-fallback {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+
+/* -------------------------------------------------------
+   FOOTER — standardized
+------------------------------------------------------- */
+.footer-copy {
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  padding: var(--space-4) 0 var(--space-6);
+  margin: 0;
+  border-top: 1px solid var(--color-divider);
+}
+
+
+/* -------------------------------------------------------
+   MOBILE — responsive QA
+------------------------------------------------------- */
+@media (max-width: 639px) {
+  .consult-hero-headline {
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+    max-width: 100%;
+  }
+
+  .consult-calendar-wrapper,
+  .consult-calendar-wrap {
+    border-radius: var(--radius-lg);
+  }
+
+  .consult-calendar-wrapper iframe,
+  .consult-calendar-wrap iframe {
+    min-height: 650px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .consult-pricing-note {
+    padding: var(--space-5) var(--space-5);
+  }
+}
+
+/* ── Case result / proof block ────────────────────────────────── */
+.consult-case-result {
+  padding: var(--space-20) 0;
+}
+.consult-case-video-intro {
+  text-align: center;
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  margin: var(--space-6) 0 var(--space-4);
+}
+.consult-video-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.consult-video-16-9 {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+.consult-video-16-9 iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── How consult works — bullet list ─────────────────────────── */
+.consult-how-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-6) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.consult-how-list li {
+  padding-left: 1.75rem;
+  position: relative;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+.consult-how-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ── Featured review gallery ─────────────────────────────────── */
+.consult-review-gallery {
+  padding: var(--space-20) 0;
+  background: var(--color-surface);
+}
+.consult-review-pull-quote {
+  border-left: 3px solid var(--color-accent);
+  margin: var(--space-8) 0 var(--space-4);
+  padding-left: var(--space-5);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text);
+}
+.consult-review-pull-quote p { margin: 0; }
+.consult-review-micro {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+.consult-review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+@media (max-width: 768px) {
+  .consult-review-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.consult-review-img-wrap {
+  margin: 0;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.consult-review-img-wrap:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+.consult-review-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Final CTA reassurance ───────────────────────────────────── */
+.consult-final-reassurance {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+/* ── Pricing note block ───────────────────────────────────────── */
+.consult-pricing-note {
+  margin-top: var(--space-5);
+  padding: var(--space-4) var(--space-5);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+.consult-pricing-note p {
+  margin: 0 0 var(--space-2);
+}
+.consult-pricing-note p:last-of-type {
+  margin-bottom: var(--space-3);
+}
+.consult-pricing-note-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+}
