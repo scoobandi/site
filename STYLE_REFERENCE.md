@@ -1,6 +1,8 @@
 # Scoob & I — Site Style Reference
 Use this doc to build new pages that match the existing site exactly.
 
+Current product note: Fix the Walk is the active primary offer. The old `/the-playbook/` URL is a legacy bridge and should not be used as a sales page. Public `Join Fix the Walk` CTAs should point to `https://checkout.digitaldogschool.com/fixthewalk-page`; plain `Fix the Walk` nav links may point to `/fix-the-walk/`.
+
 ---
 
 ## Stack & File Structure
@@ -296,7 +298,7 @@ Nav JS is in `playbook.js` (handles hamburger toggle) — copy or link to same f
 | Service | Value |
 |---|---|
 | GHL Webhook | `https://services.leadconnectorhq.com/hooks/ILH4tVyH5NKhdoMewJqZ/webhook-trigger/YwsHepg0mFYjhz4LrFYS` |
-| Playbook checkout | `https://checkout.digitaldogschool.com/jointheplaybook` |
+| Fix the Walk checkout | `https://checkout.digitaldogschool.com/fixthewalk-page` |
 | Meta Pixel — Scoob & I | `961888533447407` |
 | Meta Pixel — Digital Dog School | `2113401182770587` |
 | Image CDN base | `https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/` |
