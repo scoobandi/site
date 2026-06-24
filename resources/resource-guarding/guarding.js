@@ -77,7 +77,7 @@
       const location = el.dataset.location || '';
       fireEvent(eventName, { location, page_path: window.location.pathname });
 
-      if (typeof fbq === 'function' && eventName.includes('primary')) {
+      if (typeof fbq === 'function' && eventName.includes('consult')) {
         fbq('track', 'Contact', { content_name: 'Resource Guarding Consult', content_category: 'consult' });
       }
     });
