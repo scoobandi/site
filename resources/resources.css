@@ -223,6 +223,10 @@
 .rsc-guide-card-footer {
   padding: var(--space-4) clamp(var(--space-8), 5vw, var(--space-10));
   border-top: 1px solid var(--color-divider);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
 }
 
 .rsc-guide-card-footer--primary {
@@ -253,6 +257,21 @@
   color: #c9a038;
 }
 
+.rsc-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1rem;
+  background: var(--rs-plum-dark, #2a192c);
+  color: var(--rs-paper, #fffaf2);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0 var(--rs-amber, #c18a46);
+}
+
 /* -------------------------------------------------------
    METHOD / P15 EDUCATIONAL VISUAL
 ------------------------------------------------------- */
@@ -264,21 +283,8 @@
 .rsc-method-inner {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-12);
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .rsc-method-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-16);
-  }
-}
-
-@media (min-width: 1024px) {
-  .rsc-method-inner {
-    grid-template-columns: 2fr 3fr;
-  }
+  gap: var(--space-10);
+  align-items: start;
 }
 
 .rsc-method-copy {
@@ -291,18 +297,61 @@
   max-width: 48ch;
 }
 
+.rsc-method-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-block: var(--space-6) var(--space-4);
+}
+
+@media (min-width: 720px) {
+  .rsc-method-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.rsc-method-step {
+  padding: var(--space-5);
+  background: var(--rs-paper, #fffaf2);
+  border: 1px solid var(--rs-line, rgba(29, 26, 24, 0.18));
+  box-shadow: 7px 7px 0 rgba(193, 138, 70, 0.72);
+}
+
+.rsc-method-step span {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  color: var(--rs-amber, #c18a46);
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.rsc-method-step h3 {
+  margin: 0 0 var(--space-2);
+  color: var(--rs-plum-dark, #2a192c);
+  font-size: var(--text-lg);
+  font-weight: 900;
+}
+
+.rsc-method-step p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
 .rsc-method-copy .btn {
   align-self: flex-start;
   margin-top: var(--space-4);
 }
 
 .rsc-method-visual {
-  margin: 0;
+  margin: var(--space-4) auto 0;
   border-radius: var(--radius-2xl);
   overflow: hidden;
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
+  max-width: 820px;
 }
 
 .rsc-method-img {
