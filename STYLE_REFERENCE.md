@@ -10,10 +10,10 @@ scoobandi/
 ├── index.html           ← Homepage (quiz, path cards, testimonials)
 ├── style.css            ← Shared stylesheet — load on every page
 ├── main.js              ← Homepage quiz engine only
-├── the-playbook/
-│   ├── index.html       ← Playbook sales page
-│   ├── playbook.css     ← Page-specific styles (extends style.css)
-│   └── playbook.js      ← FAQ accordion + scroll tracking
+├── fix-the-walk/
+│   ├── index.html       ← Current Fix the Walk sales page
+│   ├── styles.css       ← Page-specific styles
+│   └── script.js        ← Page-specific behavior
 ```
 
 New pages go in their own subfolder: `scoobandi/[page-name]/index.html`
@@ -28,14 +28,14 @@ Always `<link rel="stylesheet" href="../style.css" />` first, then the page CSS.
 
 ## Navigation Links (relative paths — no `/` absolute paths)
 
-From a subfolder page like `the-playbook/index.html`:
+From a subfolder page like `resources/anxiety/index.html`:
 - Home → `../index.html`
-- The Playbook → `index.html` (self) or `../the-playbook/index.html`
+- Fix the Walk → `../fix-the-walk/index.html`
 - Book a Call → `/consult` (page not built yet, leave as-is)
 - Digital Dog School → `https://digitaldogschool.com/` (external, target="_blank")
 
 From homepage `index.html`:
-- The Playbook → `the-playbook/index.html`
+- Fix the Walk → `fix-the-walk/index.html`
 
 ---
 
@@ -193,7 +193,7 @@ Section alternation pattern (dark ↔ surface):
   </div>
 </div>
 ```
-FAQ JS is in `playbook.js` — copy or link to the same file.
+FAQ behavior should live in the page-specific script for the page being built.
 
 ---
 
@@ -210,12 +210,12 @@ FAQ JS is in `playbook.js` — copy or link to the same file.
     <nav class="nav-links" role="navigation" aria-label="Main navigation">
       <a href="../index.html" class="nav-link">Home</a>
       <a href="https://digitaldogschool.com/" class="nav-link" target="_blank" rel="noopener">Digital Dog School</a>
-      <a href="../the-playbook/index.html" class="nav-link">The Playbook</a>
+      <a href="../fix-the-walk/index.html" class="nav-link">Fix the Walk</a>
       <a href="/consult" class="nav-link" aria-current="page">Book a Call</a>
     </nav>
 
     <div class="header-actions">
-      <a href="#cta" class="btn btn-primary btn-sm">Reserve My Spot</a>
+      <a href="https://dogs.scoobandi.com/quiz-4061" class="btn btn-primary btn-sm">Take the Quiz</a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -225,14 +225,14 @@ FAQ JS is in `playbook.js` — copy or link to the same file.
   <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
     <a href="../index.html" class="mobile-nav-link">Home</a>
     <a href="https://digitaldogschool.com/" class="mobile-nav-link" target="_blank" rel="noopener">Digital Dog School</a>
-    <a href="../the-playbook/index.html" class="mobile-nav-link">The Playbook</a>
+    <a href="../fix-the-walk/index.html" class="mobile-nav-link">Fix the Walk</a>
     <a href="/consult" class="mobile-nav-link">Book a Call</a>
-    <a href="#cta" class="mobile-nav-link mobile-nav-cta">Reserve My Spot</a>
+    <a href="https://dogs.scoobandi.com/quiz-4061" class="mobile-nav-link mobile-nav-cta">Take the Quiz</a>
   </nav>
 </header>
 ```
 
-Nav JS is in `playbook.js` (handles hamburger toggle) — copy or link to same file.
+Nav JS should live in the page-specific script for the page being built.
 
 ---
 
@@ -250,7 +250,7 @@ Nav JS is in `playbook.js` (handles hamburger toggle) — copy or link to same f
     </div>
     <nav class="footer-nav" aria-label="Footer navigation">
       <a href="../index.html">Home</a>
-      <a href="../the-playbook/index.html">The Playbook</a>
+      <a href="../fix-the-walk/index.html">Fix the Walk</a>
       <a href="https://digitaldogschool.com/" target="_blank" rel="noopener">Digital Dog School</a>
       <a href="/consult">Book a Call</a>
     </nav>
@@ -296,7 +296,7 @@ Nav JS is in `playbook.js` (handles hamburger toggle) — copy or link to same f
 | Service | Value |
 |---|---|
 | GHL Webhook | `https://services.leadconnectorhq.com/hooks/ILH4tVyH5NKhdoMewJqZ/webhook-trigger/YwsHepg0mFYjhz4LrFYS` |
-| Playbook checkout | `https://checkout.digitaldogschool.com/jointheplaybook` |
+| Fix the Walk checkout | `https://checkout.digitaldogschool.com/fixthewalk-page` |
 | Meta Pixel — Scoob & I | `961888533447407` |
 | Meta Pixel — Digital Dog School | `2113401182770587` |
 | Image CDN base | `https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/` |
@@ -307,10 +307,10 @@ Nav JS is in `playbook.js` (handles hamburger toggle) — copy or link to same f
 
 | Asset | URL |
 |---|---|
-| Joel hero (Playbook) | `.../6712d5be5f0d87d326b33543.jpeg` |
+| Fix the Walk hero | `fix-the-walk/geordi-at-airport-hero.png` |
 | Joel hero (Homepage) | `.../682297cfa20a2ac49d386a9b.jpeg` |
-| Playbook review 1 | `.../6740e3af7776d52fef8fbad1.png` |
-| Playbook review 2 | `.../668b05994a1876e04d2087cb.png` |
+| Review image 1 | `.../6740e3af7776d52fef8fbad1.png` |
+| Review image 2 | `.../668b05994a1876e04d2087cb.png` |
 | Homepage review 1 | `.../698d243452c95231811df8c9.webp` |
 | Homepage review 2 | `.../65a4713b28a68b20d7b2fd92.png` |
 | Training GIF | `.../1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif` |
