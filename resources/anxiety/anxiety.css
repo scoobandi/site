@@ -67,6 +67,10 @@
 .article-meta-sep { color: var(--color-text-faint); }
 .article-affiliation { color: var(--color-text-faint); }
 
+.article-hero-actions {
+  margin-top: var(--space-7);
+}
+
 /* -------------------------------------------------------
    INTRO / LEDE
 ------------------------------------------------------- */
@@ -434,6 +438,12 @@ a.puzzle-tag:hover {
   max-width: 52ch;
   margin-inline: auto;
   margin-bottom: var(--space-8);
+}
+.anxiety-cta .footer-cta-note a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 /* -------------------------------------------------------
