@@ -1,6 +1,8 @@
 /* Shared visual alignment layer for resource pages.
    Keeps page copy and CTA logic intact while borrowing the Fix the Walk visual system. */
 
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap");
+
 :root {
   --rs-ink: #1d1a18;
   --rs-ink-soft: #514b46;
@@ -14,6 +16,7 @@
   --rs-line: rgba(29, 26, 24, 0.18);
   --rs-shadow: 11px 11px 0 rgba(193, 138, 70, 0.92);
   --rs-shadow-soft: 0 22px 60px rgba(29, 26, 24, 0.14);
+  --rs-heading-font: "Barlow Condensed", sans-serif;
 
   --color-bg: var(--rs-cream);
   --color-surface: var(--rs-cream-deep);
@@ -138,9 +141,11 @@ body {
 .rsc-hero-headline,
 .rg-hero-title,
 .lr-headline {
+  font-family: var(--rs-heading-font);
+  font-weight: 700;
   color: var(--rs-ink);
   line-height: 0.96;
-  letter-spacing: -0.035em;
+  letter-spacing: 0;
 }
 
 .rsc-hero,
@@ -198,7 +203,8 @@ body {
 .lr-headline {
   max-width: 13ch;
   color: var(--rs-paper);
-  font-size: clamp(3.4rem, 10vw, 8.4rem);
+  font-size: clamp(4.35rem, 11vw, 8.8rem);
+  line-height: 0.86;
 }
 
 .rsc-hero-sub,
@@ -298,14 +304,16 @@ body {
 .lr-section-heading,
 .lr-sidebar-heading,
 .article-section-heading {
+  font-family: var(--rs-heading-font);
+  font-weight: 700;
   color: var(--rs-plum);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
+  line-height: 0.98;
+  letter-spacing: 0;
 }
 
 .article-section {
   margin-bottom: 0;
-  padding: clamp(2rem, 5vw, 3.2rem);
+  padding: clamp(2.15rem, 5vw, 3.5rem);
   background: var(--rs-paper);
   border: 1px solid var(--rs-line);
   border-radius: 14px;
@@ -313,7 +321,61 @@ body {
 }
 
 .article-section + .article-section {
-  margin-top: clamp(1rem, 3vw, 1.6rem);
+  margin-top: clamp(1.25rem, 3.5vw, 2rem);
+}
+
+.article-section-content p,
+.rg-lede p,
+.rg-section .section-body,
+.rg-card p,
+.rg-step-item p,
+.rg-growl-card p,
+.lr-section p,
+.lr-sidebar-body,
+.faq-answer p {
+  line-height: 1.72;
+}
+
+.article-section-content p + p,
+.rg-lede p + p,
+.rg-section .section-body + .section-body,
+.lr-section p + p {
+  margin-top: 1.05rem;
+}
+
+.article-callout,
+.article-story,
+.rg-callout,
+.rg-growl-card,
+.lr-acceptable-section,
+.lr-tools-section,
+.inline-cta-inner {
+  position: relative;
+  padding: clamp(1.35rem, 4vw, 2rem);
+  border-radius: 14px;
+}
+
+.article-callout,
+.rg-callout,
+.lr-acceptable-section,
+.lr-tools-section {
+  border-left: 6px solid var(--rs-amber);
+}
+
+.rg-warning-item,
+.lr-breed-item,
+.lr-acceptable-item,
+.article-balance-list li,
+.article-questions li {
+  min-height: 48px;
+}
+
+.faq-list,
+.rg-steps,
+.lr-breed-list,
+.lr-acceptable-list,
+.rsc-method-steps {
+  gap: clamp(0.9rem, 3vw, 1.25rem);
 }
 
 .article-section-num,
@@ -427,6 +489,31 @@ body {
   }
 }
 
+@media (min-width: 960px) {
+  .rsc-hero,
+  .article-hero,
+  .rg-hero,
+  .lr-hero {
+    padding-block: clamp(5rem, 8vw, 8.5rem);
+  }
+
+  .rsc-guides,
+  .rsc-method,
+  .rsc-faq,
+  .rsc-bottom-cta,
+  .article-intro,
+  .article-body,
+  .faq,
+  .rg-mirror,
+  .rg-section,
+  .rg-final-cta,
+  .lr-article,
+  .lr-faq,
+  .lr-final-cta {
+    padding-block: clamp(4.75rem, 8vw, 7rem);
+  }
+}
+
 @media (max-width: 720px) {
   .site-header .btn-sm {
     min-height: 38px;
@@ -437,7 +524,7 @@ body {
   .article-hero,
   .rg-hero,
   .lr-hero {
-    padding-block: clamp(3rem, 14vw, 5rem);
+    padding-block: clamp(3.5rem, 15vw, 5.4rem);
   }
 
   .rsc-hero-copy {
@@ -453,17 +540,18 @@ body {
   .rsc-hero-headline,
   .rg-hero-title,
   .lr-headline {
-    font-size: clamp(3rem, 17vw, 5rem);
-    max-width: 9ch;
-  }
-
-  .article-headline {
-    font-size: clamp(2.55rem, 11.8vw, 3.35rem);
+    font-size: clamp(4rem, 18vw, 5.7rem);
     max-width: 10ch;
   }
 
+  .article-headline {
+    font-size: clamp(3.25rem, 14.5vw, 4.7rem);
+    max-width: 11.5ch;
+    line-height: 0.88;
+  }
+
   .lr-headline {
-    font-size: clamp(2.85rem, 14vw, 3.85rem);
+    font-size: clamp(3.4rem, 15.5vw, 4.9rem);
     max-width: 10ch;
   }
 
@@ -472,7 +560,23 @@ body {
   .rg-hero-sub,
   .lr-hero-kicker p {
     font-size: 1rem;
-    line-height: 1.45;
+    line-height: 1.58;
+  }
+
+  .rsc-guides,
+  .rsc-method,
+  .rsc-faq,
+  .rsc-bottom-cta,
+  .article-intro,
+  .article-body,
+  .faq,
+  .rg-mirror,
+  .rg-section,
+  .rg-final-cta,
+  .lr-article,
+  .lr-faq,
+  .lr-final-cta {
+    padding-block: clamp(3.75rem, 14vw, 5rem);
   }
 
   .btn,
@@ -493,6 +597,42 @@ body {
   }
 
   .article-section {
+    padding: 1.6rem;
+  }
+
+  .article-section + .article-section {
+    margin-top: 1rem;
+  }
+
+  .section-heading,
+  .footer-cta-heading,
+  .rsc-bottom-cta-heading,
+  .rg-cta-heading,
+  .lr-cta-heading {
+    line-height: 0.9;
+  }
+
+  .rsc-guide-card-body,
+  .rsc-guide-card-footer,
+  .rg-card,
+  .rg-step-item,
+  .rg-related-card,
+  .lr-sidebar-card,
+  .faq-item {
+    padding: 1.35rem;
+  }
+
+  .rsc-method-step {
+    padding: 1.3rem;
+  }
+
+  .article-callout,
+  .article-story,
+  .rg-callout,
+  .rg-growl-card,
+  .lr-acceptable-section,
+  .lr-tools-section,
+  .inline-cta-inner {
     padding: 1.35rem;
   }
 
