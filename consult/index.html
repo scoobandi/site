@@ -1,27 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Free Dog Training Consult — Scoob &amp; I</title>
-  <meta name="description" content="For owners dealing with serious behavioral challenges, reactivity, aggression, or cases that need hands-on help. Book a free call with Joel to find out if we're the right fit." />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Private dog training consults for complicated dogs who do not fit the template. Get Joel's eyes on aggression, anxiety, reactivity, guarding, biting, household stress, or training that has not worked.">
+  <meta property="og:title" content="Private Consults for Complicated Dogs | Scoob &amp; I">
+  <meta property="og:description" content="If tips, trainers, videos, or programs have not worked, book a consult. Joel looks at the actual dog, household, history, risk, and real life before recommending the next step.">
+  <meta property="og:image" content="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg">
+  <meta property="og:type" content="website">
+  <title>Private Consults for Complicated Dogs | Scoob &amp; I</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="consult.css">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Work with Joel — Private Dog Training Consults" />
-  <meta property="og:description" content="A free conversation about your dog and what makes the most sense next. No pressure. No sales script." />
-  <meta property="og:image" content="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg" />
-  <meta property="og:type" content="website" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
-  <link href="https://api.fontshare.com/v2/css?f[]=boska@700,400&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="../style.css" />
-  <!-- Consult-specific styles -->
-  <link rel="stylesheet" href="consult.css" />
-
-  <!-- Meta Pixel — Scoob & I -->
+  <!-- Meta Pixel - Scoob & I -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -31,15 +24,17 @@
     fbq('init', '961888533447407');
     fbq('track', 'PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=961888533447407&ev=PageView&noscript=1" /></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=961888533447407&ev=PageView&noscript=1" alt=""></noscript>
+
   <!-- Microsoft Clarity -->
-  <script type="text/javascript">
+  <script>
     (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window,document,"clarity","script","w90zj569xx");
   </script>
+
   <!-- Google Analytics GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-945PBSRQBE"></script>
   <script>
@@ -50,422 +45,296 @@
   </script>
 </head>
 <body>
-  <a href="#main" class="sr-only">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <!-- ============================================================
-       HEADER
-  ============================================================ -->
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo" aria-label="Scoob &amp; I Dog Training homepage">
-        <img src="../logo.png" alt="Scoob &amp; I Dog Training" height="44" style="height:44px;width:auto;display:block;" />
-      </a>
-
-      <nav class="nav-links" role="navigation" aria-label="Main navigation">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="https://digitaldogschool.com/" class="nav-link">Digital Dog School</a>
-        <a href="../fix-the-walk/index.html" class="nav-link">Fix the Walk</a>
-        <a href="../resources/index.html" class="nav-link">Resources</a>
-        <a href="../consult/index.html" class="nav-link" aria-current="page">Book a Call</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="#scheduler" class="btn btn-primary btn-sm">Book a Call with Joel</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-
-    <nav class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="../index.html" class="mobile-nav-link">Home</a>
-      <a href="https://digitaldogschool.com/" class="mobile-nav-link">Digital Dog School</a>
-      <a href="../fix-the-walk/index.html" class="mobile-nav-link">Fix the Walk</a>
-      <a href="../resources/index.html" class="mobile-nav-link">Resources</a>
-      <a href="../consult/index.html" class="mobile-nav-link" aria-current="page">Book a Call</a>
-      <a href="#scheduler" class="mobile-nav-link mobile-nav-cta">Book a Call with Joel</a>
+  <header class="site-header">
+    <a class="brand" href="https://scoobandi.com" aria-label="Scoob and I home">SCOOB <span>&amp;</span> I</a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="https://digitaldogschool.com/">Digital Dog School</a>
+      <a href="https://scoobandi.com/fix-the-walk/">Fix the Walk</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="https://scoobandi.com/consult/" aria-current="page">Consult</a>
     </nav>
+    <a class="header-cta" href="#scheduler" data-event="consult_cta_click" data-location="header">Book a consult</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="https://digitaldogschool.com/">Digital Dog School</a>
+    <a href="https://scoobandi.com/fix-the-walk/">Fix the Walk</a>
+    <a href="../resources/index.html">Resources</a>
+    <a href="https://dogs.scoobandi.com/quiz-4061">Take the quiz</a>
+    <a href="#scheduler">Book a consult</a>
+  </nav>
+
   <main id="main">
-
-    <!-- ============================================================
-         1) HERO
-    ============================================================ -->
-    <section class="consult-hero" id="hero">
-      <div class="consult-hero-split">
-
-        <div class="consult-hero-copy-col">
-          <p class="consult-hero-eyebrow">Private Dog Training Consults</p>
-          <h1 class="consult-hero-headline">Work with Joel — and find out what kind of help actually makes sense for your dog.</h1>
-          <p class="consult-hero-sub">For owners dealing with serious behavioral challenges, reactivity, aggression, or cases that may need private training, board and train, or other hands-on support. Book a free call to find out what makes the most sense.</p>
-
-          <div class="consult-hero-actions">
-            <a href="#scheduler" class="btn btn-primary btn-hero" data-event="consult_cta_click" data-location="hero">Book a Free Call with Joel &rarr;</a>
-          </div>
-
-          <p class="consult-hero-micro">No pressure. No weird sales script. Just a real conversation about your dog and what makes sense next.</p>
+    <section class="hero section-dark">
+      <div class="hero-copy">
+        <p class="eyebrow">Private consults with Joel for complicated dogs</p>
+        <h1>For the dog who does not fit the template.</h1>
+        <p class="hero-lede">If you have tried tips, trainers, videos, or programs and still do not know what your dog needs next, book a consult.</p>
+        <p class="hero-sub">Joel looks at the actual dog, actual owner, actual household, actual history, actual risks, and the life you are living. Then he helps you figure out what to do next.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#scheduler" data-event="consult_cta_click" data-location="hero">Schedule your consult <span>&rarr;</span></a>
+          <a class="hero-quiz-link" href="https://dogs.scoobandi.com/quiz-4061" data-event="quiz_click" data-location="hero">Not sure? Take the quiz</a>
         </div>
+        <p class="trust-line">Home of the last-chance dogs / No shame / Real-life plan / Clear next steps</p>
+      </div>
 
-        <div class="consult-hero-img-col" aria-hidden="true">
-          <img
-            class="consult-hero-img"
-            src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg"
-            alt="Joel working with a dog in a real training session"
-            width="1280" height="720"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-
+      <div class="hero-card" aria-label="Consult details">
+        <img class="hero-photo" src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg" alt="Joel working with a dog in a real training session">
+        <span class="scribble">Faster, personal, higher-touch help.</span>
+        <div class="stat"><strong>28</strong><span>US states</span></div>
+        <div class="stat"><strong>5</strong><span>continents</span></div>
+        <div class="stat"><strong>1:1</strong><span>client work</span></div>
+        <p>Meet in</p>
+        <strong class="cohort-date">Sharpsburg, GA or anywhere by Zoom</strong>
       </div>
     </section>
 
-
-    <!-- ============================================================
-         2) PROOF / CASE RESULT
-    ============================================================ -->
-    <section class="consult-case-result" id="case-result">
-      <div class="container container-narrow">
-        <h2 class="section-heading centered">Real dogs. Real behavior change. Real life getting easier.</h2>
-        <p class="section-body centered">A lot of owners who book this call are dealing with situations that already feel heavy — guests cannot come over, walks feel impossible, tension is building at home, or nothing they have tried has really matched the problem. This is where clarity starts.</p>
-
-        <figure class="consult-featured-figure">
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698beb427f6dcf9e0af6164a.jpg" alt="Celebrity chef Sammy Monsour — able to have company over for the first time in three years after working with Joel on his dog's aggression" loading="lazy" />
-          <figcaption>Celebrity chef Sammy Monsour was able to have company over again for the first time in three years after getting help for his dog's aggression.</figcaption>
-        </figure>
-
-        <p class="consult-case-video-intro">Watch the story, then decide if this feels like the kind of support you've been looking for.</p>
-
-        <div class="consult-video-wrap">
-          <div class="consult-video-16-9">
-            <video src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698bb13c8682155f6073704c.mp4" poster="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698d275e3fdd0e4824cb82f9.jpg" controls playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;"></video>
-          </div>
-        </div>
-
-        <div class="consult-silent-video" style="margin-top:2rem;max-width:720px;margin-inline:auto;">
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/93cdfc08-e2d5-42fd-815e-f76592f05591.gif" alt="Dog training demonstration" loading="lazy" style="width:100%;border-radius:12px;display:block;" />
-        </div>
+    <section class="marquee" aria-label="Common consult reasons">
+      <div class="marquee-lines">
+        <p><span>Aggression</span><span>Anxiety</span><span>Reactivity</span></p>
+        <p><span>Guarding</span><span>Biting</span><span>Household stress</span></p>
       </div>
     </section>
 
+    <section class="pain section-dark">
+      <div class="section-label">When the normal path has not worked</div>
+      <div class="pain-copy">
+        <h2>Your dog may not have failed training. The plan may have failed your dog.</h2>
+        <div class="prose-grid">
+          <p>If you have already spent money and still feel stuck, you are not starting over from zero. You are bringing better information to the right kind of plan.</p>
+          <p>A lot of dog training fails because it tries to force a complicated dog and a real human household into a template. But your dog's behavior is shaped by the dog, the owner, the environment, the history, the safety risks, the stress, the relationship, and what daily life actually looks like.</p>
+        </div>
+        <p class="pain-note">This is why consults exist. Before you spend more money on another trainer, course, or random piece of advice, let's look at the full situation.</p>
+      </div>
+    </section>
 
-    <!-- ============================================================
-         3) HOW THE CONSULT WORKS
-    ============================================================ -->
-    <section class="consult-steps" id="steps">
-      <div class="container container-narrow">
-        <h2 class="section-heading">What happens on the consult</h2>
+    <section class="last-chance section-light">
+      <div class="last-chance-copy">
+        <p class="eyebrow">Home of the last-chance dogs</p>
+        <h2>Not because we promise miracles. Because complicated dogs need more than a template.</h2>
+      </div>
+      <div class="last-chance-body">
+        <p>Some dogs come to us after multiple homes. Some after multiple trainers. Some after behavior meds, vet behaviorists, failed classes, failed advice, or owners being told the dog is too much.</p>
+        <p>That does not mean every case is simple. It does not mean every dog becomes easy. But it does mean the dog deserves to be understood as an individual before another plan gets thrown at the problem.</p>
+        <p>This is where we look at what the dog and owner actually need to succeed, in a way the owner can realistically follow.</p>
+      </div>
+    </section>
 
-        <p class="section-body">This is a 30–45 minute conversation about what's going on with your dog, what you've already tried, and what kind of support actually makes sense.</p>
-        <p class="section-body">You do not need to know what program you need before you book. That is the point of the call. Joel will help you make sense of the behavior, the level of support it likely requires, and the smartest next step from here.</p>
-        <p class="section-body">Private 1-on-1 programs start at $945. Some dogs need that level of support. Others are a better fit for Fix the Walk, Digital Dog School, virtual coaching, or another path entirely. If there is a better fit than private training, we will tell you honestly.</p>
+    <section class="dream section-accent">
+      <p class="eyebrow">What clarity gives you</p>
+      <h2>The goal is not just a better-trained dog. It is a life that feels possible again.</h2>
+      <p class="dream-intro">No consult can promise a perfect dog or an easy road. The work is built around getting you closer to the life you are trying to have with the dog in front of you.</p>
+      <div class="dream-grid">
+        <article><h3>Have people over without panic.</h3></article>
+        <article><h3>Walk without feeling like the whole neighborhood is watching.</h3></article>
+        <article><h3>Stop managing every moment around your dog's reactions.</h3></article>
+        <article><h3>Understand what your dog needs instead of guessing.</h3></article>
+        <article><h3>Know what to stop doing, what to build, and what comes next.</h3></article>
+        <article><h3>Feel less embarrassed, less stuck, and less alone.</h3></article>
+      </div>
+      <p class="speed-note dream-note">The plan has to fit your real life, not a version of dog training that only works on paper.</p>
+    </section>
 
-        <ul class="consult-how-list" role="list">
-          <li>Share what's been going on and what worries you most</li>
-          <li>Get clear on what your dog likely needs and why</li>
-          <li>Leave knowing the best next step, even if it is not the highest-support option</li>
+    <section class="included section-accent">
+      <p class="eyebrow">What happens on the call</p>
+      <h2>This is not a vague "tell me about your dog" chat.</h2>
+      <div class="feature-grid">
+        <article>
+          <span>01</span>
+          <h3>You tell me what is actually happening.</h3>
+          <p>Not just the polished version. The walks, the bites, the fights, the anxiety, the guarding, the guests, the routines, the moments you are embarrassed to explain, and the parts of daily life that are starting to feel heavy.</p>
+        </article>
+
+        <article>
+          <span>02</span>
+          <h3>I ask the questions that get underneath the behavior.</h3>
+          <p>Most dog problems are not solved by guessing from the symptom. I want to understand the dog, the owner, the environment, the history, the pressure points, and the patterns that keep repeating.</p>
+        </article>
+
+        <article>
+          <span>03</span>
+          <h3>We talk through what I would do if this were my dog.</h3>
+          <p>You will get my honest read on what matters first, what I would stop doing, what I would build, what I would avoid, and how I would think about the path forward.</p>
+        </article>
+
+        <article>
+          <span>04</span>
+          <h3>If it makes sense, we talk next steps.</h3>
+          <p>Some dogs need private training. Some need Digital Dog School as part of the foundation. Some need Fix the Walk. Some need a bigger plan. If working together is the right move, we will talk about the program that actually fits your dog and your life.</p>
+        </article>
+      </div>
+
+      <p class="speed-note">The point of the consult is clarity. Before you spend more money, more time, or more emotional energy guessing, let's figure out what kind of help your dog actually needs.</p>
+    </section>
+
+    <section class="method section-light">
+      <div class="method-intro">
+        <p class="eyebrow">The lens</p>
+        <h2>The Trust to Train Relationship Reset.</h2>
+        <p>The consult uses the same core lens behind Scoob &amp; I training: stop the patterns making life harder, rebuild trust, clarity, and reward, train skills that actually matter, then bring those skills back into real life.</p>
+      </div>
+      <div class="weeks">
+        <details open>
+          <summary><span>Step 01</span> Stop the patterns making life harder</summary>
+          <div><p>Sometimes the fastest progress starts with interrupting the cycle that keeps rehearsing the problem.</p></div>
+        </details>
+        <details>
+          <summary><span>Step 02</span> Rebuild trust, clarity, and reward</summary>
+          <div><p>Your dog needs a reason to listen, a way to understand, and a relationship that can carry the work.</p></div>
+        </details>
+        <details>
+          <summary><span>Step 03</span> Train the skills that matter</summary>
+          <div><p>Not every skill matters equally. The consult helps clarify which ones your dog and household need first.</p></div>
+        </details>
+        <details>
+          <summary><span>Step 04</span> Bring it back into real life</summary>
+          <div><p>The plan has to work around walks, guests, kids, other dogs, routines, stress, and the real moments that have been hard.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <section class="fit section-dark">
+      <div class="fit-card fit-yes">
+        <p class="eyebrow">A consult is probably your next step if</p>
+        <h2>You need Joel looking directly at the situation.</h2>
+        <ul>
+          <li>You want the fastest path.</li>
+          <li>You want individual attention from Joel.</li>
+          <li>Your dog's behavior feels complicated or urgent.</li>
+          <li>Your dog has bitten, snapped, guarded, lunged, fought, panicked, or scared you.</li>
+          <li>You are managing multiple issues at once.</li>
+          <li>You are not sure whether you need training, behavior support, DDS, Fix the Walk, or something else.</li>
+          <li>You need a plan built around your actual home and dog.</li>
         </ul>
-
-        <div class="consult-pricing-note">
-          <p>Every case is different. Some dogs need a few sessions. Others need a more intensive plan.</p>
-          <p>If that feels like more support than you need right now, Digital Dog School or Fix the Walk may be a better fit — and both are great places to start.</p>
-          <div class="consult-pricing-note-links">
-            <a href="https://digitaldogschool.com/" class="text-link">Explore Digital Dog School &rarr;</a>
-            <a href="../fix-the-walk/index.html" class="text-link">Explore Fix the Walk &rarr;</a>
-          </div>
-        </div>
-
-        <p class="consult-reassurance">No pressure. No hard sell. Just clarity about what is happening and what to do next.</p>
+      </div>
+      <div class="fit-card fit-no">
+        <p class="eyebrow">Choose another path first if</p>
+        <h2>You need a different level of help.</h2>
+        <ul>
+          <li>You want the most affordable full education path.</li>
+          <li>You only need focused leash help and want a self-guided product.</li>
+          <li>You are not ready to change your own habits or follow a plan.</li>
+          <li>You are looking for a magic fix without practice.</li>
+        </ul>
+        <p class="fit-footer">Digital Dog School is the affordable full education path. Fix the Walk is focused leash help. The quiz can help route you.</p>
+        <a href="https://digitaldogschool.com/">Explore Digital Dog School &rarr;</a><br>
+        <a href="https://scoobandi.com/fix-the-walk/">Explore Fix the Walk &rarr;</a><br>
+        <a href="https://dogs.scoobandi.com/quiz-4061">Take the quiz &rarr;</a>
       </div>
     </section>
 
+    <section class="proof section-light">
+      <p class="eyebrow">Real proof</p>
+      <h2>Real dogs. Real behavior change. Real life getting easier.</h2>
+      <p class="proof-intro">For owners who needed more than a template, the work starts by understanding the actual dog, the actual household, and the real pressure points in daily life.</p>
 
-    <!-- ============================================================
-         4) FEATURED REVIEW — 3-screenshot gallery
-    ============================================================ -->
-    <section class="consult-review-gallery" id="review-gallery">
-      <div class="container container-narrow">
-        <h2 class="section-heading centered">Read one client's full review</h2>
-        <p class="section-body centered">A short quote can tell you someone was happy. A longer review shows you what the experience actually felt like, why it mattered, and what changed.</p>
+      <div class="case-pattern-grid" aria-label="Real consult case patterns">
+        <article>
+          <span>Case pattern</span>
+          <h3>Trainers with their own dogs.</h3>
+          <p>Some clients are dog trainers themselves who came to Joel to learn how to help their own dogs when the usual tools were not enough.</p>
+        </article>
+        <article>
+          <span>Longer path</span>
+          <h3>Multiple dogs. Multiple problems.</h3>
+          <p>Some households need a longer, more layered plan before life becomes happier, safer, and more livable.</p>
+        </article>
+        <article>
+          <span>Real-world example</span>
+          <h3>Eight homes, four trainers, and vet behaviorists.</h3>
+          <p>A real case came with that much history and is finally finding success because the work is being built around the dog in front of us.</p>
+        </article>
+        <article>
+          <span>Faster clarity</span>
+          <h3>Not every case takes years.</h3>
+          <p>Some owners get faster wins once the work is aimed at the right problem, in the right order, with the right level of support.</p>
+        </article>
+      </div>
 
-        <blockquote class="consult-review-pull-quote">
-          <p>"After talking with Joel, I finally felt like I understood what was happening and what to do next."</p>
-        </blockquote>
-
-        <p class="consult-review-micro">Tap any image to read the full review.</p>
-
-        <div class="consult-review-grid">
-          <figure class="consult-review-img-wrap" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review full size">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5978362c0ad7dbbab8.png" alt="Full client review — part 1" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="consult-review-img-wrap" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review full size">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5980bb0fc1fc4611d2.png" alt="Full client review — part 2" loading="lazy" decoding="async" />
-          </figure>
-          <figure class="consult-review-img-wrap" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review full size">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f59e1ff777fa701cfdb.png" alt="Full client review — part 3" loading="lazy" decoding="async" />
-          </figure>
+      <div class="case-story">
+        <div>
+          <h3>Company over again after three years.</h3>
+          <p>Celebrity chef Sammy Monsour was able to have company over again for the first time in three years after getting help for his dog's aggression.</p>
         </div>
+        <div class="video-frame">
+          <video src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698bb13c8682155f6073704c.mp4" poster="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698d275e3fdd0e4824cb82f9.jpg" controls playsinline preload="metadata"></video>
+        </div>
+      </div>
+
+      <div class="proof-gallery" aria-label="Client review screenshots">
+        <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5978362c0ad7dbbab8.png" alt="Full client review part 1" loading="lazy" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5978362c0ad7dbbab8.png">
+        <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5980bb0fc1fc4611d2.png" alt="Full client review part 2" loading="lazy" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f5980bb0fc1fc4611d2.png">
+        <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f59e1ff777fa701cfdb.png" alt="Full client review part 3" loading="lazy" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/67126f59e1ff777fa701cfdb.png">
+      </div>
+
+      <div class="quote-grid">
+        <blockquote><span class="proof-source">Real review</span><p>"After talking with Joel, I finally felt like I understood what was happening and what to do next."</p><cite>Client review screenshot</cite></blockquote>
+        <blockquote><span class="proof-source">Google rating</span><p>5.0 Google rating from real owners working through real behavior problems.</p><cite>Scoob &amp; I</cite></blockquote>
+        <blockquote><span class="proof-source">Reach</span><p>Successful 1-on-1 clients in 28 US states and 5 continents, with online and in-person support available.</p><cite>Private consults</cite></blockquote>
       </div>
     </section>
 
+    <!-- Consult VSL placeholder: add the real consult VSL asset here when it exists. -->
 
-    <!-- ============================================================
-         5) QUICK-HIT TRUST STRIP
-    ============================================================ -->
-    <section class="consult-proof" id="proof">
-      <div class="container">
-
-        <!-- 3-card compact trust strip -->
-        <div class="consult-trust-strip" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:820px;margin:0 auto 1.75rem;">
-          <figure class="review-card review-card--image" style="margin:0;cursor:zoom-in;" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/653fcf07cf4e0c1609689fc3.jpeg" alt="Client review" width="400" height="260" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" />
-          </figure>
-          <figure class="review-card review-card--image" style="margin:0;cursor:zoom-in;" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0ab2ed1677b028a63b0d.png" alt="Client review" width="400" height="260" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" />
-          </figure>
-          <figure class="review-card review-card--image" style="margin:0;cursor:zoom-in;" onclick="openConsultLightbox(this.querySelector('img').src)" tabindex="0" role="button" aria-label="View review">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876c2ce2087cd.png" alt="Client review" width="400" height="260" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;border-radius:10px;display:block;" />
-          </figure>
-        </div>
-
-        <!-- Trust pills -->
-        <div class="consult-trust-row">
-          <span class="consult-trust-pill">1,000+ dogs trained</span>
-          <span class="consult-trust-pill">5.0 Google rating</span>
-          <span class="consult-trust-pill">216k TikTok followers</span>
-          <span class="consult-trust-pill">Online &amp; in-person support</span>
-        </div>
+    <section class="faq section-dark">
+      <p class="eyebrow">Straight answers</p>
+      <h2>Frequently asked questions.</h2>
+      <div class="faq-list">
+        <details open><summary>Is this just a sales call?</summary><p>No. The goal is to understand what is happening, help you make sense of it, and point you toward the right next step. If another option makes more sense, Joel will tell you.</p></details>
+        <details><summary>What if I am embarrassed by my dog's behavior?</summary><p>You do not need to perform or pretend. People usually book because things already feel emotional, messy, confusing, or hard to talk about.</p></details>
+        <details><summary>What if my dog has bitten someone?</summary><p>Start with a consult. Bite history, guarding, snapping, fighting, or unsafe household stress needs context before anyone gives you a plan.</p></details>
+        <details><summary>What if I only need help with leash walking?</summary><p>If leash walking is the main issue and you want a focused self-guided product, Fix the Walk may be the cleaner fit. If the walking problem is tied to aggression, panic, bite risk, or a bigger pattern, book the consult.</p></details>
+        <details><summary>What if I am not sure whether I need DDS, Fix the Walk, or a consult?</summary><p>That is exactly what the consult can help sort out. You can also take the quiz if you want a lighter first step.</p></details>
+        <details><summary>Will you tell me exactly what program I need?</summary><p>If working together makes sense, yes. The consult is where we sort out whether your dog needs private training, Digital Dog School, Fix the Walk, virtual coaching, or a bigger custom plan. I am not trying to shove every dog into the same offer. The whole point is to figure out what actually fits.</p></details>
+        <details><summary>What if I have already wasted money on training?</summary><p>That does not mean your dog is hopeless or that you failed. A lot of people come here after spending money on advice that did not fit their dog, their home, or their life. The consult helps us stop guessing and look at the whole picture before you spend more.</p></details>
+        <details><summary>Is the consult useful if I am not ready to buy a bigger program?</summary><p>Yes. You should still leave with a clearer understanding of what is going on, what matters first, and what kind of path makes sense. If ongoing help is the right move, we can talk about it. If another option fits better, I will tell you.</p></details>
+        <details><summary>Will one consult fix everything?</summary><p>No. A consult gives you clarity, direction, and next steps. Some dogs need a few sessions, some need a bigger plan, and some are better served by a course or focused program.</p></details>
+        <details><summary>What happens after the consult?</summary><p>If ongoing training, DDS, Fix the Walk, virtual coaching, or a bigger plan makes sense, Joel will tell you. If this is not a fit, that should be clear too.</p></details>
+        <details><summary>Is this virtual or in person?</summary><p>Both are possible. Appointments can happen in person in Sharpsburg, GA, or anywhere in the world through Zoom. Joel has successful 1-on-1 clients in 28 US states and 5 continents.</p></details>
       </div>
     </section>
 
-
-    <!-- ============================================================
-         6) WHO IT IS FOR / NOT FOR
-    ============================================================ -->
-    <section class="consult-fit" id="fit">
-      <div class="container">
-        <h2 class="section-heading centered">Who this is best for</h2>
-
-        <div class="consult-fit-grid">
-          <div class="consult-fit-card consult-fit-card--yes">
-            <h3 class="consult-fit-card-heading">This call is probably a good fit if:</h3>
-            <ul class="consult-fit-cards-list" role="list">
-              <li>You are dealing with serious, confusing, or escalating behavior concerns</li>
-              <li>Your dog is showing reactivity, anxiety, aggression, or other more complex patterns</li>
-              <li>You want expert help figuring out the right level of support before spending money in the wrong place</li>
-              <li>You are open to private, virtual, or higher-support options if that is what your dog needs</li>
-              <li>You want clarity before committing to the wrong path</li>
-            </ul>
-          </div>
-
-          <div class="consult-fit-card consult-fit-card--no">
-            <h3 class="consult-fit-card-heading">This may not be the best fit if:</h3>
-            <ul class="consult-fit-cards-list" role="list">
-              <li>You are only looking for free advice with no intention to take action</li>
-              <li>Your dog's issue is mild and clearly better suited for Digital Dog School</li>
-              <li>You are looking for a quick fix without consistency or follow-through</li>
-              <li>Your situation is outside the scope of what Joel helps with — in which case we will point you in the right direction</li>
-            </ul>
-          </div>
-        </div>
-
-        <p class="consult-fit-note centered">If this is not the right fit, we will point you in the right direction.</p>
+    <section class="scheduler section-light" id="scheduler">
+      <div class="scheduler-copy">
+        <p class="eyebrow">Book the consult</p>
+        <h2>Stop buying help that does not fit your dog.</h2>
+        <p>Appointments can happen in person in Sharpsburg, GA, or anywhere in the world through Zoom. Answer a few quick questions in the calendar so Joel has context before you talk.</p>
+      </div>
+      <div class="calendar-shell">
+        <iframe src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" id="consult-calendar-iframe" title="Schedule your private dog training consult with Joel" scrolling="yes" allow="payment *; microphone *; camera *; fullscreen *"></iframe>
       </div>
     </section>
 
-
-    <!-- ============================================================
-         7) FAQ
-    ============================================================ -->
-    <section class="consult-faq faq" id="faq">
-      <div class="container container-narrow">
-        <h2 class="section-heading centered">Frequently asked questions</h2>
-
-        <div class="faq-list" role="list">
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq1">
-              What kinds of cases do you take?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq1" hidden>
-              <p>We work with owners dealing with reactivity, aggression, anxiety, frustration, and behavior that feels serious, confusing, or bigger than a basic training issue.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq2">
-              Is this a sales call?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq2" hidden>
-              <p>No. The goal is to understand what is happening, help you make sense of it, and point you toward the right next step. If another option makes more sense than working with Joel privately, we will tell you.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq3">
-              What if I should start with DDS or Fix the Walk instead?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq3" hidden>
-              <p>That is exactly the kind of thing this call is meant to sort out. Not every dog needs the highest level of support, and we will help you figure out what makes the most sense.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq4">
-              How much does private training cost?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq4" hidden>
-<p>Private 1-on-1 programs start at $945. The consult helps determine what level of support makes sense for your dog and what that would look like.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq5">
-              Do I need to be local?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq5" hidden>
-              <p>No. Some owners are a fit for in-person help, and others are better served through virtual coaching or another support path.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" role="listitem">
-            <button class="faq-trigger" aria-expanded="false" aria-controls="cfaq6">
-              What if I think my dog may be too much?
-              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer" id="cfaq6" hidden>
-              <p>That is often why people book the call. If things feel serious enough that you do not want to keep guessing, this is the right place to start.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
+    <section class="final-cta section-accent">
+      <p class="eyebrow">Stop guessing</p>
+      <h2>You do not need another guess. You need someone to look at the whole picture.</h2>
+      <p>If your dog's behavior is starting to shape your life, your home, your relationships, or your confidence, this is the place to stop guessing. Book the consult. Tell Joel what is actually happening. Leave with a clearer read on what your dog needs next.</p>
+      <a class="button button-dark" href="#scheduler" data-event="consult_cta_click" data-location="final">Book a consult <span>&rarr;</span></a>
+      <a class="text-link" href="https://dogs.scoobandi.com/quiz-4061">Not sure? Take the quiz.</a>
     </section>
-
-
-    <!-- ============================================================
-         8) SCHEDULER BLOCK
-    ============================================================ -->
-    <section class="consult-scheduler" id="scheduler">
-      <div class="container" style="max-width:900px;">
-        <h2 class="consult-scheduler-heading" style="text-align:center;">Book a free call with Joel</h2>
-        <p class="consult-scheduler-sub" style="text-align:center;">Pick a time that works, answer a few quick questions, and we'll take it from there.</p>
-
-        <div class="consult-calendar-wrapper">
-          <iframe src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" 
-                  style="width:100%;min-height:800px;height:800px;border:none;overflow:visible;display:block;" 
-                  scrolling="yes"
-                  allow="payment *; microphone *; camera *; fullscreen *"
-                  id="consult-calendar-iframe"
-                  title="Book a free consult with Joel"></iframe>
-        </div>
-
-        <p class="consult-scheduler-micro" style="text-align:center;">If there is a better fit than a call with Joel, we will tell you.</p>
-      </div>
-    </section>
-
-
-    <!-- ============================================================
-         9) FINAL CTA / REASSURANCE
-    ============================================================ -->
-    <section class="consult-final" id="final">
-      <div class="container container-narrow centered">
-        <h2 class="consult-final-heading">You do not need to have it all figured out.</h2>
-        <p class="consult-final-sub">If what is happening with your dog feels serious enough that you do not want to keep guessing, this call is the next right step. Talk with Joel, get clarity, and find out what kind of help actually makes sense.</p>
-
-        <div class="consult-final-actions">
-          <a href="#scheduler" class="btn btn-primary btn-hero" data-event="consult_cta_click" data-location="final">Book a Free Call with Joel &rarr;</a>
-        </div>
-
-        <p class="consult-final-reassurance">If there is a better fit than private coaching, we will tell you.</p>
-
-        <p class="consult-final-fallback">
-          Not sure you need this much help? <a href="https://dogs.scoobandi.com/quiz-4061" class="text-link">Take the quiz</a> or <a href="https://digitaldogschool.com/" class="text-link">start with Digital Dog School</a>.
-        </p>
-      </div>
-    </section>
-
   </main>
 
-
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="../index.html" class="logo" aria-label="Scoob &amp; I Dog Training homepage">
-          <img src="../logo.png" alt="Scoob &amp; I Dog Training" height="40" style="height:40px;width:auto;display:block;" />
-        </a>
-        <p class="footer-tagline">Real training. Real results. For real life.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="../index.html">Home</a>
-        <a href="https://digitaldogschool.com/" target="_blank" rel="noopener">Digital Dog School</a>
-        <a href="../fix-the-walk/index.html">Fix the Walk</a>
-        <a href="../consult/index.html" aria-current="page">Book a Call</a>
-        <a href="../resources/index.html">Resources</a>
-      </nav>
-    </div>
-    <p class="footer-copy">&copy; <span class="footer-year-js"></span> Scoob &amp; I. All rights reserved.</p>
+  <footer>
+    <a class="brand" href="https://scoobandi.com">SCOOB <span>&amp;</span> I</a>
+    <nav aria-label="Footer navigation">
+      <a href="https://digitaldogschool.com/">Digital Dog School</a>
+      <a href="https://scoobandi.com/fix-the-walk/">Fix the Walk</a>
+      <a href="../resources/index.html">Resources</a>
+      <a href="https://scoobandi.com/consult/">Consult</a>
+    </nav>
+    <p>&copy; <span id="year"></span> Scoob &amp; I</p>
   </footer>
 
-  <!-- Calendar iframe auto-resize -->
-  <script>
-    window.addEventListener('message', function(e) {
-      var iframe = document.getElementById('consult-calendar-iframe');
-      if (!iframe) return;
-      var h = null;
-      if (e.data && typeof e.data === 'object') {
-        // Handle all known GHL postMessage formats
-        if (e.data.height) h = e.data.height;
-        else if (e.data.iframeHeight) h = e.data.iframeHeight;
-        else if (e.data.type === 'height' && e.data.value) h = e.data.value;
-        else if (e.data.type === 'iframeHeight' && e.data.height) h = e.data.height;
-      } else if (typeof e.data === 'number' && e.data > 200) {
-        h = e.data;
-      }
-      if (h && h > 200) {
-        iframe.style.height = (parseInt(h) + 60) + 'px';
-        iframe.style.minHeight = (parseInt(h) + 60) + 'px';
-      }
-    });
-    document.querySelectorAll('.footer-year-js').forEach(function(el) {
-      el.textContent = new Date().getFullYear();
-    });
-  </script>
-
-  <script src="consult.js" defer></script>
-
-  <!-- Consult lightbox -->
-  <div id="consult-lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;cursor:pointer;align-items:center;justify-content:center;" onclick="this.style.display='none'" role="dialog" aria-modal="true" aria-label="Review image">
-    <img id="consult-lightbox-img" src="" alt="Full review" style="max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 8px 48px rgba(0,0,0,.6);" />
+  <div id="proof-lightbox" class="proof-lightbox" hidden>
+    <button type="button" id="proof-lightbox-close" aria-label="Close">&times;</button>
+    <img id="proof-lightbox-img" src="" alt="">
   </div>
 
-  <script>
-    function openConsultLightbox(src) {
-      const lb = document.getElementById('consult-lightbox');
-      document.getElementById('consult-lightbox-img').src = src;
-      lb.style.display = 'flex';
-    }
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape') document.getElementById('consult-lightbox').style.display = 'none';
-    });
-    // keyboard support for review figures
-    document.querySelectorAll('.consult-review-img-wrap').forEach(function(el) {
-      el.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openConsultLightbox(el.querySelector('img').src);
-        }
-      });
-    });
-  </script>
+  <script src="consult.js"></script>
 </body>
 </html>
