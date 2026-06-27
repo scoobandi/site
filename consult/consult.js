@@ -43,6 +43,19 @@
     });
   });
 
+  document.querySelectorAll('a[href="#scheduler"]').forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      var scheduler = document.getElementById("scheduler");
+      if (!scheduler) return;
+      event.preventDefault();
+      var top = scheduler.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({ top: top, behavior: "smooth" });
+      if (window.history && window.history.pushState) {
+        window.history.pushState(null, "", "#scheduler");
+      }
+    });
+  });
+
   window.addEventListener("message", function (event) {
     var iframe = document.getElementById("consult-calendar-iframe");
     var height = null;
