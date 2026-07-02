@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>You're in Fix the Walk | Scoob &amp; I</title>
-  <meta name="description" content="Purchase confirmation for Fix the Walk.">
+  <title>Your consult is booked | Scoob &amp; I</title>
+  <meta name="description" content="Consult booking confirmation for Scoob &amp; I.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,79 +18,75 @@
   <script>
     (function () {
       var params = new URLSearchParams(window.location.search);
-      var transactionId = params.get("transaction_id") || params.get("order_id") || params.get("payment_id") || "fix-the-walk-thank-you";
-      var guardKey = "scoobandi_fix_the_walk_purchase_" + transactionId;
+      var eventId = params.get("appointment_id") || params.get("booking_id") || params.get("contact_id") || "consult-thank-you";
+      var guardKey = "scoobandi_consult_booking_" + eventId;
       if (window.sessionStorage && sessionStorage.getItem(guardKey)) return;
       if (window.sessionStorage) sessionStorage.setItem(guardKey, "1");
 
-      var purchase = {
+      var lead = {
         currency: "USD",
-        value: 795,
-        transaction_id: transactionId,
-        items: [{
-          item_name: "Fix the Walk",
-          item_id: "fix-the-walk",
-          price: 795,
-          quantity: 1
-        }]
+        value: 0,
+        method: "consult_booking",
+        event_category: "lead",
+        event_label: "Consult booked"
       };
 
-      // GA4 purchase conversion event: Fix the Walk.
-      if (typeof window.gtag === "function") window.gtag("event", "purchase", purchase);
+      // GA4 generate_lead conversion event: consult booking.
+      if (typeof window.gtag === "function") window.gtag("event", "generate_lead", lead);
 
-      // Meta Purchase conversion event: Fix the Walk.
+      // GA4 custom conversion event: consult_booking_confirmed.
+      if (typeof window.gtag === "function") window.gtag("event", "consult_booking_confirmed", lead);
+
+      // Meta Lead conversion event: consult booking.
       if (typeof window.fbq === "function") {
-        window.fbq("track", "Purchase", {
-          value: 795,
-          currency: "USD",
-          content_name: "Fix the Walk",
-          content_type: "product",
-          contents: [{ id: "fix-the-walk", quantity: 1, item_price: 795 }]
-        }, { eventID: transactionId });
+        window.fbq("track", "Lead", { content_name: "Consult Booking" }, { eventID: eventId + "_lead" });
+
+        // Meta custom conversion event: ConsultBooked.
+        window.fbq("trackCustom", "ConsultBooked", { content_name: "Consult Booking" }, { eventID: eventId + "_consult_booked" });
       }
     })();
   </script>
 </head>
-<body data-page="fix_the_walk_thank_you">
+<body data-page="consult_thank_you">
   <header class="site-header"><div class="container header-inner"><a class="brand" href="../../index.html">SCOOB <span>&amp;</span> I</a></div></header>
   <main>
     <section class="hero">
       <div class="narrow center">
-        <p class="eyebrow">Confirmed</p>
-        <h1>You're in Fix the Walk.</h1>
-        <p class="lead">You just took the first step toward making walks feel better for both you and your dog. Class starts Monday, July 27, 2026.</p>
+        <p class="eyebrow">Booked</p>
+        <h1>Your consult is booked.</h1>
+        <p class="lead">Tell me what is going on. I'll help you make sense of it and figure out the next move.</p>
       </div>
     </section>
     <section class="section section-light">
       <div class="container card-grid">
         <article class="card accent">
-          <h3>Check your email.</h3>
-          <p>Your receipt, access details, and next steps should arrive shortly. If you used a different checkout email, check that inbox too.</p>
+          <h3>Check your email and calendar.</h3>
+          <p>Look for the confirmation, calendar invite, and any meeting details. Check spam or promotions if you do not see it.</p>
         </article>
         <article class="card sage">
-          <h3>Start the prep now.</h3>
-          <p>Required prep opens immediately. Complete it before class starts so you are ready for the first live coaching week on July 27.</p>
+          <h3>Gather the useful notes.</h3>
+          <p>Write down behavior history, triggers, what you have tried, what helped, and what made things worse.</p>
         </article>
         <article class="card blue">
-          <h3>Watch for weekly assignments.</h3>
-          <p>The right lessons and resources for each week are released or assigned on Sundays so you stay focused instead of digging through everything at once.</p>
+          <h3>No obligation.</h3>
+          <p>This call is for clarity. If paid help is not the right next step, Joel will tell you that too.</p>
         </article>
       </div>
     </section>
     <section class="section section-cream">
       <div class="narrow">
         <div class="callout">
-          <p class="eyebrow">Good move</p>
-          <h2>The sprint works best when you show up prepared.</h2>
-          <p>Bring the real walk problems, the messy details, and your questions. Check your email first, complete the required prep, then follow the weekly assignments as they are released.</p>
+          <p class="eyebrow">What may come next</p>
+          <h2>We will match the recommendation to the dog in front of us.</h2>
+          <p>The call may lead to private coaching, virtual help, in-person help near Sharpsburg, GA, or board-and-train consideration if that is appropriate for the situation.</p>
         </div>
       </div>
     </section>
     <section class="section section-light">
       <div class="narrow center">
         <p class="eyebrow">Need help?</p>
-        <h2>If the email does not arrive, contact support.</h2>
-        <p class="lead">Check spam, promotions, and the email address used at checkout first. If nothing shows up, reply to your receipt or contact Scoob &amp; I support with the purchase email.</p>
+        <h2>If the confirmation does not arrive, contact support.</h2>
+        <p class="lead">Use the same name and email address from the booking so the appointment can be found quickly.</p>
       </div>
     </section>
   </main>
