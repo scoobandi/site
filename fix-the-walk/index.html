@@ -538,6 +538,100 @@
     .split-reverse .split-media { order: -1; }
   }
 
+  .program-compare .section-head { text-align: center; margin-bottom: 32px; }
+  .program-compare .section-head h2 { margin: 0 auto 16px; }
+  .program-compare .section-head p { margin: 0 auto; max-width: 58ch; color: var(--ink-soft); }
+  .program-table-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .program-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .program-table th,
+  .program-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+    text-align: left;
+  }
+  .program-table tr:last-child th,
+  .program-table tr:last-child td { border-bottom: 0; }
+  .program-table thead th {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .program-table tbody th {
+    width: 28%;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .program-table tbody td {
+    width: 36%;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .compare-link { text-decoration: none; }
+  .compare-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .program-cards { display: none; }
+  .program-bottom-line {
+    margin: 24px auto 0;
+    max-width: 74ch;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  @media (max-width: 640px) {
+    .program-table-wrap { display: none; }
+    .program-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .program-card {
+      background: var(--bg-card);
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+    }
+    .program-card h3 {
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin: 0 0 18px;
+    }
+    .program-card dl {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+    }
+    .program-card dt {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 4px;
+    }
+    .program-card dd {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+  }
+
   /* =========================================================
      TIMELINE — 4 week cards
      ========================================================= */
@@ -780,6 +874,26 @@
   }
   @media (min-width: 800px) {
     .proof-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  }
+
+  .effort-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    padding: 36px 26px;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .effort-panel h2 { margin: 0 0 22px; }
+  .effort-panel p {
+    margin: 0 0 18px;
+    color: var(--ink-soft);
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .effort-panel p:last-child { margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .effort-panel { padding: 46px 44px; }
   }
 
   /* =========================================================
@@ -1333,6 +1447,83 @@
 </section>
 
 <!-- =========================================================
+     PROGRAM COMPARISON
+     ========================================================= -->
+<section class="program-compare" aria-labelledby="program-compare-heading">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2 class="display display-md" id="program-compare-heading">Not sure which one fits?</h2>
+      <p>Two different programs. Two different owners. Here's the honest difference.</p>
+    </div>
+    <div class="program-table-wrap reveal">
+      <table class="program-table">
+        <thead>
+          <tr>
+            <th scope="col">Question</th>
+            <th scope="col">FIX THE WALK</th>
+            <th scope="col"><a class="compare-link" href="https://digitaldogschool.com/">DIGITAL DOG SCHOOL</a></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">What problem is this solving?</th>
+            <td>Walks are the whole problem. Everything else about your dog is mostly fine.</td>
+            <td>You want the full foundation - walks, manners, reactivity, settling, the works.</td>
+          </tr>
+          <tr>
+            <th scope="row">How much time each week?</th>
+            <td>20 min/day for 4 weeks. Live class cadence.</td>
+            <td>20 min/day at your own pace. No calendar pressure.</td>
+          </tr>
+          <tr>
+            <th scope="row">Is Joel watching my dog specifically?</th>
+            <td>Yes - live weekly coaching calls plus video reviews of clips you submit.</td>
+            <td>No - self-paced. You submit clips inside the community if you want feedback.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="program-cards reveal">
+      <div class="program-card">
+        <h3>FIX THE WALK</h3>
+        <dl>
+          <div>
+            <dt>What problem is this solving?</dt>
+            <dd>Walks are the whole problem. Everything else about your dog is mostly fine.</dd>
+          </div>
+          <div>
+            <dt>How much time each week?</dt>
+            <dd>20 min/day for 4 weeks. Live class cadence.</dd>
+          </div>
+          <div>
+            <dt>Is Joel watching my dog specifically?</dt>
+            <dd>Yes - live weekly coaching calls plus video reviews of clips you submit.</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="program-card">
+        <h3><a class="compare-link" href="https://digitaldogschool.com/">DIGITAL DOG SCHOOL</a></h3>
+        <dl>
+          <div>
+            <dt>What problem is this solving?</dt>
+            <dd>You want the full foundation - walks, manners, reactivity, settling, the works.</dd>
+          </div>
+          <div>
+            <dt>How much time each week?</dt>
+            <dd>20 min/day at your own pace. No calendar pressure.</dd>
+          </div>
+          <div>
+            <dt>Is Joel watching my dog specifically?</dt>
+            <dd>No - self-paced. You submit clips inside the community if you want feedback.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <p class="program-bottom-line reveal">If walks are the whole problem, Fix the Walk. If you want the foundation and time to move at your own pace, Digital Dog School.</p>
+  </div>
+</section>
+
+<!-- =========================================================
      TIMELINE — 4 weeks
      ========================================================= -->
 <section class="timeline" aria-labelledby="timeline-heading">
@@ -1542,6 +1733,20 @@
         <div class="label">Fix the Walk &middot; or 4&times;$225</div>
         <p>Four weeks of live coaching, video reviews, Q&amp;As, a follow-up session, and Digital Dog School included.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TIME COMMITMENT
+     ========================================================= -->
+<section aria-labelledby="effort-heading">
+  <div class="wrap">
+    <div class="effort-panel reveal">
+      <h2 class="display display-md" id="effort-heading">What the work actually looks like</h2>
+      <p>Plan on 20 minutes a day, most days of the week. Some days will be a full session on your street. Some days will be a 5-minute drill in the driveway before work. Some days you'll just watch the week's lesson while you eat lunch.</p>
+      <p>If you can only give this 5 minutes a week, this isn't the right program. The dogs who transform in 4 weeks belong to owners who show up almost every day, even for a little.</p>
+      <p>The good news: your dog doesn't need a two-hour training session. Your dog needs you, consistently, for four weeks.</p>
     </div>
   </div>
 </section>
