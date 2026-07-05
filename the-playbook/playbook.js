@@ -1,1 +1,0 @@
-/* Retired offer page script intentionally removed. */
