@@ -304,6 +304,20 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   .t2t-step{padding:1rem 1.15rem;gap:.9rem}
   .t2t-num{width:2.4rem;height:2.4rem;font-size:1rem}
 }
+
+/* Inky's Story */
+.inky-story{max-width:1080px;margin:5rem auto;padding:0 1.25rem}
+.inky-head{text-align:center;margin-bottom:2.5rem}
+.inky-head .eyebrow{display:inline-block;margin-bottom:.75rem}
+.inky-head h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.15;margin:0 0 .75rem;letter-spacing:-.01em}
+.inky-head p.inky-lede{max-width:640px;margin:0 auto;color:#333;line-height:1.6}
+.inky-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-bottom:2.5rem}
+@media (min-width:820px){.inky-grid{grid-template-columns:1fr 1fr}}
+.inky-card{background:#fff;border:1px solid #e6e8e3;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.inky-card .inky-caption{padding:.85rem 1.15rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#666;border-bottom:1px solid #eef0eb;background:#faf9f5}
+.inky-card img{display:block;width:100%;height:auto}
+.inky-tiktok{max-width:605px;margin:0 auto;text-align:center}
+.inky-tiktok-label{margin:0 0 1rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:#0f0f0f;font-weight:600}
 </style>
 </head>
 <body>
@@ -527,6 +541,31 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </ol>
 </section>
 
+<section class="inky-story" aria-labelledby="inky-h">
+  <div class="inky-head">
+    <span class="eyebrow">One dog. One family. 1.5 years.</span>
+    <h2 id="inky-h">Inky's Story</h2>
+    <p class="inky-lede">Inky's family had already been through two trainers and a vet behaviorist. Anxiety. Sudden inter-dog aggression. Hyper-fixation. This is what happened when they stopped trying to fix the behavior and started rebuilding the relationship.</p>
+  </div>
+
+  <div class="inky-grid">
+    <button type="button" class="zoomable inky-card" data-zoom-src="proof-inky-3.jpg" data-zoom-alt="Inky's five-star review — 2 trainers and a vet behaviorist later, I did a consult with Joel." aria-label="Enlarge Inky's consult review">
+      <div class="inky-caption">The beginning — the consult</div>
+      <img src="proof-inky-3.jpg" alt="Inky's five-star review: 2 trainers and a vet behaviorist later, I did a consult with Joel. Should have done this sooner." loading="lazy" />
+    </button>
+
+    <button type="button" class="zoomable inky-card" data-zoom-src="proof-dogperson-2.jpg" data-zoom-alt="Inky's follow-up review — Joel is THE dog person. Take the plunge." aria-label="Enlarge Inky's endorsement review">
+      <div class="inky-caption">The endorsement — a few months in</div>
+      <img src="proof-dogperson-2.jpg" alt="Inky's follow-up review: Joel is THE dog person. You will be happy, your dogs will be happy. Take the plunge." loading="lazy" />
+    </button>
+  </div>
+
+  <div class="inky-tiktok">
+    <p class="inky-tiktok-label">1.5 years later — the biggest win yet</p>
+    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@inkyinkblot/video/7659110650999754014" data-video-id="7659110650999754014" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@inkyinkblot" href="https://www.tiktok.com/@inkyinkblot?refer=embed">@inkyinkblot</a> @Scoob &#38; I Dog training @Leah McManus  1.5 years of putting in the work. Through tears, failures, small wins, and baby steps of progress, board &#38; train helped us progress pass big hurdles, but we still had a lot of work to do.  We finally got the biggest win yet.  🙌💪 <a title="dogtraining" target="_blank" href="https://www.tiktok.com/tag/dogtraining?refer=embed">#dogtraining</a> <a title="nevergiveup" target="_blank" href="https://www.tiktok.com/tag/nevergiveup?refer=embed">#nevergiveup</a> <a title="pitbull" target="_blank" href="https://www.tiktok.com/tag/pitbull?refer=embed">#pitbull</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ A Simple Life - Morunas" href="https://www.tiktok.com/music/A-Simple-Life-7486702176300222480?refer=embed">♬ A Simple Life - Morunas</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+  </div>
+</section>
+
 <!-- ================= BIG PROOF ================= -->
 <section class="sec bproof reveal" aria-labelledby="bproof-h">
   <div class="bproof-head">
@@ -545,14 +584,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     </button>
     <button type="button" class="zoomable" data-zoom-src="proof-ember-kai.jpg" data-zoom-alt="Ember Kai's post: Bucky, a formerly very reactive Craigslist rescue, earning his first leg of an AKC obedience title." aria-label="Enlarge Ember Kai post">
       <div class="frame"><img src="proof-ember-kai.jpg" alt="Post from Ember Kai about Bucky, a formerly very reactive rescue, earning his first leg of a Beginner Novice AKC obedience title." loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <button type="button" class="zoomable" data-zoom-src="proof-inky.png" data-zoom-alt="Inky Inkblot five-star review about a consult with Joel after two trainers and a vet behaviorist." aria-label="Enlarge Inky Inkblot review">
-      <div class="frame"><img src="proof-inky.png" alt="Five-star review from Inky Inkblot after two trainers and a vet behaviorist — 'I knew this time things will be different.'" loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <button type="button" class="zoomable" data-zoom-src="proof-dogperson.png" data-zoom-alt="Review: 'Joel is THE dog person' recommending the online training school and personal meetings." aria-label="Enlarge 'Joel is THE dog person' review">
-      <div class="frame"><img src="proof-dogperson.png" alt="Client review: 'Joel is THE dog person. He will hear you out, then provide the encouragement and steps you need.'" loading="lazy" /></div>
       <span class="zoom-hint" aria-hidden="true">Tap to read</span>
     </button>
     <button type="button" class="zoomable" data-zoom-src="proof-tiktok.jpg" data-zoom-alt="TikTok comment about how Joel explained everything and laid out clear plans after bad trainers." aria-label="Enlarge TikTok comment">
