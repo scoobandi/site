@@ -111,7 +111,7 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 @media (min-width:860px){.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 60px -26px rgba(26,22,19,.34);border-color:rgba(179,81,47,.35)}}
 .rcard-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a0806}
 .rcard-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.rcard-media img[src*="geordi-airport"]{object-position:center top}
+.rcard-media img[src*="geordi-airport"]{object-position:center 15%; aspect-ratio: 4/5}
 @media (min-width:860px){.rcard:hover .rcard-media img{transform:scale(1.04)}}
 .rcard-eyebrow{position:absolute;top:14px;left:14px;z-index:2;background:rgba(26,22,19,.82);color:#FFFDF9;font-family:var(--font-body);font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;backdrop-filter:blur(6px);max-width:calc(100% - 28px)}
 .rcard-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
@@ -327,7 +327,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="rcard-body">
           <h2 class="rcard-title">Fix the Walk</h2>
           <p class="rcard-desc">4-week virtual group class for owners whose dog is sweet at home but a lunatic on leash. Pulling, lunging, barking, dragging — we fix it live with your dog, on your street.</p>
-          <div class="rcard-meta"><span class="m-accent">$795</span> · Next cohort: Mon, July 27</div>
+          <div class="rcard-meta">Next cohort: Mon, July 27</div>
           <span class="rcard-cta">See the class <span class="arr">→</span></span>
         </div>
         </a>
@@ -369,6 +369,13 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 
   </div>
 </section>
+
+  <div class="proof-video" style="max-width:720px;margin:2rem auto;">
+  <h3 style="margin:0 0 0.75rem 0;font-size:1.15rem;text-align:center;">See a real virtual lesson</h3>
+  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+    <iframe src="https://www.youtube.com/embed/YPsLtHM0nzo" title="See a real virtual lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+</div>
 
 <!-- ================= PROOF STRIP ================= -->
 <section class="pstrip" aria-labelledby="pstrip-h">
@@ -509,12 +516,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </div>
     </div>
   </div>
-  <div class="proof-video" style="max-width:720px;margin:2rem auto;">
-  <h3 style="margin:0 0 0.75rem 0;font-size:1.15rem;text-align:center;">See a real virtual lesson</h3>
-  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-    <iframe src="https://www.youtube.com/embed/YPsLtHM0nzo" title="See a real virtual lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-</div>
 </section>
 
 <!-- ================= FINAL ROUTING CTA ================= -->
@@ -522,7 +523,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="final-inner">
     <span class="eyebrow">You know what your dog needs</span>
     <h2 id="final-h">You know what your dog needs. Let's start.</h2>
-    <p class="final-guarantee">Every program is backed by a moneyback guarantee. If you do the work and it doesn't help your dog, you get your money back.</p>
+    <p class="final-guarantee">Fix the Walk and Digital Dog School come with a moneyback guarantee. Do the work, and if it doesn't help your dog, you get your money back.</p>
     <div class="final-rows">
       <a href="https://scoobandi.com/fix-the-walk/" class="final-row" data-event="fix_the_walk_cta_click" data-location="final">
         <span class="fr-l"><span class="fr-tag">Walks</span><span class="fr-name">Fix the Walk</span></span>
