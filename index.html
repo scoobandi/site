@@ -285,6 +285,25 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 .final-resources { margin-top: 2rem; text-align: center; font-size: 0.95rem; }
 .final-resources a { color: inherit; text-decoration: underline; opacity: 0.8; }
 .final-resources a:hover { opacity: 1; }
+
+/* Trust-to-Train infographic */
+.t2t-wrap{max-width:920px;margin:4rem auto;padding:0 1.25rem}
+.t2t-head{text-align:center;margin-bottom:2.5rem}
+.t2t-head h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.15;margin:0 0 .5rem;letter-spacing:-.01em}
+.t2t-head p{margin:0;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.t2t-steps{display:flex;flex-direction:column;gap:1rem;position:relative}
+.t2t-steps::before{content:"";position:absolute;left:2.25rem;top:2.25rem;bottom:2.25rem;width:2px;background:#c6f26a;opacity:.55}
+.t2t-step{display:flex;gap:1.25rem;align-items:flex-start;background:#fff;border:1px solid #e6e8e3;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.03);position:relative}
+.t2t-num{flex:0 0 auto;width:3rem;height:3rem;border-radius:999px;background:#c6f26a;color:#0f0f0f;font-weight:700;font-size:1.15rem;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.t2t-body h3{margin:.15rem 0 .4rem;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
+.t2t-body p{margin:0;line-height:1.55;color:#333}
+.t2t-body ul{margin:.35rem 0 0;padding-left:1.15rem;line-height:1.6;color:#333}
+.t2t-body ul li{margin:.1rem 0}
+@media (max-width:520px){
+  .t2t-steps::before{left:1.6rem;top:1.6rem;bottom:1.6rem}
+  .t2t-step{padding:1rem 1.15rem;gap:.9rem}
+  .t2t-num{width:2.4rem;height:2.4rem;font-size:1rem}
+}
 </style>
 </head>
 <body>
@@ -466,13 +485,46 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
-<section class="t2t-jpg-section" aria-labelledby="t2t-jpg-title">
-  <div class="t2t-jpg-inner">
-    <h2 id="t2t-jpg-title" class="visually-hidden">Trust to Train Relationship Reset — 4 Steps of Behavior Change</h2>
-    <a href="t2trr.jpg" class="t2t-jpg-link" target="_blank" rel="noopener" aria-label="Open full-size infographic">
-      <img src="t2trr.jpg" alt="Trust to Train Relationship Reset: 4 Steps of Behavior Change. Step 01 Stop Negative Behaviors — unwanted behaviors are self-rewarding or stressful, stop practicing the problem. Step 02 Play With Your Dog — build confidence, motivation, emotional control, great relationship. Step 03 Train Your Dog — use the foundation to teach and practice basic skills. Step 04 Live With Your Dog — use the skills to navigate a safe happy life together." class="t2t-jpg-img" loading="lazy" />
-    </a>
+<section class="t2t-wrap" aria-labelledby="t2t-h">
+  <div class="t2t-head">
+    <h2 id="t2t-h">Trust to Train Relationship Reset</h2>
+    <p>4 steps of behavior change</p>
   </div>
+  <ol class="t2t-steps">
+    <li class="t2t-step">
+      <div class="t2t-num">01</div>
+      <div class="t2t-body">
+        <h3>Stop Negative Behaviors</h3>
+        <p>Unwanted behaviors are either self rewarding or extremely stressful. Either way, stop practicing the problem.</p>
+      </div>
+    </li>
+    <li class="t2t-step">
+      <div class="t2t-num">02</div>
+      <div class="t2t-body">
+        <h3>Play With Your Dog</h3>
+        <ul>
+          <li>Build Confidence</li>
+          <li>Motivation</li>
+          <li>Emotional Control</li>
+          <li>Great Relationship</li>
+        </ul>
+      </div>
+    </li>
+    <li class="t2t-step">
+      <div class="t2t-num">03</div>
+      <div class="t2t-body">
+        <h3>Train Your Dog</h3>
+        <p>Use the previous foundation to teach your dog and practice the basic skills needed to navigate their world together.</p>
+      </div>
+    </li>
+    <li class="t2t-step">
+      <div class="t2t-num">04</div>
+      <div class="t2t-body">
+        <h3>Live With Your Dog</h3>
+        <p>Use the skills you have built with your dog to navigate a safe, happy life together, solving problems as they arise.</p>
+      </div>
+    </li>
+  </ol>
 </section>
 
 <!-- ================= BIG PROOF ================= -->
