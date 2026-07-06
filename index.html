@@ -111,6 +111,7 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 @media (min-width:860px){.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 60px -26px rgba(26,22,19,.34);border-color:rgba(179,81,47,.35)}}
 .rcard-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a0806}
 .rcard-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.rcard-media img[src*="geordi-airport"]{object-position:center top}
 @media (min-width:860px){.rcard:hover .rcard-media img{transform:scale(1.04)}}
 .rcard-eyebrow{position:absolute;top:14px;left:14px;z-index:2;background:rgba(26,22,19,.82);color:#FFFDF9;font-family:var(--font-body);font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;backdrop-filter:blur(6px);max-width:calc(100% - 28px)}
 .rcard-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
@@ -277,7 +278,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 <section class="hero" aria-labelledby="hero-h">
   <div class="container">
     <div class="hero-head">
-      <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>Training for the dogs everyone else gave up on</span>
+      <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>If it's your first dog or your dog's last chance</span>
       <h1 id="hero-h">Your dog isn't broken. You just haven't been shown the <em>right plan</em> yet.</h1>
       <p class="hero-sub">For owners who've already tried 2 or 3 trainers and are done being told their dog is 'just like that.'</p>
       <p class="hero-sub">I help owners of difficult, misunderstood, or intense dogs build a life that actually works — using a relationship-based system that works in real life, not just in a training center.</p>
@@ -290,7 +291,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="router">
 
       <!-- Card 1 — Fix the Walk -->
-      <article class="rcard">
+      <article class="rcard rcard-clickable">
+        <a class="rcard-link" href="https://scoobandi.com/fix-the-walk/">
         <div class="rcard-media">
           <span class="rcard-eyebrow">Walks are the hardest part</span>
           <img src="geordi-airport-mobile.jpg" alt="A calm black-and-white dog walking on a loose leash beside its handler through a busy airport terminal." loading="eager" width="1080" height="1256" />
@@ -299,42 +301,41 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
           <h2 class="rcard-title">Fix the Walk</h2>
           <p class="rcard-desc">4-week virtual group class for owners whose dog is sweet at home but a lunatic on leash. Pulling, lunging, barking, dragging — we fix it live with your dog, on your street.</p>
           <div class="rcard-meta"><span class="m-accent">$795</span> · Next cohort: Mon, July 27</div>
-          <div class="rcard-cta">
-            <a href="https://scoobandi.com/fix-the-walk/" class="cta-solid" data-event="fix_the_walk_cta_click" data-location="router_card">See the class <span class="arr">→</span></a>
-          </div>
+          <span class="rcard-cta">See the class <span class="arr">→</span></span>
         </div>
+        </a>
       </article>
 
       <!-- Card 2 — Digital Dog School -->
-      <article class="rcard">
+      <article class="rcard rcard-clickable">
+        <a class="rcard-link" href="https://digitaldogschool.com/">
         <div class="rcard-media">
           <span class="rcard-eyebrow">Self-paced · Lifetime access</span>
           <img src="dds-silhouette.png" alt="Silhouette of a person and a seated dog looking at each other against a vivid sunset over water." loading="lazy" width="960" height="540" />
         </div>
         <div class="rcard-body">
           <h2 class="rcard-title">Digital Dog School</h2>
-          <p class="rcard-desc">The full system I use with complex cases, distilled into a self-paced course you can start tonight. If these lessons work on the hardest dogs, imagine what they'll do for yours.</p>
+          <p class="rcard-desc">A dog you can actually live with — from jumping and pulling to reactivity and anxiety. DDS gives you the foundation, the play, and the skills to handle whatever comes up.</p>
           <div class="rcard-meta"><span class="m-accent">$147</span> · One price · Start tonight</div>
-          <div class="rcard-cta">
-            <a href="https://digitaldogschool.com/" class="cta-ink" data-event="dds_cta_click" data-location="router_card">See what's inside <span class="arr">→</span></a>
-          </div>
+          <span class="rcard-cta">See what's inside <span class="arr">→</span></span>
         </div>
+        </a>
       </article>
 
       <!-- Card 3 — Free Consult -->
-      <article class="rcard is-feature">
+      <article class="rcard is-feature rcard-clickable">
+        <a class="rcard-link" href="https://scoobandi.com/consult/#scheduler">
         <div class="rcard-media">
           <span class="rcard-eyebrow">50-minute strategy call · Free</span>
           <img src="consult-joel.jpg" alt="Joel Harrison crouched in the woods with a young shepherd-type dog leaning calmly into him." loading="lazy" width="1400" height="896" />
         </div>
         <div class="rcard-body">
           <h2 class="rcard-title">Book a Consult</h2>
-          <p class="rcard-desc">For complex cases: aggression, bite history, dog-on-dog fighting, panic, cases where 2 or 3 other trainers already tried. Also the starting point for private lessons and board &amp; train.</p>
+          <p class="rcard-desc">For the hard cases — aggression, bite history, dog-on-dog fighting, panic, cases where two or three other trainers already tried. 50 minutes with Joel to figure out what your dog actually needs, and whether we're the right fit.</p>
           <div class="rcard-meta"><span class="m-accent">Free</span> · 50 minutes · With Joel</div>
-          <div class="rcard-cta">
-            <a href="https://scoobandi.com/consult/#scheduler" class="cta-solid" data-event="consult_cta_click" data-location="router_card">Book a consult <span class="arr">→</span></a>
-          </div>
+          <span class="rcard-cta">Book a consult <span class="arr">→</span></span>
         </div>
+        </a>
       </article>
 
     </div>
@@ -347,10 +348,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="pstrip-inner">
     <h2 id="pstrip-h" class="pstrip-lead">Real owners. Real dogs. Real results.</h2>
     <div class="pstrip-grid">
-      <button type="button" class="zoomable" data-zoom-src="proof-inky.png" data-zoom-alt="Five-star review from Inky Inkblot: two trainers and a vet behaviorist later, a consult with Joel changed everything." aria-label="Enlarge Inky Inkblot review">
-        <div class="frame"><img src="proof-inky.png" alt="Five-star review from Inky Inkblot — 'Two trainers and a vet behaviorist later, I did a consult with Joel. Should have done this sooner.'" loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
       <button type="button" class="zoomable" data-zoom-src="proof-tiktok.jpg" data-zoom-alt="TikTok comment: after two bad trainers, Joel actually explained everything and laid out steps and plans to follow." aria-label="Enlarge TikTok comment">
         <div class="frame"><img src="proof-tiktok.jpg" alt="TikTok comment praising Joel for explaining everything and laying out clear steps after two other trainers failed." loading="lazy" /></div>
         <span class="zoom-hint" aria-hidden="true">Tap to read</span>
@@ -380,6 +377,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     </div>
     <div class="mirror-close">
       <p>You're in the right place. Pick the path that fits and let's get to work.</p>
+      <a class="quiz-escape" href="https://dogs.scoobandi.com/quiz-4061">Still not sure which path? Take the 60-second quiz →</a>
       <a href="#top" data-scroll-top="1">Back to the paths ↑</a>
     </div>
   </div>
@@ -434,6 +432,45 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
+<section class="t2t-section" aria-labelledby="t2t-title">
+  <div class="t2t-inner">
+    <header class="t2t-header">
+      <h2 id="t2t-title" class="t2t-title">Trust to Train Relationship Reset</h2>
+      <p class="t2t-subtitle">4 Steps of Behavior Change</p>
+    </header>
+    <ol class="t2t-steps">
+      <li class="t2t-step">
+        <div class="t2t-step-num">01</div>
+        <div class="t2t-step-body">
+          <h3 class="t2t-step-title">Stop negative behaviors</h3>
+          <p class="t2t-step-copy">Unwanted behaviors are either self-rewarding or extremely stressful. Either way — stop practicing the problem.</p>
+        </div>
+      </li>
+      <li class="t2t-step">
+        <div class="t2t-step-num">02</div>
+        <div class="t2t-step-body">
+          <h3 class="t2t-step-title">Learn what your dog loves</h3>
+          <p class="t2t-step-copy">Play is mother nature's teaching tool. It's how you build confidence, motivation, emotional control — and a great relationship. Without this, nothing else sticks.</p>
+        </div>
+      </li>
+      <li class="t2t-step">
+        <div class="t2t-step-num">03</div>
+        <div class="t2t-step-body">
+          <h3 class="t2t-step-title">Train your dog</h3>
+          <p class="t2t-step-copy">Use the foundation you just built to teach and practice the skills you both need to navigate the world together.</p>
+        </div>
+      </li>
+      <li class="t2t-step">
+        <div class="t2t-step-num">04</div>
+        <div class="t2t-step-body">
+          <h3 class="t2t-step-title">Live with your dog</h3>
+          <p class="t2t-step-copy">Use the skills you've built to navigate a safe, happy life together — solving problems as they come up.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
 <!-- ================= BIG PROOF ================= -->
 <section class="sec bproof reveal" aria-labelledby="bproof-h">
   <div class="bproof-head">
@@ -475,6 +512,12 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </div>
     </div>
   </div>
+  <div class="proof-video" style="max-width:720px;margin:2rem auto;">
+  <h3 style="margin:0 0 0.75rem 0;font-size:1.15rem;text-align:center;">See a real virtual lesson</h3>
+  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
+    <iframe src="https://www.youtube.com/embed/YPsLtHM0nzo" title="See a real virtual lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+</div>
 </section>
 
 <!-- ================= FINAL ROUTING CTA ================= -->
@@ -482,13 +525,14 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="final-inner">
     <span class="eyebrow">You know what your dog needs</span>
     <h2 id="final-h">You know what your dog needs. Let's start.</h2>
+    <p class="final-guarantee">Every program is backed by a moneyback guarantee. If you do the work and it doesn't help your dog, you get your money back.</p>
     <div class="final-rows">
       <a href="https://scoobandi.com/fix-the-walk/" class="final-row" data-event="fix_the_walk_cta_click" data-location="final">
         <span class="fr-l"><span class="fr-tag">Walks</span><span class="fr-name">Fix the Walk</span></span>
         <span class="fr-arr" aria-hidden="true">→</span>
       </a>
       <a href="https://digitaldogschool.com/" class="final-row" data-event="dds_cta_click" data-location="final">
-        <span class="fr-l"><span class="fr-tag">Full system</span><span class="fr-name">Digital Dog School</span></span>
+        <span class="fr-l"><span class="fr-tag">A dog you can live with</span><span class="fr-name">Digital Dog School</span></span>
         <span class="fr-arr" aria-hidden="true">→</span>
       </a>
       <a href="https://scoobandi.com/consult/#scheduler" class="final-row" data-event="consult_cta_click" data-location="final">
@@ -497,6 +541,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </a>
     </div>
   </div>
+  <p class="final-resources"><a href="https://scoobandi.com/resources/">Browse free resources →</a></p>
 </section>
 
 <!-- ================= FOOTER ================= -->

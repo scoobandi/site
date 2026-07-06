@@ -138,6 +138,7 @@ h3 { font-size: 1.14rem; line-height: 1.18; }
   border-radius: var(--radius);
   background: rgba(255,255,255,.72);
 }
+
 .quiz-prompt p { margin: 0 0 4px; }
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 5vw, 54px); align-items: center; }
 .two-card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
@@ -403,3 +404,43 @@ details p { color: var(--muted); margin-bottom: 0; }
   body.has-sticky { padding-bottom: 112px; }
   .sidebar { position: static; }
 }
+
+/* Pass B Part 2 — Homepage additions */
+.rcard-clickable { position: relative; }
+.rcard-link { display: block; color: inherit; text-decoration: none; }
+.rcard-link:hover .rcard-cta,
+.rcard-link:focus .rcard-cta { text-decoration: underline; }
+.rcard-cta { display: inline-block; font-weight: 700; margin-top: 0.75rem; }
+
+.quiz-escape {
+  display: inline-block; margin: 0.75rem 0;
+  font-size: 0.95rem; opacity: 0.85; text-decoration: underline;
+}
+.quiz-escape:hover { opacity: 1; }
+
+.t2t-section { padding: 3rem 1rem; background: #fafaf5; color: #1a1613; }
+.t2t-inner { max-width: 900px; margin: 0 auto; }
+.t2t-header { text-align: center; margin-bottom: 2.5rem; }
+.t2t-title { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: 0 0 0.5rem 0; line-height: 1.15; }
+.t2t-subtitle { font-size: 1rem; opacity: 0.75; margin: 0; letter-spacing: 0.02em; }
+.t2t-steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; }
+.t2t-step {
+  display: grid; grid-template-columns: 72px 1fr; gap: 1rem; align-items: center;
+  background: #fff; border: 1px solid #eee; border-left: 4px solid #c9e26b;
+  border-radius: 10px; padding: 1.25rem;
+}
+.t2t-step-num { font-size: 1.75rem; font-weight: 800; color: #7a8f2a; text-align: center; line-height: 1; }
+.t2t-step-title { margin: 0 0 0.35rem 0; font-size: 1.15rem; }
+.t2t-step-copy { margin: 0; font-size: 0.98rem; line-height: 1.5; opacity: 0.9; }
+@media (max-width: 480px) {
+  .t2t-step { grid-template-columns: 56px 1fr; padding: 1rem; }
+  .t2t-step-num { font-size: 1.4rem; }
+}
+
+.final-guarantee {
+  max-width: 640px; margin: 1rem auto 2rem;
+  font-size: 0.95rem; opacity: 0.85; text-align: center; line-height: 1.5;
+}
+.final-resources { margin-top: 2rem; text-align: center; font-size: 0.95rem; }
+.final-resources a { color: inherit; text-decoration: underline; opacity: 0.8; }
+.final-resources a:hover { opacity: 1; }
