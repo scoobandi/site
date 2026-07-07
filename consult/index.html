@@ -276,6 +276,11 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 .case-story-img img{width:100%;height:auto;display:block}
 .case-story-tiktok{text-align:center;margin-top:1rem}
 .case-story-tiktok-label{margin:0 0 1rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.inky-tiles-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:2rem}
+@media (min-width:820px){.inky-tiles-grid{grid-template-columns:1fr 1fr 1fr;gap:1.25rem}}
+.inky-tile{margin:0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e8e3;box-shadow:0 10px 28px -14px rgba(0,0,0,.2)}
+.inky-tile img{width:100%;height:auto;display:block}
+.catie-video{max-width:900px;margin:1.5rem auto 0}
 </style>
 </head>
 <body>
@@ -491,19 +496,16 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <h2 id="inky-consult-h">Inky's Story</h2>
     <p class="case-story-lede">Inky's family had already been through two trainers and a vet behaviorist before Joel. Anxiety. Sudden inter-dog aggression. Hyper-fixation. This is what happened when they stopped trying to fix the behavior and started rebuilding the relationship.</p>
 
-    <div class="case-story-images">
-      <button type="button" class="zoomable case-story-img" data-zoom-src="/proof-inky.png" data-zoom-alt="Inky's beginning-of-consult review — 2 trainers and a vet behaviorist later, I did a consult with Joel." aria-label="Enlarge Inky consult review">
-        <div class="frame">
-          <span class="case-story-img-caption">The beginning — the consult</span>
-          <img src="/proof-inky.png" alt="Inky's beginning review" loading="lazy" />
-        </div>
-      </button>
-      <button type="button" class="zoomable case-story-img" data-zoom-src="/proof-dogperson-2.png" data-zoom-alt="Inky's follow-up review — Joel is THE dog person. Take the plunge." aria-label="Enlarge Inky endorsement review">
-        <div class="frame">
-          <span class="case-story-img-caption">The endorsement — a few months in</span>
-          <img src="/proof-dogperson-2.png" alt="Inky's endorsement review" loading="lazy" />
-        </div>
-      </button>
+    <div class="inky-tiles-grid">
+      <figure class="inky-tile">
+        <img src="/proof-inky-2.jpg" alt="Inky review part 1 — 2 trainers and a vet behaviorist later, I did a consult with Joel" loading="lazy" />
+      </figure>
+      <figure class="inky-tile">
+        <img src="/proof-different.jpg" alt="Inky review part 2 — Joel's way is different than the rest" loading="lazy" />
+      </figure>
+      <figure class="inky-tile">
+        <img src="/proof-dogperson-3.jpg" alt="Inky review part 3 — Joel is THE dog person, take the plunge" loading="lazy" />
+      </figure>
     </div>
 
     <div class="case-story-tiktok">
@@ -537,8 +539,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </button>
       <div class="proof-video" style="max-width:720px;margin:2rem auto;">
   <h3 style="margin:0 0 0.75rem 0;font-size:1.15rem;">Catie (@catieosaurus) on working with Joel</h3>
-  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-    <iframe src="https://www.youtube.com/embed/B5NJkhUgMjQ" title="Catie on working with Joel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  <div class="video-wrap catie-video">
+    <iframe src="https://www.youtube.com/embed/B5NJkhUgMjQ" title="Catie (@catieosaurus) on working with Joel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
   </div>
 </div>
     </div>
