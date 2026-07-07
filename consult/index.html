@@ -255,6 +255,27 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
   .reveal{opacity:1;transform:none}
 }
+
+.case-story{max-width:1000px;margin:4rem auto;padding:0 1.25rem}
+.case-story .eyebrow{display:inline-block;margin-bottom:.75rem}
+.case-story h2{margin:0 0 .75rem;line-height:1.15}
+.case-story-lede{max-width:640px;margin:0 0 2rem;line-height:1.6;color:#333}
+.case-story-video{margin:0 0 2rem}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:12px;overflow:hidden}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.case-story-messages{display:grid;grid-template-columns:1fr;gap:1.25rem}
+@media (min-width:820px){.case-story-messages{grid-template-columns:1fr 1fr}}
+.case-story-msg{background:#fff;border:1px solid #e6e8e3;border-left:3px solid #c9e26b;border-radius:10px;padding:1.25rem 1.5rem}
+.case-story-msg p{margin:0 0 .75rem;line-height:1.6;font-size:.95rem;color:#222}
+.case-story-msg footer{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#666}
+.case-story-images{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-bottom:2rem}
+@media (min-width:720px){.case-story-images{grid-template-columns:1fr 1fr}}
+.case-story-img{padding:0;background:transparent;border:0;cursor:zoom-in;position:relative;text-align:left;width:100%}
+.case-story-img .frame{border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e8e3;box-shadow:0 10px 28px -14px rgba(0,0,0,.2)}
+.case-story-img-caption{display:block;padding:.75rem 1rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#666;background:#faf9f5;border-bottom:1px solid #eef0eb}
+.case-story-img img{width:100%;height:auto;display:block}
+.case-story-tiktok{text-align:center;margin-top:1rem}
+.case-story-tiktok-label{margin:0 0 1rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
 </style>
 </head>
 <body>
@@ -291,7 +312,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </div>
       <figure class="hero-photo">
         <div class="frame">
-          <img src="consult-hero.jpg" alt="Joel Harrison crouched in the woods with a young shepherd-type dog leaning calmly into him." width="1600" height="1024" fetchpriority="high" />
+          <img src="/IMG_2794.jpeg" alt="Joel walking a blue pit bull on leash" loading="eager" />
           <span class="hero-badge">Free · 50 minutes · With Joel directly</span>
         </div>
       </figure>
@@ -305,7 +326,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="sec-eyebrow-row"><span class="eyebrow">Who this call is for</span></div>
     <div class="sec-head">
       <h2 id="fit-h" class="h-display">This is a specialist call. Let's be honest about who it serves.</h2>
-      <p>The consult is high-touch and direct. If your situation fits below, you're in exactly the right place. If it doesn't, we'll point you somewhere better — no hard feelings.</p>
+      <p>The consult is high-touch and direct. If your situation fits below, you're in exactly the right place. If it doesn't, we'll point you somewhere better.</p>
     </div>
     <div class="fit-grid">
       <div class="fit-col yes">
@@ -330,21 +351,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
           <li><span class="mk" aria-hidden="true">✕</span><div>You're looking for a magic quick fix.</div></li>
           <li><span class="mk" aria-hidden="true">✕</span><div>You want to be told you're doing everything right.</div></li>
         </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec pstrip reveal" aria-label="Dean and Deb testimonial placeholder">
-  <div class="container">
-    <div class="pstrip-grid">
-      <div class="zoomable">
-        <div class="frame">
-          <div class="testimonial-block" style="max-width:720px;margin:2rem auto;padding:1.5rem;border-left:3px solid #d4a017;">
-  <p style="margin:0 0 1rem 0;font-size:1rem;line-height:1.6;">"Hey Joel! I'm Luna's Dad and Deb's husband. I just wanted to thank you for taking the time and effort to speak with Deb last night about Luna and providing her some guidance and ideas for Luna. I've never seen Deb so excited, charged up, so elated about any trainer or program than yours. It looked like the weight of the world on her shoulders concerning Luna prior to your meeting last night. She has a renewed vigour now about Luna and it's amazing to see."</p>
-  <footer style="font-size:0.9rem;opacity:0.85;">— Dean, Luna's dad</footer>
-</div>
-        </div>
       </div>
     </div>
   </div>
@@ -400,32 +406,15 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="fmt-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <h3>In-person</h3>
         <p class="fmt-sub">Sharpsburg, GA · 30 miles south of Atlanta</p>
-        <ul class="fmt-list">
-          <li><span class="b" aria-hidden="true"></span><div>Just south of Atlanta — an easy drive for the metro area.</div></li>
-          <li><span class="b" aria-hidden="true"></span><div>Includes a walk together so Joel can see your dog in real conditions.</div></li>
-          <li><span class="b" aria-hidden="true"></span><div>Choose <strong>"In-person"</strong> as the option when you book below.</div></li>
-        </ul>
-        <div class="fmt-note">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 3 5v6c0 5.25 3.75 9.75 9 11 5.25-1.25 9-5.75 9-11V5l-9-4Z"/></svg>
-          <span>Proof of current vaccinations required for in-person visits.</span>
-        </div>
+        <p>In-person consults let me see the behavior in real time and evaluate your dog directly. We don't walk together — the focus is watching, listening, and building the plan. Just south of Atlanta — an easy drive for the metro area. Proof of current vaccinations required for in-person visits. Choose 'In-person' as the option when you book below.</p>
       </div>
       <div class="fmt-col">
         <div class="fmt-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8M12 18v3" stroke-linecap="round"/></svg></div>
         <h3>Virtual</h3>
         <p class="fmt-sub">Zoom · From anywhere in the world</p>
-        <ul class="fmt-list">
-          <li><span class="b" aria-hidden="true"></span><div>Joel has clients in the U.S., Canada, U.K., Australia, and across Europe.</div></li>
-          <li><span class="b" aria-hidden="true"></span><div>Perfect for a first look at behavior in your <strong>actual home environment</strong>.</div></li>
-          <li><span class="b" aria-hidden="true"></span><div>No travel, no waiting — book a slot and hop on.</div></li>
-        </ul>
-        <div class="fmt-note" style="background:var(--ink)">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1 15-4-4 1.4-1.4L11 14.2l5.6-5.6L18 10l-7 7Z"/></svg>
-          <span>Most owners start here — you can always come in later.</span>
-        </div>
+        <p>Virtual consults are how I share my expertise with dog owners worldwide. Most of the call is a conversation about the behavior — not always watching it happen live. You get the same depth of thinking, the same plan, and often the same breakthroughs. Joel has clients in the U.S., Canada, U.K., Australia, and across Europe. No travel, no waiting — book a slot and hop on.</p>
       </div>
     </div>
-    <p class="format-micro"><strong>Not sure which?</strong> Book virtual — you can always come in later if it's the right fit.</p>
   </div>
 </section>
 
@@ -458,36 +447,70 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="ar-ico" aria-hidden="true">1:1</div>
         <div>
           <h3>Private Unlimited Lessons with Joel</h3>
-          <p>For owners who want direct 1-on-1 access, ongoing, until the case is solved.</p>
-          <p class="price-anchor">Private programs are priced by case complexity - starting in the low four figures. Discussed on the call.</p>
+          <p>Unlimited 1-on-1 private lessons start at $995. Payment plans available. Digital Dog School is included.</p>
         </div>
       </div>
       <div class="after-row">
         <div class="ar-ico" aria-hidden="true">B&amp;T</div>
         <div>
           <h3>Board &amp; Train</h3>
-          <p>For owners whose dogs need a full behavioral reset in Joel's care.</p>
-          <p class="price-anchor">Board &amp; Train is priced by case, length, and dog. Discussed on the call - most cases land in the mid four figures.</p>
-        </div>
-      </div>
-      <div class="after-row">
-        <div class="ar-ico" aria-hidden="true">+</div>
-        <div>
-          <h3>Digital Dog School with 1-on-1 support</h3>
-          <p>For owners who want the course <em>plus</em> regular check-ins with Joel.</p>
-          <p class="price-anchor">$147 one-time.</p>
-        </div>
-      </div>
-      <div class="after-row">
-        <div class="ar-ico" aria-hidden="true">DIY</div>
-        <div>
-          <h3>A DIY plan on the Digital Dog School course</h3>
-          <p>If that's the right fit, Joel will tell you — and hand you the plan to run it yourself.</p>
-          <p class="price-anchor">Starts at $147.</p>
+          <p>Board and train programs start at $2,150. Priced by case, length, and dog. Discussed on the call.</p>
         </div>
       </div>
     </div>
     <p class="after-close">Whatever the right move is, you'll leave the call knowing.</p>
+  </div>
+</section>
+
+<section class="case-story luna-story reveal" aria-labelledby="luna-h">
+  <div class="case-story-inner">
+    <span class="eyebrow">Case study</span>
+    <h2 id="luna-h">Luna's Story</h2>
+    <p class="case-story-lede">8 homes, 2 vet behaviorists, and 3 trainers before we finally started finding success. This is what a consult with Joel unlocked.</p>
+
+    <div class="case-story-video">
+      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/IeybbYUZGyA" title="Luna's before and after" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+
+    <div class="case-story-messages">
+      <div class="case-story-msg">
+        <p>"Hey Joel! I'm Luna's Dad and Deb's husband. I just wanted to thank you for taking the time and effort to speak with Deb last night about Luna and providing her some guidance and ideas for Luna. I must tell you that I've never seen Deb so excited, charged up, so elated about any trainer or program than yours. It looked like the weight of the world on her shoulders concerning Luna prior to your meeting last night. She has a renewed vigour now about Luna and it's amazing to see."</p>
+        <footer>— Dean, Luna's dad · after the consult</footer>
+      </div>
+      <div class="case-story-msg">
+        <p>"In truth, all of this is because of Deb. She's spent countless hours with Luna just to get her to this point. There were many times at the beginning that all of us wondered what did we just get ourselves into, but Deb and Luna have bonded hard together and Luna absolutely loves her mom. Deb is the first person that Luna rubs to for comfort, love and security when big scary things come out. I know you two will do great things together for Luna."</p>
+        <footer>— Dean, Luna's dad · a few weeks later</footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-story inky-story-consult reveal" aria-labelledby="inky-consult-h">
+  <div class="case-story-inner">
+    <span class="eyebrow">Case study</span>
+    <h2 id="inky-consult-h">Inky's Story</h2>
+    <p class="case-story-lede">Inky's family had already been through two trainers and a vet behaviorist before Joel. Anxiety. Sudden inter-dog aggression. Hyper-fixation. This is what happened when they stopped trying to fix the behavior and started rebuilding the relationship.</p>
+
+    <div class="case-story-images">
+      <button type="button" class="zoomable case-story-img" data-zoom-src="/proof-inky.png" data-zoom-alt="Inky's beginning-of-consult review — 2 trainers and a vet behaviorist later, I did a consult with Joel." aria-label="Enlarge Inky consult review">
+        <div class="frame">
+          <span class="case-story-img-caption">The beginning — the consult</span>
+          <img src="/proof-inky.png" alt="Inky's beginning review" loading="lazy" />
+        </div>
+      </button>
+      <button type="button" class="zoomable case-story-img" data-zoom-src="/proof-dogperson-2.png" data-zoom-alt="Inky's follow-up review — Joel is THE dog person. Take the plunge." aria-label="Enlarge Inky endorsement review">
+        <div class="frame">
+          <span class="case-story-img-caption">The endorsement — a few months in</span>
+          <img src="/proof-dogperson-2.png" alt="Inky's endorsement review" loading="lazy" />
+        </div>
+      </button>
+    </div>
+
+    <div class="case-story-tiktok">
+      <p class="case-story-tiktok-label">1.5 years later — the biggest win yet</p>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@inkyinkblot/video/7659110650999754014" data-video-id="7659110650999754014" style="max-width: 605px;min-width: 325px;margin:0 auto;"><section><a target="_blank" title="@inkyinkblot" href="https://www.tiktok.com/@inkyinkblot?refer=embed">@inkyinkblot</a> @Scoob &amp; I Dog training @Leah McManus 1.5 years of putting in the work. Through tears, failures, small wins, and baby steps of progress, board &amp; train helped us progress pass big hurdles, but we still had a lot of work to do. We finally got the biggest win yet. 🙌💪 <a title="dogtraining" target="_blank" href="https://www.tiktok.com/tag/dogtraining?refer=embed">#dogtraining</a> <a title="nevergiveup" target="_blank" href="https://www.tiktok.com/tag/nevergiveup?refer=embed">#nevergiveup</a> <a title="pitbull" target="_blank" href="https://www.tiktok.com/tag/pitbull?refer=embed">#pitbull</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ A Simple Life - Morunas" href="https://www.tiktok.com/music/A-Simple-Life-7486702176300222480?refer=embed">♬ A Simple Life - Morunas</a></section></blockquote>
+      <script async src="https://www.tiktok.com/embed.js"></script>
+    </div>
   </div>
 </section>
 
@@ -500,10 +523,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       <p>Not stock testimonials. Actual reviews from owners who found Joel after other trainers, classes, and even vet behaviorists. Tap any to read the whole thing.</p>
     </div>
     <div class="pstrip-grid">
-      <button type="button" class="zoomable" data-zoom-src="proof-inky.png" data-zoom-alt="Five-star review from Inky Inkblot: two trainers and a vet behaviorist later, a consult with Joel changed everything." aria-label="Enlarge Inky Inkblot review">
-        <div class="frame"><img src="proof-inky.png" alt="Five-star review from Inky Inkblot — 'Two trainers and a vet behaviorist later, I did a consult with Joel. Should have done this sooner.'" loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
       <button type="button" class="zoomable" data-zoom-src="proof-dogperson.png" data-zoom-alt="Review: 'Joel is THE dog person. He will hear you out, then provide the encouragement and steps you need.'" aria-label="Enlarge 'Joel is THE dog person' review">
         <div class="frame"><img src="proof-dogperson.png" alt="Client review: 'Joel is THE dog person. He will hear you out, then provide the encouragement and steps you need.'" loading="lazy" /></div>
         <span class="zoom-hint" aria-hidden="true">Tap to read</span>
