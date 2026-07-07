@@ -1326,6 +1326,37 @@
 
   .dds-highlight{background:#f4faea;border-top:1px solid #d4e6a8;border-bottom:1px solid #d4e6a8;padding:3rem 1.25rem;margin:2rem 0}
   .dds-highlight .eyebrow{color:#5a7d1a}
+
+/* Lightbox modal */
+.lb{position:fixed;inset:0;z-index:1000;background:rgba(10,8,6,.93);display:none;align-items:center;justify-content:center;padding:40px 20px;opacity:0;transition:opacity .25s ease}
+.lb.is-open{display:flex;opacity:1}
+.lb-img{max-width:min(720px,96vw);max-height:88vh;width:auto;height:auto;border-radius:10px;box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.lb-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,253,249,.14);color:#FFFDF9;display:flex;align-items:center;justify-content:center;font-size:24px;line-height:1;cursor:pointer;transition:background .2s ease;border:0}
+.lb-close:hover{background:rgba(255,253,249,.24)}
+
+/* Zoomable review buttons */
+.zoomable{padding:0;background:transparent;border:0;cursor:zoom-in;position:relative;display:block;width:100%;text-align:left}
+.zoomable .frame{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 40px -22px rgba(26,22,19,.28);transition:transform .3s ease, box-shadow .3s ease}
+.zoomable:hover .frame{transform:translateY(-3px);box-shadow:0 22px 54px -24px rgba(26,22,19,.4)}
+.zoomable .frame img{width:100%;height:auto;display:block}
+.zoomable .zoom-hint{position:absolute;bottom:12px;right:12px;background:rgba(26,22,19,.82);color:#FFFDF9;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:999px;pointer-events:none;opacity:.85;backdrop-filter:blur(6px)}
+.zoomable:hover .zoom-hint{opacity:1;background:#c9e26b;color:#0f0f0f}
+
+/* Pre-price proof + guarantee strip */
+.ftw-preprice{max-width:1080px;margin:3rem auto 0;padding:0 1.25rem}
+.ftw-preprice-inner{display:grid;grid-template-columns:1fr;gap:1.5rem}
+@media (min-width:820px){.ftw-preprice-inner{grid-template-columns:2fr 1fr;align-items:stretch}}
+.ftw-preprice-quotes{display:grid;grid-template-columns:1fr;gap:1rem}
+@media (min-width:640px){.ftw-preprice-quotes{grid-template-columns:1fr 1fr;align-items:stretch}}
+.ftw-preprice-card{width:100%;height:100%}
+.ftw-preprice-card .frame{height:100%}
+.ftw-preprice-card .frame img{width:100%;height:100%;object-fit:cover;display:block}
+.ftw-quote{margin:0;background:#fff;border:1px solid #e6e8e3;border-left:3px solid #c9e26b;border-radius:10px;padding:1.15rem 1.35rem;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:center}
+.ftw-quote p{margin:0 0 .5rem;line-height:1.5;color:#222;font-size:.98rem}
+.ftw-quote footer{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#666}
+.ftw-guarantee-badge{background:#0f2f1a;color:#f4faea;border-radius:12px;padding:1.35rem 1.5rem;display:flex;flex-direction:column;justify-content:center}
+.ftw-guarantee-badge-title{font-family:var(--serif);font-size:1.35rem;margin-bottom:.5rem;letter-spacing:.02em}
+.ftw-guarantee-badge p{margin:0;line-height:1.5;font-size:.95rem;opacity:.92}
 </style>
 </head>
 <body>
@@ -1381,6 +1412,27 @@
       and real-world reliability &mdash; without turning your life into a six-month dog training project.
     </p>
 
+<section class="ftw-preprice" aria-label="Proof and guarantee before pricing">
+  <div class="ftw-preprice-inner">
+    <div class="ftw-preprice-quotes">
+      <button type="button" class="zoomable ftw-preprice-card" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" data-zoom-alt="Oakley — 'I was instantly hooked.' Becky Morris: In just the 6 week class my reactive dog walks so well on the leash and doesn't react to other dogs outside or other people walking by like he always did." aria-label="Enlarge Oakley story">
+        <div class="frame">
+          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" alt="Oakley — 'I was instantly hooked.' In just the 6 week class my reactive dog walks so well on the leash." loading="lazy" />
+        </div>
+        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+      </button>
+      <blockquote class="ftw-quote">
+        <p>"Joel's way is different. These are not corrections and harsh methods that focus on dominating your dog. Your dog is going to think you are the best person ever."</p>
+        <footer>— Verified client review</footer>
+      </blockquote>
+    </div>
+    <div class="ftw-guarantee-badge">
+      <div class="ftw-guarantee-badge-title">Moneyback Guarantee</div>
+      <p>Do the work. If it doesn't help your dog, you get your money back. Full terms below.</p>
+    </div>
+  </div>
+</section>
+
     <div id="enroll" class="offer-card reveal">
       <div class="offer-name">Fix the Walk</div>
       <div class="price-row">
@@ -1397,10 +1449,10 @@
         Backed by the <strong>Moneyback Guarantee</strong>
       </div>
       <div class="meta-row">
-        <span><span class="tick">✓</span> 4-week live virtual class</span>
-        <span><span class="tick">✓</span> Live coaching video reviews</span>
-        <span><span class="tick">✓</span> Digital Dog School included</span>
-        <span><span class="tick">✓</span> Class starts Mon, July 27</span>
+        <span><span class="tick">✓</span> Walks you can actually enjoy in 4 weeks</span>
+        <span><span class="tick">✓</span> Personal feedback on your dog — not a hypothetical one</span>
+        <span><span class="tick">✓</span> Digital Dog School foundation included ($147 value)</span>
+        <span><span class="tick">✓</span> Next cohort starts Monday, July 27</span>
       </div>
     </div>
   </div>
@@ -1664,8 +1716,12 @@
       <article class="proof-card reveal">
         <div class="proof-media">
           <span class="chip">Virtual client</span>
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png"
-               alt="Five-star Google review from Megan Wolf about virtual training with Joel" />
+          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" data-zoom-alt="Five-star Google review from Megan Wolf about virtual training with Joel" aria-label="Enlarge Megan Wolf review">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" alt="Five-star Google review from Megan Wolf about virtual training with Joel" loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
         </div>
         <div class="proof-body">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -1679,8 +1735,12 @@
       <article class="proof-card reveal">
         <div class="proof-media">
           <span class="chip">Real-life outing</span>
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png"
-               alt="Emmylou&rsquo;s owner sharing how Emmylou handled a busy Tractor Supply outing without meltdowns" />
+          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" data-zoom-alt="Emmylou's owner sharing how Emmylou handled a busy Tractor Supply outing without meltdowns" aria-label="Enlarge Emmylou owner review">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" alt="Emmylou's owner sharing how Emmylou handled a busy Tractor Supply outing without meltdowns" loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
         </div>
         <div class="proof-body">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -1694,8 +1754,12 @@
       <article class="proof-card reveal">
         <div class="proof-media">
           <span class="chip">Walk transformation</span>
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif"
-               alt="Woman walking a dog calmly past another dog &mdash; real training result" />
+          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" data-zoom-alt="Woman walking a dog calmly past another dog — real training result" aria-label="Enlarge walk transformation clip">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" alt="Woman walking a dog calmly past another dog — real training result" loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
         </div>
         <div class="proof-body">
           <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -1705,6 +1769,30 @@
           <cite>Verified client review</cite>
         </div>
       </article>
+
+<!-- New: Bowser (Adrienne Scott) -->
+<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" data-zoom-alt="Bowser's owner Adrienne Scott — 'You changed our lives for the better.' A genetically strong, aggressive dog now happier and better on the leash." aria-label="Enlarge Bowser review">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" alt="Bowser's owner Adrienne Scott — 'You changed our lives for the better.' A genetically strong, aggressive dog now happier and better on the leash." loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
+
+<!-- New: Indi (Brittany Hicks) -->
+<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" data-zoom-alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." aria-label="Enlarge Indi review">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
+
+<!-- New: Daniella TikTok comment -->
+<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" data-zoom-alt="TikTok comment from Daniella Camen — 'I did virtual training with @scoobandi and she went from not being able to walk passed other dogs to being able to roll in the grass while other dogs walked passed her. He helped a lot with her anxious behaviors.'" aria-label="Enlarge Daniella TikTok comment">
+  <div class="frame">
+    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" alt="TikTok comment from Daniella Camen — 'I did virtual training with @scoobandi and she went from not being able to walk passed other dogs to being able to roll in the grass while other dogs walked passed her.'" loading="lazy" />
+  </div>
+  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+</button>
 
       <article class="proof-card reveal">
         <div class="proof-body">
@@ -2056,6 +2144,28 @@
   }, { threshold: 0.35 });
   sections.forEach(function(s){ io.observe(s); });
 }());
+</script>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Close">✕</button>
+  <img class="lb-img" id="lb-img" alt="" />
+</div>
+
+<script>
+/* ---- Lightbox ---- */
+(function(){
+  var lb=document.getElementById('lb'), img=document.getElementById('lb-img'), closeBtn=document.getElementById('lb-close');
+  if(!lb||!img||!closeBtn) return;
+  function open(src,alt){ img.src=src; img.alt=alt||''; lb.classList.add('is-open'); document.body.style.overflow='hidden'; }
+  function close(){ lb.classList.remove('is-open'); document.body.style.overflow=''; setTimeout(function(){ img.src=''; }, 250); }
+  document.querySelectorAll('.zoomable').forEach(function(btn){
+    btn.addEventListener('click', function(){ open(btn.dataset.zoomSrc, btn.dataset.zoomAlt); });
+  });
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lb.classList.contains('is-open')) close(); });
+})();
 </script>
 
 </body>
