@@ -280,13 +280,30 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 @media (min-width:820px){.inky-tiles-grid{grid-template-columns:1fr 1fr 1fr;gap:1.25rem}}
 .inky-tile{margin:0;border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e6e8e3;box-shadow:0 10px 28px -14px rgba(0,0,0,.2)}
 .inky-tile img{width:100%;height:auto;display:block}
-.catie-video{max-width:900px;margin:1.5rem auto 0}
+.catie-video{max-width:1100px;margin:1.5rem auto 0}
 .sec.method{padding:3.5rem 1.25rem}
 .sec.method .container{max-width:820px;margin:0 auto;text-align:center}
 .sec.method .eyebrow{display:inline-block;margin-bottom:.75rem}
 .sec.method h2{margin:0 0 1.25rem;line-height:1.1}
 .method-lede{max-width:720px;margin:0 auto 1.5rem;line-height:1.7;font-size:1.05rem}
 .method-tag{max-width:640px;margin:0 auto;line-height:1.6;font-size:.95rem;color:#555;font-style:normal}
+.hero-vsl{max-width:420px;margin:0 auto;text-align:center}
+.hero-vsl-intro{margin:0 0 .75rem;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:#333}
+.hero-vsl-thumb{position:relative;display:block;width:100%;padding:0;border:0;background:transparent;cursor:pointer;border-radius:14px;overflow:hidden;box-shadow:0 12px 32px -14px rgba(0,0,0,.3);aspect-ratio:9/16}
+.hero-vsl-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
+.hero-vsl-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform .2s ease}
+.hero-vsl-thumb:hover .hero-vsl-play{transform:scale(1.06)}
+.hero-vsl-player{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 12px 32px -14px rgba(0,0,0,.3)}
+.hero-vsl-frame{position:absolute;inset:0}
+.hero-vsl-frame iframe{width:100%;height:100%;border:0;display:block}
+@media (min-width:900px){.hero-vsl{max-width:360px}}
+.format-bullets{list-style:disc;padding-left:1.25rem;margin:1rem 0 0}
+.format-bullets li{margin:.5rem 0;line-height:1.6}
+.method-objection{max-width:720px;margin:2.5rem auto 0;padding:1.5rem 1.75rem;background:#faf9f5;border:1px solid #e6e8e3;border-left:3px solid #c9e26b;border-radius:10px;text-align:left}
+.method-objection-eyebrow{margin:0 0 .75rem;font-size:1.05rem;font-weight:700;color:#222}
+.method-objection-body{margin:0;line-height:1.7;font-size:.98rem;color:#222}
+.method-objection-body strong{font-weight:700}
+.proof-video{grid-column:1 / -1;width:100%;max-width:1100px!important}
 </style>
 </head>
 <body>
@@ -321,12 +338,21 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
           Booked by owners across the U.S., Canada, U.K., Australia, and Europe.
         </p>
       </div>
-      <figure class="hero-photo">
-        <div class="frame">
-          <img src="/IMG_2794.jpeg" alt="Joel walking a blue pit bull on leash" loading="eager" />
-          <span class="hero-badge">Free · 50 minutes · With Joel directly</span>
-        </div>
-      </figure>
+      <div class="hero-vsl">
+  <p class="hero-vsl-intro">Watch this short video to learn more.</p>
+  <button type="button" class="hero-vsl-thumb" id="hero-vsl-thumb" aria-label="Play video from Joel">
+    <img src="/IMG_2794.jpeg" alt="Joel walking a blue pit bull on leash" loading="eager" />
+    <span class="hero-vsl-play" aria-hidden="true">
+      <svg viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)"/>
+        <path d="M25 20 L47 32 L25 44 Z" fill="#fff"/>
+      </svg>
+    </span>
+  </button>
+  <div class="hero-vsl-player" id="hero-vsl-player" hidden>
+    <div class="hero-vsl-frame"></div>
+  </div>
+</div>
     </div>
   </div>
 </section>
@@ -417,13 +443,23 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="fmt-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7Z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5"/></svg></div>
         <h3>In-person</h3>
         <p class="fmt-sub">Sharpsburg, GA · 30 miles south of Atlanta</p>
-        <p>In-person consults let me see the behavior in real time and evaluate your dog directly. We don't walk together — the focus is watching, listening, and building the plan. Just south of Atlanta — an easy drive for the metro area. Proof of current vaccinations required for in-person visits. Choose 'In-person' as the option when you book below.</p>
+        <ul class="format-bullets">
+  <li>I evaluate your dog in real time — watching behavior, body language, and how they read the environment.</li>
+  <li>Just south of Atlanta, an easy drive for the metro area.</li>
+  <li>Proof of current vaccinations required.</li>
+  <li>Choose "In-person" as the option when you book below.</li>
+</ul>
       </div>
       <div class="fmt-col">
         <div class="fmt-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8M12 18v3" stroke-linecap="round"/></svg></div>
         <h3>Virtual</h3>
         <p class="fmt-sub">Zoom · From anywhere in the world</p>
-        <p>Virtual consults are how I share my expertise with dog owners worldwide. Most of the call is a conversation about the behavior — not always watching it happen live. You get the same depth of thinking, the same plan, and often the same breakthroughs. Joel has clients in the U.S., Canada, U.K., Australia, and across Europe. No travel, no waiting — book a slot and hop on.</p>
+        <ul class="format-bullets">
+  <li>We'll have a conversation about the behavior. If there's something you want me to see, send me a video before your appointment.</li>
+  <li>Joel has clients in the U.S., Canada, U.K., Australia, and across Europe.</li>
+  <li>You get the same depth of thinking, the same plan, and the same breakthroughs.</li>
+  <li>No travel, no waiting — book a slot and hop on.</li>
+</ul>
       </div>
     </div>
   </div>
@@ -435,6 +471,10 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <h2 id="method-h" class="h-display">One method. Every dog.</h2>
     <p class="method-lede">Play is mother nature's teaching tool. Every skill your dog needs — attention, motivation, confidence, emotional control, a great relationship with you — is built through play, not drilled through obedience. That's why the training sticks. That's why the walks feel different. That's why the dog you're living with in 6 months feels like a different animal. It's not magic. It's play, used on purpose.</p>
     <p class="method-tag">Everything Joel does — private lessons, board and train, Digital Dog School, Fix the Walk — runs on the same method: the Trust to Train Relationship Reset.</p>
+    <div class="method-objection">
+  <p class="method-objection-eyebrow">"My dog doesn't play."</p>
+  <p class="method-objection-body">There can be lots of different reasons why dogs don't play. Whatever your dog's reasons are, this is not something to be overlooked. Play is basically experimentation that happens when a being feels safe enough to do so — whether they don't feel safe, don't understand, or don't see the point. Finding something they love and giving it to them regularly to help them build confidence, motivation, and most importantly a stronger relationship <strong>IS THE PATH TO SUCCESS.</strong></p>
+</div>
   </div>
 </section>
 
@@ -443,7 +483,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="container">
     <div class="sec-eyebrow-row"><span class="eyebrow">Real lesson preview</span></div>
     <div class="sec-head">
-      <h2 id="lesson-video-h" class="h-display">See a real lesson from inside the program</h2>
+      <h2 id="lesson-video-h" class="h-display">Watch a real lesson. Edited to tell the story, not to look impressive.</h2>
       <p>Before you book, watch a two-minute clip from an actual coaching session. It's not edited to look impressive. It's just what a lesson looks like when the camera happens to be on.</p>
     </div>
     <div>
@@ -516,7 +556,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <img src="/proof-inky-2.jpg" alt="Inky review part 1 — 2 trainers and a vet behaviorist later, I did a consult with Joel" loading="lazy" />
       </figure>
       <figure class="inky-tile">
-        <img src="/proof-different.jpg" alt="Inky review part 2 — Joel's way is different than the rest" loading="lazy" />
+        <img src="/proof-different.jpg" alt="/proof-different.jpg" loading="lazy" />
       </figure>
       <figure class="inky-tile">
         <img src="/proof-dogperson-3.jpg" alt="Inky review part 3 — Joel is THE dog person, take the plunge" loading="lazy" />
@@ -540,16 +580,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       <p>Not stock testimonials. Actual reviews from owners who found Joel after other trainers, classes, and even vet behaviorists. Tap any to read the whole thing.</p>
     </div>
     <div class="pstrip-grid">
-      <button type="button" class="zoomable" data-zoom-src="proof-dogperson.png" data-zoom-alt="Review: 'Joel is THE dog person. He will hear you out, then provide the encouragement and steps you need.'" aria-label="Enlarge 'Joel is THE dog person' review">
-        <div class="frame"><img src="proof-dogperson.png" alt="Client review: 'Joel is THE dog person. He will hear you out, then provide the encouragement and steps you need.'" loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
       <button type="button" class="zoomable" data-zoom-src="proof-sonia.png" data-zoom-alt="Five-star review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." aria-label="Enlarge Sonia Bologa review">
         <div class="frame"><img src="proof-sonia.png" alt="Five-star Google review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
-      <button type="button" class="zoomable" data-zoom-src="proof-different.png" data-zoom-alt="Review: 'Joel's way is different than the rest. These are not corrections and harsh methods that focus on dominating your dog.'" aria-label="Enlarge review about Joel's approach">
-        <div class="frame"><img src="proof-different.png" alt="Client review: 'Not all dogs are the same... Joel's way is different than the rest. These are not corrections and harsh methods that focus on dominating your dog.'" loading="lazy" /></div>
         <span class="zoom-hint" aria-hidden="true">Tap to read</span>
       </button>
       <div class="proof-video" style="max-width:720px;margin:2rem auto;">
@@ -591,12 +623,13 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <p class="faq-a">Yes — that's the point. The in-person visit includes a walk together so Joel can see your dog in real conditions. Proof of current vaccinations is required.</p>
       </details>
       <details class="faq-item">
-        <summary>What if I already have another trainer?</summary>
-        <p class="faq-a">Fine. Joel is not tribal about it. He'll evaluate your situation honestly and tell you what he'd do — whether that involves him or not.</p>
-      </details>
-      <details class="faq-item">
         <summary>Is there any obligation to book something after?</summary>
         <p class="faq-a">No. Book the consult, take the plan, and do what you want with it. If working together is the right move, you'll know — but there's no pressure.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What if I already have a trainer?</summary>
+        <p class="faq-a">If you're already in a training program and everything is going well, STAY THERE. Many dog trainers develop their own style and process — or if they didn't, they learned from someone who did. From one trainer to another, it's not always better or worse — maybe just different. Which means consulting with 2 different trainers could just end up being more confusing for you and the dog.</p>
+        <p class="faq-a">If you're unhappy with your current progress, or want to know if there's more that can be done for your dog, then you should ABSOLUTELY book a call.</p>
       </details>
     </div>
   </div>
@@ -736,6 +769,18 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     if(eventName) sendEvent(eventName, {location:location, href:href});
     if(href.indexOf('dogs.scoobandi.com/quiz-4061')!==-1) sendEvent('quiz_click', {location:location, href:href});
     if(href.indexOf('#scheduler')!==-1) sendEvent('consult_click', {location:location, href:href});
+  });
+})();
+
+(function(){
+  var thumb=document.getElementById('hero-vsl-thumb');
+  var player=document.getElementById('hero-vsl-player');
+  if(!thumb||!player) return;
+  thumb.addEventListener('click',function(){
+    var frame=player.querySelector('.hero-vsl-frame');
+    frame.innerHTML='<iframe src="https://www.youtube.com/embed/vR1wAM63CP4?autoplay=1&rel=0&modestbranding=1" title="Watch this short video from Joel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    thumb.hidden=true;
+    player.hidden=false;
   });
 })();
 </script>
