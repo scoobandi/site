@@ -1327,36 +1327,66 @@
   .dds-highlight{background:#f4faea;border-top:1px solid #d4e6a8;border-bottom:1px solid #d4e6a8;padding:3rem 1.25rem;margin:2rem 0}
   .dds-highlight .eyebrow{color:#5a7d1a}
 
-/* Lightbox modal */
-.lb{position:fixed;inset:0;z-index:1000;background:rgba(10,8,6,.93);display:none;align-items:center;justify-content:center;padding:40px 20px;opacity:0;transition:opacity .25s ease}
-.lb.is-open{display:flex;opacity:1}
-.lb-img{max-width:min(720px,96vw);max-height:88vh;width:auto;height:auto;border-radius:10px;box-shadow:0 40px 100px rgba(0,0,0,.6)}
-.lb-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border-radius:50%;background:rgba(255,253,249,.14);color:#FFFDF9;display:flex;align-items:center;justify-content:center;font-size:24px;line-height:1;cursor:pointer;transition:background .2s ease;border:0}
-.lb-close:hover{background:rgba(255,253,249,.24)}
+/* Inline screenshot proof */
+.proof-media img.proof-contain{object-fit:contain;background:#fff}
+.proof-lightbox-trigger{position:relative;display:block;width:100%;height:100%;padding:0;border:0;background:#fff;color:inherit;text-align:left;cursor:zoom-in}
+.proof-lightbox-trigger:focus-visible{outline:3px solid rgba(179,81,47,.38);outline-offset:-3px}
+.proof-open-hint{position:absolute;right:10px;bottom:10px;z-index:3;display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:rgba(26,22,19,.86);color:#fffdf9;padding:7px 10px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;line-height:1;box-shadow:0 10px 24px -18px rgba(26,22,19,.7);pointer-events:none}
+.proof-open-hint::before{content:"";width:11px;height:11px;border:2px solid currentColor;border-radius:50%;box-sizing:border-box}
+.proof-open-hint::after{content:"Tap to read"}
+.proof-open-hint .handle{position:absolute;width:6px;height:2px;background:currentColor;left:18px;top:18px;transform:rotate(45deg);border-radius:999px}
+@media (min-width:760px){.proof-open-hint::after{content:"Click to enlarge"}}
 
-/* Zoomable review buttons */
-.zoomable{padding:0;background:transparent;border:0;cursor:zoom-in;position:relative;display:block;width:100%;text-align:left}
-.zoomable .frame{border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 14px 40px -22px rgba(26,22,19,.28);transition:transform .3s ease, box-shadow .3s ease}
-.zoomable:hover .frame{transform:translateY(-3px);box-shadow:0 22px 54px -24px rgba(26,22,19,.4)}
-.zoomable .frame img{width:100%;height:auto;display:block}
-.zoomable .zoom-hint{position:absolute;bottom:12px;right:12px;background:rgba(26,22,19,.82);color:#FFFDF9;font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:999px;pointer-events:none;opacity:.85;backdrop-filter:blur(6px)}
-.zoomable:hover .zoom-hint{opacity:1;background:#c9e26b;color:#0f0f0f}
+.proof-lb{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(10,8,6,.9)}
+.proof-lb.is-open{display:flex}
+.proof-lb-backdrop{position:absolute;inset:0;border:0;background:transparent;cursor:zoom-out}
+.proof-lb-frame{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;width:100%;max-width:min(1080px,96vw);max-height:calc(100vh - 56px);padding:0}
+.proof-lb-img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 76px);object-fit:contain;border-radius:12px;background:#fff;box-shadow:0 34px 90px -36px rgba(0,0,0,.78)}
+.proof-lb-close{position:absolute;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,253,249,.28);background:rgba(26,22,19,.78);color:#fffdf9;font-size:26px;line-height:1;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
+.proof-lb-close:focus-visible{outline:3px solid rgba(255,253,249,.62);outline-offset:3px}
+@media (min-width:760px){.proof-lb{padding:32px}.proof-lb-frame{max-height:calc(100vh - 80px)}.proof-lb-img{max-height:calc(100vh - 96px)}}
 
-/* Pre-price proof + guarantee strip */
-.ftw-preprice{max-width:1080px;margin:3rem auto 0;padding:0 1.25rem}
-.ftw-preprice-inner{display:grid;grid-template-columns:1fr;gap:1.5rem}
-@media (min-width:820px){.ftw-preprice-inner{grid-template-columns:2fr 1fr;align-items:stretch}}
-.ftw-preprice-quotes{display:grid;grid-template-columns:1fr;gap:1rem}
-@media (min-width:640px){.ftw-preprice-quotes{grid-template-columns:1fr 1fr;align-items:stretch}}
-.ftw-preprice-card{width:100%;height:100%}
-.ftw-preprice-card .frame{height:100%}
-.ftw-preprice-card .frame img{width:100%;height:100%;object-fit:cover;display:block}
-.ftw-quote{margin:0;background:#fff;border:1px solid #e6e8e3;border-left:3px solid #c9e26b;border-radius:10px;padding:1.15rem 1.35rem;box-shadow:0 1px 3px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:center}
-.ftw-quote p{margin:0 0 .5rem;line-height:1.5;color:#222;font-size:.98rem}
-.ftw-quote footer{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#666}
-.ftw-guarantee-badge{background:#0f2f1a;color:#f4faea;border-radius:12px;padding:1.35rem 1.5rem;display:flex;flex-direction:column;justify-content:center}
-.ftw-guarantee-badge-title{font-family:var(--serif);font-size:1.35rem;margin-bottom:.5rem;letter-spacing:.02em}
-.ftw-guarantee-badge p{margin:0;line-height:1.5;font-size:.95rem;opacity:.92}
+/* Mobile-first problem matcher before the first offer */
+.dog-match{max-width:920px;margin:3rem auto 3rem;padding:0}
+.dog-match .section-head{text-align:left;margin-bottom:22px}
+.dog-match .section-head h2{margin:10px 0 12px}
+.dog-match-subhead{margin:0;color:var(--ink-soft);font-size:16px;line-height:1.6}
+.dog-match-list{display:grid;grid-template-columns:1fr;gap:12px}
+.dog-match-item{background:var(--bg-card);border:1px solid var(--hairline);border-radius:var(--radius);overflow:hidden;box-shadow:0 18px 50px -42px rgba(26,22,19,.28)}
+.dog-match-item h3{margin:0;font-size:inherit}
+.dog-match-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:18px;color:var(--ink);font-size:16px;font-weight:700;line-height:1.25;background:var(--bg-card);-webkit-tap-highlight-color:transparent}
+.dog-match-toggle:hover,.dog-match-toggle[aria-expanded="true"]{background:#fbf4ea}
+.dog-match-toggle:focus-visible{outline:3px solid rgba(179,81,47,.32);outline-offset:-3px}
+.dog-match-toggle .chevron{width:24px;height:24px;flex:0 0 24px;border:1px solid var(--hairline-strong);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:var(--accent);transition:transform .2s var(--ease),background .2s var(--ease),color .2s var(--ease)}
+.dog-match-toggle .chevron::before{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translate(-1px,-1px)}
+.dog-match-toggle[aria-expanded="true"] .chevron{background:var(--ink);color:var(--bg);transform:rotate(180deg)}
+.dog-match-panel{border-top:1px solid var(--hairline);padding:0 18px 20px}
+.dog-match-content{display:grid;grid-template-columns:1fr;gap:18px;padding-top:18px}
+.dog-match-diagnosis{display:grid;gap:12px}
+.dog-match-copy-block{background:rgba(179,81,47,.06);border:1px solid rgba(179,81,47,.12);border-radius:14px;padding:16px}
+.dog-match-kicker{display:block;color:var(--accent);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.dog-match-copy-block p{margin:7px 0 0;color:var(--ink-soft);font-size:15px;line-height:1.55}
+.receipt-card{background:#fff;border:1px solid var(--hairline);border-radius:16px;overflow:hidden;box-shadow:0 20px 50px -42px rgba(26,22,19,.36)}
+.receipt-head{padding:16px 16px 0}
+.receipt-label{display:inline-flex;align-items:center;border:1px solid rgba(179,81,47,.18);border-radius:999px;background:rgba(179,81,47,.07);color:var(--accent);padding:5px 9px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.receipt-head h3{font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.15;letter-spacing:-.01em;margin:10px 0 12px;color:var(--ink)}
+.receipt-media{margin:0 16px;border:1px solid var(--hairline);border-radius:12px;overflow:hidden;background:#f8f4ee;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center}
+.receipt-media img{width:100%;height:100%;object-fit:contain;background:#fff}
+.receipt-quote{margin:0 16px;border-left:3px solid var(--accent);background:#fbf4ea;border-radius:0 12px 12px 0;padding:15px 16px;color:var(--ink);font-family:var(--serif);font-size:15px;line-height:1.55}
+.receipt-summary{margin:14px 16px 18px;color:var(--ink-soft);font-size:14px;line-height:1.55}
+.dog-match-cta{display:block;width:100%;margin-top:2px;background:var(--ink);color:var(--bg);text-align:center;padding:16px 18px;border-radius:999px;font-size:15px;font-weight:700;line-height:1.2;transition:transform .2s var(--ease),background .25s var(--ease)}
+.dog-match-cta:hover{background:var(--accent);transform:translateY(-1px)}
+.dog-match-scarcity{margin:18px 0 0;padding:14px 16px;border:1px solid rgba(179,81,47,.16);border-radius:14px;background:rgba(179,81,47,.07);color:var(--ink-soft);font-size:14px;line-height:1.45}
+@media (min-width:760px){
+  .dog-match{margin-top:4rem;margin-bottom:4rem}
+  .dog-match .section-head{text-align:center;margin-bottom:28px}
+  .dog-match-subhead{max-width:62ch;margin:0 auto}
+  .dog-match-toggle{padding:22px 24px;font-size:18px}
+  .dog-match-panel{padding:0 24px 24px}
+  .dog-match-content{grid-template-columns:minmax(0,.95fr) minmax(280px,.75fr);align-items:start;gap:24px}
+  .receipt-media{aspect-ratio:1/1}
+  .dog-match-cta{display:inline-flex;width:auto;align-items:center;justify-content:center;padding-left:22px;padding-right:22px}
+}
 </style>
 </head>
 <body>
@@ -1412,25 +1442,200 @@
       and real-world reliability &mdash; without turning your life into a six-month dog training project.
     </p>
 
-<section class="ftw-preprice" aria-label="Proof and guarantee before pricing">
-  <div class="ftw-preprice-inner">
-    <div class="ftw-preprice-quotes">
-      <button type="button" class="zoomable ftw-preprice-card" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" data-zoom-alt="Oakley — 'I was instantly hooked.' Becky Morris: In just the 6 week class my reactive dog walks so well on the leash and doesn't react to other dogs outside or other people walking by like he always did." aria-label="Enlarge Oakley story">
-        <div class="frame">
-          <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" alt="Oakley — 'I was instantly hooked.' In just the 6 week class my reactive dog walks so well on the leash." loading="lazy" />
-        </div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
-      <blockquote class="ftw-quote">
-        <p>"Joel's way is different. These are not corrections and harsh methods that focus on dominating your dog. Your dog is going to think you are the best person ever."</p>
-        <footer>— Verified client review</footer>
-      </blockquote>
-    </div>
-    <div class="ftw-guarantee-badge">
-      <div class="ftw-guarantee-badge-title">Moneyback Guarantee</div>
-      <p>Do the work. If it doesn't help your dog, you get your money back. Full terms below.</p>
-    </div>
+<section class="dog-match reveal" id="dog-match" aria-labelledby="dog-match-heading">
+  <div class="section-head">
+    <span class="eyebrow">Proof by problem</span>
+    <h2 class="display display-md" id="dog-match-heading">Show Me a Dog Like Mine</h2>
+    <p class="dog-match-subhead">Walk problems look different from the outside, but they usually come from the same few gaps: attention, arousal, leash skills, recall, stay, and trust outside.</p>
   </div>
+
+  <div class="dog-match-list" data-dog-match-accordion>
+    <article class="dog-match-item">
+      <h3>
+        <button type="button" class="dog-match-toggle" id="dog-match-pulling-button" aria-expanded="false" aria-controls="dog-match-pulling-panel">
+          <span>My dog pulls or drags me</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="dog-match-panel" id="dog-match-pulling-panel" role="region" aria-labelledby="dog-match-pulling-button" hidden>
+        <div class="dog-match-content">
+          <div class="dog-match-diagnosis">
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">What&rsquo;s probably happening</span>
+              <p>Your dog has learned that the leash is the gas pedal. Outside is exciting, and checking in with you has not paid enough yet.</p>
+            </div>
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">How Fix the Walk helps</span>
+              <p>We start with attention and leash games so your dog learns that moving with you is how good things happen, instead of dragging you to them.</p>
+            </div>
+            <a href="https://checkout.digitaldogschool.com/fixthewalk-page" class="dog-match-cta" data-event="fix_the_walk_checkout_click" data-location="dog_match_pulling">Claim your seat and start fixing the pulling</a>
+          </div>
+          <article class="receipt-card" aria-label="Proof this works virtually">
+            <div class="receipt-head">
+              <span class="receipt-label">Proof this works virtually</span>
+              <h3>A virtual plan for a dog distracted by the whole world.</h3>
+            </div>
+            <div class="receipt-media">
+              <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" data-lightbox-alt="Five-star Google review from Megan Wolf about virtual training with Joel" aria-label="Open Megan Wolf review in lightbox">
+                <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" alt="Five-star Google review from Megan Wolf about virtual training with Joel" loading="lazy" decoding="async" />
+                <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+              </button>
+            </div>
+            <p class="receipt-summary">Megan Wolf says Joel helped her become more important than the challenging world and build a game plan for hard behaviors, all virtually.</p>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <article class="dog-match-item">
+      <h3>
+        <button type="button" class="dog-match-toggle" id="dog-match-barking-button" aria-expanded="false" aria-controls="dog-match-barking-panel">
+          <span>My dog barks or lunges</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="dog-match-panel" id="dog-match-barking-panel" role="region" aria-labelledby="dog-match-barking-button" hidden>
+        <div class="dog-match-content">
+          <div class="dog-match-diagnosis">
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">What&rsquo;s probably happening</span>
+              <p>Your dog is getting pushed over threshold, then rehearsing the same loud pattern at the end of the leash. The more it works, the faster it appears.</p>
+            </div>
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">How Fix the Walk helps</span>
+              <p>We start by stopping you from practicing the problem, because repeating the same pattern over and over usually makes it worse.</p>
+              <p>Then we teach your dog what to do in a calmer place, so you can build a plan and a skill set together before trying to solve it in the hardest environment.</p>
+              <p>From there, you get specific instructions for what to do when it goes well, what to do when it goes wrong, and how to keep finding success in real life again and again.</p>
+            </div>
+            <a href="https://checkout.digitaldogschool.com/fixthewalk-page" class="dog-match-cta" data-event="fix_the_walk_checkout_click" data-location="dog_match_barking_lunging">Claim your seat and build a plan for barking or lunging</a>
+          </div>
+          <article class="receipt-card" aria-label="Proof for reactive dogs">
+            <div class="receipt-head">
+              <span class="receipt-label">Proof for reactive dogs</span>
+              <h3>A strong, reactive dog got happier and better on leash.</h3>
+            </div>
+            <div class="receipt-media">
+              <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" data-lightbox-alt="Bowser's owner Adrienne Scott saying Joel changed their lives and that Bowser is happier and better on leash" aria-label="Open Bowser review in lightbox">
+                <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" alt="Bowser's owner Adrienne Scott saying Joel changed their lives and that Bowser is happier and better on leash" loading="lazy" decoding="async" />
+                <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+              </button>
+            </div>
+            <p class="receipt-summary">Bowser&rsquo;s owner described a genetically strong, aggressive dog who became happier and better on the leash after working with Joel.</p>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <article class="dog-match-item">
+      <h3>
+        <button type="button" class="dog-match-toggle" id="dog-match-ignoring-button" aria-expanded="false" aria-controls="dog-match-ignoring-panel">
+          <span>My dog ignores me outside</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="dog-match-panel" id="dog-match-ignoring-panel" role="region" aria-labelledby="dog-match-ignoring-button" hidden>
+        <div class="dog-match-content">
+          <div class="dog-match-diagnosis">
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">What&rsquo;s probably happening</span>
+              <p>Your dog is not blowing you off on purpose. The outside world is simply winning the attention contest before you have a reliable way back in.</p>
+            </div>
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">How Fix the Walk helps</span>
+              <p>Attention is not built on the walk.</p>
+              <p>First, we teach you how to gain and keep your dog&rsquo;s attention. Then we teach your dog what to do once they are actually ready to learn.</p>
+              <p>Trying to build attention and teach the skill at the same time is where a lot of people get stuck.</p>
+            </div>
+            <a href="https://checkout.digitaldogschool.com/fixthewalk-page" class="dog-match-cta" data-event="fix_the_walk_checkout_click" data-location="dog_match_ignoring_outside">Claim your seat and build attention outside</a>
+          </div>
+          <article class="receipt-card" aria-label="Proof this is not just obedience">
+            <div class="receipt-head">
+              <span class="receipt-label">Proof this is not just obedience</span>
+              <h3>The work changed the dog-human relationship outside.</h3>
+            </div>
+            <div class="receipt-media">
+              <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" data-lightbox-alt="Oakley review saying a reactive dog walks well on leash and no longer reacts to dogs or people walking by" aria-label="Open Oakley review in lightbox">
+                <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b05994a1876e04d2087cb.png" alt="Oakley review saying a reactive dog walks well on leash and no longer reacts to dogs or people walking by" loading="lazy" decoding="async" />
+                <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+              </button>
+            </div>
+            <p class="receipt-summary">Oakley&rsquo;s owner says the approach was not harsh or dominance-based, and that her reactive dog began walking well around dogs and people.</p>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <article class="dog-match-item">
+      <h3>
+        <button type="button" class="dog-match-toggle" id="dog-match-overwhelmed-button" aria-expanded="false" aria-controls="dog-match-overwhelmed-panel">
+          <span>My dog gets overwhelmed or anxious</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="dog-match-panel" id="dog-match-overwhelmed-panel" role="region" aria-labelledby="dog-match-overwhelmed-button" hidden>
+        <div class="dog-match-content">
+          <div class="dog-match-diagnosis">
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">What&rsquo;s probably happening</span>
+              <p>Your dog may be scanning for scary things and running out of coping skills. When trust is thin outside, even normal walk stuff can feel huge.</p>
+            </div>
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">How Fix the Walk helps</span>
+              <p>Joel coaches you on the foundation under the walk: how to build trust, make choices clearer, and help your dog feel safer before asking for more.</p>
+            </div>
+            <a href="https://checkout.digitaldogschool.com/fixthewalk-page" class="dog-match-cta" data-event="fix_the_walk_checkout_click" data-location="dog_match_overwhelmed_anxious">Claim your seat and make walks feel safer</a>
+          </div>
+          <article class="receipt-card" aria-label="Proof for owners who are overwhelmed">
+            <div class="receipt-head">
+              <span class="receipt-label">Proof for owners who are overwhelmed</span>
+              <h3>From weight-of-the-world to excited about the plan.</h3>
+            </div>
+            <blockquote class="receipt-quote">&ldquo;It looked like the weight of the world on her shoulders concerning Luna prior to your meeting last night. She has a renewed vigour now about Luna and it&rsquo;s amazing to see.&rdquo;</blockquote>
+            <p class="receipt-summary">Dean, Luna&rsquo;s dad, sent this after Joel talked through Luna&rsquo;s training plan with Deb.</p>
+          </article>
+        </div>
+      </div>
+    </article>
+
+    <article class="dog-match-item">
+      <h3>
+        <button type="button" class="dog-match-toggle" id="dog-match-avoiding-button" aria-expanded="false" aria-controls="dog-match-avoiding-panel">
+          <span>I avoid walks because they&rsquo;re embarrassing or exhausting</span>
+          <span class="chevron" aria-hidden="true"></span>
+        </button>
+      </h3>
+      <div class="dog-match-panel" id="dog-match-avoiding-panel" role="region" aria-labelledby="dog-match-avoiding-button" hidden>
+        <div class="dog-match-content">
+          <div class="dog-match-diagnosis">
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">What&rsquo;s probably happening</span>
+              <p>You are not lazy or dramatic. You have learned to avoid a situation where your dog struggles, people stare, and you come home cooked.</p>
+            </div>
+            <div class="dog-match-copy-block">
+              <span class="dog-match-kicker">How Fix the Walk helps</span>
+              <p>The sprint turns the walk back into a plan: what to do before you leave, what to practice outside, and how to recover when real life gets loud.</p>
+            </div>
+            <a href="https://checkout.digitaldogschool.com/fixthewalk-page" class="dog-match-cta" data-event="fix_the_walk_checkout_click" data-location="dog_match_avoiding_walks">Claim your seat and stop dreading the leash</a>
+          </div>
+          <article class="receipt-card" aria-label="Proof it transfers to real life">
+            <div class="receipt-head">
+              <span class="receipt-label">Proof it transfers to real life</span>
+              <h3>A busy public outing, without the meltdown.</h3>
+            </div>
+            <div class="receipt-media">
+              <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" data-lightbox-alt="Emmylou's owner sharing that Emmylou handled a busy Tractor Supply outing without meltdowns" aria-label="Open Emmylou Tractor Supply proof in lightbox">
+                <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" alt="Emmylou's owner sharing that Emmylou handled a busy Tractor Supply outing without meltdowns" loading="lazy" decoding="async" />
+                <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+              </button>
+            </div>
+            <p class="receipt-summary">Emmylou handled carts, kids, big scary men carrying stuff, other dogs, and a busy Tractor Supply outing without one meltdown.</p>
+          </article>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <p class="dog-match-scarcity">This cohort is limited to 15 dogs because Joel is reviewing real training clips and coaching owners live.</p>
 </section>
 
     <div id="enroll" class="offer-card reveal">
@@ -1715,92 +1920,52 @@
     <div class="proof-grid">
       <article class="proof-card reveal">
         <div class="proof-media">
-          <span class="chip">Virtual client</span>
-          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" data-zoom-alt="Five-star Google review from Megan Wolf about virtual training with Joel" aria-label="Enlarge Megan Wolf review">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" alt="Five-star Google review from Megan Wolf about virtual training with Joel" loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
-        </div>
-        <div class="proof-body">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>
-            &ldquo;He assisted me in creating a bond with my dog where I am more important than the challenging world we live in. We were able to figure out a game plan for any of the challenging behaviors. The best part is it was all virtual.&rdquo;
-          </blockquote>
-          <cite>Megan Wolf &middot; Google review</cite>
-        </div>
-      </article>
-
-      <article class="proof-card reveal">
-        <div class="proof-media">
-          <span class="chip">Real-life outing</span>
-          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" data-zoom-alt="Emmylou's owner sharing how Emmylou handled a busy Tractor Supply outing without meltdowns" aria-label="Enlarge Emmylou owner review">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/68f92d624ab7283038a1d38a.png" alt="Emmylou's owner sharing how Emmylou handled a busy Tractor Supply outing without meltdowns" loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
-        </div>
-        <div class="proof-body">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-          <blockquote>
-            &ldquo;Took Emmylou to Tractor Supply. Busier than shit. She did a fabulous job &mdash; carts, kids, big scary men carrying stuff, other pups. Not one meltdown. She didn&rsquo;t even try to sit and put on the brakes.&rdquo;
-          </blockquote>
-          <cite>From shutdown &amp; reactive to real-world reliable</cite>
-        </div>
-      </article>
-
-      <article class="proof-card reveal">
-        <div class="proof-media">
           <span class="chip">Walk transformation</span>
-          <button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" data-zoom-alt="Woman walking a dog calmly past another dog — real training result" aria-label="Enlarge walk transformation clip">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" alt="Woman walking a dog calmly past another dog — real training result" loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
+          <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" data-lightbox-alt="Woman walking a dog calmly past another dog — real training result" aria-label="Open walk transformation proof in lightbox">
+            <img class="proof-contain" src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" alt="Woman walking a dog calmly past another dog — real training result" loading="lazy" decoding="async" />
+            <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+          </button>
         </div>
         <div class="proof-body">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <blockquote>
-            &ldquo;Joel&rsquo;s way is different. These are not corrections and harsh methods that focus on dominating your dog. Your dog is going to think you are the best person ever.&rdquo;
+            A calmer pass-by is the result the sprint is built for: your dog noticing the world without the leash becoming a fight.
           </blockquote>
-          <cite>Verified client review</cite>
+          <cite>Real training clip</cite>
         </div>
       </article>
 
-<!-- New: Bowser (Adrienne Scott) -->
-<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" data-zoom-alt="Bowser's owner Adrienne Scott — 'You changed our lives for the better.' A genetically strong, aggressive dog now happier and better on the leash." aria-label="Enlarge Bowser review">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/668b0599b5678b2187cc77ca.jpeg" alt="Bowser's owner Adrienne Scott — 'You changed our lives for the better.' A genetically strong, aggressive dog now happier and better on the leash." loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
-
-<!-- New: Indi (Brittany Hicks) -->
-<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" data-zoom-alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." aria-label="Enlarge Indi review">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
-
-<!-- New: Daniella TikTok comment -->
-<button type="button" class="zoomable" data-zoom-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" data-zoom-alt="TikTok comment from Daniella Camen — 'I did virtual training with @scoobandi and she went from not being able to walk passed other dogs to being able to roll in the grass while other dogs walked passed her. He helped a lot with her anxious behaviors.'" aria-label="Enlarge Daniella TikTok comment">
-  <div class="frame">
-    <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" alt="TikTok comment from Daniella Camen — 'I did virtual training with @scoobandi and she went from not being able to walk passed other dogs to being able to roll in the grass while other dogs walked passed her.'" loading="lazy" />
-  </div>
-  <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-</button>
+      <article class="proof-card reveal">
+        <div class="proof-media">
+          <span class="chip">Fearful reactive dog</span>
+          <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" data-lightbox-alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." aria-label="Open Indi review in lightbox">
+            <img class="proof-contain" src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6696a3a7e723e23ff66c3839.png" alt="Brittany Hicks writing about Indi — a fearful reactive 4 year old Australian Cattle Dog with IVDD. Learned to walk past scary situations using treat toss and the play method." loading="lazy" decoding="async" />
+            <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+          </button>
+        </div>
+        <div class="proof-body">
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            &ldquo;Learned to walk past scary situations using treat toss and the play method.&rdquo;
+          </blockquote>
+          <cite>Brittany Hicks &middot; Indi</cite>
+        </div>
+      </article>
 
       <article class="proof-card reveal">
+        <div class="proof-media">
+          <span class="chip">Virtual training</span>
+          <button type="button" class="proof-lightbox-trigger" data-lightbox-src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" data-lightbox-alt="TikTok comment from Daniella Camen saying virtual training helped anxious behaviors and helped her dog relax around passing dogs" aria-label="Open Daniella TikTok proof in lightbox">
+            <img class="proof-contain" src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/3a1e2758-1755-4f0a-a841-32195a8ef65f.png" alt="TikTok comment from Daniella Camen saying virtual training helped anxious behaviors and helped her dog relax around passing dogs" loading="lazy" decoding="async" />
+            <span class="proof-open-hint" aria-hidden="true"><span class="handle"></span></span>
+          </button>
+        </div>
         <div class="proof-body">
-          <div class="testimonial-block" style="max-width:720px;margin:2rem auto;padding:1.5rem;border-left:3px solid #d4a017;">
-  <p style="margin:0 0 1rem 0;font-size:1rem;line-height:1.6;">"Hey Joel! I'm Luna's Dad and Deb's husband. I just wanted to thank you for taking the time and effort to speak with Deb last night about Luna and providing her some guidance and ideas for Luna. I must tell you that I've never seen Deb so excited, charged up, so elated about any trainer or program than yours. It looked like the weight of the world on her shoulders concerning Luna prior to your meeting last night. She has a renewed vigour now about Luna and it's amazing to see."</p>
-  <p style="margin:0 0 1rem 0;font-size:1rem;line-height:1.6;">"In truth, all of this is because of Deb. She's spent countless hours with Luna just to get her to this point. There were many times at the beginning that all of us wondered what did we just get ourselves into, but Deb and Luna have bonded hard together and Luna absolutely loves her mom. Deb is the first person that Luna rubs to for comfort, love and security when big scary things come out. I know you two will do great things together for Luna."</p>
-  <footer style="font-size:0.9rem;opacity:0.85;">— Dean, Luna's dad</footer>
-</div>
+          <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>
+            &ldquo;She went from not being able to walk past other dogs to being able to roll in the grass while other dogs walked past her.&rdquo;
+          </blockquote>
+          <cite>Daniella Camen &middot; TikTok comment</cite>
         </div>
       </article>
     </div>
@@ -2005,9 +2170,126 @@
   </a>
 </div>
 
+<div class="proof-lb" id="proofLightbox" role="dialog" aria-modal="true" aria-label="Enlarged proof image" aria-hidden="true" hidden>
+  <button type="button" class="proof-lb-backdrop" data-proof-lightbox-close aria-label="Close enlarged proof"></button>
+  <div class="proof-lb-frame">
+    <img class="proof-lb-img" id="proofLightboxImage" alt="" />
+  </div>
+  <button type="button" class="proof-lb-close" id="proofLightboxClose" data-proof-lightbox-close aria-label="Close enlarged proof">&times;</button>
+</div>
+
 <!-- =========================================================
      SCRIPTS
      ========================================================= -->
+
+<!-- Problem matcher accordion -->
+<script>
+(function(){
+  var root = document.querySelector('[data-dog-match-accordion]');
+  if (!root) return;
+
+  var buttons = Array.prototype.slice.call(root.querySelectorAll('.dog-match-toggle'));
+
+  function setExpanded(button, expanded) {
+    var panelId = button.getAttribute('aria-controls');
+    var panel = panelId ? document.getElementById(panelId) : null;
+    if (!panel) return;
+    button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    panel.hidden = !expanded;
+  }
+
+  buttons.forEach(function(button){
+    setExpanded(button, false);
+    button.addEventListener('click', function(){
+      var isOpen = button.getAttribute('aria-expanded') === 'true';
+      buttons.forEach(function(other){ setExpanded(other, false); });
+      setExpanded(button, !isOpen);
+    });
+  });
+}());
+</script>
+
+<!-- Proof image lightbox -->
+<script>
+(function(){
+  var lightbox = document.getElementById('proofLightbox');
+  var image = document.getElementById('proofLightboxImage');
+  var closeButton = document.getElementById('proofLightboxClose');
+  var frame = lightbox ? lightbox.querySelector('.proof-lb-frame') : null;
+  if (!lightbox || !image || !closeButton || !frame) return;
+
+  var activeTrigger = null;
+  var previousOverflow = '';
+
+  function getFocusable() {
+    return Array.prototype.slice.call(lightbox.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'))
+      .filter(function(el){ return !el.disabled && el.offsetParent !== null; });
+  }
+
+  function openLightbox(trigger) {
+    var src = trigger.getAttribute('data-lightbox-src');
+    if (!src) return;
+
+    activeTrigger = trigger;
+    previousOverflow = document.body.style.overflow;
+    image.src = src;
+    var triggerImage = trigger.querySelector('img');
+    image.alt = trigger.getAttribute('data-lightbox-alt') || (triggerImage ? triggerImage.alt : '') || 'Enlarged proof image';
+    lightbox.hidden = false;
+    lightbox.setAttribute('aria-hidden', 'false');
+    lightbox.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    closeButton.focus({ preventScroll: true });
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.hidden = true;
+    image.removeAttribute('src');
+    image.alt = '';
+    document.body.style.overflow = previousOverflow;
+    if (activeTrigger && typeof activeTrigger.focus === 'function') {
+      activeTrigger.focus({ preventScroll: true });
+    }
+    activeTrigger = null;
+  }
+
+  document.querySelectorAll('.proof-lightbox-trigger').forEach(function(trigger){
+    trigger.addEventListener('click', function(){ openLightbox(trigger); });
+  });
+
+  lightbox.querySelectorAll('[data-proof-lightbox-close]').forEach(function(button){
+    button.addEventListener('click', closeLightbox);
+  });
+
+  frame.addEventListener('click', function(event){
+    if (event.target === frame) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function(event){
+    if (lightbox.hidden) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeLightbox();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+
+    var focusable = getFocusable();
+    if (!focusable.length) return;
+    var first = focusable[0];
+    var last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}());
+</script>
 
 <!-- UTM preservation (per handoff §14) -->
 <script>
@@ -2144,28 +2426,6 @@
   }, { threshold: 0.35 });
   sections.forEach(function(s){ io.observe(s); });
 }());
-</script>
-
-<!-- ================= LIGHTBOX ================= -->
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button type="button" class="lb-close" id="lb-close" aria-label="Close">✕</button>
-  <img class="lb-img" id="lb-img" alt="" />
-</div>
-
-<script>
-/* ---- Lightbox ---- */
-(function(){
-  var lb=document.getElementById('lb'), img=document.getElementById('lb-img'), closeBtn=document.getElementById('lb-close');
-  if(!lb||!img||!closeBtn) return;
-  function open(src,alt){ img.src=src; img.alt=alt||''; lb.classList.add('is-open'); document.body.style.overflow='hidden'; }
-  function close(){ lb.classList.remove('is-open'); document.body.style.overflow=''; setTimeout(function(){ img.src=''; }, 250); }
-  document.querySelectorAll('.zoomable').forEach(function(btn){
-    btn.addEventListener('click', function(){ open(btn.dataset.zoomSrc, btn.dataset.zoomAlt); });
-  });
-  closeBtn.addEventListener('click', close);
-  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lb.classList.contains('is-open')) close(); });
-})();
 </script>
 
 </body>
