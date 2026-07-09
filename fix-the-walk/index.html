@@ -2198,12 +2198,29 @@
     panel.hidden = !expanded;
   }
 
+  function scrollOpenedItemIntoView(button) {
+    if (!window.matchMedia || !window.matchMedia('(max-width: 759px)').matches) return;
+
+    window.requestAnimationFrame(function(){
+      var item = button.closest('.dog-match-item');
+      if (!item) return;
+
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var top = item.getBoundingClientRect().top + window.pageYOffset - 14;
+      window.scrollTo({
+        top: Math.max(0, top),
+        behavior: prefersReducedMotion ? 'auto' : 'smooth'
+      });
+    });
+  }
+
   buttons.forEach(function(button){
     setExpanded(button, false);
     button.addEventListener('click', function(){
       var isOpen = button.getAttribute('aria-expanded') === 'true';
       buttons.forEach(function(other){ setExpanded(other, false); });
       setExpanded(button, !isOpen);
+      if (!isOpen) scrollOpenedItemIntoView(button);
     });
   });
 }());
