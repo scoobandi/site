@@ -215,13 +215,19 @@ section{position:relative}
 
 /* ================= SCHEDULER ================= */
 .scheduler{background:var(--bg-2)}
+.scheduler .container{max-width:1280px}
 .scheduler .sec-head{margin-bottom:28px}
-.sched-frame-wrap{background:var(--card);border:1px solid var(--hair);border-radius:22px;overflow:hidden;box-shadow:0 20px 60px -32px rgba(26,22,19,.4);max-width:960px;margin:0 auto}
-.sched-frame-wrap iframe{display:block;width:100%;min-height:820px;border:0;background:var(--card)}
+.sched-frame-wrap{background:var(--card);border:1px solid var(--hair);border-radius:22px;overflow:hidden;box-shadow:0 20px 60px -32px rgba(26,22,19,.4);max-width:1160px;width:100%;margin:0 auto}
+.sched-frame-wrap iframe{display:block;width:100%;height:1280px;min-height:1280px;border:0;background:var(--card);overflow:auto}
 .sched-fallback{text-align:center;margin:22px auto 0;max-width:60ch;font-size:14.5px;color:var(--ink-55);line-height:1.55}
 .sched-fallback a{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(179,81,47,.4);text-underline-offset:2px}
 .sched-fallback a:hover{border-bottom-color:var(--accent)}
 .sched-note{text-align:center;margin:24px auto 0;max-width:58ch;font-size:15px;color:var(--ink-70);line-height:1.55}
+@media (max-width:720px){
+  .scheduler .container{padding:0 12px}
+  .sched-frame-wrap{border-radius:14px}
+  .sched-frame-wrap iframe{height:1560px;min-height:1560px}
+}
 
 /* ================= FINAL CTA BAND ================= */
 .final{background:#1A1613;color:#fff;padding:92px 0 100px}
@@ -656,9 +662,10 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       <h2 id="sched-h" class="h-display">Pick a time.</h2>
     </div>
     <div class="sched-frame-wrap">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" title="Book a consult with Joel Harrison" loading="lazy" scrolling="no" allow="payment"></iframe>
+      <iframe id="consult-calendar-iframe" src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" title="Book a consult with Joel Harrison" loading="lazy" scrolling="yes" allow="payment"></iframe>
     </div>
-    <p class="sched-fallback">Widget not loading? <a href="https://scoobandi.com/consult/#scheduler" data-event="consult_cta_click" data-location="scheduler_fallback" target="_blank" rel="noopener">Book directly →</a></p>
+    <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+    <p class="sched-fallback">Widget not loading or feeling cramped? <a href="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" data-event="consult_cta_click" data-location="scheduler_fallback" target="_blank" rel="noopener">Open the scheduler in a full window →</a></p>
     <p class="sched-note">The scheduler asks you a few questions so Joel comes prepared. Answer honestly — this call works better when he knows what he's walking into.</p>
   </div>
 </section>
@@ -764,6 +771,82 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       link.href = url.toString();
     }catch(e){}
   });
+})();
+
+/* ---- Scheduler iframe sizing ---- */
+(function(){
+  var iframe = document.getElementById('consult-calendar-iframe');
+  if(!iframe) return;
+
+  function minHeight(){
+    return window.matchMedia && window.matchMedia('(max-width: 720px)').matches ? 1560 : 1280;
+  }
+
+  function numberFrom(value){
+    var next = parseInt(value,10);
+    return Number.isFinite(next) ? next : null;
+  }
+
+  function applyHeight(value){
+    var raw = numberFrom(value);
+    if(!raw || raw < 300) return;
+    var next = Math.min(Math.max(raw + 90, minHeight()), 4200);
+    iframe.style.height = next + 'px';
+    iframe.style.minHeight = next + 'px';
+  }
+
+  function extractHeight(data){
+    if(typeof data === 'number') return data;
+    if(typeof data === 'string'){
+      var direct = numberFrom(data);
+      if(direct) return direct;
+      try { data = JSON.parse(data); }
+      catch(err) {
+        var match = data.match(/(?:height|iframeHeight|scrollHeight)\D+(\d{3,5})/i);
+        return match ? match[1] : null;
+      }
+    }
+    if(!data || typeof data !== 'object') return null;
+    return data.height || data.iframeHeight || data.scrollHeight || data.contentHeight ||
+      (data.type === 'height' && data.value) ||
+      (data.type === 'iframeHeight' && data.height) ||
+      (data.type === 'resize' && (data.height || data.value)) ||
+      (data.data && extractHeight(data.data)) ||
+      (data.payload && extractHeight(data.payload));
+  }
+
+  function trustedSchedulerOrigin(origin){
+    if(!origin) return false;
+    try {
+      var host = new URL(origin).hostname;
+      return host === 'api.leadconnectorhq.com' || host.endsWith('.leadconnectorhq.com') ||
+        host === 'link.msgsndr.com' || host.endsWith('.msgsndr.com');
+    } catch(err) {
+      return false;
+    }
+  }
+
+  function enforceMinimum(){
+    var floor = minHeight();
+    var current = numberFrom(iframe.style.height) || iframe.getBoundingClientRect().height;
+    if(current < floor){
+      iframe.style.height = floor + 'px';
+      iframe.style.minHeight = floor + 'px';
+    }
+  }
+
+  window.addEventListener('message', function(event){
+    if(!trustedSchedulerOrigin(event.origin)) return;
+    applyHeight(extractHeight(event.data));
+  });
+
+  var resizeTimer;
+  window.addEventListener('resize', function(){
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(enforceMinimum, 150);
+  });
+
+  enforceMinimum();
 })();
 
 /* ---- CTA / path click tracking (Meta + GA4) ---- */
