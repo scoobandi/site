@@ -49,11 +49,11 @@ Result: hero is 3 lines on desktop; router starts at `top:504` within the 900px 
 |----------|-------------|-------|-------------|
 | Router — Fix the Walk | "See the class →" | orange `.cta-solid` | `https://scoobandi.com/fix-the-walk/` |
 | Router — Digital Dog School | "See what's inside →" | ink `.cta-ink` | `https://digitaldogschool.com/` |
-| Router — Book a Consult | "Book a consult →" | orange `.cta-solid` | `https://scoobandi.com/consult/#scheduler` |
+| Router — Book a Consult | "Book a consult →" | orange `.cta-solid` | `https://scoobandi.com/consult/` |
 | Router quiet fallback | "Not sure which one? Take the 60-second quiz" | small gray text link (no button) | `https://dogs.scoobandi.com/quiz-4061` |
 | Final CTA — Walks | "Fix the Walk →" row | dark card row | `https://scoobandi.com/fix-the-walk/` |
 | Final CTA — Full system | "Digital Dog School →" row | dark card row | `https://digitaldogschool.com/` |
-| Final CTA — Complex case | "Book a Consult →" row | dark card row | `https://scoobandi.com/consult/#scheduler` |
+| Final CTA — Complex case | "Book a Consult →" row | dark card row | `https://scoobandi.com/consult/` |
 | Final CTA fallback | "Take the quiz" / "Browse free resources" | text links | quiz / `https://scoobandi.com/resources/` |
 | Nav / footer | Consult, Resources, About, quiz | links | consult / resources / #about / quiz |
 
@@ -63,7 +63,7 @@ Result: hero is 3 lines on desktop; router starts at `top:504` within the 900px 
 
 - `https://scoobandi.com/fix-the-walk/` — ×3 occurrences
 - `https://digitaldogschool.com/` — ×3
-- `https://scoobandi.com/consult/#scheduler` — ×5
+- `https://scoobandi.com/consult/` — ×5
 - `https://dogs.scoobandi.com/quiz-4061` — ×3
 - `https://scoobandi.com/resources/` — ×3
 
