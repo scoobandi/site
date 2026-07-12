@@ -24,6 +24,60 @@
      Do NOT fire Purchase here — that belongs on the thank-you page.
      ============================================================ -->
 
+<!-- iOS Facebook/Instagram WebView bridge guard -->
+<script>
+  (function(){
+    var ua = navigator.userAgent || '';
+    var isIosSocialWebView = /(iPhone|iPad|iPod)/i.test(ua) && /(FBAN|FBAV|FBIOS|Instagram)/i.test(ua);
+    var webkitBridgeError = /webkit\.messagehandlers|webkit\.messageHandlers|window\.webkit/i;
+
+    function isBridgeError(message) {
+      return webkitBridgeError.test(String(message || ''));
+    }
+
+    if (isIosSocialWebView) {
+      try {
+        var noopHandler = { postMessage: function(){} };
+        var handlers = typeof Proxy === 'function'
+          ? new Proxy({}, { get: function(target, prop){ return target[prop] || noopHandler; } })
+          : { fbq: noopHandler, fbqHandler: noopHandler, ReactNativeWebView: noopHandler };
+
+        window.webkit = window.webkit || {};
+        if (!window.webkit.messageHandlers && !window.webkit.messagehandlers) {
+          window.webkit.messageHandlers = handlers;
+          window.webkit.messagehandlers = handlers;
+        } else if (window.webkit.messageHandlers && !window.webkit.messagehandlers) {
+          window.webkit.messagehandlers = window.webkit.messageHandlers;
+        } else if (window.webkit.messagehandlers && !window.webkit.messageHandlers) {
+          window.webkit.messageHandlers = window.webkit.messagehandlers;
+        }
+      } catch (e) {}
+    }
+
+    var previousOnError = window.onerror;
+    window.onerror = function(message, source, lineno, colno, error) {
+      if (isBridgeError(message) || isBridgeError(error && error.message)) return true;
+      if (typeof previousOnError === 'function') {
+        return previousOnError.apply(this, arguments);
+      }
+      return false;
+    };
+
+    window.addEventListener('error', function(event){
+      if (isBridgeError(event.message) || isBridgeError(event.error && event.error.message)) {
+        event.preventDefault();
+      }
+    }, true);
+
+    window.addEventListener('unhandledrejection', function(event){
+      var reason = event.reason;
+      if (isBridgeError(reason && (reason.message || reason))) {
+        event.preventDefault();
+      }
+    });
+  }());
+</script>
+
 <!-- Meta Pixel — Scoob & I -->
 <script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -31,8 +85,10 @@
   n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
   document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '961888533447407');
-  fbq('track', 'PageView');
+  try {
+    fbq('init', '961888533447407');
+    fbq('track', 'PageView');
+  } catch (e) {}
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=961888533447407&ev=PageView&noscript=1" alt="" /></noscript>
 
@@ -2353,8 +2409,8 @@
     var eventName = cleanName(name);
     var payload = params || {};
     if (!eventName) return;
-    if (typeof fbq === 'function') fbq('trackCustom', eventName, payload);
-    if (typeof gtag === 'function') gtag('event', eventName, payload);
+    try { if (typeof fbq === 'function') fbq('trackCustom', eventName, payload); } catch (e) {}
+    try { if (typeof gtag === 'function') gtag('event', eventName, payload); } catch (e) {}
   }
   document.addEventListener('click', function(event) {
     var link = event.target.closest && event.target.closest('a');
@@ -2365,14 +2421,16 @@
     if (eventName) sendEvent(eventName, { location: location, href: href });
     if (href.indexOf('checkout.digitaldogschool.com/fixthewalk-page') !== -1) {
       sendEvent('fix_the_walk_checkout_click', { location: location, href: href, value: 795, currency: 'USD' });
-      if (typeof fbq === 'function') {
-        fbq('track', 'InitiateCheckout', {
-          value: 795, currency: 'USD',
-          content_name: 'Fix the Walk',
-          content_type: 'product',
-          content_ids: ['fix_the_walk']
-        });
-      }
+      try {
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            value: 795, currency: 'USD',
+            content_name: 'Fix the Walk',
+            content_type: 'product',
+            content_ids: ['fix_the_walk']
+          });
+        }
+      } catch (e) {}
     }
     if (href.indexOf('dogs.scoobandi.com/quiz-4061') !== -1) {
       sendEvent('quiz_click', { location: location, href: href });
@@ -2437,8 +2495,8 @@
       var id = entry.target.id || entry.target.getAttribute('aria-labelledby') || 'section';
       if (seen[id]) return;
       seen[id] = true;
-      if (typeof fbq === 'function') fbq('trackCustom', 'SectionView', { section: id, page: 'fix_the_walk' });
-      if (typeof gtag === 'function') gtag('event', 'section_view', { section: id, page: 'fix_the_walk' });
+      try { if (typeof fbq === 'function') fbq('trackCustom', 'SectionView', { section: id, page: 'fix_the_walk' }); } catch (e) {}
+      try { if (typeof gtag === 'function') gtag('event', 'section_view', { section: id, page: 'fix_the_walk' }); } catch (e) {}
     });
   }, { threshold: 0.35 });
   sections.forEach(function(s){ io.observe(s); });
