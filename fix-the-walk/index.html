@@ -306,9 +306,16 @@
     background: #2b2320;
   }
   @media (max-width: 700px) {
+    .hero {
+      min-height: calc(100vh - 60px);
+      min-height: calc(100svh - 60px);
+    }
     .hero-media img {
       object-fit: cover;
       object-position: center 30%;
+    }
+    .hero-scroll-cue {
+      bottom: 22px;
     }
   }
   .hero-media::after {
@@ -1472,8 +1479,8 @@
     <h1>You shouldn&rsquo;t have to dread the leash.</h1>
   </div>
 
-  <a href="#dream" class="hero-scroll-cue" aria-label="Scroll to read more">
-    Read on
+  <a href="#dream" class="hero-scroll-cue" aria-label="See the 4-week walking plan">
+    See the plan
   </a>
 </header>
 
@@ -2270,8 +2277,8 @@
     });
   }
 
-  buttons.forEach(function(button){
-    setExpanded(button, false);
+  buttons.forEach(function(button, index){
+    setExpanded(button, index === 0);
     button.addEventListener('click', function(){
       var isOpen = button.getAttribute('aria-expanded') === 'true';
       buttons.forEach(function(other){ setExpanded(other, false); });
@@ -2470,8 +2477,8 @@
 
   function update() {
     var heroRect = hero.getBoundingClientRect();
-    // Hide when hero is majority visible; show once user has scrolled past ~70% of hero
-    if (heroRect.bottom > window.innerHeight * 0.35) {
+    // Hide at first paint, then show after the first small scroll so mobile visitors always have a next action.
+    if (heroRect.bottom > window.innerHeight * 0.9) {
       sticky.classList.add('hidden');
     } else {
       sticky.classList.remove('hidden');
