@@ -246,7 +246,7 @@
     right: 0;
     z-index: 15;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     padding: 0 var(--gutter);
     color: #fff;
@@ -280,12 +280,12 @@
      ========================================================= */
   .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100svh; /* safe iOS Safari */
+    min-height: calc(100vh - 40px);
+    min-height: calc(100svh - 40px); /* safe iOS Safari */
     width: 100%;
     padding: 0;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     overflow: hidden;
     color: #fff;
@@ -296,6 +296,7 @@
     z-index: 0;
     background: #2b2320;
   }
+  .hero-media video,
   .hero-media img {
     position: absolute;
     inset: 0;
@@ -305,14 +306,16 @@
     object-position: center center;
     background: #2b2320;
   }
+  .hero-media video {
+    pointer-events: none;
+  }
+  .hero-poster {
+    display: none;
+  }
   @media (max-width: 700px) {
     .hero {
       min-height: calc(100vh - 60px);
       min-height: calc(100svh - 60px);
-    }
-    .hero-media img {
-      object-fit: cover;
-      object-position: center 30%;
     }
     .hero-scroll-cue {
       bottom: 22px;
@@ -324,61 +327,60 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.10) 30%, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.55) 100%),
-      radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35) 100%);
+      linear-gradient(180deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.22) 34%, rgba(0,0,0,0.35) 58%, rgba(0,0,0,0.86) 100%),
+      radial-gradient(ellipse at center, rgba(0,0,0,0.08) 32%, rgba(0,0,0,0.52) 100%);
   }
   .hero-inner {
     position: relative;
     z-index: 2;
     width: 100%;
-    padding: 0 var(--gutter);
+    padding: 88px var(--gutter) 78px;
     text-align: center;
   }
   .hero h1 {
     font-family: var(--serif);
     font-weight: 500;
     font-variation-settings: "opsz" 144;
-    font-size: clamp(34px, 6vw, 62px);
-    letter-spacing: -0.018em;
+    font-size: clamp(34px, 8.6vw, 62px);
+    letter-spacing: 0;
     line-height: 1.04;
     color: #fff;
-    margin: 14px auto 18px;
-    max-width: 17ch;
-    text-shadow: 0 1px 30px rgba(0,0,0,0.25);
+    margin: 12px auto 14px;
+    max-width: 15ch;
+    text-shadow: 0 2px 22px rgba(0,0,0,0.72);
   }
   .hero-content {
-    max-width: 760px;
+    max-width: 620px;
     margin: 0 auto;
     display: grid;
     justify-items: center;
     gap: 0;
   }
   .hero-eyebrow {
-    color: rgba(255,255,255,0.88);
-    text-shadow: 0 1px 16px rgba(0,0,0,0.35);
+    color: rgba(255,255,255,0.94);
+    text-shadow: 0 2px 16px rgba(0,0,0,0.72);
   }
   .hero-copy {
-    max-width: 58ch;
+    max-width: 33ch;
     margin: 0 auto;
-    color: rgba(255,255,255,0.92);
-    font-size: 17px;
-    line-height: 1.55;
-    text-shadow: 0 1px 18px rgba(0,0,0,0.35);
+    color: rgba(255,255,255,0.94);
+    font-size: 15px;
+    line-height: 1.45;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.75);
   }
   .hero-details {
-    margin: 18px 0 0;
+    margin: 14px 0 0;
     color: rgba(255,255,255,0.9);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
-    text-shadow: 0 1px 14px rgba(0,0,0,0.35);
+    text-shadow: 0 2px 14px rgba(0,0,0,0.72);
   }
   .hero-cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: 22px;
+    margin-top: 20px;
     background: #fffdf9;
     color: var(--ink);
     padding: 16px 24px;
@@ -389,16 +391,17 @@
     transition: transform 0.2s var(--ease), background 0.25s var(--ease);
   }
   .hero-cta:hover { background: var(--accent-soft); transform: translateY(-1px); }
-  .hero-guarantee {
-    margin: 12px 0 0;
-    color: rgba(255,255,255,0.82);
-    font-size: 13px;
-    line-height: 1.4;
-    text-shadow: 0 1px 14px rgba(0,0,0,0.35);
-  }
   @media (min-width: 768px) {
-    .hero-copy { font-size: 20px; }
+    .hero-inner { padding-bottom: 108px; }
+    .hero-copy {
+      max-width: 46ch;
+      font-size: 19px;
+    }
     .hero-details { font-size: 15px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-media video { display: none; }
+    .hero-poster { display: block; }
   }
   .hero-scroll-cue {
     position: absolute;
@@ -430,7 +433,7 @@
   .proof-video {
     max-width: 420px;
     margin: 2rem auto;
-    padding: 0 var(--gutter);
+    padding: 88px var(--gutter) 78px;
   }
   .proof-video h3 {
     margin: 0 0 0.75rem 0;
@@ -1151,7 +1154,7 @@
   .cinema .cinema-inner {
     position: relative;
     z-index: 2;
-    padding: 0 var(--gutter);
+    padding: 88px var(--gutter) 78px;
   }
   .cinema h2 {
     font-family: var(--serif);
@@ -1542,34 +1545,27 @@
      HERO — Part 1: cinematic full-bleed
      ========================================================= -->
 <header class="hero" role="banner" aria-label="Fix the Walk hero">
-  <nav class="nav" aria-label="Primary">
-    <a href="https://scoobandi.com/" class="brand" aria-label="Scoob &amp; I home">Scoob &amp; I</a>
-  </nav>
-
   <div class="hero-media" aria-hidden="true">
-    <img src="https://scoobandi.com/fix-the-walk/geordi-at-airport-hero.webp"
-         alt=""
-         onerror="this.onerror=null;this.src='https://scoobandi.com/fix-the-walk/geordi-at-airport-hero.png';" />
+    <video autoplay muted loop playsinline preload="metadata" poster="../assets/images/fix-the-walk-hero-comparison-poster.jpg">
+      <source src="../assets/videos/fix-the-walk-hero-comparison.mp4" type="video/mp4">
+    </video>
+    <img class="hero-poster" src="../assets/images/fix-the-walk-hero-comparison-poster.jpg" alt="" />
   </div>
 
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="eyebrow hero-eyebrow">LIVE 4-WEEK DOG-TRAINING PROGRAM</p>
-      <h1>Fix the pulling, lunging, and chaos that make you dread walking your dog.</h1>
+      <p class="eyebrow hero-eyebrow">LIVE 4-WEEK VIRTUAL GROUP COACHING</p>
+      <h1>You shouldn&rsquo;t have to dread walking your dog.</h1>
       <p class="hero-copy">
-        Fix the Walk gives you four weeks of live coaching, personalized video feedback, and a step-by-step training plan for building calmer, more reliable walks with your actual dog.
+        Join from anywhere in the world for four weeks of live coaching, video feedback, and step-by-step help with pulling, barking, and lunging.
       </p>
-      <p class="hero-details">Starts Monday, July 27 &middot; Limited to 15 dogs</p>
       <a href="#program" class="hero-cta" data-event="hero_program_cta_click" data-location="hero">
-        See How Fix the Walk Works
+        See How It Works
       </a>
-      <p class="hero-guarantee">Money-back guarantee for owners who complete the work.</p>
+      <p class="hero-details">Starts Monday, July 27 &middot; Limited to 15 dogs</p>
     </div>
   </div>
 
-  <a href="#program" class="hero-scroll-cue" aria-label="See how Fix the Walk works">
-    See the program
-  </a>
 </header>
 
 <div class="proof-video">
