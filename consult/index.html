@@ -6,7 +6,7 @@
 <title>Book a Consult with Joel — Scoob &amp; I | The call for difficult, misunderstood dogs</title>
 <meta name="description" content="A 50-minute private strategy call with Joel Harrison for owners of difficult, misunderstood, or complex dogs. In-person in Sharpsburg, GA or virtual anywhere in the world. Free. The starting point for private lessons and board &amp; train." />
 <meta property="og:title" content="Book a Consult with Joel — Scoob & I" />
-<meta property="og:description" content="The call owners take when they've run out of easier answers. For aggression, reactivity, panic, and complex cases 2–3 trainers already tried. In-person or virtual, worldwide. Free." />
+<meta property="og:description" content="A private 50-minute strategy call for reactive, aggressive, anxious, or complicated dogs. In-person near Atlanta or virtual anywhere. Free for a limited time." />
 <meta property="og:image" content="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scoobandi.com/consult/" />
@@ -150,6 +150,15 @@ section{position:relative}
 .step .num{font-family:var(--font-display);font-weight:800;font-size:15px;letter-spacing:.02em;color:var(--accent-ink);background:var(--accent);width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .step h3{font-family:var(--font-display);font-weight:800;font-size:19px;letter-spacing:-.01em;margin:0 0 10px;line-height:1.15}
 .step p{font-size:15px;line-height:1.55;color:var(--ink-70);margin:0}
+.section-cta{text-align:center;margin:32px auto 0}
+.section-cta .btn{min-width:220px}
+.start-here{background:var(--bg)}
+.start-card{max-width:980px;margin:0 auto;padding:34px 32px;background:var(--card);border:1px solid var(--hair);border-left:5px solid var(--accent);border-radius:20px;box-shadow:0 18px 48px -30px rgba(26,22,19,.35)}
+.start-card h2{font-size:clamp(25px,3.1vw,40px);margin:0 0 16px}
+.start-card p{font-size:16.5px;color:var(--ink-70);line-height:1.6;margin:0}
+.trust-box{max-width:860px;margin:28px auto 0;padding:24px 26px;background:var(--card);border:1px solid rgba(44,93,59,.28);border-left:5px solid var(--success);border-radius:18px}
+.trust-box p{margin:0;color:var(--ink-70);font-size:15.5px;line-height:1.6}
+.trust-box p + p{margin-top:12px}
 
 /* ================= FORMAT (in-person vs virtual) ================= */
 .format{background:var(--bg-2)}
@@ -223,6 +232,8 @@ section{position:relative}
 .sched-fallback a{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(179,81,47,.4);text-underline-offset:2px}
 .sched-fallback a:hover{border-bottom-color:var(--accent)}
 .sched-note{text-align:center;margin:24px auto 0;max-width:58ch;font-size:15px;color:var(--ink-70);line-height:1.55}
+.confirm-warning{max-width:860px;margin:0 auto 24px;padding:18px 20px;background:#FFF7DF;border:1px solid rgba(179,81,47,.28);border-left:5px solid var(--accent);border-radius:16px;color:var(--ink);font-size:15.5px;line-height:1.55}
+.confirm-warning strong{font-weight:800;color:var(--accent)}
 @media (max-width:720px){
   .scheduler .container{padding:0 12px}
   .sched-frame-wrap{border-radius:14px}
@@ -343,10 +354,10 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="hero-grid">
       <div>
         <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>50-minute private strategy call · with Joel</span>
-        <h1 id="hero-h">The call owners take when they've run out of <em>easier answers.</em></h1>
-        <p class="hero-sub">This is the call for owners of difficult, misunderstood, or complex dogs. Owners who have tried 2, 3, or 4 trainers and are ready for someone who actually specializes in this.</p>
-        <p class="hero-sub"><strong>This call is free. It's not a freebie.</strong></p>
-        <p class="hero-sub">Most 50-minute consults with a specialist in reactivity, anxiety, and aggression cost $150-$250. Mine doesn't, because most of the people I want to talk to have already spent that money on trainers who didn't help. Show up. Bring your dog's real story. I'll bring everything I know.</p>
+        <h1 id="hero-h">You know your dog needs more than another generic training plan.</h1>
+        <p class="hero-sub">A private 50-minute strategy call for reactive, aggressive, anxious, or complicated dogs—and the owners who need a clear plan before things get worse.</p>
+        <p class="hero-sub"><strong>In person near Atlanta or virtually anywhere. Free for a limited time.</strong></p>
+        <p class="hero-sub">Show up with your dog's real story, the hard details, and the questions you have not been able to get answered. Joel will help you understand what may be happening and what level of help actually makes sense.</p>
         <div class="hero-cta-row">
           <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="hero">Book my consult <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
@@ -376,38 +387,49 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
+<!-- ================= START HERE ================= -->
+<section class="sec start-here reveal" aria-labelledby="start-h">
+  <div class="container">
+    <div class="start-card">
+      <span class="eyebrow">Start here</span>
+      <h2 id="start-h" class="h-display">If I'm often the trainer people call after everything else failed, why not start here before spending more time and money on the wrong plan?</h2>
+      <p>You do not need to cycle through generic classes, conflicting advice, or programs built for a completely different dog before getting a thoughtful assessment. Start with a clear conversation about your dog, your household, what has already happened, and what the right level of help actually is.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= WHO THIS IS FOR ================= -->
 <section class="sec fit reveal" aria-labelledby="fit-h">
   <div class="container">
     <div class="sec-eyebrow-row"><span class="eyebrow">Who this call is for</span></div>
     <div class="sec-head">
-      <h2 id="fit-h" class="h-display">This is a specialist call. Let's be honest about who it serves.</h2>
-      <p>The consult is high-touch and direct. If your situation fits below, you're in exactly the right place. If it doesn't, we'll point you somewhere better.</p>
+      <h2 id="fit-h" class="h-display">This is a specialist call for dogs and households that need more thought.</h2>
+      <p>If one of these situations sounds familiar, book the consult. If private help is unnecessary, Joel will tell you and point you toward the least expensive option that makes sense.</p>
     </div>
     <div class="fit-grid">
       <div class="fit-col yes">
         <span class="tag">This is for you if…</span>
         <h3>Book the consult</h3>
         <ul class="fit-list">
-          <li><span class="mk" aria-hidden="true">✓</span><div>Aggression, bite history, dog-on-dog fighting, or resource guarding.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Reactivity that hasn't budged with force-free or tool-based approaches.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Aggression or bite history.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Dog-on-dog fighting.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Resource guarding.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Leash or barrier reactivity.</div></li>
           <li><span class="mk" aria-hidden="true">✓</span><div>Panic, anxiety, or a dog who can't settle in their own home.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Complex cases where 2 or 3 trainers have already tried.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Complex cases where the usual advice is not enough.</div></li>
           <li><span class="mk" aria-hidden="true">✓</span><div>You're considering board &amp; train but want to be sure it's the right move.</div></li>
           <li><span class="mk" aria-hidden="true">✓</span><div>You want private, unlimited 1-on-1 lessons with Joel directly.</div></li>
           <li><span class="mk" aria-hidden="true">✓</span><div>Your situation just doesn't fit a self-paced course or a group class.</div></li>
         </ul>
       </div>
       <div class="fit-col no">
-        <span class="tag">This is not for you if…</span>
-        <h3>Start somewhere else</h3>
-        <ul class="fit-list">
-          <li><span class="mk" aria-hidden="true">✕</span><div>You need basic puppy obedience.<span class="route">Better fit: <a href="https://digitaldogschool.com/" data-event="dds_cta_click" data-location="fit_notfor">Digital Dog School →</a></span></div></li>
-          <li><span class="mk" aria-hidden="true">✕</span><div>Your issue is leash pulling or walk-only problems.<span class="route">Better fit: <a href="https://scoobandi.com/fix-the-walk/" data-event="fix_the_walk_cta_click" data-location="fit_notfor">Fix the Walk →</a></span></div></li>
-          <li><span class="mk" aria-hidden="true">✕</span><div>You're looking for a magic quick fix.</div></li>
-          <li><span class="mk" aria-hidden="true">✕</span><div>You want to be told you're doing everything right.</div></li>
-        </ul>
+        <span class="tag">When in doubt</span>
+        <h3>Not sure your situation is serious enough?</h3>
+        <p style="color:var(--ink-70);font-size:16px;line-height:1.6;margin:14px 0 0">Book anyway. If private help is unnecessary, Joel will tell you and point you toward the least expensive option that makes sense.</p>
       </div>
+    </div>
+    <div class="section-cta">
+      <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="qualification">Book my consult <span class="btn-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -418,35 +440,49 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="sec-eyebrow-row"><span class="eyebrow">How the consult works</span></div>
     <div class="sec-head">
       <h2 id="steps-h" class="h-display">Here's exactly what happens on the call</h2>
-      <p>No sales pitch. No pressure to buy anything. Here's the 50 minutes, step by step:</p>
+      <p>This is a real strategy call, not a scripted sales presentation. Joel will help you understand what may be happening, explain the path he recommends, and—when working together makes sense—show you the relevant options and pricing.</p>
     </div>
     <div class="steps-grid">
       <div class="step">
         <div class="num" aria-hidden="true">1</div>
-        <h3>You explain what's happening with your dog.</h3>
-        <p>The behaviors, the history, what you've tried, what's making you crazy. I mostly listen.</p>
+        <h3>Tell Joel what is happening.</h3>
+        <p>The behavior, history, what you have tried, and what is making life difficult.</p>
       </div>
       <div class="step">
         <div class="num" aria-hidden="true">2</div>
-        <h3>I ask questions.</h3>
-        <p>Specific ones. Because your dog isn't every dog, and I need to understand the actual pattern before I can tell you anything useful.</p>
+        <h3>Joel identifies the pattern.</h3>
+        <p>He asks specific questions because the right plan depends on your actual dog and household.</p>
       </div>
       <div class="step">
         <div class="num" aria-hidden="true">3</div>
-        <h3>I tell you what I'd do.</h3>
-        <p>Not in vague trainer-speak. The actual plan - what to work on first, what to stop doing, what the path looks like.</p>
+        <h3>You get a recommended path.</h3>
+        <p>What to address first, what may be making the problem worse, and what meaningful progress could look like.</p>
       </div>
       <div class="step">
         <div class="num" aria-hidden="true">4</div>
-        <h3>We talk about what success looks like for your household.</h3>
-        <p>Not "your dog will be perfect." Real, specific outcomes that would change your life with this dog.</p>
-      </div>
-      <div class="step">
-        <div class="num" aria-hidden="true">5</div>
-        <h3>If we're a fit, I show you the options. If we're not, I tell you that too.</h3>
-        <p>Some dogs need something I don't offer. Some owners aren't ready. Some cases need a vet behaviorist first. I'll be honest either way.</p>
+        <h3>When appropriate, discuss working together.</h3>
+        <p>If private lessons or Board &amp; Train make sense, Joel will explain the relevant option and pricing. If they do not, he will tell you.</p>
       </div>
     </div>
+    <div class="trust-box">
+      <p>If I do not believe there is a meaningful benefit to working together, I will not offer you a program. I'll tell you what I think the best next step is—even when that means spending less money or not hiring me at all.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCHEDULER ================= -->
+<section class="sec scheduler" id="scheduler" aria-labelledby="sched-h">
+  <div class="container">
+    <div class="sec-head center">
+      <span class="eyebrow" style="display:block;margin-bottom:14px">Book your call</span>
+      <h2 id="sched-h" class="h-display">Pick a time.</h2>
+    </div>
+    <p class="confirm-warning"><strong>Important:</strong> Your appointment is not secured until you confirm it by email. After booking, check your inbox immediately and click the confirmation link. Unconfirmed appointments may automatically be removed from the calendar.</p>
+    <div class="sched-frame-wrap">
+      <iframe id="consult-calendar-iframe" src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" title="Book a consult with Joel Harrison" loading="lazy" scrolling="yes" allow="payment"></iframe>
+    </div>
+    <p class="sched-fallback">Widget not loading or feeling cramped? <a href="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" data-event="consult_cta_click" data-location="scheduler_fallback" target="_blank" rel="noopener">Open the scheduler in a full window →</a></p>
+    <p class="sched-note">The scheduler asks you a few questions so Joel comes prepared. Answer honestly—this call works better when he knows what he's walking into.</p>
   </div>
 </section>
 
@@ -487,13 +523,9 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 <section class="sec method reveal" aria-labelledby="method-h">
   <div class="container">
     <span class="eyebrow">The method</span>
-    <h2 id="method-h" class="h-display">One method. Every dog.</h2>
-    <p class="method-lede">Play is mother nature's teaching tool. Every skill your dog needs — attention, motivation, confidence, emotional control, a great relationship with you — is built through play, not drilled through obedience. That's why the training sticks. That's why the walks feel different. That's why the dog you're living with in 6 months feels like a different animal. It's not magic. It's play, used on purpose.</p>
-    <p class="method-tag">Everything Joel does — private lessons, board and train, Digital Dog School, Fix the Walk — runs on the same method: the Trust to Train Relationship Reset.</p>
-    <div class="method-objection">
-  <p class="method-objection-eyebrow">"My dog doesn't play."</p>
-  <p class="method-objection-body">There can be lots of different reasons why dogs don't play. Whatever your dog's reasons are, this is not something to be overlooked. Play is basically experimentation that happens when a being feels safe enough to do so — whether they don't feel safe, don't understand, or don't see the point. Finding something they love and giving it to them regularly to help them build confidence, motivation, and most importantly a stronger relationship <strong>IS THE PATH TO SUCCESS.</strong></p>
-</div>
+    <h2 id="method-h" class="h-display">The Trust to Train Relationship Reset.</h2>
+    <p class="method-lede">Everything Joel does—private lessons, Board &amp; Train, Digital Dog School, and Fix the Walk—starts with understanding the whole dog and household. Behavior is not treated as a generic obedience problem; it is looked at in context, including the dog's history, environment, relationships, triggers, routines, and what the humans can realistically maintain.</p>
+    <p class="method-tag">The goal is a workable relationship and communication system for the specific dog in front of Joel. That means building a plan around the dog you actually have, not forcing one-size-fits-all advice onto a dog whose behavior is more complicated than that.</p>
   </div>
 </section>
 
@@ -526,40 +558,20 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="ar-ico" aria-hidden="true">1:1</div>
         <div>
           <h3>Private Unlimited Lessons with Joel</h3>
-          <p>Unlimited 1-on-1 private lessons start at $995. Payment plans available. Digital Dog School is included.</p>
+          <p>Private unlimited 1-on-1 support starts at $945. Digital Dog School is included, and clients keep access to Digital Dog School forever.</p>
         </div>
       </div>
       <div class="after-row">
         <div class="ar-ico" aria-hidden="true">B&amp;T</div>
         <div>
           <h3>Board &amp; Train</h3>
-          <p>Board and train programs start at $2,150. Priced by case, length, and dog. Discussed on the call.</p>
+          <p>Board &amp; Train programs are customized based on the dog, the behavior, and the level of support required, and begin at $2,150. Programs may range from shorter foundational stays to longer behavior-modification work. Joel will only recommend this option when it is appropriate for the dog and household.</p>
         </div>
       </div>
     </div>
     <p class="after-close">Whatever the right move is, you'll leave the call knowing.</p>
-  </div>
-</section>
-
-<section class="case-story luna-story reveal" aria-labelledby="luna-h">
-  <div class="case-story-inner">
-    <span class="eyebrow">Case study</span>
-    <h2 id="luna-h">Luna's Story</h2>
-    <p class="case-story-lede">8 homes, 2 vet behaviorists, and 3 trainers before we finally started finding success. This is what a consult with Joel unlocked.</p>
-
-    <div class="case-story-video">
-      <div class="video-wrap"><iframe src="https://www.youtube.com/embed/IeybbYUZGyA" title="Luna's before and after" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe></div>
-    </div>
-
-    <div class="case-story-messages">
-      <div class="case-story-msg">
-        <p>"Hey Joel! I'm Luna's Dad and Deb's husband. I just wanted to thank you for taking the time and effort to speak with Deb last night about Luna and providing her some guidance and ideas for Luna. I must tell you that I've never seen Deb so excited, charged up, so elated about any trainer or program than yours. It looked like the weight of the world on her shoulders concerning Luna prior to your meeting last night. She has a renewed vigour now about Luna and it's amazing to see."</p>
-        <footer>— Dean, Luna's dad · after the consult</footer>
-      </div>
-      <div class="case-story-msg">
-        <p>"In truth, all of this is because of Deb. She's spent countless hours with Luna just to get her to this point. There were many times at the beginning that all of us wondered what did we just get ourselves into, but Deb and Luna have bonded hard together and Luna absolutely loves her mom. Deb is the first person that Luna rubs to for comfort, love and security when big scary things come out. I know you two will do great things together for Luna."</p>
-        <footer>— Dean, Luna's dad · a few weeks later</footer>
-      </div>
+    <div class="section-cta">
+      <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="program_paths">Book my consult <span class="btn-arrow" aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -590,13 +602,17 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
+<div class="section-cta" style="margin-top:-24px;margin-bottom:48px">
+  <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="case_study">Book my consult <span class="btn-arrow" aria-hidden="true">→</span></a>
+</div>
+
 <!-- ================= PROOF STRIP ================= -->
 <section class="sec pstrip reveal" aria-labelledby="proof-h">
   <div class="container">
     <div class="sec-head center">
       <span class="eyebrow" style="display:block;margin-bottom:14px">Real owners · real consults</span>
-      <h2 id="proof-h" class="h-display">The owners who booked this call had already tried everything.</h2>
-      <p>Not stock testimonials. Actual reviews from owners who found Joel after other trainers, classes, and even vet behaviorists. Tap any to read the whole thing.</p>
+      <h2 id="proof-h" class="h-display">Owners book this call when the situation needs careful thinking.</h2>
+      <p>Not stock testimonials. Actual reviews from owners navigating anxiety, reactivity, complex behavior, and hard decisions about the right level of help. Tap any to read the whole thing.</p>
     </div>
     <div class="pstrip-grid">
       <button type="button" class="zoomable" data-zoom-src="proof-sonia.png" data-zoom-alt="Five-star review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." aria-label="Enlarge Sonia Bologa review">
@@ -623,7 +639,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="faq-wrap">
       <details class="faq-item">
         <summary>How much does the consult cost?</summary>
-        <p class="faq-a">It's free. 50 minutes with Joel. That's not a typo — the call is currently free, and it's a real diagnostic conversation, not a rushed sales pitch.</p>
+        <p class="faq-a">It's free for a limited time. You get 50 minutes with Joel for a real strategy conversation about your dog and the right next step.</p>
       </details>
       <details class="faq-item">
         <summary>What if my case is really extreme?</summary>
@@ -631,11 +647,11 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </details>
       <details class="faq-item">
         <summary>What if I'm not sure it's extreme enough?</summary>
-        <p class="faq-a">Book anyway. If it's a better fit for <a href="https://scoobandi.com/fix-the-walk/" data-event="fix_the_walk_cta_click" data-location="faq">Fix the Walk</a> or <a href="https://digitaldogschool.com/" data-event="dds_cta_click" data-location="faq">Digital Dog School</a>, Joel will tell you honestly. You don't have to earn your way onto this call.</p>
+        <p class="faq-a">Book anyway. If private help is unnecessary, Joel will tell you and point you toward the least expensive option that makes sense. You do not have to earn your way onto this call.</p>
       </details>
       <details class="faq-item">
-        <summary>Do you take international clients?</summary>
-        <p class="faq-a">Yes. Joel regularly works with clients in Canada, the U.K., Australia, and across Europe. Virtual consults work beautifully — often better, because he sees your dog in your actual home.</p>
+        <summary>Can the consult be virtual or international?</summary>
+        <p class="faq-a">Yes. Joel regularly works with clients in Canada, the U.K., Australia, and across Europe. Virtual consults work well because the conversation is about your dog, your home, your routines, and the behavior pattern.</p>
       </details>
       <details class="faq-item">
         <summary>Can I bring my dog to the in-person consult?</summary>
@@ -643,29 +659,9 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       </details>
       <details class="faq-item">
         <summary>Is there any obligation to book something after?</summary>
-        <p class="faq-a">No. Book the consult, take the plan, and do what you want with it. If working together is the right move, you'll know — but there's no pressure.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What if I already have a trainer?</summary>
-        <p class="faq-a">If you're already in a training program and everything is going well, STAY THERE. Many dog trainers develop their own style and process — or if they didn't, they learned from someone who did. From one trainer to another, it's not always better or worse — maybe just different. Which means consulting with 2 different trainers could just end up being more confusing for you and the dog.</p>
-        <p class="faq-a">If you're unhappy with your current progress, or want to know if there's more that can be done for your dog, then you should ABSOLUTELY book a call.</p>
+        <p class="faq-a">No. Joel will make a recommendation and explain paid services when they are relevant. If he does not believe there is a meaningful benefit to working together, he will not offer you a program.</p>
       </details>
     </div>
-  </div>
-</section>
-
-<!-- ================= SCHEDULER ================= -->
-<section class="sec scheduler" id="scheduler" aria-labelledby="sched-h">
-  <div class="container">
-    <div class="sec-head center">
-      <span class="eyebrow" style="display:block;margin-bottom:14px">Book your call</span>
-      <h2 id="sched-h" class="h-display">Pick a time.</h2>
-    </div>
-    <div class="sched-frame-wrap">
-      <iframe id="consult-calendar-iframe" src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" title="Book a consult with Joel Harrison" loading="lazy" scrolling="yes" allow="payment"></iframe>
-    </div>
-    <p class="sched-fallback">Widget not loading or feeling cramped? <a href="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2" data-event="consult_cta_click" data-location="scheduler_fallback" target="_blank" rel="noopener">Open the scheduler in a full window →</a></p>
-    <p class="sched-note">The scheduler asks you a few questions so Joel comes prepared. Answer honestly — this call works better when he knows what he's walking into.</p>
   </div>
 </section>
 
