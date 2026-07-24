@@ -99,7 +99,7 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 @media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(179,81,47,.16)}
-.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(34px,4.6vw,58px);color:var(--ink);margin:0 0 20px;max-width:22ch}
+.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(34px,4.2vw,52px);color:var(--ink);margin:0 0 20px;max-width:22ch}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:var(--ink-70);max-width:54ch;margin:0 0 18px}
 .hero-dream{font-weight:700;color:var(--ink);max-width:50ch}
@@ -172,6 +172,14 @@ section{position:relative}
 .trust-box{max-width:860px;margin:28px auto 0;padding:24px 26px;background:var(--card);border:1px solid rgba(44,93,59,.28);border-left:5px solid var(--success);border-radius:18px}
 .trust-box p{margin:0;color:var(--ink-70);font-size:15.5px;line-height:1.6}
 .trust-box p + p{margin-top:12px}
+.early-proof{background:var(--bg)}
+.early-proof .container{max-width:980px}
+.early-proof-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:720px){.early-proof-grid{grid-template-columns:1fr 1fr;gap:18px}}
+.early-proof-tile{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:14px;box-shadow:0 14px 38px -28px rgba(26,22,19,.32)}
+.early-proof-tile .frame{border-radius:12px}
+.early-proof-label{display:block;margin-top:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink-55)}
+.early-proof-caption{margin:4px 0 0;font-size:14px;color:var(--ink-70);line-height:1.45}
 
 /* ================= FORMAT (in-person vs virtual) ================= */
 .format{background:var(--bg-2)}
@@ -282,6 +290,11 @@ section{position:relative}
 .final h2 em{font-style:normal;color:#F2D9A8}
 .final p:not(.final-foot){max-width:58ch;margin:0 auto 30px;color:rgba(255,255,255,.78);font-size:17px;line-height:1.6}
 .final-foot{margin-top:26px;font-size:14.5px;color:rgba(255,255,255,.62);line-height:1.6}
+.urgency{background:var(--bg);padding:72px 0}
+.urgency-inner{max-width:780px;margin:0 auto;padding:0 24px;text-align:center}
+.urgency h2{font-family:var(--font-display);font-size:clamp(27px,3.5vw,44px);line-height:1.06;letter-spacing:-.02em;margin:0 0 18px}
+.urgency p{margin:0 auto;color:var(--ink-70);font-size:16.5px;line-height:1.65;max-width:62ch}
+.urgency p + p{margin-top:14px}
 
 /* ================= FOOTER ================= */
 footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-size:14px}
@@ -410,7 +423,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="hero-grid">
       <div>
         <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>Private 50-minute strategy call with Joel</span>
-        <h1 id="hero-h">You love your dog. You're just tired of every walk, visitor, and small moment turning into a struggle.</h1>
+        <h1 id="hero-h">You love your dog. You should be able to enjoy life together.</h1>
         <p class="hero-sub">Whether your dog pulls, barks at deliveries, jumps on guests, reacts to other dogs, struggles to settle, or has a more serious behavior problem, you do not need more random advice.</p>
         <p class="hero-sub hero-dream">You need a clear plan that helps life with your dog feel calmer, safer, and more manageable.</p>
         <p class="hero-sub">In this free 50-minute consultation, Joel will help you understand what may be happening and what he believes the most practical next step is.</p>
@@ -420,9 +433,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <p class="hero-trust">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5.25 3.75 9.75 9 11 5.25-1.25 9-5.75 9-11V6l-9-4Zm-1.2 13.4-3.3-3.3 1.4-1.4 1.9 1.9 4.5-4.5 1.4 1.4-5.9 5.9Z"/></svg>
           Sharpsburg / near Atlanta · Virtual anywhere · Free 50-minute call
-        </p>
-        <p class="hero-trust">
-          If I don't believe working together would meaningfully help, I won't offer you a program.
         </p>
       </div>
       <div class="hero-vsl">
@@ -480,6 +490,25 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 </section>
 
 <!-- ================= CONSULTATION VALUE ================= -->
+<section class="sec early-proof reveal" aria-label="Early client proof">
+  <div class="container">
+    <div class="early-proof-grid">
+      <button type="button" class="zoomable early-proof-tile" data-zoom-src="/proof-ember-reynolds.png" data-zoom-alt="Ember Reynolds five-star review: an excitement-reactive dog transformed through Digital Dog School." aria-label="Enlarge Ember Reynolds review">
+        <div class="frame"><img src="/proof-ember-reynolds.png" alt="Five-star review from Ember Reynolds about an excitement-reactive dog." loading="lazy" /></div>
+        <span class="early-proof-label">Five-star review</span>
+        <p class="early-proof-caption">A real owner review from the same proof gallery.</p>
+        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+      </button>
+      <button type="button" class="zoomable early-proof-tile" data-zoom-src="/proof-sonia.png" data-zoom-alt="Five-star review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." aria-label="Enlarge Sonia Bologa review from early proof">
+        <div class="frame"><img src="/proof-sonia.png" alt="Five-star Google review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." loading="lazy" /></div>
+        <span class="early-proof-label">Online and private coaching</span>
+        <p class="early-proof-caption">Existing verified proof of real-life improvement.</p>
+        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+      </button>
+    </div>
+  </div>
+</section>
+
 <section class="sec steps reveal" aria-labelledby="steps-h">
   <div class="container">
     <div class="sec-eyebrow-row"><span class="eyebrow">The consultation</span></div>
@@ -744,12 +773,21 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
+<!-- ================= URGENCY ================= -->
+<section class="urgency reveal" aria-labelledby="urgency-h">
+  <div class="urgency-inner">
+    <h2 id="urgency-h">Waiting often makes the pattern stronger—and life around it harder.</h2>
+    <p>Every time the behavior works, your dog gets another chance to practice it. Meanwhile, you keep changing walks, visitors, routines, and expectations around the problem.</p>
+    <p>You do not have to wait until it becomes dangerous or unbearable to change direction.</p>
+  </div>
+</section>
+
 <!-- ================= FINAL CTA BAND ================= -->
 <section class="final" aria-labelledby="final-h">
   <div class="final-inner">
     <span class="eyebrow">Next step</span>
     <h2 id="final-h">Stop guessing what your dog needs.</h2>
-    <p>Tell me what life currently looks like, and I'll help you identify the most practical next step.</p>
+    <p>If you're ready for life with your dog to feel different, let's figure out the right next step.</p>
     <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="final">Book my free consultation <span class="btn-arrow" aria-hidden="true">→</span></a>
     <p class="final-foot">50 minutes · In person near Atlanta or virtual anywhere</p>
   </div>
