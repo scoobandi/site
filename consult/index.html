@@ -99,7 +99,7 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 @media (min-width:900px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:56px}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(179,81,47,.16)}
-.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(34px,4.6vw,58px);color:var(--ink);margin:0 0 20px;max-width:16ch}
+.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(34px,4.6vw,58px);color:var(--ink);margin:0 0 20px;max-width:22ch}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-sub{font-size:clamp(16px,1.5vw,19px);line-height:1.55;color:var(--ink-70);max-width:52ch;margin:0 0 30px}
 .hero-cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
@@ -156,6 +156,7 @@ section{position:relative}
 .start-card{max-width:980px;margin:0 auto;padding:34px 32px;background:var(--card);border:1px solid var(--hair);border-left:5px solid var(--accent);border-radius:20px;box-shadow:0 18px 48px -30px rgba(26,22,19,.35)}
 .start-card h2{font-size:clamp(25px,3.1vw,40px);margin:0 0 16px}
 .start-card p{font-size:16.5px;color:var(--ink-70);line-height:1.6;margin:0}
+.start-card p + p{margin-top:14px}
 .trust-box{max-width:860px;margin:28px auto 0;padding:24px 26px;background:var(--card);border:1px solid rgba(44,93,59,.28);border-left:5px solid var(--success);border-radius:18px}
 .trust-box p{margin:0;color:var(--ink-70);font-size:15.5px;line-height:1.6}
 .trust-box p + p{margin-top:12px}
@@ -353,17 +354,17 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="container">
     <div class="hero-grid">
       <div>
-        <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>50-minute private strategy call · with Joel</span>
-        <h1 id="hero-h">You know your dog needs more than another generic training plan.</h1>
-        <p class="hero-sub">A private 50-minute strategy call for reactive, aggressive, anxious, or complicated dogs—and the owners who need a clear plan before things get worse.</p>
-        <p class="hero-sub"><strong>In person near Atlanta or virtually anywhere. Free for a limited time.</strong></p>
-        <p class="hero-sub">Show up with your dog's real story, the hard details, and the questions you have not been able to get answered. Joel will help you understand what may be happening and what level of help actually makes sense.</p>
+        <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>Private 50-minute strategy call with Joel</span>
+        <h1 id="hero-h">You love your dog. You're just tired of every walk, visitor, and small moment turning into a struggle.</h1>
+        <p class="hero-sub">Whether your dog pulls, barks at deliveries, jumps on guests, reacts to other dogs, struggles to settle, or has a more serious behavior problem, you do not need more random advice.</p>
+        <p class="hero-sub"><strong>You need a clear plan that helps life with your dog feel calmer, safer, and more manageable.</strong></p>
+        <p class="hero-sub">In this free 50-minute consultation, Joel will help you understand what may be happening and what he believes the most practical next step is.</p>
         <div class="hero-cta-row">
           <a href="#scheduler" class="btn btn-primary btn-lg" data-event="consult_cta_click" data-location="hero">Book my consult <span class="btn-arrow" aria-hidden="true">→</span></a>
         </div>
         <p class="hero-trust">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 3 6v6c0 5.25 3.75 9.75 9 11 5.25-1.25 9-5.75 9-11V6l-9-4Zm-1.2 13.4-3.3-3.3 1.4-1.4 1.9 1.9 4.5-4.5 1.4 1.4-5.9 5.9Z"/></svg>
-          Booked by owners across the U.S., Canada, U.K., Australia, and Europe.
+          Virtual from anywhere · In person near Atlanta · Free 50-minute strategy call
         </p>
       </div>
       <div class="hero-vsl">
@@ -387,45 +388,42 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   </div>
 </section>
 
-<!-- ================= START HERE ================= -->
+<!-- ================= EMOTIONAL PROBLEM ================= -->
 <section class="sec start-here reveal" aria-labelledby="start-h">
   <div class="container">
     <div class="start-card">
-      <span class="eyebrow">Start here</span>
-      <h2 id="start-h" class="h-display">If I'm often the trainer people call after everything else failed, why not start here before spending more time and money on the wrong plan?</h2>
-      <p>You do not need to cycle through generic classes, conflicting advice, or programs built for a completely different dog before getting a thoughtful assessment. Start with a clear conversation about your dog, your household, what has already happened, and what the right level of help actually is.</p>
+      <span class="eyebrow">When daily life gets smaller</span>
+      <h2 id="start-h" class="h-display">Maybe it does not look extreme from the outside.</h2>
+      <p>Maybe your dog "just" pulls hard, barks at the Amazon driver, loses their mind when someone visits, or cannot focus around another dog.</p>
+      <p>But when it happens every day, it changes where you go, who comes over, how you feel on walks, and how much you trust yourself to handle your dog.</p>
+      <p>You do not have to wait until the problem becomes dangerous—or spend thousands trying the wrong solution—to get a clear plan.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= WHO THIS IS FOR ================= -->
+<!-- ================= DREAM OUTCOME ================= -->
 <section class="sec fit reveal" aria-labelledby="fit-h">
   <div class="container">
-    <div class="sec-eyebrow-row"><span class="eyebrow">Who this call is for</span></div>
+    <div class="sec-eyebrow-row"><span class="eyebrow">What changes</span></div>
     <div class="sec-head">
-      <h2 id="fit-h" class="h-display">This is a specialist call for dogs and households that need more thought.</h2>
-      <p>If one of these situations sounds familiar, book the consult. If private help is unnecessary, Joel will tell you and point you toward the least expensive option that makes sense.</p>
+      <h2 id="fit-h" class="h-display">What life could look like instead</h2>
     </div>
     <div class="fit-grid">
       <div class="fit-col yes">
-        <span class="tag">This is for you if…</span>
-        <h3>Book the consult</h3>
+        <span class="tag">The practical goal</span>
+        <h3>More calm, more clarity</h3>
         <ul class="fit-list">
-          <li><span class="mk" aria-hidden="true">✓</span><div>Aggression or bite history.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Dog-on-dog fighting.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Resource guarding.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Leash or barrier reactivity.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Panic, anxiety, or a dog who can't settle in their own home.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Complex cases where the usual advice is not enough.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>You're considering board &amp; train but want to be sure it's the right move.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>You want private, unlimited 1-on-1 lessons with Joel directly.</div></li>
-          <li><span class="mk" aria-hidden="true">✓</span><div>Your situation just doesn't fit a self-paced course or a group class.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Walks where you know what to do before your dog escalates.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Visitors without twenty minutes of chaos.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>A dog who can settle instead of constantly becoming more worked up.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>A plan that fits your actual dog, household, and goals.</div></li>
+          <li><span class="mk" aria-hidden="true">✓</span><div>Confidence that you are finally working on the right problem.</div></li>
         </ul>
       </div>
       <div class="fit-col no">
-        <span class="tag">When in doubt</span>
-        <h3>Not sure your situation is serious enough?</h3>
-        <p style="color:var(--ink-70);font-size:16px;line-height:1.6;margin:14px 0 0">Book anyway. If private help is unnecessary, Joel will tell you and point you toward the least expensive option that makes sense.</p>
+        <span class="tag">You can start here</span>
+        <h3>You do not need an extreme case to book.</h3>
+        <p style="color:var(--ink-70);font-size:16px;line-height:1.6;margin:14px 0 0">If your problem does not require private training, Joel will tell you and recommend the least expensive sensible next step.</p>
       </div>
     </div>
     <div class="section-cta">
@@ -552,6 +550,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     <div class="sec-head">
       <h2 id="after-h" class="h-display">This is the front door to everything Joel offers 1-on-1.</h2>
       <p>Board &amp; Train and Private Unlimited Lessons both start here. So does DIY. The consult is where Joel figures out which one is actually right for you.</p>
+      <p>That includes reactivity, anxiety, aggression, resource guarding, bite history, dog-on-dog conflict, failed prior training, and owners facing difficult or urgent decisions.</p>
     </div>
     <div class="after-rows">
       <div class="after-row">
