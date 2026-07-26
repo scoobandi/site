@@ -96,7 +96,6 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 .hero{background:var(--bg);padding:56px 0 20px;position:relative}
 @media (max-width:860px){.hero{padding:36px 0 12px}}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:36px;align-items:center}
-@media (min-width:900px){.hero-grid{grid-template-columns:.9fr 1.1fr;gap:44px}}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
 .hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(179,81,47,.16)}
 .hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(34px,4.2vw,52px);color:var(--ink);margin:0 0 20px;max-width:22ch}
@@ -394,8 +393,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   .hero-grid > div:first-child{display:contents}
   .hero-eyebrow{order:1}
   .hero h1{order:2}
-  .hero-sub,.hero-cta-row,.hero-trust{order:3}
-  .hero-proof{order:4;margin:1.25rem auto 0}
+  .hero-proof{order:3;margin:1.25rem auto}
+  .hero-sub,.hero-cta-row,.hero-trust{order:4}
 }
 .format-bullets{list-style:disc;padding-left:1.25rem;margin:1rem 0 0}
 .format-bullets li{margin:.5rem 0;line-height:1.6}
@@ -427,6 +426,19 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       <div>
         <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>Private 50-minute strategy call with Joel</span>
         <h1 id="hero-h">You love your dog. You should be able to enjoy life together.</h1>
+        <figure class="hero-proof">
+          <span class="hero-proof-label">Real client. Everyday problem. Measurable change.</span>
+          <button type="button" class="zoomable bleu-proof-button" data-zoom-src="/assets/images/bleu-private-lessons-proof.png" data-zoom-alt="Bleu beside a five-star client testimonial reporting that six private lessons stopped his pulling and jumping." aria-label="Enlarge Bleu private lessons proof">
+            <div class="bleu-proof-frame">
+              <img src="/assets/images/bleu-private-lessons-proof.png" alt="Bleu beside a five-star client testimonial reporting that six private lessons stopped his pulling and jumping." width="1448" height="1086" loading="eager" />
+            </div>
+            <span class="zoom-hint" aria-hidden="true">Tap to read</span>
+          </button>
+          <div class="bleu-mobile-summary" aria-hidden="true">
+            <p>Six lessons later, Bleu stopped pulling and jumping.</p>
+            <p>&mdash; Jarvis D. Jenkins</p>
+          </div>
+        </figure>
         <p class="hero-sub">Whether your dog pulls, barks at deliveries, jumps on guests, reacts to other dogs, struggles to settle, or has a more serious behavior problem, you do not need more random advice.</p>
         <p class="hero-sub hero-dream">You need a clear plan that helps life with your dog feel calmer, safer, and more manageable.</p>
         <p class="hero-sub">In this free 50-minute consultation, Joel will help you understand what may be happening and what he believes the most practical next step is.</p>
@@ -438,19 +450,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
           Sharpsburg / near Atlanta · Virtual anywhere · Free 50-minute call
         </p>
       </div>
-      <figure class="hero-proof">
-        <span class="hero-proof-label">Real client. Everyday problem. Measurable change.</span>
-        <button type="button" class="zoomable bleu-proof-button" data-zoom-src="/assets/images/bleu-private-lessons-proof.png" data-zoom-alt="Bleu beside a five-star client testimonial reporting that six private lessons stopped his pulling and jumping." aria-label="Enlarge Bleu private lessons proof">
-          <div class="bleu-proof-frame">
-            <img src="/assets/images/bleu-private-lessons-proof.png" alt="Bleu beside a five-star client testimonial reporting that six private lessons stopped his pulling and jumping." width="1448" height="1086" loading="eager" />
-          </div>
-          <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-        </button>
-        <div class="bleu-mobile-summary" aria-hidden="true">
-          <p>Six lessons later, Bleu stopped pulling and jumping.</p>
-          <p>&mdash; Jarvis D. Jenkins</p>
-        </div>
-      </figure>
     </div>
   </div>
 </section>
