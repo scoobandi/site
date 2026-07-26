@@ -392,17 +392,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 .method-lede{max-width:720px;margin:0 auto 1.5rem;line-height:1.7;font-size:1.05rem}
 .method-tag{max-width:640px;margin:0 auto;line-height:1.6;font-size:.95rem;color:#555;font-style:normal}
 .hero-vsl{max-width:420px;margin:0 auto;text-align:center}
-.hero-vsl-intro{margin:0 0 .75rem;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:#333}
 .hero-vsl-stage{position:relative;width:100%;aspect-ratio:9/16;border-radius:14px;overflow:hidden;box-shadow:0 12px 32px -14px rgba(0,0,0,.3)}
-.hero-vsl-thumb{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:pointer;transition:opacity .15s ease;z-index:2}
-.hero-vsl-thumb img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
-.hero-vsl-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:transform .2s ease;pointer-events:none}
-.hero-vsl-thumb:hover .hero-vsl-play{transform:scale(1.06)}
-.hero-vsl-thumb.is-hidden{opacity:0;pointer-events:none}
-.hero-vsl-player{position:absolute;inset:0;z-index:1;opacity:0;transition:opacity .15s ease;pointer-events:none}
-.hero-vsl-player.is-active{opacity:1;pointer-events:auto;z-index:3}
-.hero-vsl-frame{position:absolute;inset:0}
-.hero-vsl-frame iframe{width:100%;height:100%;border:0;display:block}
+.hero-static-frame img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block}
 @media (min-width:900px){.hero-vsl{max-width:360px}}
 @media (max-width:719px){
   .hero-grid{display:flex;flex-direction:column;grid-template-columns:1fr}
@@ -453,23 +444,11 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
           Sharpsburg / near Atlanta · Virtual anywhere · Free 50-minute call
         </p>
       </div>
-      <div class="hero-vsl">
-  <p class="hero-vsl-intro">Watch this short video to learn more.</p>
-  <div class="hero-vsl-stage">
-    <button type="button" class="hero-vsl-thumb" id="hero-vsl-thumb" aria-label="Play video from Joel">
-      <img src="/IMG_2794.jpeg" alt="Joel walking a blue pit bull on leash" loading="eager" />
-      <span class="hero-vsl-play" aria-hidden="true">
-        <svg viewBox="0 0 64 64" width="64" height="64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.55)"/>
-          <path d="M25 20 L47 32 L25 44 Z" fill="#fff"/>
-        </svg>
-      </span>
-    </button>
-    <div class="hero-vsl-player" id="hero-vsl-player" aria-hidden="true">
-      <div class="hero-vsl-frame"></div>
-    </div>
-  </div>
-</div>
+      <figure class="hero-vsl">
+        <div class="hero-vsl-stage hero-static-frame">
+          <img src="/IMG_2794.jpeg" alt="Joel walking a blue pit bull on leash" loading="eager" />
+        </div>
+      </figure>
     </div>
   </div>
 </section>
@@ -596,6 +575,10 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <p>That is why I look at your dog, household, history, routines, environment, and what you can realistically maintain.</p>
       </div>
       <div>
+        <p class="lesson-label">Watch this short video from Joel</p>
+        <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:0 0 24px;">
+          <iframe src="https://www.youtube.com/embed/vR1wAM63CP4?rel=0&modestbranding=1" title="Watch this short video from Joel" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+        </div>
         <p class="lesson-label">Watch a real coaching session</p>
         <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;margin:0;">
           <iframe src="https://www.youtube.com/embed/KDYeoR37FR0" title="Watch a real coaching session with Joel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
@@ -1019,18 +1002,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   });
 })();
 
-(function(){
-  var thumb=document.getElementById('hero-vsl-thumb');
-  var player=document.getElementById('hero-vsl-player');
-  if(!thumb||!player) return;
-  thumb.addEventListener('click',function(){
-    var frame=player.querySelector('.hero-vsl-frame');
-    frame.innerHTML='<iframe src="https://www.youtube.com/embed/vR1wAM63CP4?autoplay=1&rel=0&modestbranding=1" title="Watch this short video from Joel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-    thumb.classList.add('is-hidden');
-    player.classList.add('is-active');
-    player.setAttribute('aria-hidden','false');
-  });
-})();
 </script>
 
 <script data-pplx-inline-edit>
