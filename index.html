@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Scoob &amp; I — Training for the dogs everyone else gave up on</title>
-<meta name="description" content="Joel Harrison helps owners of difficult, misunderstood, or intense dogs build a life that actually works — a relationship-based system that works in real life, not just a training center. Pick your path: Fix the Walk, Digital Dog School, or a free consult." />
-<meta property="og:title" content="Scoob & I — Training for the dogs everyone else gave up on" />
+<title>Scoob &amp; I - Find out what your dog actually needs</title>
+<meta name="description" content="Take the Scoob & I dog training assessment to find out whether your dog needs a clearer foundation, personalized support, or a safety-first plan." />
+<meta property="og:title" content="Scoob & I - Training for the dogs everyone else gave up on" />
 <meta property="og:description" content="Reactivity, anxiety, aggression, pulling, panic. A relationship-based system that works in real life. 1000+ dogs helped worldwide, virtually." />
 <meta property="og:image" content="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6712d5be5f0d87d326b33543.jpeg" />
 <meta property="og:type" content="website" />
@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo+Black&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/images/homepage-hero-training.webp" type="image/webp" fetchpriority="high" />
 
 <!-- ================= TRACKING ================= -->
 <!-- Meta Pixel - Scoob & I -->
@@ -38,6 +39,7 @@ gtag('config','G-945PBSRQBE');
 <style>
 /* ================= RESET ================= */
 *,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
 html,body{margin:0;padding:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 img,svg{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
@@ -53,6 +55,8 @@ button{font:inherit;cursor:pointer;border:0;background:transparent;color:inherit
   --ink-30:rgba(26,22,19,.30);
   --hair:rgba(26,22,19,.12);
   --card:#FFFDF9;
+  --clay:var(--accent);
+  --sage:var(--accent);
   --accent:#B3512F;
   --accent-dk:#96411f;
   --accent-ink:#FFFDF9;
@@ -68,8 +72,8 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 .container{max-width:var(--w);margin:0 auto;padding:0 24px}
 .container-narrow{max-width:var(--w-narrow);margin:0 auto;padding:0 24px}
 .eyebrow{font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55)}
-.h-display{font-family:var(--font-display);font-weight:800;letter-spacing:-.02em;line-height:1.05;color:var(--ink)}
-.h-title{font-family:var(--font-display);font-weight:800;letter-spacing:-.015em;line-height:1.1;color:var(--ink)}
+.h-display{font-family:var(--font-display);font-weight:800;letter-spacing:0;line-height:1.05;color:var(--ink)}
+.h-title{font-family:var(--font-display);font-weight:800;letter-spacing:0;line-height:1.1;color:var(--ink)}
 .small{font-size:13px;color:var(--ink-55)}
 
 /* ================= BUTTONS ================= */
@@ -88,68 +92,85 @@ html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);lin
 .topnav a{font-size:14px;font-weight:500;color:var(--ink-70);transition:color .18s ease}
 .topnav a:hover{color:var(--ink)}
 .topnav a.nav-consult{color:var(--accent);font-weight:600}
-@media (max-width:640px){.topnav a.nav-hide{display:none}.topnav{gap:18px}.topbar .brand{font-size:13px}}
+.topnav a.nav-assessment{color:var(--ink);font-weight:600}
+a:focus-visible,button:focus-visible,iframe:focus-visible{outline:3px solid rgba(179,81,47,.55);outline-offset:3px}
+@media (max-width:640px){.topnav a.nav-hide{display:none}.topnav{gap:14px}.topnav a{font-size:13px}.topbar .brand{font-size:13px}.topbar-inner{padding:12px 16px}}
 
 /* ================= HERO ================= */
-.hero{background:var(--bg);padding:40px 0 36px;position:relative}
-@media (max-width:720px){.hero{padding:32px 0 24px}}
-.hero-head{max-width:880px}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
-.hero-eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(179,81,47,.16)}
-.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:-.025em;line-height:1.02;font-size:clamp(36px,5vw,62px);color:var(--ink);margin:0 0 20px;max-width:20ch}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero-sub{font-size:clamp(16px,1.5vw,20px);line-height:1.55;color:var(--ink-70);max-width:60ch;margin:0}
-.pick-row{display:flex;align-items:center;gap:14px;margin:32px 0 22px}
-.pick-row::after{content:"";flex:1;height:1px;background:var(--hair)}
-.pick-label{font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-55)}
-@media (max-width:720px){.pick-row{margin:32px 0 20px}}
+.hero{isolation:isolate;display:grid;align-items:center;min-height:clamp(660px,51vw,740px);overflow:hidden;background:#120f0d;color:#fff;position:relative}
+.hero-media{position:absolute;inset:0;z-index:-2;display:block}
+.hero-media img{width:100%;height:100%;object-fit:contain;object-position:right center}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#120f0d 0%,rgba(18,15,13,.97) 31%,rgba(18,15,13,.76) 49%,rgba(18,15,13,.24) 75%,rgba(18,15,13,.06) 100%),linear-gradient(180deg,rgba(18,15,13,.08),rgba(18,15,13,.24))}
+.hero .container{width:100%;position:relative;z-index:1}
+.hero-head{max-width:620px;padding:72px 0}
+.hero h1{font-family:var(--font-display);font-weight:800;letter-spacing:0;line-height:.98;font-size:clamp(48px,4.8vw,68px);text-transform:uppercase;color:#FFFDF9;margin:0 0 28px;text-shadow:0 2px 20px rgba(0,0,0,.36)}
+.hero h1 span{display:block}
+.hero h1 .hero-accent{color:var(--accent)}
+@media (min-width:1200px){.hero h1 .hero-accent{font-size:.9em;white-space:nowrap}}
+.hero-sub{font-family:var(--font-body);font-size:clamp(17px,1.45vw,20px);line-height:1.62;color:rgba(255,253,249,.96);max-width:51ch;margin:0;text-shadow:0 1px 14px rgba(0,0,0,.4)}
+.hero-reassurance{font-family:var(--font-body);font-size:15px;font-weight:600;line-height:1.55;color:rgba(255,253,249,.82);margin:26px 0 0;max-width:52ch;text-shadow:0 1px 12px rgba(0,0,0,.42)}
+.hero-reassurance::before{content:"";display:block;width:56px;height:3px;background:var(--accent);margin-bottom:18px}
+@media (max-width:1199px) and (min-width:601px){
+  .hero-head{max-width:60vw;margin-left:32vw}
+  .hero h1{font-size:clamp(42px,5.8vw,58px)}
+  .hero-sub{font-size:17px}
+}
+@media (max-width:600px){
+  .hero{min-height:780px;align-items:start}
+  .hero-media{top:390px}
+  .hero-media img{object-position:center bottom}
+  .hero::after{background:linear-gradient(180deg,#120f0d 0%,rgba(18,15,13,.97) 46%,rgba(18,15,13,.52) 66%,rgba(18,15,13,.10) 100%)}
+  .hero .container{padding:0 18px}
+  .hero-head{max-width:100%;margin:0;padding:42px 0 20px}
+  .hero h1{font-size:clamp(31px,9.5vw,38px);line-height:1;margin-bottom:18px}
+  .hero-sub{font-size:15px;line-height:1.5}
+  .hero-reassurance{font-size:13px;line-height:1.45;margin-top:16px}
+  .hero-reassurance::before{width:44px;margin-bottom:14px}
+}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;align-items:center}
+.center-action{justify-content:center}
 
-/* ================= ROUTER CARDS ================= */
-.router{display:grid;grid-template-columns:1fr;gap:20px}
-@media (min-width:860px){.router{grid-template-columns:repeat(3,1fr);gap:22px}}
-.rcard{background:var(--card);border:1px solid var(--hair);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(26,22,19,.03);transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease}
-@media (min-width:860px){.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 60px -26px rgba(26,22,19,.34);border-color:rgba(179,81,47,.35)}}
-.rcard-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a0806}
-.rcard-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.rcard-media img[src*="geordi-airport"]{object-position:center 15%; aspect-ratio: 4/5}
-@media (min-width:860px){.rcard:hover .rcard-media img{transform:scale(1.04)}}
-.rcard-eyebrow{position:absolute;top:14px;left:14px;z-index:2;background:rgba(26,22,19,.82);color:#FFFDF9;font-family:var(--font-body);font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:7px 11px;border-radius:999px;backdrop-filter:blur(6px);max-width:calc(100% - 28px)}
-.rcard-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
-.rcard-title{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.015em;line-height:1.05;margin:0 0 12px;color:var(--ink)}
-.rcard-desc{font-size:15px;line-height:1.55;color:var(--ink-70);margin:0 0 18px}
-.rcard-meta{font-size:13px;font-weight:600;color:var(--ink);letter-spacing:.01em;padding-top:16px;border-top:1px solid var(--hair);margin-top:auto;display:flex;align-items:center;gap:8px}
-.rcard-meta .m-accent{color:var(--accent)}
-.rcard-cta{margin-top:18px}
-.rcard-cta a{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px 20px;border-radius:999px;font-weight:600;font-size:15.5px;transition:transform .15s ease,background .2s ease,box-shadow .2s ease}
-.rcard-cta .cta-solid{background:var(--accent);color:#fff;box-shadow:0 8px 22px rgba(179,81,47,.24)}
-.rcard-cta .cta-solid:hover{background:var(--accent-dk);transform:translateY(-1px)}
-.rcard-cta .cta-ink{background:var(--ink);color:#fff}
-.rcard-cta .cta-ink:hover{background:#000;transform:translateY(-1px)}
-.rcard-cta .arr{transition:transform .2s ease}
-.rcard-cta a:hover .arr{transform:translateX(3px)}
-.rcard.is-feature{border-color:rgba(179,81,47,.4)}
-.rcard.is-feature .rcard-media::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 2px rgba(179,81,47,.0)}
+/* ================= ASSESSMENT ================= */
+.assessment{background:var(--bg);padding:0 0 20px;overflow-x:hidden;scroll-margin-top:48px}
+.assessment-embed{width:100%;max-width:960px;margin:0 auto}
+.assessment-embed iframe{display:block;width:100%;min-height:720px;border:0;background:var(--card)}
+.assessment-fallback{margin:16px auto 0;padding:0 24px;max-width:760px;text-align:center;font-size:14px;color:var(--ink-55)}
+.assessment-fallback a{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(179,81,47,.35)}
 
-/* quiz fallback */
-.quiz-fallback{margin:28px 0 0;text-align:center;font-size:14px;color:var(--ink-55)}
-.quiz-fallback a{color:var(--ink-70);border-bottom:1px solid var(--ink-30);text-underline-offset:3px;transition:color .18s}
-.quiz-fallback a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+@media (max-width:720px){
+  .assessment{padding-bottom:12px}
+  .assessment .container{padding:0}
+  .assessment-embed iframe{min-height:760px}
+  .assessment-fallback{padding:0 16px}
+}
 
 /* ================= SECTION FRAME ================= */
 section{position:relative}
-.sec{padding:84px 0}
-@media (max-width:720px){.sec{padding:60px 0}}
-.sec-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.sec{padding:92px 0}
+@media (max-width:720px){.sec{padding:66px 0}}
+.sec-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:22px}
 .sec-eyebrow-row::before{content:"";width:34px;height:1px;background:var(--ink-30)}
 
 /* ================= PROOF STRIP ================= */
-.pstrip{background:var(--bg-2);padding:40px 0 44px}
+.pstrip{background:var(--bg-2);padding:46px 0 50px}
 .pstrip-inner{max-width:var(--w);margin:0 auto;padding:0 24px}
-.pstrip-lead{text-align:center;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55);margin:0 0 26px}
-.pstrip-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:1000px;margin:0 auto}
-@media (min-width:720px){.pstrip-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
-.pstrip-foot{text-align:center;margin:28px 0 0;font-size:14.5px;color:var(--ink-70);line-height:1.5}
-.pstrip-foot strong{color:var(--ink);font-weight:700}
+.pstrip-lead{text-align:center;font-family:var(--font-body);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-55);margin:0 0 30px}
+.pstrip-grid{display:grid;grid-template-columns:1fr;gap:14px;max-width:1100px;margin:0 auto}
+@media (min-width:760px){.pstrip-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+.pstrip-item{background:var(--card);padding:24px 22px;border:1px solid var(--hair);border-radius:8px;color:var(--ink);line-height:1.45}
+.pstrip-item:nth-child(2){background:var(--clay)}
+.pstrip-item:nth-child(3){background:var(--sage)}
+.pstrip-item:nth-child(2),.pstrip-item:nth-child(3){border-color:var(--accent);color:#fff}
+.pstrip-item strong{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.pstrip-item span{display:block;font-size:14px;color:var(--ink-70);line-height:1.55}
+.pstrip-item:nth-child(2) span,.pstrip-item:nth-child(3) span{color:rgba(255,255,255,.86)}
+
+/* ================= RESOURCES BANNER ================= */
+.resources-banner{background:var(--bg)}
+.resources-split{display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:clamp(34px,5.5vw,72px);align-items:center}
+.resources-photo{margin:0;border-radius:8px;overflow:hidden;border:1px solid var(--hair);box-shadow:0 24px 60px -30px rgba(26,22,19,.4);background:var(--sage)}
+.resources-photo img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center top}
+@media (max-width:760px){.resources-split{grid-template-columns:1fr}.resources-photo{max-width:520px;margin:0 auto}.resources-photo img{aspect-ratio:4/5;object-position:center top}}
 
 /* ================= ZOOMABLE / PROOF FRAMES ================= */
 .zoomable{padding:0;background:transparent;border:0;cursor:zoom-in;position:relative;display:block;width:100%;text-align:left}
@@ -168,73 +189,69 @@ section{position:relative}
 
 /* ================= MIRROR ================= */
 .mirror{background:var(--bg)}
-.mirror h2{font-size:clamp(28px,3.8vw,50px);margin:0 0 20px;max-width:22ch}
-.mirror .lead{font-size:clamp(16px,1.4vw,19px);color:var(--ink-70);max-width:58ch;margin:0 0 40px}
+.mirror h2{font-size:clamp(28px,3.8vw,50px);margin:0 0 24px;max-width:22ch}
+.mirror .lead{font-size:clamp(16px,1.4vw,19px);line-height:1.65;color:var(--ink-70);max-width:58ch;margin:0 0 44px}
 .mirror-grid{display:grid;grid-template-columns:1fr;gap:0 32px}
 @media (min-width:760px){.mirror-grid{grid-template-columns:1fr 1fr}}
-.mirror-item{display:flex;gap:14px;padding:18px 0;border-bottom:1px solid var(--hair);font-size:16.5px;line-height:1.5;color:var(--ink)}
+.mirror-item{display:flex;gap:14px;padding:21px 0;border-bottom:1px solid var(--hair);font-size:16.5px;line-height:1.55;color:var(--ink)}
 .mirror-item .dot{flex:0 0 auto;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px}
-.mirror-close{margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px}
-.mirror-close p{font-family:var(--font-display);font-weight:800;font-size:clamp(20px,2.3vw,28px);line-height:1.2;letter-spacing:-.01em;max-width:26ch;color:var(--ink);margin:0}
+.mirror-close{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px}
+.mirror-close p{font-family:var(--font-display);font-weight:800;font-size:clamp(20px,2.3vw,28px);line-height:1.2;letter-spacing:0;max-width:30ch;color:var(--ink);margin:0}
 .mirror-close a{color:var(--accent);font-weight:600;font-size:15px;border-bottom:1px solid rgba(179,81,47,.4);text-underline-offset:3px;white-space:nowrap}
 .mirror-close a:hover{border-bottom-color:var(--accent)}
 
 /* ================= DIFFERENT / POSITIONING ================= */
 .diff{background:var(--bg-2)}
-.diff-inner{display:grid;grid-template-columns:1fr;gap:44px;align-items:start}
-@media (min-width:900px){.diff-inner{grid-template-columns:1.1fr .9fr;gap:64px}}
-.diff h2{font-size:clamp(28px,3.6vw,46px);margin:0 0 18px;letter-spacing:-.02em;max-width:16ch}
-.diff .lead{font-size:17px;color:var(--ink-70);margin:0 0 30px;max-width:52ch}
+.diff-inner{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+@media (min-width:900px){.diff-inner{grid-template-columns:1.15fr .85fr;gap:72px}}
+.diff h2{font-size:clamp(28px,3.4vw,44px);margin:0 0 24px;letter-spacing:0;line-height:1.06;max-width:24ch;text-transform:uppercase}
+.diff .lead{font-size:17px;line-height:1.68;color:var(--ink-70);margin:0 0 34px;max-width:58ch}
+.diff .lead + .lead{margin-top:-16px}
 .diff .lead strong{color:var(--ink);font-weight:600}
-.diff-list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.diff-list li{padding:16px 18px;border-radius:14px;font-size:15.5px;line-height:1.5;display:flex;gap:12px;align-items:flex-start}
-.diff-list li.no{background:var(--card);border:1px solid var(--hair);color:var(--ink-70)}
-.diff-list li.no .mk{color:var(--accent);font-weight:700;flex:0 0 auto}
-.diff-list li.yes{background:var(--ink);color:#fff}
-.diff-list li.yes .mk{color:#F2D9A8;font-weight:700;flex:0 0 auto}
-.diff-list li.yes strong{color:#fff}
-.diff-proof{margin:0}
+.method-steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:14px}
+.method-steps li{background:var(--card);border:1px solid var(--hair);border-radius:8px;padding:21px 22px}
+.method-steps li:nth-child(2),.method-steps li:nth-child(4){background:var(--sage)}
+.method-steps li:nth-child(3){background:var(--clay)}
+.method-steps li:nth-child(2),.method-steps li:nth-child(3),.method-steps li:nth-child(4){border-color:var(--accent);color:#fff}
+.method-steps span{display:block;color:var(--accent);font-weight:800;font-size:12px;letter-spacing:.14em;margin-bottom:6px}
+.method-steps strong{display:block;font-family:var(--font-display);letter-spacing:0;line-height:1.1;margin-bottom:8px}
+.method-steps p{margin:0;color:var(--ink-70);font-size:15px;line-height:1.52}
+.method-steps li:nth-child(2) span,.method-steps li:nth-child(3) span,.method-steps li:nth-child(4) span{color:rgba(255,255,255,.72)}
+.method-steps li:nth-child(2) p,.method-steps li:nth-child(3) p,.method-steps li:nth-child(4) p{color:rgba(255,255,255,.86)}
+.diff-quote{margin:0;background:var(--sage);border:1px solid var(--hair);border-radius:8px;padding:30px 28px;box-shadow:0 18px 44px -28px rgba(26,22,19,.38)}
+.diff-quote{border-color:var(--accent);color:#fff}
+.diff-quote p{font-family:var(--font-display);font-size:clamp(20px,2.2vw,28px);line-height:1.25;letter-spacing:0;margin:0 0 22px;color:#fff}
+.diff-quote footer{display:block;background:transparent;padding:0;margin:0;font-size:14px;color:rgba(255,255,255,.78)}
+.diff-quote a{color:#fff;font-weight:700}
 
 /* ================= ABOUT ================= */
 .about{background:var(--bg)}
-.about-inner{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
-@media (min-width:860px){.about-inner{grid-template-columns:.85fr 1.15fr;gap:56px}}
+.about-inner{display:grid;grid-template-columns:1fr;gap:46px;align-items:start}
+@media (min-width:860px){.about-inner{grid-template-columns:.78fr 1.22fr;gap:64px}}
 .about-photo{margin:0}
-.about-photo .frame{border-radius:22px;overflow:hidden;border:1px solid var(--hair);box-shadow:0 24px 60px -30px rgba(26,22,19,.4);aspect-ratio:1/1;background:#0a0806}
+.about-photo .frame{border-radius:8px;overflow:hidden;border:1px solid var(--hair);box-shadow:0 24px 60px -30px rgba(26,22,19,.4);aspect-ratio:1/1;background:#0a0806}
 .about-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
-.about h2{font-size:clamp(28px,3.4vw,44px);margin:0 0 20px;letter-spacing:-.02em;max-width:18ch}
-.about p{font-size:16.5px;line-height:1.6;color:var(--ink-70);margin:0 0 16px;max-width:56ch}
+.about h2{font-size:clamp(30px,3.5vw,46px);margin:0 0 24px;letter-spacing:0;line-height:1.05;max-width:20ch;text-transform:uppercase}
+.about p{font-size:16.5px;line-height:1.7;color:var(--ink-70);margin:0 0 20px;max-width:62ch}
 .about p strong{color:var(--ink);font-weight:600}
-.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0 0;padding:24px 0 0;border-top:1px solid var(--hair)}
-.about-stats .stat .n{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.02em;color:var(--accent);line-height:1}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 0}
+.about-stats .stat{padding:19px 17px;border:1px solid var(--hair);border-radius:8px;background:var(--card)}
+.about-stats .stat:nth-child(2){background:var(--clay)}
+.about-stats .stat:nth-child(3){background:var(--sage)}
+.about-stats .stat:nth-child(2),.about-stats .stat:nth-child(3){border-color:var(--accent);color:#fff}
+.about-stats .stat .n{font-family:var(--font-display);font-weight:800;font-size:clamp(21px,2.4vw,30px);letter-spacing:0;color:var(--accent);line-height:1.05}
 .about-stats .stat .l{font-size:12.5px;color:var(--ink-55);margin-top:7px;line-height:1.35}
-
-/* ================= BIG PROOF ================= */
-.bproof{background:var(--bg-2)}
-.bproof-head{text-align:center;max-width:640px;margin:0 auto 44px;padding:0 24px}
-.bproof-head h2{font-size:clamp(28px,3.6vw,46px);margin:0 0 14px;letter-spacing:-.02em}
-.bproof-head p{font-size:16.5px;color:var(--ink-70);margin:0}
-.bproof-grid{display:grid;grid-template-columns:1fr;gap:16px;max-width:1040px;margin:0 auto;padding:0 24px}
-@media (min-width:640px){.bproof-grid{grid-template-columns:1fr 1fr;gap:18px}}
-@media (min-width:1000px){.bproof-grid{grid-template-columns:repeat(3,1fr);gap:20px}}
+.about-stats .stat:nth-child(2) .n,.about-stats .stat:nth-child(3) .n{color:#fff}
+.about-stats .stat:nth-child(2) .l,.about-stats .stat:nth-child(3) .l{color:rgba(255,255,255,.8)}
+@media (max-width:620px){.about-stats{grid-template-columns:1fr}.about-stats .stat{padding:18px}}
 
 /* ================= FINAL ROUTING CTA ================= */
-.final{background:#1A1613;color:#fff;padding:96px 0 104px}
-@media (max-width:720px){.final{padding:72px 0 84px}}
+.final{background:#1A1613;color:#fff;padding:104px 0 112px}
+@media (max-width:720px){.final{padding:78px 0 90px}}
 .final-inner{max-width:760px;margin:0 auto;padding:0 24px;text-align:center}
 .final .eyebrow{color:rgba(255,255,255,.55)}
-.final h2{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,4.3vw,56px);letter-spacing:-.02em;line-height:1.04;color:#fff;margin:16px 0 34px;max-width:18ch;margin-left:auto;margin-right:auto}
-.final-rows{display:grid;gap:12px;max-width:560px;margin:0 auto}
-.final-row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:rgba(255,253,249,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px 22px;text-align:left;transition:background .2s ease,border-color .2s ease,transform .18s ease}
-.final-row:hover{background:rgba(255,253,249,.09);border-color:rgba(242,217,168,.4);transform:translateY(-2px)}
-.final-row .fr-l{display:flex;flex-direction:column;gap:3px}
-.final-row .fr-tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F2D9A8;font-weight:700}
-.final-row .fr-name{font-family:var(--font-display);font-weight:800;font-size:18px;letter-spacing:-.01em;color:#fff}
-.final-row .fr-arr{font-size:20px;color:rgba(255,255,255,.7);flex:0 0 auto;transition:transform .2s ease,color .2s ease}
-.final-row:hover .fr-arr{transform:translateX(4px);color:#F2D9A8}
-.final-foot{margin-top:30px;font-size:14px;color:rgba(255,255,255,.6);line-height:1.6}
-.final-foot a{color:#F2D9A8;font-weight:600;border-bottom:1px solid rgba(242,217,168,.4)}
-.final-foot a:hover{color:#fff;border-bottom-color:#fff}
+.final h2{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,4.3vw,56px);letter-spacing:0;line-height:1.04;color:#fff;margin:18px auto 22px;max-width:20ch}
+.final p{max-width:640px;margin:0 auto;color:rgba(255,255,255,.76);font-size:17px;line-height:1.6}
 
 /* ================= FOOTER ================= */
 footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-size:14px}
@@ -259,65 +276,22 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   .reveal{opacity:1;transform:none}
 }
 
-/* Pass B Part 2 — Homepage additions */
-.rcard-clickable { position: relative; }
-.rcard-link { display: block; color: inherit; text-decoration: none; }
-.rcard-link:hover .rcard-cta,
-.rcard-link:focus .rcard-cta { text-decoration: underline; }
-.rcard-cta { display: inline-block; font-weight: 700; margin-top: 0.75rem; }
-
-.quiz-escape {
-  display: inline-block; margin: 0.75rem 0;
-  font-size: 0.95rem; opacity: 0.85; text-decoration: underline;
-}
-.quiz-escape:hover { opacity: 1; }
-
-.t2t-jpg-section { padding: 3rem 1rem; background: #fafaf5; }
-.t2t-jpg-inner { max-width: 720px; margin: 0 auto; }
-.t2t-jpg-link { display: block; }
-.t2t-jpg-img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 
-.final-guarantee {
-  max-width: 640px; margin: 1rem auto 2rem;
-  font-size: 0.95rem; opacity: 0.85; text-align: center; line-height: 1.5;
-}
-.final-resources { margin-top: 2rem; text-align: center; font-size: 0.95rem; }
-.final-resources a { color: inherit; text-decoration: underline; opacity: 0.8; }
-.final-resources a:hover { opacity: 1; }
-
-/* Trust-to-Train infographic */
-.t2t-wrap{max-width:920px;margin:4rem auto;padding:0 1.25rem}
-.t2t-head{text-align:center;margin-bottom:2.5rem}
-.t2t-head h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.15;margin:0 0 .5rem;letter-spacing:-.01em}
-.t2t-head p{margin:0;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
-.t2t-steps{display:flex;flex-direction:column;gap:1rem;position:relative}
-.t2t-steps::before{content:"";position:absolute;left:2.25rem;top:2.25rem;bottom:2.25rem;width:2px;background:#c6f26a;opacity:.55}
-.t2t-step{display:flex;gap:1.25rem;align-items:flex-start;background:#fff;border:1px solid #e6e8e3;border-radius:14px;padding:1.25rem 1.5rem;box-shadow:0 1px 2px rgba(0,0,0,.03);position:relative}
-.t2t-num{flex:0 0 auto;width:3rem;height:3rem;border-radius:999px;background:#c6f26a;color:#0f0f0f;font-weight:700;font-size:1.15rem;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
-.t2t-body h3{margin:.15rem 0 .4rem;font-size:1.15rem;letter-spacing:.02em;text-transform:uppercase}
-.t2t-body p{margin:0;line-height:1.55;color:#333}
-.t2t-body ul{margin:.35rem 0 0;padding-left:1.15rem;line-height:1.6;color:#333}
-.t2t-body ul li{margin:.1rem 0}
-@media (max-width:520px){
-  .t2t-steps::before{left:1.6rem;top:1.6rem;bottom:1.6rem}
-  .t2t-step{padding:1rem 1.15rem;gap:.9rem}
-  .t2t-num{width:2.4rem;height:2.4rem;font-size:1rem}
-}
-
 /* Inky's Story */
-.inky-story{max-width:1080px;margin:5rem auto;padding:0 1.25rem}
-.inky-head{text-align:center;margin-bottom:2.5rem}
+.inky-story{background:var(--bg);padding:92px 24px}
+.inky-head{text-align:center;max-width:700px;margin:0 auto 46px}
 .inky-head .eyebrow{display:inline-block;margin-bottom:.75rem}
-.inky-head h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.15;margin:0 0 .75rem;letter-spacing:-.01em}
-.inky-head p.inky-lede{max-width:640px;margin:0 auto;color:#333;line-height:1.6}
-.inky-grid{display:grid;grid-template-columns:1fr;gap:1.5rem;margin-bottom:2.5rem}
-@media (min-width:820px){.inky-grid{grid-template-columns:1fr 1fr}}
-.inky-card{background:#fff;border:1px solid #e6e8e3;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
-.inky-card .inky-caption{padding:.85rem 1.15rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#666;border-bottom:1px solid #eef0eb;background:#faf9f5}
-.inky-card img{display:block;width:100%;height:auto}
-.inky-tiktok{max-width:605px;margin:0 auto;text-align:center}
-.inky-tiktok-label{margin:0 0 1rem;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:#0f0f0f;font-weight:600}
+.inky-head h2{font-family:var(--font-display);font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;margin:0 0 1rem;letter-spacing:0}
+.inky-head p.inky-lede{max-width:680px;margin:0 auto;color:var(--ink-70);line-height:1.68}
+.inky-parts{display:grid;grid-template-columns:1fr;gap:22px;max-width:1200px;margin:0 auto;align-items:start}
+@media (min-width:760px){.inky-parts{grid-template-columns:1fr 1fr}.inky-part--outcome{grid-column:1/-1;max-width:620px;width:100%;justify-self:center}}
+@media (min-width:1120px){.inky-parts{grid-template-columns:repeat(3,1fr)}.inky-part--outcome{grid-column:auto;max-width:none}}
+.inky-part{background:var(--card);border:1px solid var(--hair);border-radius:8px;overflow:hidden;box-shadow:0 18px 44px -30px rgba(26,22,19,.38);padding:20px;text-align:left}
+.inky-label{display:block;margin:0 0 16px;padding-bottom:13px;border-bottom:1px solid var(--hair);font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.inky-part img{display:block;width:100%;height:auto;border-radius:4px}
+.inky-part .tiktok-embed{width:100%!important;max-width:100%!important;min-width:0!important;margin:0 auto!important}
+@media (max-width:720px){.inky-story{padding:66px 16px}.inky-part{padding:18px}}
 </style>
 </head>
 <body>
@@ -327,104 +301,49 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="topbar-inner">
     <a href="https://scoobandi.com/" class="brand" aria-label="Scoob and I home">SCOOB <span class="amp">&amp;</span> I</a>
     <nav class="topnav" aria-label="Primary">
+      <a href="#dog-assessment" class="nav-assessment" data-event="quiz_click" data-location="topbar">Take the Assessment</a>
+      <a href="https://scoobandi.com/resources/">Resources</a>
       <a href="#about" class="nav-hide">About</a>
-      <a href="https://scoobandi.com/resources/" class="nav-hide">Resources</a>
-      <a href="https://scoobandi.com/consult/" class="nav-consult" data-event="consult_cta_click" data-location="topbar">Consult</a>
+      <a href="https://scoobandi.com/consult/" class="nav-consult nav-hide" data-event="consult_cta_click" data-location="topbar">Consult</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= HERO / ROUTER ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero" aria-labelledby="hero-h">
+  <picture class="hero-media" aria-hidden="true">
+    <source srcset="assets/images/homepage-hero-training.webp" type="image/webp" />
+    <img src="assets/images/homepage-hero-training.jpg" alt="" width="940" height="788" fetchpriority="high" decoding="async" />
+  </picture>
   <div class="container">
     <div class="hero-head">
-      <span class="hero-eyebrow"><span class="dot" aria-hidden="true"></span>If it's your first dog or your dog's last chance</span>
-      <h1 id="hero-h">Your dog isn't broken. You just haven't been shown the <em>right plan</em> yet.</h1>
-      <p class="hero-sub">For owners who've already tried 2 or 3 trainers and are done being told their dog is 'just like that.'</p>
-      <p class="hero-sub">I help owners of difficult, misunderstood, or intense dogs build a life that actually works — using a relationship-based system that works in real life, not just in a training center.</p>
+      <h1 id="hero-h"><span>Life with your dog should feel</span><span class="hero-accent">Easier than this.</span></h1>
+      <p class="hero-sub">If walks, visitors, anxiety, reactivity, aggression, or everyday life are harder than you expected, this five-minute assessment will help you understand where the solution should begin.</p>
+      <p class="hero-reassurance">No shame. No generic recommendation. No pressure to choose the most expensive option.</p>
     </div>
-
-    <div class="pick-row">
-      <span class="pick-label">Pick your path</span>
-    </div>
-
-    <div class="router">
-
-      <!-- Card 1 — Fix the Walk -->
-      <article class="rcard rcard-clickable">
-        <a class="rcard-link" href="https://scoobandi.com/fix-the-walk/">
-        <div class="rcard-media">
-          <span class="rcard-eyebrow">Walks are the hardest part</span>
-          <img src="geordi-airport-mobile.jpg" alt="A calm black-and-white dog walking on a loose leash beside its handler through a busy airport terminal." loading="eager" width="1080" height="1256" />
-        </div>
-        <div class="rcard-body">
-          <h2 class="rcard-title">Fix the Walk</h2>
-          <p class="rcard-desc">4-week virtual group class for owners whose dog is sweet at home but a lunatic on leash. Pulling, lunging, barking, dragging — we fix it live with your dog, on your street.</p>
-          <div class="rcard-meta">Next cohort: Mon, July 27</div>
-          <span class="rcard-cta">See the class <span class="arr">→</span></span>
-        </div>
-        </a>
-      </article>
-
-      <!-- Card 2 — Digital Dog School -->
-      <article class="rcard rcard-clickable">
-        <a class="rcard-link" href="https://digitaldogschool.com/">
-        <div class="rcard-media">
-          <span class="rcard-eyebrow">Self-paced · Lifetime access</span>
-          <img src="dds-silhouette.png" alt="Silhouette of a person and a seated dog looking at each other against a vivid sunset over water." loading="lazy" width="960" height="540" />
-        </div>
-        <div class="rcard-body">
-          <h2 class="rcard-title">Digital Dog School</h2>
-          <p class="rcard-desc">A dog you can actually live with — from jumping and pulling to reactivity and anxiety. DDS gives you the foundation, the play, and the skills to handle whatever comes up.</p>
-          <div class="rcard-meta"><span class="m-accent">$147</span> · One price · Start tonight</div>
-          <span class="rcard-cta">See what's inside <span class="arr">→</span></span>
-        </div>
-        </a>
-      </article>
-
-      <!-- Card 3 — Free Consult -->
-      <article class="rcard is-feature rcard-clickable">
-        <a class="rcard-link" href="https://scoobandi.com/consult/">
-        <div class="rcard-media">
-          <span class="rcard-eyebrow">50-minute strategy call · Free</span>
-          <img src="consult-joel.jpg" alt="Joel Harrison crouched in the woods with a young shepherd-type dog leaning calmly into him." loading="lazy" width="1400" height="896" />
-        </div>
-        <div class="rcard-body">
-          <h2 class="rcard-title">Book a Consult</h2>
-          <p class="rcard-desc">For the hard cases — aggression, bite history, dog-on-dog fighting, panic, cases where two or three other trainers already tried. 50 minutes with Joel to figure out what your dog actually needs, and whether we're the right fit.</p>
-          <div class="rcard-meta"><span class="m-accent">Free</span> · 50 minutes · With Joel</div>
-          <span class="rcard-cta">Book a consult <span class="arr">→</span></span>
-        </div>
-        </a>
-      </article>
-
-    </div>
-
   </div>
 </section>
 
-  <div class="proof-video" style="max-width:720px;margin:2rem auto;">
-  <h3 style="margin:0 0 0.75rem 0;font-size:1.15rem;text-align:center;">See a real virtual lesson</h3>
-  <div class="video-embed" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;">
-    <iframe src="https://www.youtube.com/embed/YPsLtHM0nzo" title="See a real virtual lesson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+<!-- ================= DOG ASSESSMENT ================= -->
+<section class="assessment" id="dog-assessment" aria-label="Your 5-minute assessment">
+  <div class="container">
+    <div class="assessment-embed">
+      <iframe src="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" style="border:none;width:100%;" scrolling="no" id="pDmHSDUSVSBSMg099kYJ" title="What Does Your Dog Actually Need assessment"></iframe>
+    </div>
+    <p class="assessment-fallback">Having trouble loading the assessment? <a href="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" target="_blank" rel="noopener" data-event="quiz_click" data-location="assessment_fallback">Open it here.</a></p>
   </div>
-</div>
+</section>
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 
 <!-- ================= PROOF STRIP ================= -->
 <section class="pstrip" aria-labelledby="pstrip-h">
   <div class="pstrip-inner">
-    <h2 id="pstrip-h" class="pstrip-lead">Real owners. Real dogs. Real results.</h2>
+    <h2 id="pstrip-h" class="pstrip-lead">Real support for real life with your dog.</h2>
     <div class="pstrip-grid">
-      <button type="button" class="zoomable" data-zoom-src="proof-tiktok.jpg" data-zoom-alt="TikTok comment: after two bad trainers, Joel actually explained everything and laid out steps and plans to follow." aria-label="Enlarge TikTok comment">
-        <div class="frame"><img src="proof-tiktok.jpg" alt="TikTok comment praising Joel for explaining everything and laying out clear steps after two other trainers failed." loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
-      <button type="button" class="zoomable" data-zoom-src="proof-sonia.png" data-zoom-alt="Five-star review from Sonia Bologa about her high-energy dog Sully thriving after working with Joel virtually." aria-label="Enlarge Sonia Bologa review">
-        <div class="frame"><img src="proof-sonia.png" alt="Five-star Google review from Sonia Bologa about her high-energy dog Sully thriving after online lessons and private sessions with Joel." loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
+      <div class="pstrip-item"><strong>1,000+ dogs helped</strong><span>Practical support built around the dog and family in front of me.</span></div>
+      <div class="pstrip-item"><strong>Virtual + in-person support</strong><span>Work with Joel worldwide through virtual coaching, or in Sharpsburg, Georgia through in-person lessons and Board &amp; Train.</span></div>
+      <div class="pstrip-item"><strong>Complex behavior experience</strong><span>Reactivity, anxiety, aggression, and difficult behavior that has not improved with generic advice.</span></div>
     </div>
-    <p class="pstrip-foot"><strong>1000+ dogs helped worldwide</strong></p>
   </div>
 </section>
 
@@ -433,42 +352,84 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="container-narrow">
     <div class="sec-eyebrow-row"><span class="eyebrow">Does this sound like you?</span></div>
     <h2 id="mirror-h" class="h-display">If any of this is your life right now, you're in the right place.</h2>
-    <p class="lead">You're not a bad owner. You're not doing it wrong. You just haven't been taught the right thing in the right order yet.</p>
+    <p class="lead">You cannot use information no one has taught you yet. The plan may not have matched the dog in front of you.</p>
     <div class="mirror-grid">
       <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>Your dog is sweet in the house but a lunatic on leash.</div></div>
       <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>Walks feel like the hardest part of your day.</div></div>
       <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>You're not sure whether this is anxiety, reactivity, aggression, or a dog with too much gas in the tank.</div></div>
       <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>You're tired of being told to just use more treats.</div></div>
-      <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>You're wondering whether your dog is too far gone.</div></div>
       <div class="mirror-item"><span class="dot" aria-hidden="true"></span><div>You've already tried 2 or 3 trainers and nothing has stuck.</div></div>
     </div>
     <div class="mirror-close">
-      <p>You're in the right place. Pick the path that fits and let's get to work.</p>
-      <a class="quiz-escape" href="https://dogs.scoobandi.com/quiz-4061">Still not sure which path? Take the 60-second quiz →</a>
-      <a href="#top" data-scroll-top="1">Back to the paths ↑</a>
+      <p>You may simply be working on the wrong problem, or working on the right problem in the wrong order.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= WHY MY WORK IS DIFFERENT ================= -->
+<!-- ================= FREE RESOURCES ================= -->
+<section class="sec resources-banner reveal" aria-labelledby="resources-h">
+  <div class="container">
+    <div class="resources-split">
+      <figure class="resources-photo">
+        <img src="IMG_2794.jpeg" alt="Joel walking with a gray dog on leash during practical training outdoors." loading="lazy" width="806" height="1209" />
+      </figure>
+      <div>
+        <div class="sec-eyebrow-row"><span class="eyebrow">FREE DOG TRAINING RESOURCES</span></div>
+        <h2 id="resources-h" class="h-display">You should not have to spend money just to get a useful answer.</h2>
+        <p class="lead">Explore practical, no-shame dog training guides that help you understand what is happening, what to stop doing, and what to try next.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://scoobandi.com/resources/" data-event="resource_offer_click" data-location="resources_banner">Explore Free Resources <span class="btn-arrow" aria-hidden="true">-&gt;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= METHOD ================= -->
 <section class="sec diff reveal" aria-labelledby="diff-h">
   <div class="container">
     <div class="sec-eyebrow-row"><span class="eyebrow">Why my work is different</span></div>
     <div class="diff-inner">
       <div>
-        <h2 id="diff-h" class="h-display">The Trust to Train Relationship Reset.</h2>
-        <p class="lead">Most training fails because it's built on the wrong foundation. I don't sell a philosophy — I build a plan around <strong>your dog and you.</strong></p>
-        <ul class="diff-list">
-          <li class="no"><span class="mk" aria-hidden="true">✕</span><div>Not force-free-only purity.</div></li>
-          <li class="no"><span class="mk" aria-hidden="true">✕</span><div>Not tool-bro correction culture.</div></li>
-          <li class="no"><span class="mk" aria-hidden="true">✕</span><div>Not generic obedience commands.</div></li>
-          <li class="yes"><span class="mk" aria-hidden="true">✓</span><div><strong>Relationship-first, practical, and emotionally intelligent</strong> — customized to the dog <em>and</em> the human in front of me.</div></li>
-        </ul>
+        <h2 id="diff-h" class="h-display">If your dog weren't acting out, you probably wouldn't care that much about obedience.</h2>
+        <p class="lead">Obedience matters. But wouldn't it be better if your dog simply didn't feel the need to explode, panic, pull, guard, or shut down in the first place?</p>
+        <p class="lead">By addressing the root of the problem and building a more confident, stable dog, we can create real, lasting behavior change instead of party tricks that only work in the kitchen.</p>
+        <ol class="method-steps">
+          <li><span>01</span><strong>Stop</strong><p>Stop practicing the pattern that keeps the problem alive.</p></li>
+          <li><span>02</span><strong>Play</strong><p>Build confidence, motivation, emotional control, and connection.</p></li>
+          <li><span>03</span><strong>Train</strong><p>Teach the skills your dog actually needs for the situations you face.</p></li>
+          <li><span>04</span><strong>Live</strong><p>Bring those skills back into walks, visitors, public places, and everyday life.</p></li>
+        </ol>
       </div>
-      <button type="button" class="zoomable diff-proof" data-zoom-src="proof-different.png" data-zoom-alt="Review: 'Joel's way is different than the rest. These are not corrections and harsh methods that focus on dominating your dog.'" aria-label="Enlarge review about Joel's approach">
-        <div class="frame"><img src="proof-different.png" alt="Client review: 'Not all dogs are the same... Joel's way is different than the rest. These are not corrections and harsh methods that focus on dominating your dog.'" loading="lazy" /></div>
-        <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-      </button>
+      <blockquote class="diff-quote">
+        <p>“Joel is not just working with our dog. He's willing to work with us and train us to be the best possible parents we can be to her.”</p>
+        <footer>Catie, <a href="https://www.instagram.com/catieosaurus" target="_blank" rel="noopener">@catieosaurus</a></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="inky-story" aria-labelledby="inky-h">
+  <div class="inky-head">
+    <span class="eyebrow">One dog. One family. 1.5 years.</span>
+    <h2 id="inky-h">Inky's Story</h2>
+    <p class="inky-lede">Inky's family had already been through two trainers and a vet behaviorist. Anxiety. Sudden inter-dog aggression. Hyper-fixation. This is what happened when they stopped trying to fix the behavior and started rebuilding the relationship.</p>
+  </div>
+
+  <div class="inky-parts">
+    <button type="button" class="zoomable inky-part" data-zoom-src="proof-inky.png" data-zoom-alt="Inky's initial review after two trainers and a vet behaviorist: the consult with Joel brought clarity and a plan." aria-label="Enlarge Inky's initial consult review">
+      <span class="inky-label">The Beginning</span>
+      <img src="proof-inky.png" alt="Inky's initial review after two trainers and a vet behaviorist: the consult with Joel brought clarity and a plan." loading="lazy" />
+    </button>
+
+    <button type="button" class="zoomable inky-part" data-zoom-src="proof-dogperson.png" data-zoom-alt="Inky's follow-up review: Joel is THE dog person. Take the plunge." aria-label="Enlarge Inky's progress review">
+      <span class="inky-label">The Progress</span>
+      <img src="proof-dogperson.png" alt="Inky's follow-up review: Joel is THE dog person. You will be happy, your dogs will be happy. Take the plunge." loading="lazy" />
+    </button>
+
+    <div class="inky-part inky-part--outcome">
+      <span class="inky-label">The Outcome</span>
+      <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@inkyinkblot/video/7659110650999754014" data-video-id="7659110650999754014" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@inkyinkblot" href="https://www.tiktok.com/@inkyinkblot?refer=embed">@inkyinkblot</a> @Scoob &#38; I Dog training @Leah McManus  1.5 years of putting in the work. Through tears, failures, small wins, and baby steps of progress, board &#38; train helped us progress pass big hurdles, but we still had a lot of work to do.  We finally got the biggest win yet.  🙌💪 <a title="dogtraining" target="_blank" href="https://www.tiktok.com/tag/dogtraining?refer=embed">#dogtraining</a> <a title="nevergiveup" target="_blank" href="https://www.tiktok.com/tag/nevergiveup?refer=embed">#nevergiveup</a> <a title="pitbull" target="_blank" href="https://www.tiktok.com/tag/pitbull?refer=embed">#pitbull</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ A Simple Life - Morunas" href="https://www.tiktok.com/music/A-Simple-Life-7486702176300222480?refer=embed">♬ A Simple Life - Morunas</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
     </div>
   </div>
 </section>
@@ -481,121 +442,17 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
         <div class="frame"><img src="joel-with-dog.jpg" alt="Joel Harrison kneeling outdoors in the grass with a brown dog leaning into him." loading="lazy" width="911" height="911" /></div>
       </figure>
       <div>
-        <div class="sec-eyebrow-row"><span class="eyebrow">Who you'll be working with</span></div>
-        <h2 id="about-h" class="h-display">Joel Harrison</h2>
-        <blockquote class="authority-quote" style="border-left:3px solid #d4a017;padding:1rem 1.25rem;margin:1.5rem 0;font-style:normal;">
-  <p style="margin:0 0 0.75rem 0;font-size:1.05rem;line-height:1.5;">"Joel is not just working with our dog. He's willing to work with us and train us to be the best possible parents we can be to her."</p>
-  <footer style="font-size:0.9rem;opacity:0.85;">— Catie (<a href="https://www.instagram.com/catieosaurus" target="_blank" rel="noopener">@catieosaurus</a>, 2M+ followers)</footer>
-</blockquote>
-        <p>Almost all of my work is virtual, and that's on purpose. I coach you in <strong>your</strong> real environment — your street, your living room, your neighbor's dog barking through the fence — instead of a training facility your dog will never live in. Real life is where the problem happens, so real life is where we fix it.</p>
-        <p>Everything runs on one method: <strong>the Trust to Train Relationship Reset.</strong> Stop rehearsing chaos, build the relationship and motivation, teach clear skills, then bring it all back into daily life. It's practical, it's honest, and it's built for the dog and human in front of me — not a script.</p>
+        <div class="sec-eyebrow-row"><span class="eyebrow">Meet Joel Harrison</span></div>
+        <h2 id="about-h" class="h-display">Your first dog or your dog's last chance.</h2>
+        <p>I've helped more than 1,000 dogs and owners, with much of that work happening virtually in the environments where the problems actually live. Local clients can also work with me in Sharpsburg, Georgia through in-person lessons and Board &amp; Train.</p>
+        <p>Working with difficult dogs has taught me that training the dog is only half the job. Owners need to understand what they are seeing, why the plan works, and what to do when real life gets messy. Just as importantly, I listen when you tell me what success looks like for your family.</p>
+        <p>To me, success is not a polished highlight reel created for social media. It is dogs and owners living safer, calmer, happier lives together.</p>
+        <p>That emphasis on owner education, strong foundations, and the relationship between dog and human makes Scoob &amp; I a strong fit whether this is your first dog or your dog's last chance.</p>
         <div class="about-stats">
-          <div class="stat"><div class="n">1000+</div><div class="l">Dogs helped worldwide</div></div>
-          <div class="stat"><div class="n">Virtual</div><div class="l">Trained in your real environment</div></div>
-          <div class="stat"><div class="n">Complex</div><div class="l">Reactivity · anxiety · aggression</div></div>
+          <div class="stat"><div class="n">1,000+</div><div class="l">Dogs helped</div></div>
+          <div class="stat"><div class="n">Virtual + Local</div><div class="l">Virtual and in-person support</div></div>
+          <div class="stat"><div class="n">Complex</div><div class="l">Reactivity, anxiety, aggression, and complex behavior</div></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="t2t-wrap" aria-labelledby="t2t-h">
-  <div class="t2t-head">
-    <h2 id="t2t-h">Trust to Train Relationship Reset</h2>
-    <p>4 steps of behavior change</p>
-  </div>
-  <ol class="t2t-steps">
-    <li class="t2t-step">
-      <div class="t2t-num">01</div>
-      <div class="t2t-body">
-        <h3>Stop Negative Behaviors</h3>
-        <p>Unwanted behaviors are either self rewarding or extremely stressful. Either way, stop practicing the problem.</p>
-      </div>
-    </li>
-    <li class="t2t-step">
-      <div class="t2t-num">02</div>
-      <div class="t2t-body">
-        <h3>Play With Your Dog</h3>
-        <ul>
-          <li>Build Confidence</li>
-          <li>Motivation</li>
-          <li>Emotional Control</li>
-          <li>Great Relationship</li>
-        </ul>
-      </div>
-    </li>
-    <li class="t2t-step">
-      <div class="t2t-num">03</div>
-      <div class="t2t-body">
-        <h3>Train Your Dog</h3>
-        <p>Use the previous foundation to teach your dog and practice the basic skills needed to navigate their world together.</p>
-      </div>
-    </li>
-    <li class="t2t-step">
-      <div class="t2t-num">04</div>
-      <div class="t2t-body">
-        <h3>Live With Your Dog</h3>
-        <p>Use the skills you have built with your dog to navigate a safe, happy life together, solving problems as they arise.</p>
-      </div>
-    </li>
-  </ol>
-</section>
-
-<section class="inky-story" aria-labelledby="inky-h">
-  <div class="inky-head">
-    <span class="eyebrow">One dog. One family. 1.5 years.</span>
-    <h2 id="inky-h">Inky's Story</h2>
-    <p class="inky-lede">Inky's family had already been through two trainers and a vet behaviorist. Anxiety. Sudden inter-dog aggression. Hyper-fixation. This is what happened when they stopped trying to fix the behavior and started rebuilding the relationship.</p>
-  </div>
-
-  <div class="inky-grid">
-    <button type="button" class="zoomable inky-card" data-zoom-src="proof-inky.png" data-zoom-alt="Inky's five-star review — 2 trainers and a vet behaviorist later, I did a consult with Joel." aria-label="Enlarge Inky's consult review">
-      <div class="inky-caption">The beginning — the consult</div>
-      <img src="proof-inky.png" alt="Inky's five-star review: 2 trainers and a vet behaviorist later, I did a consult with Joel. Should have done this sooner." loading="lazy" />
-    </button>
-
-    <button type="button" class="zoomable inky-card" data-zoom-src="proof-dogperson.png" data-zoom-alt="Inky's follow-up review — Joel is THE dog person. Take the plunge." aria-label="Enlarge Inky's endorsement review">
-      <div class="inky-caption">The endorsement — a few months in</div>
-      <img src="proof-dogperson.png" alt="Inky's follow-up review: Joel is THE dog person. You will be happy, your dogs will be happy. Take the plunge." loading="lazy" />
-    </button>
-  </div>
-
-  <div class="inky-tiktok">
-    <p class="inky-tiktok-label">1.5 years later — the biggest win yet</p>
-    <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@inkyinkblot/video/7659110650999754014" data-video-id="7659110650999754014" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@inkyinkblot" href="https://www.tiktok.com/@inkyinkblot?refer=embed">@inkyinkblot</a> @Scoob &#38; I Dog training @Leah McManus  1.5 years of putting in the work. Through tears, failures, small wins, and baby steps of progress, board &#38; train helped us progress pass big hurdles, but we still had a lot of work to do.  We finally got the biggest win yet.  🙌💪 <a title="dogtraining" target="_blank" href="https://www.tiktok.com/tag/dogtraining?refer=embed">#dogtraining</a> <a title="nevergiveup" target="_blank" href="https://www.tiktok.com/tag/nevergiveup?refer=embed">#nevergiveup</a> <a title="pitbull" target="_blank" href="https://www.tiktok.com/tag/pitbull?refer=embed">#pitbull</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp?refer=embed">#fyp</a> <a target="_blank" title="♬ A Simple Life - Morunas" href="https://www.tiktok.com/music/A-Simple-Life-7486702176300222480?refer=embed">♬ A Simple Life - Morunas</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-  </div>
-</section>
-
-<!-- ================= BIG PROOF ================= -->
-<section class="sec bproof reveal" aria-labelledby="bproof-h">
-  <div class="bproof-head">
-    <span class="eyebrow">The proof</span>
-    <h2 id="bproof-h" class="h-display" style="margin-top:14px">These are the dogs everyone else gave up on.</h2>
-    <p>Not stock testimonials. Actual texts, reviews, and posts from real owners. Tap any to read the whole thing.</p>
-  </div>
-  <div class="bproof-grid">
-    <button type="button" class="zoomable" data-zoom-src="proof-emmylou.png" data-zoom-alt="Emmylou's treat-free transformation: a formerly shutdown, timid, reactive dog succeeding at a busy Tractor Supply." aria-label="Enlarge Emmylou transformation">
-      <div class="frame"><img src="proof-emmylou.png" alt="Emmylou's treat-free transformation — a formerly shutdown, timid, reactive dog handling a busy public outing with no meltdowns." loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <button type="button" class="zoomable" data-zoom-src="proof-ember-reynolds.png" data-zoom-alt="Ember Reynolds five-star review: an excitement-reactive dog transformed through Digital Dog School." aria-label="Enlarge Ember Reynolds review">
-      <div class="frame"><img src="proof-ember-reynolds.png" alt="Five-star review from Ember Reynolds: 'My dog was an excitement reactive mess before we started Digital Dog School. Our bond has never been stronger.'" loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <button type="button" class="zoomable" data-zoom-src="proof-ember-kai.jpg" data-zoom-alt="Ember Kai's post: Bucky, a formerly very reactive Craigslist rescue, earning his first leg of an AKC obedience title." aria-label="Enlarge Ember Kai post">
-      <div class="frame"><img src="proof-ember-kai.jpg" alt="Post from Ember Kai about Bucky, a formerly very reactive rescue, earning his first leg of a Beginner Novice AKC obedience title." loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <button type="button" class="zoomable" data-zoom-src="proof-tiktok.jpg" data-zoom-alt="TikTok comment about how Joel explained everything and laid out clear plans after bad trainers." aria-label="Enlarge TikTok comment">
-      <div class="frame"><img src="proof-tiktok.jpg" alt="TikTok comment: after a book-writing trainer and a punish-and-startle trainer, Joel actually explained everything and laid out steps to follow." loading="lazy" /></div>
-      <span class="zoom-hint" aria-hidden="true">Tap to read</span>
-    </button>
-    <div class="zoomable">
-      <div class="frame">
-        <blockquote class="testimonial-pullquote" style="border-left:3px solid #d4a017;padding:1rem 1.25rem;margin:1.5rem 0;">
-  <p style="margin:0 0 0.75rem 0;font-size:1.05rem;line-height:1.5;">"I've never seen Deb so excited, charged up, so elated about any trainer or program than yours."</p>
-  <footer style="font-size:0.9rem;opacity:0.85;">— Dean, Luna's dad</footer>
-</blockquote>
       </div>
     </div>
   </div>
@@ -604,25 +461,13 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 <!-- ================= FINAL ROUTING CTA ================= -->
 <section class="final" aria-labelledby="final-h">
   <div class="final-inner">
-    <span class="eyebrow">You know what your dog needs</span>
-    <h2 id="final-h">You know what your dog needs. Let's start.</h2>
-    <p class="final-guarantee">Fix the Walk and Digital Dog School come with a moneyback guarantee. Do the work, and if it doesn't help your dog, you get your money back.</p>
-    <div class="final-rows">
-      <a href="https://scoobandi.com/fix-the-walk/" class="final-row" data-event="fix_the_walk_cta_click" data-location="final">
-        <span class="fr-l"><span class="fr-tag">Walks</span><span class="fr-name">Fix the Walk</span></span>
-        <span class="fr-arr" aria-hidden="true">→</span>
-      </a>
-      <a href="https://digitaldogschool.com/" class="final-row" data-event="dds_cta_click" data-location="final">
-        <span class="fr-l"><span class="fr-tag">A dog you can live with</span><span class="fr-name">Digital Dog School</span></span>
-        <span class="fr-arr" aria-hidden="true">→</span>
-      </a>
-      <a href="https://scoobandi.com/consult/" class="final-row" data-event="consult_cta_click" data-location="final">
-        <span class="fr-l"><span class="fr-tag">Complex case</span><span class="fr-name">Book a Consult</span></span>
-        <span class="fr-arr" aria-hidden="true">→</span>
-      </a>
+    <span class="eyebrow">NOT SURE WHERE TO START?</span>
+    <h2 id="final-h">Let's figure out what your dog actually needs.</h2>
+    <p>The assessment will help you identify whether the most responsible next step is foundational training, personalized support, or a safety-first conversation.</p>
+    <div class="actions center-action">
+      <a class="btn btn-primary" href="#dog-assessment" data-event="quiz_click" data-location="final">Take the Assessment <span class="btn-arrow" aria-hidden="true">-&gt;</span></a>
     </div>
   </div>
-  <p class="final-resources"><a href="https://scoobandi.com/resources/">Browse free resources →</a></p>
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -630,27 +475,25 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="foot-grid">
     <div>
       <span class="foot-brand">SCOOB <span class="amp">&amp;</span> I</span>
-      <p style="margin:0;max-width:44ch;color:rgba(255,255,255,.6);font-size:13px;line-height:1.5">Behavior work for reactive, anxious, and misunderstood dogs. Built on trust, not force. Sharpsburg, Georgia — working with dogs worldwide.</p>
+      <p style="margin:0;max-width:44ch;color:rgba(255,255,255,.6);font-size:13px;line-height:1.5">Behavior work for reactive, anxious, and misunderstood dogs. Built on trust, not force. Sharpsburg, Georgia, working with dogs worldwide.</p>
       <div class="foot-social">
         <a href="https://www.instagram.com/scoobandi" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.42.4.68.8.9 1.4.17.4.36 1 .42 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.4.42-.8.68-1.4.9-.4.17-1 .36-2.2.42-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.42-.4-.68-.8-.9-1.4-.17-.4-.36-1-.42-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.4-.42.8-.68 1.4-.9.4-.17 1-.36 2.2-.42C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.1 0-3.5 0-4.7.07-.9.04-1.4.2-1.7.32-.43.17-.74.37-1.06.7-.32.3-.52.6-.7 1.05-.12.3-.28.8-.32 1.7C3.5 8.5 3.5 8.9 3.5 12s0 3.5.07 4.7c.04.9.2 1.4.32 1.7.17.43.37.74.7 1.06.3.32.6.52 1.05.7.3.12.8.28 1.7.32 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c.9-.04 1.4-.2 1.7-.32.43-.17.74-.37 1.06-.7.32-.3.52-.6.7-1.05.12-.3.28-.8.32-1.7.06-1.2.07-1.6.07-4.7s0-3.5-.07-4.7c-.04-.9-.2-1.4-.32-1.7-.17-.43-.37-.74-.7-1.06-.3-.32-.6-.52-1.05-.7-.3-.12-.8-.28-1.7-.32C15.5 4 15.1 4 12 4Zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06Zm0 8.15A3.2 3.2 0 1 0 8.8 12 3.2 3.2 0 0 0 12 15.2Zm6.3-8.35a1.15 1.15 0 1 1-1.15-1.15 1.15 1.15 0 0 1 1.15 1.15Z"/></svg></a>
         <a href="https://www.tiktok.com/@scoobandi" aria-label="TikTok" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.8a4.3 4.3 0 0 1-2.9-1.1 4.3 4.3 0 0 1-1.3-2.4h-3v13.2a2.4 2.4 0 1 1-1.7-2.3v-3a5.4 5.4 0 1 0 4.7 5.3V9.2a7.3 7.3 0 0 0 4.2 1.3v-3a4.3 4.3 0 0 1-.1-1.7Z"/></svg></a>
       </div>
     </div>
     <div class="foot-col">
-      <h4>Programs</h4>
-      <a href="https://scoobandi.com/fix-the-walk/">Fix the Walk</a>
-      <a href="https://digitaldogschool.com/">Digital Dog School</a>
-      <a href="https://scoobandi.com/consult/">Free Consult</a>
+      <h4>Start</h4>
+      <a href="#dog-assessment" data-event="quiz_click" data-location="footer">Take the assessment</a>
+      <a href="https://scoobandi.com/resources/">Free resources</a>
+      <a href="#about">About Joel</a>
     </div>
     <div class="foot-col">
       <h4>More</h4>
-      <a href="https://scoobandi.com/resources/">Resources</a>
-      <a href="#about">About</a>
-      <a href="https://dogs.scoobandi.com/quiz-4061">Not sure? Take the quiz</a>
+      <a href="https://www.instagram.com/scoobandi" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@scoobandi" target="_blank" rel="noopener">TikTok</a>
     </div>
     <div class="foot-col">
       <h4>Contact</h4>
-      <a href="https://scoobandi.com/consult/">Book a consult</a>
       <a href="mailto:joel@scoobandi.com">joel@scoobandi.com</a>
     </div>
   </div>
@@ -675,13 +518,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('is-in'); obs.unobserve(e.target); } });
   }, {threshold:0.10, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-})();
-
-/* ---- Smooth scroll to top (back to paths) ---- */
-(function(){
-  document.querySelectorAll('[data-scroll-top]').forEach(function(a){
-    a.addEventListener('click', function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
-  });
 })();
 
 /* ---- Lightbox ---- */
@@ -712,7 +548,6 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     var href = link.getAttribute('href'); if(!href) return;
     var decorate = href.indexOf('checkout.digitaldogschool.com')!==-1 ||
       href.indexOf('digitaldogschool.com')!==-1 ||
-      href.indexOf('dogs.scoobandi.com/quiz-4061')!==-1 ||
       href.indexOf('api.leadconnectorhq.com')!==-1 ||
       href.indexOf('/fix-the-walk')!==-1 ||
       href.indexOf('/consult')!==-1;
@@ -739,8 +574,8 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     var location = link.getAttribute('data-location') || 'unknown';
     var href = link.href;
     if(eventName) sendEvent(eventName, {location:location, href:href});
-    if(href.indexOf('dogs.scoobandi.com/quiz-4061')!==-1) sendEvent('quiz_click', {location:location, href:href});
-    if(href.indexOf('/consult')!==-1 || href.indexOf('#scheduler')!==-1) sendEvent('consult_click', {location:location, href:href});
+    if(!eventName && (href.indexOf('api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ')!==-1 || href.indexOf('#dog-assessment')!==-1)) sendEvent('quiz_click', {location:location, href:href});
+    if(!eventName && (href.indexOf('/consult')!==-1 || href.indexOf('#scheduler')!==-1)) sendEvent('consult_click', {location:location, href:href});
   });
 })();
 </script>
@@ -756,7 +591,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   let scrollRaf = 0;
   let trustedTopOrigin = null;
 
-  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
+  // Allow entries like "https://*.preview.i.perplexity.ai"; the wildcard
   // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
   // across multiple labels.
   function matchesAllowedOrigin(origin) {
@@ -780,7 +615,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   // real origin like https://www.perplexity.ai) we trust event.origin directly.
   // When event.origin is "null" (opaque broker srcdoc), we fall back to the
   // broker's stamped `parentOrigin` to identify the top window. The fallback
-  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
+  // is claim-only; we rely on the browser's native `targetOrigin` enforcement
   // on the response path (see postToTrustedTop) to ensure replies can't be
   // delivered to anyone but the actual top window of that claimed origin.
   function getTrustedParentOrigin(event) {
@@ -793,7 +628,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   // All responses go to window.top with targetOrigin = the allowlisted origin.
   // An attacker that iframes us inside their own null-origin broker can claim
   // any parentOrigin they like, but the browser will drop the reply whenever
-  // the real top's origin doesn't match — so the screenshot never leaves.
+  // the real top's origin doesn't match, so the screenshot never leaves.
   function postToTrustedTop(message) {
     if (!trustedTopOrigin) return;
     try {
@@ -807,7 +642,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     try {
       const computedStyle = getComputedStyle(original);
       // cssText on a computed style is the serialized declaration in modern
-      // Chromium/Safari — a single read beats enumerating ~400 longhand
+      // Chromium/Safari: a single read beats enumerating ~400 longhand
       // properties. Firefox returns "" here, so we fall back on empty.
       const serialized = computedStyle.cssText;
       if (serialized) {
@@ -849,7 +684,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
 
   // Cache resolved font URL -> data URI across captures. Fonts on a page
   // essentially never change, and a batch run emits multiple captures back to
-  // back — without this we'd refetch + re-base64 every time.
+  // back; without this we'd refetch + re-base64 every time.
   const fontDataUriCache = new Map();
   const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
 
@@ -1005,7 +840,7 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       stripExternal(clone);
 
       // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
-      // can resolve them — external font URLs aren't fetched during
+      // can resolve them; external font URLs aren't fetched during
       // foreignObject rendering, which would otherwise force a fallback face
       // and change text metrics.
       const inlinedFontCss = await buildInlinedFontCss();
