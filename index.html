@@ -131,15 +131,23 @@ a:focus-visible,button:focus-visible,iframe:focus-visible{outline:3px solid rgba
 .center-action{justify-content:center}
 
 /* ================= ASSESSMENT ================= */
-.assessment{background:var(--bg);padding:0 0 20px;overflow-x:hidden;scroll-margin-top:48px}
+.assessment{background:var(--bg);padding:58px 0 20px;overflow-x:hidden;scroll-margin-top:48px}
+.assessment-intro{max-width:780px;margin:0 auto 24px;text-align:center}
+.assessment-intro .eyebrow{display:block;color:var(--accent);margin:0 0 14px}
+.assessment-intro h2{font-family:var(--font-display);font-weight:800;font-size:clamp(30px,3.7vw,48px);letter-spacing:0;line-height:1.05;color:var(--ink);margin:0 auto 16px;max-width:20ch}
+.assessment-intro p{font-size:17px;line-height:1.62;color:var(--ink-70);max-width:68ch;margin:0 auto}
 .assessment-embed{width:100%;max-width:960px;margin:0 auto}
 .assessment-embed iframe{display:block;width:100%;min-height:720px;border:0;background:var(--card)}
 .assessment-fallback{margin:16px auto 0;padding:0 24px;max-width:760px;text-align:center;font-size:14px;color:var(--ink-55)}
 .assessment-fallback a{color:var(--accent);font-weight:600;border-bottom:1px solid rgba(179,81,47,.35)}
 
 @media (max-width:720px){
-  .assessment{padding-bottom:12px}
+  .assessment{padding:44px 0 12px}
   .assessment .container{padding:0}
+  .assessment-intro{margin-bottom:18px;padding:0 18px}
+  .assessment-intro .eyebrow{margin-bottom:12px}
+  .assessment-intro h2{font-size:clamp(28px,8.5vw,36px);margin-bottom:14px}
+  .assessment-intro p{font-size:15px;line-height:1.55}
   .assessment-embed iframe{min-height:760px}
   .assessment-fallback{padding:0 16px}
 }
@@ -318,15 +326,20 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
   <div class="container">
     <div class="hero-head">
       <h1 id="hero-h"><span>Life with your dog should feel</span><span class="hero-accent">Easier than this.</span></h1>
-      <p class="hero-sub">If walks, visitors, anxiety, reactivity, aggression, or everyday life are harder than you expected, this five-minute assessment will help you understand where the solution should begin.</p>
+      <p class="hero-sub">More freedom. Calmer walks. Safer choices. A dog you can enjoy living with instead of constantly managing.</p>
       <p class="hero-reassurance">No shame. No generic recommendation. No pressure to choose the most expensive option.</p>
     </div>
   </div>
 </section>
 
 <!-- ================= DOG ASSESSMENT ================= -->
-<section class="assessment" id="dog-assessment" aria-label="Your 5-minute assessment">
+<section class="assessment" id="dog-assessment" aria-labelledby="assessment-h">
   <div class="container">
+    <div class="assessment-intro">
+      <span class="eyebrow">Your 5-minute assessment</span>
+      <h2 id="assessment-h">Find out what your dog actually needs.</h2>
+      <p>Answer 11 questions and get a personalized starting point based on your dog's behavior, recovery, safety, and ability to engage with you.</p>
+    </div>
     <div class="assessment-embed">
       <iframe src="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" style="border:none;width:100%;" scrolling="no" id="pDmHSDUSVSBSMg099kYJ" title="What Does Your Dog Actually Need assessment"></iframe>
     </div>
