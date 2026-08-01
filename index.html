@@ -341,7 +341,23 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
       <p>Answer 11 questions and get a personalized starting point based on your dog's behavior, recovery, safety, and ability to engage with you.</p>
     </div>
     <div class="assessment-embed">
-      <iframe src="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" style="border:none;width:100%;" scrolling="no" id="pDmHSDUSVSBSMg099kYJ" title="What Does Your Dog Actually Need assessment"></iframe>
+      <iframe data-base-src="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" style="border:none;width:100%;" scrolling="no" id="pDmHSDUSVSBSMg099kYJ" title="What Does Your Dog Actually Need assessment"></iframe>
+      <script>
+      (function(){
+        var frame = document.getElementById('pDmHSDUSVSBSMg099kYJ');
+        if(!frame) return;
+        var url = new URL(frame.getAttribute('data-base-src'));
+        var current = new URLSearchParams(window.location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','msclkid','ttclid'].forEach(function(key){
+          var value = current.get(key);
+          if(!value && window.sessionStorage){
+            try { value = sessionStorage.getItem('tracking_' + key); } catch(e) {}
+          }
+          if(value && !url.searchParams.has(key)) url.searchParams.set(key, value);
+        });
+        frame.src = url.toString();
+      })();
+      </script>
     </div>
     <p class="assessment-fallback">Having trouble loading the assessment? <a href="https://api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ" target="_blank" rel="noopener" data-event="quiz_click" data-location="assessment_fallback">Open it here.</a></p>
   </div>
@@ -586,6 +602,13 @@ footer{background:#0f0c0a;color:rgba(255,255,255,.7);padding:44px 0 32px;font-si
     var eventName = link.getAttribute('data-event');
     var location = link.getAttribute('data-location') || 'unknown';
     var href = link.href;
+    if(link.getAttribute('href') === '#dog-assessment'){
+      var assessment = document.getElementById('dog-assessment');
+      if(assessment){
+        event.preventDefault();
+        assessment.scrollIntoView({behavior:'smooth', block:'start'});
+      }
+    }
     if(eventName) sendEvent(eventName, {location:location, href:href});
     if(!eventName && (href.indexOf('api.leadconnectorhq.com/widget/quiz/pDmHSDUSVSBSMg099kYJ')!==-1 || href.indexOf('#dog-assessment')!==-1)) sendEvent('quiz_click', {location:location, href:href});
     if(!eventName && (href.indexOf('/consult')!==-1 || href.indexOf('#scheduler')!==-1)) sendEvent('consult_click', {location:location, href:href});

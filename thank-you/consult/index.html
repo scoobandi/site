@@ -37,11 +37,8 @@
       // GA4 custom conversion event: consult_booking_confirmed.
       if (typeof window.gtag === "function") window.gtag("event", "consult_booking_confirmed", lead);
 
-      // Meta Lead conversion event: consult booking.
+      // Keep booked calls separate from quiz leads in Meta.
       if (typeof window.fbq === "function") {
-        window.fbq("track", "Lead", { content_name: "Consult Booking" }, { eventID: eventId + "_lead" });
-
-        // Meta custom conversion event: ConsultBooked.
         window.fbq("trackCustom", "ConsultBooked", { content_name: "Consult Booking" }, { eventID: eventId + "_consult_booked" });
       }
     })();

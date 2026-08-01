@@ -19,9 +19,6 @@
       if (eventName === "dds_checkout_click" || eventName === "fix_the_walk_checkout_click") {
         window.fbq("track", "InitiateCheckout", data || {});
       }
-      if (eventName === "consult_booking_click" || eventName === "quiz_click") {
-        window.fbq("track", "Lead", data || {});
-      }
       if (eventName === "resource_offer_click" || eventName === "proof_click") {
         window.fbq("track", "ViewContent", data || {});
       }

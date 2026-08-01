@@ -73,7 +73,6 @@
         if (msg.event === "booking_start") trackEvent("consult_booking_start", { page: "consult" });
         if (msg.event === "booking_complete") {
           trackEvent("consult_booking_complete", { page: "consult" });
-          if (typeof fbq === "function") fbq("track", "Lead");
         }
       } catch (err) {
         return;
