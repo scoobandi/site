@@ -64,7 +64,7 @@
   }
   </script>
 
-  <!-- Meta Pixel — Scoob & I -->
+  <!-- Meta Pixel - Scoob & I -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init','961888533447407');
@@ -225,17 +225,22 @@
       .steps{grid-template-columns:1fr 1fr}
     }
     @media(max-width:640px){
-      .container{width:min(calc(100% - 28px),var(--wide))}
-      .topbar-inner{height:60px}.nav{gap:16px}.nav .hide-mobile{display:none}
-      .hero{padding-top:48px}.hero h1{font-size:clamp(34px,10vw,48px)}
-      .hero-actions,.btn{width:100%}
-      .video-shell{border-radius:14px}.video-caption{align-items:flex-start;flex-direction:column;gap:4px}
-      .after-video{grid-template-columns:1fr;padding:22px}.after-video .btn{width:100%}
+      .container{width:min(calc(100% - 32px),var(--wide))}
+      .topbar-inner{height:58px}.brand{font-size:14px}.nav{gap:14px;font-size:13px}.nav .hide-mobile{display:none}
+      .hero{padding:30px 0 28px}.hero-grid{gap:22px}.hero h1{font-size:clamp(36px,11vw,44px);line-height:.98;letter-spacing:-.045em;margin:10px 0 16px;max-width:none}
+      .hero-copy{font-size:17px;line-height:1.45;margin-bottom:18px}.hero-meta{gap:6px 15px;margin-bottom:20px;font-size:12px}
+      .hero-actions{gap:10px}.hero-actions,.btn{width:100%}.btn{min-height:48px;padding:11px 18px;font-size:14px}
+      .hero-note{border-left:0;border-top:1px solid var(--hair);padding:17px 0 0;font-size:14px;line-height:1.5}.hero-note strong{font-size:15px}
+      .watch{padding-bottom:64px}.video-shell{border-radius:12px}.video-caption{align-items:flex-start;flex-direction:column;gap:3px;padding:12px 14px;line-height:1.4}
+      .after-video{grid-template-columns:1fr;padding:20px;margin-top:14px;border-radius:14px}.after-video h2{font-size:21px}.after-video .btn{width:100%}
+      .outcomes{padding:58px 0}.outcomes-head{gap:18px;margin-bottom:30px}.outcomes h2{font-size:34px}.outcomes-head p{font-size:16px}
       .outcome-grid{grid-template-columns:1fr}.outcome,.outcome:not(:first-child){padding:22px 0;border-right:0;border-top:1px solid rgba(255,255,255,.18)}
       .signal-row{grid-template-columns:1fr 1fr}.split,.steps{grid-template-columns:1fr}
-      .article{font-size:17px}.article section{padding:40px 0}
-      .author-card{grid-template-columns:64px 1fr}.author img{width:64px;height:64px}
-      .foot{grid-template-columns:1fr}.foot-links{flex-wrap:wrap;gap:14px 22px}
+      .field-guide{padding:60px 0}.guide-intro{text-align:left;margin-bottom:34px}.guide-intro h2{font-size:36px;margin:9px 0 14px}.guide-intro p{font-size:16px}
+      .article{font-size:17px}.article section{padding:34px 0}.article h2{font-size:29px;margin-bottom:16px}.article .lead{font-size:18px;line-height:1.5}.pullquote{font-size:24px;padding-left:18px;margin:28px 0}.panel,.note,.risk{padding:20px}.checklist li,.incident li{padding:14px}
+      .final-cta{padding:60px 0}.cta-grid{gap:30px}.final-cta h2{font-size:40px}.final-cta p{font-size:17px}.author{padding:48px 0}
+      .author-card{grid-template-columns:60px 1fr;gap:16px}.author img{width:60px;height:60px}.author h2{font-size:21px}
+      footer{padding:40px 0 26px}.foot{grid-template-columns:1fr;gap:24px}.foot-links{flex-wrap:wrap;gap:12px 20px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
   </style>
@@ -260,7 +265,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Free 17-minute behavior class</p>
-          <h1>If your dog gets scary when they have something they value—watch this to learn how to keep everyone safe.</h1>
+          <h1>Resource Guarding Is Not a Disobedience Problem</h1>
           <p class="hero-copy">Learn what your dog is afraid of losing, how common reactions can make guarding worse, and the safety-first path to changing the behavior.</p>
           <div class="hero-meta" aria-label="Video information">
             <span>With Joel Harrison</span>
@@ -273,7 +278,7 @@
           </div>
         </div>
         <aside class="hero-note">
-          <strong>A growl is information—not the whole problem.</strong>
+          <strong>A growl is information. It is not the whole problem.</strong>
           Fast eating, freezing, turning away, hiding with objects, and guarding the space around an item can all be part of the same progression.
         </aside>
       </div>
@@ -324,9 +329,9 @@
     <section class="field-guide" aria-labelledby="guide-title">
       <div class="container">
         <header class="guide-intro">
-          <p class="eyebrow">Prefer to read—or need a quick reference?</p>
+          <p class="eyebrow">Prefer to read or need a quick reference?</p>
           <h2 id="guide-title">The practical field guide.</h2>
-          <p>This is the useful written companion to the class—not a second 17-minute transcript.</p>
+          <p>This is the useful written companion to the class, not a second 17-minute transcript.</p>
         </header>
 
         <article class="article read">
@@ -334,7 +339,7 @@
             <p class="eyebrow">Start here</p>
             <h2>Guarding begins with the possibility of loss.</h2>
             <p class="lead">A dog who eats faster, circles a bowl to avoid a hand, takes an object and runs, or hides under furniture is already trying to keep a resource.</p>
-            <p>The dog does not need to be growling for the underlying concern to exist. Genetics can create the possibility of guarding. Life experience—including experiences before you met the dog—can shape whether it appears and how strongly. Pain, temperament, past punishment or reward, and the dog’s relationship with the person also influence tolerance.</p>
+            <p>The dog does not need to be growling for the underlying concern to exist. Genetics can create the possibility of guarding. Life experience, including experiences before you met the dog, can shape whether it appears and how strongly. Pain, temperament, past punishment or reward, and the dog’s relationship with the person also influence tolerance.</p>
             <div class="pullquote">Relationship changes what access feels safe.</div>
           </section>
 
@@ -462,7 +467,7 @@
       <div class="foot">
         <div>
           <a class="brand" href="https://scoobandi.com/">SCOOB <span>&amp;</span> I</a>
-          <p>Behavior work for reactive, anxious, and misunderstood dogs. Built on trust, not force. Sharpsburg, Georgia—working with dogs worldwide.</p>
+          <p>Behavior work for reactive, anxious, and misunderstood dogs. Built on trust, not force. Based in Sharpsburg, Georgia and working with dogs worldwide.</p>
         </div>
         <nav class="foot-links" aria-label="Footer">
           <a href="https://scoobandi.com/resources/">Resources</a>
