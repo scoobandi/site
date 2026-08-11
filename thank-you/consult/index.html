@@ -37,10 +37,9 @@
       // GA4 custom conversion event: consult_booking_confirmed.
       if (typeof window.gtag === "function") window.gtag("event", "consult_booking_confirmed", lead);
 
-      // Keep booked calls separate from quiz leads in Meta.
-      if (typeof window.fbq === "function") {
-        window.fbq("trackCustom", "ConsultBooked", { content_name: "Consult Booking" }, { eventID: eventId + "_consult_booked" });
-      }
+      // Meta's ConsultBooked event is sent server-side by the booking system.
+      // Do not also send it from this page: the browser cannot reliably share
+      // GHL's unique booking event ID, which prevents Meta deduplication.
     })();
   </script>
 </head>
