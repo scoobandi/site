@@ -265,7 +265,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Free 17-minute behavior class</p>
-          <h1>if your dog gets scary over food toys people or space... watch this video and learn how to keep everyone safe</h1>
+          <h1>If Your Dog Gets Scary Over Food, Toys, People, or Space... Watch This Video and Learn How to Keep Everyone Safe</h1>
           <p class="hero-copy">Learn what your dog is afraid of losing, how common reactions can make guarding worse, and the safety-first path to changing the behavior.</p>
           <div class="hero-meta" aria-label="Video information">
             <span>With Joel Harrison</span>
@@ -274,7 +274,7 @@
           </div>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#watch" data-event="video_cta_click" data-location="hero">Watch the class ↓</a>
-            <a class="btn btn-secondary" href="https://dogs.scoobandi.com/quiz-4061" data-event="assessment_click" data-location="hero">Take the behavior assessment</a>
+            <a class="btn btn-secondary" href="https://scoobandi.com/#dog-assessment" data-event="assessment_click" data-location="hero">Take the behavior assessment</a>
           </div>
         </div>
         <aside class="hero-note">
@@ -303,7 +303,7 @@
             <h2>Not sure how serious your dog’s guarding is?</h2>
             <p>Answer 11 questions and get a personalized starting point based on behavior, recovery, safety, and engagement.</p>
           </div>
-          <a class="btn btn-primary" href="https://dogs.scoobandi.com/quiz-4061" data-event="assessment_click" data-location="after_video">Take the 5-minute assessment →</a>
+          <a class="btn btn-primary" href="https://scoobandi.com/#dog-assessment" data-event="assessment_click" data-location="after_video">Take the 5-minute assessment →</a>
         </div>
       </div>
     </section>
@@ -441,7 +441,7 @@
           <p>The assessment will help you identify whether the responsible starting point is management, foundational training, personalized support, or a safety-first conversation.</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn-primary" href="https://dogs.scoobandi.com/quiz-4061" data-event="assessment_click" data-location="final_cta">Take the dog behavior assessment →</a>
+          <a class="btn btn-primary" href="https://scoobandi.com/#dog-assessment" data-event="assessment_click" data-location="final_cta">Take the dog behavior assessment →</a>
           <a class="btn btn-secondary" href="https://scoobandi.com/consult/" data-event="consult_click" data-location="final_cta">Book a free consultation</a>
           <p class="cta-small">No shame. No pressure. Start with the clearest next step.</p>
         </div>
@@ -497,9 +497,36 @@
         window.dataLayer=window.dataLayer||[];
         window.dataLayer.push(Object.assign({event:name},params||{}));
       }
+      var trackingKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','msclkid','ttclid'];
+      var currentParams=new URLSearchParams(location.search);
+      var trackingValues={};
+      trackingKeys.forEach(function(key){
+        var value=currentParams.get(key);
+        if(!value&&window.sessionStorage){
+          try{value=sessionStorage.getItem('tracking_'+key)}catch(e){}
+        }
+        if(value){
+          trackingValues[key]=value;
+          if(window.sessionStorage){
+            try{sessionStorage.setItem('tracking_'+key,value)}catch(e){}
+          }
+        }
+      });
+
+      document.querySelectorAll('[data-event="assessment_click"], [data-event="consult_click"]').forEach(function(link){
+        try{
+          var destination=new URL(link.href,location.href);
+          Object.keys(trackingValues).forEach(function(key){
+            if(!destination.searchParams.has(key)) destination.searchParams.set(key,trackingValues[key]);
+          });
+          link.href=destination.toString();
+        }catch(e){}
+      });
+
       document.querySelectorAll('[data-event]').forEach(function(link){
         link.addEventListener('click',function(){
           track(link.dataset.event,{location:link.dataset.location||'',page_path:location.pathname});
+          if(typeof fbq==='function'&&link.dataset.event==='assessment_click') fbq('trackCustom','quiz_click',{location:link.dataset.location||'',content_name:'Resource Guarding'});
           if(typeof fbq==='function'&&link.dataset.event==='consult_click') fbq('track','Contact',{content_name:'Resource Guarding'});
         });
       });
