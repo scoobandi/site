@@ -41,35 +41,21 @@ function parseBody(event) {
 }
 
 export async function handler(event) {
-  // Temporary preview-only self-test. It is gated by TikTok's Test Events
-  // environment variable and will be removed after validation.
-  const isPreviewSelfTest =
-    event.httpMethod === "GET" &&
-    event.queryStringParameters?.self_test === "1" &&
-    Boolean(process.env.TIKTOK_TEST_EVENT_CODE);
-
-  if (!isPreviewSelfTest && event.httpMethod !== "POST") {
+  if (event.httpMethod !== "POST") {
     return json(405, { ok: false, error: "method_not_allowed" });
   }
 
-  let payload;
-  if (isPreviewSelfTest) {
-    payload = {
-      contact_id: "preview-self-test",
-      email: "tiktok-preview-test@example.com",
-    };
-  } else {
-    const webhookSecret = process.env.GHL_TIKTOK_WEBHOOK_SECRET;
-    const suppliedSecret = event.headers?.["x-webhook-secret"] || event.headers?.["X-Webhook-Secret"];
-    if (!safeEqual(suppliedSecret, webhookSecret)) {
-      return json(401, { ok: false, error: "unauthorized" });
-    }
+  const webhookSecret = process.env.GHL_TIKTOK_WEBHOOK_SECRET;
+  const suppliedSecret = event.headers?.["x-webhook-secret"] || event.headers?.["X-Webhook-Secret"];
+  if (!safeEqual(suppliedSecret, webhookSecret)) {
+    return json(401, { ok: false, error: "unauthorized" });
+  }
 
-    try {
-      payload = parseBody(event);
-    } catch {
-      return json(400, { ok: false, error: "invalid_json" });
-    }
+  let payload;
+  try {
+    payload = parseBody(event);
+  } catch {
+    return json(400, { ok: false, error: "invalid_json" });
   }
 
   const contactId = String(payload.contact_id || "").trim();
