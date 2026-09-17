@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stop the Chaos. Keep the Dog You Love. | Scoob & I Dog Training</title>
+  <meta name="description" content="Book a free consultation with Joel Harrison at Scoob & I Dog Training. Help for everyday training problems, anxiety, reactivity, aggression, guarding, and difficult behavior." />
+  <meta property="og:title" content="Stop the Chaos. Keep the Dog You Love. | Scoob & I Dog Training" />
+  <meta property="og:description" content="Book a free consultation with Joel Harrison for a clear, practical plan for life with your dog." />
+  <meta property="og:image" content="https://scoobandi.com/assets/images/homepage-hero-training.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Tracking: matches the existing consult funnel -->
+  <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','961888533447407');
+  fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=961888533447407&ev=PageView&noscript=1" alt="" /></noscript>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-945PBSRQBE"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config','G-945PBSRQBE');
+  </script>
+  <script>
+  (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","w90zj569xx");
+  </script>
+
+  <!-- CURRENT Scoob & I typography -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@700,400&f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- CURRENT live Scoob & I design system. This is the visual source of truth. -->
+  <link rel="stylesheet" href="https://scoobandi.com/style.css" />
+
+  <style>
+    /*
+      CONSULT CHALLENGER PAGE-SPECIFIC LAYOUT ONLY.
+      Intentionally avoids hard-coding the historical purple palette.
+      Global colors/buttons/brand styling come from the live Scoob & I stylesheet above.
+    */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Satoshi", system-ui, sans-serif; }
+    h1, .display, .hero-title, .lp-h2, .final-title, .philosophy-lead { font-family: "Barlow Condensed", Arial, sans-serif; font-weight:700; text-transform:uppercase; }
+    img, video { max-width: 100%; display: block; }
+    a { text-underline-offset: .18em; }
+
+    .lp-shell { overflow: hidden; }
+    .lp-container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .lp-narrow { width: min(760px, calc(100% - 40px)); margin-inline: auto; }
+    .lp-section { padding: clamp(52px, 6.5vw, 88px) 0; }
+    .lp-section-tight { padding: clamp(40px, 5vw, 66px) 0; }
+    .lp-kicker {
+      font-size: .78rem; text-transform: uppercase; letter-spacing: .13em;
+      font-weight: 700; opacity: .64; margin: 0 0 14px;
+    }
+    .lp-h2 {
+      font-family: "Barlow Condensed", Arial, sans-serif;
+      font-size: clamp(2.25rem, 5vw, 4.3rem);
+      line-height: .98; letter-spacing: -.025em; margin: 0 0 22px;
+    }
+    .lp-h3 {
+      font-size: clamp(1.15rem, 2vw, 1.35rem); line-height: 1.25; margin: 0 0 9px;
+    }
+    .lp-body {
+      font-size: clamp(1.03rem, 1.4vw, 1.18rem); line-height: 1.7;
+      max-width: 68ch; margin: 0 0 18px;
+    }
+    .lp-muted { opacity: .68; }
+    .lp-rule { border: 0; border-top: 1px solid color-mix(in srgb, currentColor 16%, transparent); margin: 0; }
+
+    /* Minimal landing-page header; avoids navigation leakage */
+    .lp-header {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      background: color-mix(in srgb, Canvas 88%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, currentColor 12%, transparent);
+    }
+    .lp-header-inner {
+      min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .lp-logo {
+      display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;
+      font-weight: 700; letter-spacing: -.02em;
+    }
+    .lp-logo img { width: 132px; height: auto; }
+    .lp-header .btn { white-space: nowrap; }
+
+    /* Hero */
+    .lp-hero { padding: clamp(66px, 8vw, 110px) 0 clamp(58px, 7vw, 92px); }
+    .hero-grid {
+      display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(320px, .92fr);
+      gap: clamp(36px, 6vw, 84px); align-items: center;
+    }
+    .hero-title {
+      font-family: "Barlow Condensed", Arial, sans-serif;
+      font-size: clamp(4rem, 8vw, 7.7rem); line-height: .86;
+      letter-spacing: -.045em; margin: 0 0 28px; max-width: 9ch;
+    }
+    .hero-lede {
+      font-size: clamp(1.15rem, 2vw, 1.42rem); line-height: 1.55; max-width: 620px; margin: 0 0 16px;
+    }
+    .hero-first-last {
+      font-size: clamp(1.08rem, 1.7vw, 1.28rem); line-height: 1.5; font-weight: 700;
+      margin: 0 0 30px;
+    }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
+    .hero-note { flex-basis:100%; font-size:.96rem; font-weight:700; letter-spacing:.01em; color:#173642; }
+    .hero-media {
+      position: relative; border-radius: 28px; overflow: hidden;
+      box-shadow: 0 24px 70px color-mix(in srgb, currentColor 14%, transparent);
+    }
+    .hero-media > .image-zoom { display:block; width:100%; }
+    .hero-media > .image-zoom > img { width:100%; height:auto !important; aspect-ratio:auto !important; object-fit:contain !important; object-position:center !important; }
+    .hero-stamp {
+      position:absolute; top:18px; left:53%; z-index:2; width:min(34%,228px); padding:0;
+      background:#fff; border:1px solid rgba(0,0,0,.12); border-radius:12px; overflow:hidden;
+      box-shadow:0 12px 30px rgba(0,0,0,.2); transform:translateX(-50%);
+    }
+    .hero-stamp img { display:block !important; width:100% !important; height:auto !important; aspect-ratio:auto !important; max-width:none; margin:0 !important; object-fit:contain !important; object-position:top center !important; }
+
+    /* Authority strip */
+    .proof-strip {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+      border-block:1px solid color-mix(in srgb, currentColor 13%, transparent);
+    }
+    .proof-stat { padding:28px 18px; text-align:center; }
+    .proof-stat strong {
+      display:block; font-family:"Barlow Condensed", Arial, sans-serif;
+      font-size:clamp(2rem,3.7vw,3.2rem); line-height:1;
+    }
+    .proof-stat span { font-size:.88rem; opacity:.68; }
+    .authority-line { max-width:960px; margin:0 auto; padding:clamp(42px,6vw,72px) 24px; text-align:center; font-family:"Barlow Condensed",Arial,sans-serif; font-size:clamp(1.5rem,3vw,2.5rem); font-weight:700; line-height:1.08; text-transform:uppercase; background:linear-gradient(135deg,rgba(23,54,66,.08),rgba(232,163,76,.18)); border-radius:24px; }
+    .authority-line .accent-gold { color:#b46d18; }
+    .authority-line .accent-warm { color:#b94f2d; }
+
+    /* Issue "poster" */
+    .issue-intro { text-align:center; margin-bottom:38px; }
+    .issue-intro .lp-body { margin-inline:auto; }
+    .issue-poster {
+      border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+      border-radius: 26px; padding: clamp(18px, 3vw, 34px);
+      background: color-mix(in srgb, currentColor 3%, transparent);
+      box-shadow: 0 22px 60px color-mix(in srgb, currentColor 7%, transparent);
+    }
+    .issue-poster-label {
+      display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom:22px;
+      padding:0 4px;
+    }
+    .issue-poster-label strong {
+      font-family:"Barlow Condensed",Arial,sans-serif; font-size:clamp(1.7rem,3vw,2.8rem); line-height:1;
+    }
+    .issue-poster-label span { font-size:.84rem; opacity:.62; text-align:right; }
+    .issue-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+    }
+    .issue-card {
+      min-height:220px; padding:24px; border-radius:16px;
+      border:1px solid color-mix(in srgb, currentColor 13%, transparent);
+      background: color-mix(in srgb, Canvas 82%, transparent);
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .issue-card h3 { font-size:1rem; margin:0 0 16px; line-height:1.15; }
+    .issue-list { margin:0; padding:0; list-style:none; display:grid; gap:9px; }
+    .issue-list li { position:relative; padding-left:17px; font-size:.88rem; line-height:1.3; }
+    .issue-list li::before { content:"•"; position:absolute; left:0; color:#c65d32; font-weight:700; }
+    .issue-outro { text-align:center; margin:28px auto 0; max-width:700px; font-size:1rem; line-height:1.55; }
+
+    /* Split sections and rhythm */
+    .split {
+      display:grid; grid-template-columns:minmax(0,1fr) minmax(320px,.92fr);
+      align-items:center; gap:clamp(34px,6vw,86px);
+    }
+    .split.reverse .split-copy { order:2; }
+    .split.reverse .split-media { order:1; }
+    .visual-card {
+      border-radius:24px; overflow:hidden;
+      border:1px solid color-mix(in srgb, currentColor 14%, transparent);
+      background:color-mix(in srgb,currentColor 3%,transparent);
+    }
+    .visual-card img { width:100%; height:auto; }
+    .visual-caption { padding:18px 20px; font-size:.9rem; line-height:1.5; opacity:.74; }
+
+    .pullquote {
+      margin:28px 0 0; padding:22px 24px;
+      border-left:3px solid currentColor;
+      background:color-mix(in srgb,currentColor 4%,transparent);
+      border-radius:0 14px 14px 0;
+    }
+    .pullquote p {
+      font-family:"Barlow Condensed",Arial,sans-serif; font-size:clamp(1.35rem,2.5vw,2rem);
+      line-height:1.16; margin:0 0 12px;
+    }
+    .pullquote cite { font-style:normal; font-size:.88rem; opacity:.68; }
+
+    /* Case proof */
+    .proof-gallery {
+      display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:24px;
+    }
+    .proof-gallery img {
+      width:100%; border-radius:16px;
+      border:1px solid color-mix(in srgb,currentColor 12%,transparent);
+    }
+    .proof-long-term { position:relative; margin:0; overflow:hidden; border-radius:16px; }
+    .proof-long-term img { display:block; border-radius:16px; }
+    .proof-long-term figcaption { position:absolute; left:10px; bottom:10px; width:60%; padding:13px 14px; border-radius:12px; background:rgba(23,54,66,.92); color:#fff; font-size:.75rem; font-weight:600; line-height:1.32; }
+    .proof-long-term figcaption strong { display:block; margin-bottom:5px; color:#e8a34c; font-family:"Barlow Condensed",Arial,sans-serif; font-size:1.08rem; letter-spacing:.04em; text-transform:uppercase; }
+    .inky-story { position:relative; isolation:isolate; background-image:linear-gradient(90deg,rgba(255,255,255,.18) 0%,rgba(255,255,255,.34) 36%,rgba(255,255,255,.9) 76%,rgba(255,255,255,.98) 100%),url("../assets/images/gaylin-inky-long-term-success.jpg"); background-repeat:no-repeat; background-position:center,16% center; background-size:cover,auto 76%; }
+    .inky-story .lp-container { position:relative; z-index:1; }
+    .inky-story .split-copy { padding:clamp(24px,4vw,42px); border-radius:22px; background:rgba(255,255,255,.74); box-shadow:0 14px 36px rgba(23,54,66,.1); }
+
+    /* Outcome rows */
+    .outcomes {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:28px;
+    }
+    .outcome {
+      padding:20px; border-radius:16px;
+      background:color-mix(in srgb,currentColor 4%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 12%,transparent);
+    }
+    .outcome strong { display:block; margin-bottom:5px; }
+    .outcome span { font-size:.92rem; opacity:.7; line-height:1.45; }
+
+    /* Philosophy */
+    .philosophy {
+      border-radius:28px; padding:clamp(28px,5vw,58px);
+      border:1px solid color-mix(in srgb,currentColor 15%,transparent);
+      background:color-mix(in srgb,currentColor 4%,transparent);
+    }
+.philosophy-grid .philosophy-lead {
+  font-family:"Boska",Georgia,serif; font-size:clamp(2.4rem,5vw,4.3rem);
+  font-weight:700 !important; letter-spacing:-.025em; text-transform:none;
+  line-height:1.01; max-width:none; width:100%; margin:0; padding:0;
+}
+    .philosophy-grid { display:grid; grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr); gap:clamp(28px,6vw,84px); align-items:start; }
+    .philosophy-grid p { margin:0; font-size:1.03rem; line-height:1.65; }
+    .philosophy-copy { display:grid; gap:22px; align-content:start; }
+    .philosophy-conclusion { padding:18px 0 0; border-top:3px solid #e8a34c; font-weight:700; }
+
+    /* Video */
+    .video-frame {
+      border-radius:22px; overflow:hidden; background:#000;
+      box-shadow:0 20px 60px color-mix(in srgb,currentColor 12%,transparent);
+    }
+    .video-frame video { width:100%; aspect-ratio:16/10; object-fit:cover; }
+
+    /* Board & train trust */
+    .live-card {
+      padding:clamp(26px,5vw,50px); border-radius:26px;
+      border:1px solid color-mix(in srgb,currentColor 15%,transparent);
+      background:color-mix(in srgb,currentColor 4%,transparent);
+    }
+    .live-dot {
+      width:10px; height:10px; border-radius:999px; background:#d22;
+      display:inline-block; margin-right:8px; box-shadow:0 0 0 6px color-mix(in srgb,#d22 13%,transparent);
+    }
+    .live-meta { font-weight:700; font-size:.84rem; letter-spacing:.08em; text-transform:uppercase; margin-bottom:18px; }
+
+    /* Final / booking */
+    .final-grid {
+      display:grid; grid-template-columns:minmax(0,.82fr) minmax(360px,1.18fr);
+      gap:clamp(34px,6vw,80px); align-items:start;
+    }
+    .final-copy { position:sticky; top:105px; }
+    .final-title {
+      font-family:"Barlow Condensed",Arial,sans-serif; font-size:clamp(3.1rem,6vw,5.8rem);
+      line-height:.9; margin:0 0 22px; letter-spacing:-.035em;
+    }
+    .booking-wrap {
+      border-radius:24px; overflow:hidden;
+      border:1px solid color-mix(in srgb,currentColor 14%,transparent);
+      background:#fff;
+      min-height:780px;
+    }
+    .booking-wrap iframe { width:100%; min-height:800px; border:0; display:block; }
+    .booking-note { font-size:.88rem; opacity:.64; margin-top:12px; }
+
+    .consult-roadmap-section { padding:0 0 clamp(48px,7vw,82px); }
+    .consult-roadmap-heading { text-align:center; margin:0 auto 24px; max-width:740px; }
+    .consult-roadmap { display:grid; grid-template-columns:repeat(5,1fr); gap:2px; border-radius:22px; overflow:hidden; background:#173642; box-shadow:0 22px 60px rgba(23,54,66,.22); }
+    .consult-step { min-height:205px; padding:24px 19px; background:#173642; color:#fff; }
+    .consult-step:nth-child(2), .consult-step:nth-child(4) { background:#c65d32; }
+    .consult-step:nth-child(3) { background:#e8a34c; color:#182c36; }
+    .consult-step strong { display:block; margin:20px 0 8px; font-size:1.05rem; line-height:1.15; }
+    .consult-step p { margin:0; font-size:.9rem; line-height:1.48; opacity:.83; }
+    .consult-step-num { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.16); font-family:"Barlow Condensed",Arial,sans-serif; font-size:1.25rem; font-weight:700; }
+    .consult-step:nth-child(3) .consult-step-num { background:rgba(24,44,54,.14); }
+    .walk-proof { padding:clamp(28px,5vw,46px); border-radius:24px; background:#173642; color:#fff; box-shadow:0 20px 54px rgba(23,54,66,.2); }
+    .walk-proof p { margin:0; font-size:.82rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#e8a34c; }
+    .walk-proof blockquote { margin:20px 0 18px; font-family:"Barlow Condensed",Arial,sans-serif; font-size:clamp(2rem,4vw,3.5rem); font-weight:700; line-height:1; }
+    .walk-proof span { color:rgba(255,255,255,.78); line-height:1.5; }
+    .high-stakes { background:#173642; color:#fff; }
+    .high-stakes .lp-kicker { color:#e8a34c; opacity:1; }
+    .high-stakes .lp-h2 { color:#fff; }
+    .high-stakes .lp-body { color:rgba(255,255,255,.82); }
+    .high-stakes-note { margin-top:22px; padding:18px 20px; border-left:3px solid #e8a34c; background:rgba(255,255,255,.08); font-weight:700; line-height:1.45; }
+    .foundation-section { background:linear-gradient(135deg,#f8f1e6 0%,#fffaf2 58%,#f3e1c9 100%); border-block:1px solid rgba(23,54,66,.08); }
+    .foundation-section .outcome { background:rgba(255,255,255,.78); box-shadow:0 10px 24px rgba(23,54,66,.06); }
+    .foundation-section .lp-h2 { font-size:clamp(2.25rem,4.2vw,3.6rem); }
+    .final-message { background:linear-gradient(135deg,#a9432d 0%,#c65d32 58%,#d6783f 100%); color:#fff; }
+    .final-message .lp-kicker { color:#ffe0a7; opacity:1; }
+    .final-message .lp-h2, .final-message .lp-body, .final-message .hero-first-last { color:#fff; }
+    .final-message .lp-body { opacity:.88; }
+    .final-message .btn-primary { background:#fff; border-color:#fff; color:#173642; }
+    .image-zoom { display:block; width:100%; padding:0; border:0; background:transparent; cursor:zoom-in; text-align:inherit; }
+    .image-zoom:focus-visible { outline:3px solid #e8a34c; outline-offset:4px; }
+    .image-lightbox { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:24px; background:rgba(8,16,20,.9); }
+    .image-lightbox[hidden] { display:none; }
+    .image-lightbox img { max-width:min(100%,1100px); max-height:88vh; object-fit:contain; }
+    .image-lightbox button { position:absolute; top:18px; right:22px; color:#fff; border:0; background:transparent; font-size:2rem; cursor:pointer; }
+
+    .lp-footer { padding:36px 0 50px; font-size:.85rem; opacity:.66; }
+    .lp-footer-inner { display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap; }
+
+    @media (max-width: 860px) {
+      .hero-grid, .split, .final-grid { grid-template-columns:1fr; }
+      .consult-roadmap { grid-template-columns:repeat(2,1fr); }
+      .split.reverse .split-copy, .split.reverse .split-media { order:initial; }
+      .hero-title { max-width:11ch; }
+      .hero-stamp { left:52%; width:min(42%,220px); }
+      .proof-strip { grid-template-columns:1fr; }
+      .proof-stat + .proof-stat { border-top:1px solid color-mix(in srgb,currentColor 12%,transparent); }
+      .issue-grid { grid-template-columns:repeat(2,1fr); }
+      .final-copy { position:static; }
+    }
+    @media (max-width: 580px) {
+      .lp-container, .lp-narrow { width:min(100% - 28px,1120px); }
+      .lp-header-inner { min-height:56px; }
+      .lp-logo img { width:108px; }
+      .lp-header .btn { min-height:38px; font-size:.72rem; padding-inline:11px; }
+      .lp-hero { padding-top:34px; padding-bottom:48px; }
+      .hero-title { font-size:clamp(3.5rem,17vw,5rem); }
+      .hero-media { border-radius:20px; }
+      .hero-stamp { top:12px; left:52%; width:min(48%,190px); }
+      .issue-grid { grid-template-columns:1fr; }
+      .issue-card { min-height:0; }
+      .issue-poster-label { align-items:start; flex-direction:column; }
+      .issue-poster-label span { text-align:left; }
+      .philosophy-grid, .outcomes, .proof-gallery { grid-template-columns:1fr; }
+      .proof-long-term figcaption { width:64%; font-size:.83rem; }
+      .inky-story { background-position:center,8% center; background-size:cover,auto 60%; }
+      .consult-roadmap { grid-template-columns:1fr; }
+      .booking-wrap { min-height:850px; }
+      .booking-wrap iframe { min-height:860px; }
+    }
+  </style>
+</head>
+
+<body>
+<div class="lp-shell">
+  <header class="lp-header">
+    <div class="lp-container lp-header-inner">
+      <a class="lp-logo" href="https://scoobandi.com/" aria-label="Scoob & I home">
+        <img src="../logo.png" alt="Scoob &amp; I Dog Training">
+      </a>
+      <a class="btn btn-primary btn-sm" href="#booking" data-event="consult_cta_click" data-location="header">Book a Free Consultation</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="lp-hero">
+      <div class="lp-container hero-grid">
+        <div>
+          <p class="lp-kicker">Dog training for real life</p>
+          <h1 class="hero-title">Stop the Chaos.<br>Keep the Dog You Love.</h1>
+          <p class="hero-lede">Get a clear plan for a calmer, easier life with your dog, whether the problem is annoying, exhausting, scary, or all three.</p>
+          <p class="hero-first-last">Whether it’s your <strong>first dog</strong> or your dog’s <strong>last chance</strong>, I can help.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#booking" data-event="consult_cta_click" data-location="hero">Book a Free Consultation →</a>
+            <span class="hero-note">Local help in Sharpsburg, GA. Virtual consultations available anywhere.</span>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="https://scoobandi.com/assets/images/homepage-hero-training.jpg" alt="Joel Harrison working with a dog in a real training session" loading="eager">
+          <div class="hero-stamp"><img src="../assets/images/jazz-hero-conversation.png" alt="Conversation with Jazz's owner showing walks went from tears to calm, with Joel's congratulations"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="consult-roadmap-section" aria-labelledby="consult-roadmap-heading">
+      <div class="lp-container">
+        <div class="consult-roadmap-heading">
+          <p class="lp-kicker">A useful first conversation</p>
+          <h2 class="lp-h2" id="consult-roadmap-heading">Here is what happens<br>on your consultation.</h2>
+        </div>
+        <div class="consult-roadmap" aria-label="What happens during a consultation">
+          <div class="consult-step"><span class="consult-step-num">01</span><strong>Tell me about your dog.</strong><p>What life looks like now and what you want to be different.</p></div>
+          <div class="consult-step"><span class="consult-step-num">02</span><strong>I ask better questions.</strong><p>We look for what is actually driving the problem, not only the behavior you can see.</p></div>
+          <div class="consult-step"><span class="consult-step-num">03</span><strong>I may talk a little too much.</strong><p>But you will understand what is going on and what I would do next.</p></div>
+          <div class="consult-step"><span class="consult-step-num">04</span><strong>Leave with a framework.</strong><p>You get a clearer way to think about behavior change and what comes next.</p></div>
+          <div class="consult-step"><span class="consult-step-num">05</span><strong>Discuss fit and options.</strong><p>If working together makes sense, we discuss programs and pricing. One-on-one programs start at $945.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="A better path forward" class="lp-section-tight">
+      <div class="lp-container">
+        <p class="authority-line">You are <span class="accent-gold">not failing your dog.</span> You are making it harder than it needs to be. Let’s build a path to a <span class="accent-warm">fun, safe, comfortable life</span> for you and your dog.</p>
+      </div>
+    </section>
+
+    <section class="lp-section" id="issues">
+      <div class="lp-container">
+        <div class="issue-intro">
+          <p class="lp-kicker">This does not have to be a crisis. But if it is, I got you.</p>
+          <h2 class="lp-h2">Problems I can help with.</h2>
+          <p class="lp-body">From everyday behavior that makes your dog harder to enjoy to serious issues that make life feel unsafe.</p>
+        </div>
+
+        <figure class="issue-poster" aria-label="Dog training problems Scoob & I can help with">
+          <div class="issue-poster-label">
+            <strong>What is making life harder?</strong>
+            <span>A clear path forward, whatever the problem looks like today</span>
+          </div>
+          <div class="issue-grid">
+
+          <article class="issue-card">
+            <h3>Everyday chaos</h3>
+            <ul class="issue-list"><li>Pulling you down the street</li><li>Jumping on grandma</li><li>Barking at the Amazon guy</li><li>Bolting out the front door</li></ul>
+          </article>
+
+
+          <article class="issue-card">
+            <h3>Big feelings</h3>
+            <ul class="issue-list"><li>Walks that end in tears</li><li>A dog who cannot settle</li><li>Leaving home with guilt</li><li>Reactivity that makes life feel smaller</li></ul>
+          </article>
+
+
+          <article class="issue-card">
+            <h3>Safety and conflict</h3>
+            <ul class="issue-list"><li>Aggression over food, toys, or people</li><li>Barking, growling, or biting guests</li><li>Separation anxiety so bad you have to remodel the bathroom</li><li>Dog aggression</li></ul>
+          </article>
+
+          </div>
+          <figcaption class="issue-outro">If your exact problem is not on this list, tell me what is happening. The consult is where we figure out what your dog actually needs.</figcaption>
+        </figure>
+
+        <div style="text-align:center;margin-top:28px">
+          <a class="btn btn-primary" href="#booking" data-event="consult_cta_click" data-location="issues">Book a Free Consultation →</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="lp-rule">
+
+    <section class="lp-section high-stakes">
+      <div class="lp-container split">
+        <div class="split-copy">
+          <p class="lp-kicker">For the situations that feel bigger</p>
+          <h2 class="lp-h2">When it feels too big to keep guessing.</h2>
+          <p class="lp-body">Reactivity, aggression, guarding, or conflict can make your world get smaller fast. You do not need a quick trick. You need someone who can look at the full picture and help you make a plan that holds up in real life.</p>
+          <div class="high-stakes-note">If your dog’s behavior feels scary, overwhelming, or like the stakes are too high to get wrong, you are in the right place.</div>
+          <p style="margin:24px 0 0"><a class="btn btn-primary" href="#booking" data-event="consult_cta_click" data-location="high_stakes">Talk through your dog’s situation →</a></p>
+        </div>
+        <div class="split-media">
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline>
+              <source src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6a8f200b022bb1f901e5db27.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+          </div>
+          <p class="booking-note" style="color:rgba(255,255,255,.68)">A look at the kind of work that takes more than a one-size-fits-all answer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section inky-story">
+      <div class="lp-container split">
+        <div class="split-copy">
+          <p class="lp-kicker">When the obvious stuff has not worked</p>
+          <h2 class="lp-h2">“I feel like I’ve tried everything.”</h2>
+          <p class="lp-body">Sometimes the problem is not that you are not working hard enough. You need a plan that can adapt when the obvious answer stops working.</p>
+          <p class="lp-body">I have helped more than 1,000 dogs and owners around the world. My work starts with the dog, the person, their relationship, the environment, and what is actually blocking progress.</p>
+          <div class="pullquote">
+            <p>You do not need someone to make you feel like you failed. You need a clearer next step.</p>
+          </div>
+          <p style="margin:24px 0 0"><a class="btn btn-primary" href="#booking" data-event="consult_cta_click" data-location="inky_proof">Get a clearer next step →</a></p>
+        </div>
+
+        <div class="split-media visual-card">
+          <div class="proof-gallery" style="padding:14px 14px 0">
+            <img src="../proof-inky.png" alt="Inky's first review" loading="lazy">
+            <img src="../proof- inky 2.png" alt="Inky's second review" loading="lazy">
+            <img src="../proof - inky 3.jpg" alt="Inky's third review" loading="lazy">
+            <img src="../assets/images/inky-long-term-proof.jpg" alt="Message from Inky's owner sharing Maggie's off-leash recall success" loading="lazy">
+          </div>
+          <div class="visual-caption"><strong>Long-term success:</strong> Maggie graduated to GoodDog2, worked off leash on a long line for safety, and responded to every recall from 40 to 50 feet away.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section foundation-section">
+      <div class="lp-container split reverse">
+        <div class="split-copy">
+          <p class="lp-kicker">Training that survives contact with real life</p>
+          <h2 class="lp-h2">“My dog knows what to do.<br>Until it actually matters.”</h2>
+          <p class="lp-body">A dog can know a command and still lose access to it when they are excited, scared, frustrated, distracted, or overwhelmed.</p>
+          <p class="lp-body">Building a more confident, motivated dog and a better relationship first lets us build commands on top of a foundation that holds. When you need obedience to work, it works.</p>
+
+          <div class="outcomes" aria-label="What that foundation changes">
+            <div class="outcome"><strong>A walk can just be a walk.</strong><span>Not a training emergency every time you leave the driveway.</span></div>
+            <div class="outcome"><strong>People can come over.</strong><span>Without your whole evening revolving around managing the dog.</span></div>
+            <div class="outcome"><strong>You can go places.</strong><span>Without planning the entire outing around what might go wrong.</span></div>
+            <div class="outcome"><strong>You know what to do.</strong><span>Because the plan makes sense outside the lesson too.</span></div>
+          </div>
+        </div>
+
+        <div class="split-media walk-proof">
+          <p>Sonia Bologa <span>· Sully’s owner</span></p>
+          <blockquote>“After trying a local dog training class with little progress, we found Joel, and the difference he’s made with Sully has been incredible.”</blockquote>
+          <span>Joel gave them practical solutions for Sully’s energy, helped him settle indoors, and gave his owners more confidence handling real life.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section">
+      <div class="lp-container">
+        <div class="philosophy">
+          <div class="philosophy-grid">
+            <div>
+              <p class="lp-kicker">How I think about training</p>
+              <p class="philosophy-lead">“I don’t want to choose between extremes.<br>I just want to help my dog.”</p>
+            </div>
+            <div class="philosophy-copy">
+              <p><strong>Every dog and every owner is an individual.</strong> Our work is built to help you succeed together.</p>
+              <p>Training should be <strong>as fun and rewarding as possible, and it also has to work when it needs to work.</strong> Our solutions are based on the best outcomes for dogs and their owners.</p>
+              <p class="philosophy-conclusion">The plan should fit your dog and your life, not somebody else’s ideology.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section">
+      <div class="lp-container split">
+        <div class="split-copy">
+          <p class="lp-kicker">The training has to come home with you</p>
+          <h2 class="lp-h2">“What if my dog listens to you… and then ignores me?”</h2>
+          <p class="lp-body"><strong>Then the job is not finished.</strong></p>
+          <p class="lp-body">Whether we work through private lessons or Board & Train, I am not trying to build a dog who performs for me. I teach you what you are seeing, why the plan works, what to do next, and how to maintain the skills in your own life.</p>
+
+          <div class="pullquote">
+            <p>“Joel is not just working with our dog. He’s willing to work with us and train us to be the best possible parents we can be to her.”</p>
+            <cite>Catie</cite>
+          </div>
+        </div>
+
+        <div class="split-media">
+          <div class="video-frame">
+            <video controls preload="metadata" playsinline>
+              <source src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/698cb4d3a41b8780f8a582fa.mp4" type="video/mp4">
+              Your browser does not support video playback.
+            </video>
+          </div>
+          <p class="booking-note">Real client testimonial. Not a stock clip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section">
+      <div class="lp-container split reverse">
+        <div class="split-copy">
+          <p class="lp-kicker">Board & Train should not be a black box</p>
+          <h2 class="lp-h2">“I don’t know if I could leave my dog with someone.”</h2>
+          <p class="lp-body">Good. You should care who has your dog.</p>
+          <p class="lp-body">During your consultation, you will see where your dog will stay and train. I would never deny an owner the opportunity to check on their dog.</p>
+          <p class="lp-body">Longer Board &amp; Train programs are broken into 10-day stays, with a lesson and a weekend at home in between. It makes the process easier on everyone, including me.</p>
+          <p class="lp-body">Dogs are featured on <strong>TikTok Live three times a week</strong>, so owners can see the work, follow progress, and learn alongside their dog.</p>
+        </div>
+
+        <div class="split-media visual-card">
+          <img src="../assets/images/sammy-board-train-testimonial.webp" alt="Sammy's owner describing Board and Train progress that held at home" loading="lazy">
+          <div class="visual-caption"><strong>Sammy’s owner after Board &amp; Train:</strong> Emmylou made remarkable strides, and the family was able to host friends comfortably at home for the first time in three years.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section final-message">
+      <div class="lp-narrow" style="text-align:center">
+        <p class="lp-kicker">The point of all of this</p>
+        <h2 class="lp-h2">“I love this dog. I just need life to get easier.”</h2>
+        <p class="lp-body" style="margin-inline:auto">Not a perfect dog. Not a dog who looks impressive for a trainer. A dog you can live with, understand, enjoy, and trust more in the situations that actually make up your life.</p>
+        <p class="hero-first-last" style="margin-top:26px">Whether it’s your <strong>first dog</strong> or your dog’s <strong>last chance</strong>, I can help.</p>
+        <p style="margin:28px 0 0"><a class="btn btn-primary" href="#booking" data-event="consult_cta_click" data-location="final_message">Book your consultation →</a></p>
+      </div>
+    </section>
+
+    <section class="lp-section" id="booking">
+      <div class="lp-container final-grid">
+        <div class="final-copy">
+          <p class="lp-kicker">Start here</p>
+          <h2 class="final-title">Stop the Chaos.<br>Keep the Dog You Love.</h2>
+          <p class="lp-body">Tell me what is happening. I’ll help you understand what I think is going on, what I would recommend, and whether working together makes sense.</p>
+          <p class="lp-body"><strong>If I do not believe I can help, I will tell you that.</strong></p>
+          <p class="lp-muted">Free consultation • In-person in Sharpsburg, GA or virtual worldwide.</p>
+        </div>
+
+        <div>
+          <div class="booking-wrap">
+            <iframe id="consult-calendar-iframe"
+              data-base-src="https://api.leadconnectorhq.com/widget/booking/znboGN56kY7IVpI59Ji2"
+              scrolling="yes"
+              title="Book a free consultation with Scoob & I Dog Training">
+            </iframe>
+          </div>
+          <p class="booking-note">The scheduler asks a few questions so I can come prepared. Answer honestly. The call works better when I know what I am walking into.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lp-footer">
+    <div class="lp-container lp-footer-inner">
+      <span>© 2026 Scoob & I Dog Training</span>
+      <span>Sharpsburg, Georgia • Working with dog owners worldwide</span>
+    </div>
+  </footer>
+</div>
+<div class="image-lightbox" id="image-lightbox" hidden role="dialog" aria-modal="true" aria-label="Expanded image">
+  <button type="button" aria-label="Close image">×</button>
+  <img alt="">
+</div>
+<script>
+/* Preserve paid-ad attribution in the scheduler and track conversion intent. */
+(function(){
+  var keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','msclkid','ttclid'];
+  var params=new URLSearchParams(window.location.search);
+  var stored={};
+  keys.forEach(function(key){
+    var value=params.get(key)||(window.sessionStorage&&sessionStorage.getItem('tracking_'+key));
+    if(params.get(key)&&window.sessionStorage) sessionStorage.setItem('tracking_'+key,params.get(key));
+    if(value) stored[key]=value;
+  });
+  var iframe=document.getElementById('consult-calendar-iframe');
+  if(iframe){
+    var url=new URL(iframe.dataset.baseSrc);
+    Object.keys(stored).forEach(function(key){url.searchParams.set(key,stored[key]);});
+    iframe.src=url.toString();
+  }
+  function sendEvent(name, details){
+    try{if(typeof fbq==='function') fbq('trackCustom',name,details);}catch(e){}
+    try{if(typeof gtag==='function') gtag('event',name,details);}catch(e){}
+  }
+  document.addEventListener('click',function(event){
+    var link=event.target.closest&&event.target.closest('a[data-event]');
+    if(!link) return;
+    sendEvent(link.dataset.event,{location:link.dataset.location||'unknown',href:link.href});
+    if(link.getAttribute('href')==='#booking') sendEvent('consult_click',{location:link.dataset.location||'unknown'});
+  });
+  document.querySelectorAll('video').forEach(function(video,index){
+    video.addEventListener('play',function(){sendEvent('proof_video_play',{video:index+1});},{once:true});
+  });
+  if(iframe) iframe.addEventListener('load',function(){sendEvent('scheduler_loaded',{location:'booking'});},{once:true});
+})();
+</script>
+<script>
+/* Make visual proof easy to read on small screens. */
+(function(){
+  var lightbox=document.getElementById('image-lightbox');
+  var lightboxImage=lightbox.querySelector('img');
+  var close=lightbox.querySelector('button');
+  var lastTrigger;
+  document.querySelectorAll('main img').forEach(function(image){
+    var button=document.createElement('button');
+    button.type='button'; button.className='image-zoom'; button.setAttribute('aria-label','Expand image: '+(image.alt||'image'));
+    image.parentNode.insertBefore(button,image); button.appendChild(image);
+    button.addEventListener('click',function(){ lastTrigger=button; lightboxImage.src=image.currentSrc||image.src; lightboxImage.alt=image.alt; lightbox.hidden=false; close.focus(); });
+  });
+  function closeLightbox(){ lightbox.hidden=true; lightboxImage.src=''; if(lastTrigger) lastTrigger.focus(); }
+  close.addEventListener('click',closeLightbox);
+  lightbox.addEventListener('click',function(event){ if(event.target===lightbox) closeLightbox(); });
+  document.addEventListener('keydown',function(event){ if(event.key==='Escape'&&!lightbox.hidden) closeLightbox(); });
+})();
+</script>
+</body>
+</html>

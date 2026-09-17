@@ -1,0 +1,29 @@
+SCOOB & I WEBSITE DEPLOYMENT PATCH
+
+1. Unzip this package.
+2. Copy everything inside it into the ROOT of your GitHub website repository.
+3. Allow these files to overwrite the existing versions:
+   - index.html
+   - _redirects
+4. Confirm the sales page is named exactly:
+   fix-the-walk/index.html
+5. If fix-the-walk/index (2).html still exists in the repository, delete that stray duplicate.
+6. Keep these two sales-page assets in the fix-the-walk folder:
+   - fix-the-walk-hero.mp4
+   - jazz-review-dm.webp
+7. Commit the changes and push them to the branch Netlify deploys.
+
+AFTER NETLIFY FINISHES, TEST:
+
+- https://scoobandi.com/
+- https://scoobandi.com/fix-the-walk/
+- https://scoobandi.com/the-playbook
+
+The old /the-playbook address should now land on the Fix the Walk sales page.
+The /fix-the-walk address should no longer redirect to Digital Dog School.
+
+Also click all three homepage paths on both desktop and phone:
+
+- Fix the Walk
+- Digital Dog School
+- Book a Free Call

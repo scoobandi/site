@@ -1,7 +1,4 @@
-/fix-the-walk  https://digitaldogschool.com/  301!
-/fix-the-walk/  https://digitaldogschool.com/  301!
-/fix-the-walk/*  https://digitaldogschool.com/  301!
-/the-playbook  https://digitaldogschool.com/  301!
-/the-playbook/  https://digitaldogschool.com/  301!
-/the-playbook/*  https://digitaldogschool.com/  301!
+/the-playbook  /fix-the-walk/  301!
+/the-playbook/  /fix-the-walk/  301!
+/the-playbook/*  /fix-the-walk/:splat  301!
 /digital-dog-school/*  https://digitaldogschool.com/:splat  301!
