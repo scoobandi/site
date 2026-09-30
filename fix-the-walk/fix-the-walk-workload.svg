@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-labelledby="title desc">
+  <title id="title">What the work looks like in Fix the Walk</title>
+  <desc id="desc">A four-step overview of course preparation, live lessons, practice, video submission, questions, and feedback.</desc>
+
+  <rect width="1080" height="1350" fill="#F7F2EA"/>
+  <rect x="42" y="42" width="996" height="1266" rx="34" fill="#EFE5D8"/>
+
+  <text x="92" y="112" fill="#A94728" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="4">WHAT THE WORK LOOKS LIKE</text>
+  <text x="92" y="190" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="64" font-weight="600">A simple rhythm.</text>
+  <text x="92" y="260" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="64" font-weight="600">Real support.</text>
+  <text x="94" y="312" fill="#554A43" font-family="Inter, Arial, sans-serif" font-size="25">You will always know what to do next and where to get help.</text>
+
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <rect x="92" y="354" width="206" height="104" rx="20" fill="#FFFDFA"/>
+    <text x="195" y="394" fill="#A94728" font-size="30" font-weight="800">&lt;1 HR</text>
+    <text x="195" y="430" fill="#1A1613" font-size="16" font-weight="700">PREREQUISITES</text>
+
+    <rect x="322" y="354" width="206" height="104" rx="20" fill="#FFFDFA"/>
+    <text x="425" y="394" fill="#A94728" font-size="30" font-weight="800">5</text>
+    <text x="425" y="430" fill="#1A1613" font-size="18" font-weight="700">LIVE LESSONS</text>
+
+    <rect x="552" y="354" width="206" height="104" rx="20" fill="#FFFDFA"/>
+    <text x="655" y="394" fill="#A94728" font-size="30" font-weight="800">2</text>
+    <text x="655" y="430" fill="#1A1613" font-size="18" font-weight="700">LIVE Q&amp;As</text>
+
+    <rect x="782" y="354" width="206" height="104" rx="20" fill="#FFFDFA"/>
+    <text x="885" y="394" fill="#A94728" font-size="27" font-weight="800">DAILY</text>
+    <text x="885" y="430" fill="#1A1613" font-size="18" font-weight="700">PRACTICE</text>
+  </g>
+
+  <line x1="132" y1="530" x2="132" y2="1084" stroke="#D4B6A7" stroke-width="6" stroke-linecap="round"/>
+
+  <g>
+    <circle cx="132" cy="570" r="42" fill="#A94728"/>
+    <text x="132" y="579" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">1</text>
+    <rect x="198" y="500" width="790" height="140" rx="22" fill="#FFFDFA"/>
+    <text x="236" y="543" fill="#A94728" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="2">BEFORE THE FIRST LIVE SESSION</text>
+    <text x="236" y="586" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="29" font-weight="600">Complete less than one hour of prerequisite education.</text>
+    <text x="236" y="617" fill="#554A43" font-family="Inter, Arial, sans-serif" font-size="20">Finish it before the first live lesson on October 20.</text>
+  </g>
+
+  <g>
+    <circle cx="132" cy="742" r="42" fill="#A94728"/>
+    <text x="132" y="751" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">2</text>
+    <rect x="198" y="672" width="790" height="140" rx="22" fill="#FFFDFA"/>
+    <text x="236" y="715" fill="#A94728" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="2">DURING THE FOUR-WEEK COURSE</text>
+    <text x="236" y="758" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="31" font-weight="600">Join the live lessons. Work with your dog every day.</text>
+    <text x="236" y="789" fill="#554A43" font-family="Inter, Arial, sans-serif" font-size="20">If three short sessions a week are not enough, do more.</text>
+  </g>
+
+  <g>
+    <circle cx="132" cy="914" r="42" fill="#A94728"/>
+    <text x="132" y="923" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">3</text>
+    <rect x="198" y="844" width="790" height="140" rx="22" fill="#FFFDFA"/>
+    <text x="236" y="887" fill="#A94728" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="2">BEFORE EACH Q&amp;A</text>
+    <text x="236" y="930" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="31" font-weight="600">Submit video of your real training attempts.</text>
+    <text x="236" y="961" fill="#554A43" font-family="Inter, Arial, sans-serif" font-size="20">Joel can see what is happening, not just hear about it.</text>
+  </g>
+
+  <g>
+    <circle cx="132" cy="1086" r="42" fill="#A94728"/>
+    <text x="132" y="1095" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="800" text-anchor="middle">4</text>
+    <rect x="198" y="1016" width="790" height="140" rx="22" fill="#FFFDFA"/>
+    <text x="236" y="1059" fill="#A94728" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800" letter-spacing="2">WHEN SOMETHING IS NOT WORKING</text>
+    <text x="236" y="1102" fill="#1A1613" font-family="Fraunces, Georgia, serif" font-size="31" font-weight="600">Bring the question. Adjust the plan together.</text>
+    <text x="236" y="1133" fill="#554A43" font-family="Inter, Arial, sans-serif" font-size="20">The goal is useful feedback, not perfect homework.</text>
+  </g>
+
+  <rect x="92" y="1192" width="896" height="82" rx="41" fill="#1A1613"/>
+  <text x="540" y="1244" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">Learn  →  practice  →  submit  →  get feedback  →  adjust</text>
+</svg>
