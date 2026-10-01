@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f7f2ea">
   <title>Fix the Walk | Live Coaching with Joel Harrison</title>
-  <meta name="description" content="Four weeks of live virtual coaching for owners whose dogs pull, bark, lunge, or lose focus outside. Starts October 1, 2026.">
+  <meta name="description" content="Live virtual coaching for owners whose dogs pull, bark, lunge, or lose focus outside. Enrollment closes October 15, 2026; live coaching begins October 20.">
   <meta property="og:title" content="Fix the Walk | Scoob &amp; I Dog Training">
-  <meta property="og:description" content="A focused four-week walking sprint with seven live sessions, video feedback, and Digital Dog School included.">
+  <meta property="og:description" content="Five live lessons, two live Q&amp;As, video feedback, and Digital Dog School included.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://scoobandi.com/fix-the-walk/">
   <meta property="og:image" content="https://scoobandi.com/fix-the-walk/geordi-at-airport-hero.webp">
@@ -43,165 +43,42 @@
   </script>
 
   <style>
-    :root{
-      --paper:#f7f2ea;
-      --card:#fffdfa;
-      --ink:#1a1613;
-      --soft:#514842;
-      --muted:#746960;
-      --rust:#a94728;
-      --rust-dark:#84351f;
-      --peach:#f1d7c4;
-      --green:#24493f;
-      --line:rgba(26,22,19,.13);
-      --shadow:0 18px 55px rgba(53,35,23,.12);
-      --serif:'Fraunces',Georgia,serif;
-      --sans:'Inter',system-ui,sans-serif;
-    }
+    :root{--paper:#f7f2ea;--card:#fffdfa;--ink:#1a1613;--soft:#514842;--muted:#746960;--rust:#a94728;--rust-dark:#84351f;--peach:#f1d7c4;--green:#24493f;--line:rgba(26,22,19,.13);--shadow:0 18px 55px rgba(53,35,23,.12);--serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif}
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
     body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
-    img{display:block;max-width:100%}
-    a{color:inherit}
-    button{font:inherit}
-    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-    .narrow{width:min(760px,calc(100% - 40px));margin:auto}
-    .announcement{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:.01em}
-    .announcement span{color:#f2c3a6}
-    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-family:var(--serif);font-size:22px;font-weight:600;text-decoration:none}
-    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--rust);color:#fff;text-decoration:none;font-weight:800;line-height:1.15;transition:.2s ease}
-    .nav-cta{padding:11px 18px;font-size:14px}
-    .button{min-height:54px;padding:16px 25px}
-    .button:hover,.nav-cta:hover{background:var(--rust-dark);transform:translateY(-1px)}
+    img{display:block;max-width:100%} a{color:inherit} button{font:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}.narrow{width:min(760px,calc(100% - 40px));margin:auto}
+    .announcement{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px;font-weight:600;letter-spacing:.01em}.announcement span{color:#f2c3a6}
+    .nav{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-family:var(--serif);font-size:22px;font-weight:600;text-decoration:none}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:var(--rust);color:#fff;text-decoration:none;font-weight:800;line-height:1.15;transition:.2s ease}.nav-cta{padding:11px 18px;font-size:14px}.button{min-height:54px;padding:16px 25px}.button:hover,.nav-cta:hover{background:var(--rust-dark);transform:translateY(-1px)}
     .button.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
     .eyebrow{margin:0 0 14px;color:var(--rust);font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-    h1,h2,h3,p{margin-top:0}
-    h1,h2{font-family:var(--serif);letter-spacing:-.025em}
-    h1{margin-bottom:20px;font-size:clamp(42px,6.5vw,76px);line-height:.98;font-weight:600}
-    h2{margin-bottom:18px;font-size:clamp(31px,4.4vw,52px);line-height:1.05;font-weight:600}
-    h3{margin-bottom:9px;font-size:19px;line-height:1.25}
-    .hero{padding:62px 0 70px}
-    .hero-grid{display:grid;gap:38px;align-items:center}
-    .hero-copy{max-width:680px}
-    .hero .lede{max-width:610px;margin-bottom:22px;color:var(--soft);font-size:20px;line-height:1.5}
-    .facts{display:grid;gap:9px;margin:0 0 24px;padding:0;list-style:none;color:var(--soft);font-size:15px}
-    .facts li{display:flex;gap:10px;align-items:flex-start}
-    .check{display:inline-grid;flex:0 0 22px;width:22px;height:22px;place-items:center;border-radius:50%;background:var(--peach);color:var(--rust-dark);font-size:13px;font-weight:900}
-    .price{display:flex;align-items:end;gap:12px;margin:0 0 13px}
-    .price strong{font-family:var(--serif);font-size:38px;line-height:1}
-    .price span{color:var(--soft);font-size:14px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .micro{margin:12px 0 0;color:var(--muted);font-size:13px}
-    .hero-card{position:relative;overflow:hidden;width:min(100%,360px);aspect-ratio:9/16;justify-self:center;border-radius:26px;background:#302824;box-shadow:var(--shadow)}
-    .hero-card img,.hero-card video{width:100%;height:100%;object-fit:contain;object-position:center;opacity:1}
-    .hero-card::after{display:none}
-    .hero-proof{position:absolute;z-index:2;right:22px;bottom:22px;left:22px;color:#fff}
-    .hero-proof blockquote{margin:0 0 10px;font-family:var(--serif);font-size:21px;line-height:1.3}
-    .hero-proof cite{font-size:13px;font-style:normal;color:rgba(255,255,255,.78)}
-    .hero-offer{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}
-    .hero-offer .price{margin:0}
-    .mirror-line{font-family:var(--serif);font-size:clamp(24px,3.5vw,38px);line-height:1.2;color:var(--ink)}
-    .result-quote{margin-top:26px;border-left:5px solid var(--rust);border-radius:0 18px 18px 0;background:var(--card);padding:22px 24px;box-shadow:var(--shadow)}
-    .result-quote .proof-context{margin:0 0 8px;color:var(--rust-dark);font-size:13px;font-weight:800}
-    .result-quote blockquote{margin:0 0 9px;font-family:var(--serif);font-size:21px;line-height:1.4}
-    .result-quote cite{font-size:13px;font-style:normal;color:var(--muted)}
-    .featured-proof{margin:34px 0 0}
-    .featured-proof img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
-    .featured-proof figcaption{margin-top:10px;text-align:center;color:var(--muted);font-size:13px}
-    .method-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0}
-    .method-step{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px}
-    .method-step strong{display:block;color:var(--rust-dark);font-size:13px;letter-spacing:.08em}
-    .method-step span{display:block;margin-top:5px;color:var(--soft);font-size:14px;line-height:1.35}
-    .proof-strip{background:var(--green);color:#fff;padding:25px 0}
-    .proof-strip-inner{display:grid;gap:18px}
-    .proof-stat strong{display:block;font-family:var(--serif);font-size:28px;line-height:1.1}
-    .proof-stat span{font-size:13px;color:rgba(255,255,255,.76)}
-    section{padding:78px 0}
-    .section-intro{max-width:720px;margin-bottom:34px}
-    .section-intro p{color:var(--soft);font-size:18px}
-    .grid-2,.grid-3,.grid-4{display:grid;gap:18px}
-    .card{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:25px}
-    .card p{margin-bottom:0;color:var(--soft);font-size:15px}
-    .fit-card.good{border-top:5px solid var(--green)}
-    .fit-card.redirect{border-top:5px solid var(--rust)}
-    .fit-list{display:grid;gap:11px;margin:18px 0 0;padding:0;list-style:none;color:var(--soft)}
-    .fit-list li{padding-left:23px;position:relative}
-    .fit-list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
-    .fit-card.redirect .fit-list li::before{content:"→";color:var(--rust)}
-    .process{background:#efe5d8}
-    .step-number{display:grid;width:36px;height:36px;margin-bottom:18px;place-items:center;border-radius:50%;background:var(--ink);color:#fff;font-weight:800}
-    .coach{margin-top:22px;display:grid;gap:18px;align-items:center;border-radius:20px;background:var(--ink);color:#fff;padding:26px}
-    .coach p{margin:0;color:rgba(255,255,255,.78)}
-    .schedule{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:var(--card)}
-    .schedule-row{display:grid;grid-template-columns:95px 1fr;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
-    .schedule-row:last-child{border-bottom:0}
-    .schedule-row strong{color:var(--rust-dark)}
-    .schedule-row span{color:var(--soft)}
-    .prep{margin-bottom:18px;border-radius:16px;background:var(--peach);padding:18px 20px}
-    .prep strong{display:block;margin-bottom:3px}
-    .offer{background:var(--ink);color:#fff}
-    .offer h2,.offer .eyebrow{color:#fff}
-    .offer .section-intro p{color:rgba(255,255,255,.76)}
-    .offer-grid{display:grid;gap:22px;align-items:start}
-    .offer-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}
-    .offer-list li{display:flex;gap:11px;color:rgba(255,255,255,.88)}
-    .offer-box{border-radius:22px;background:#fff;color:var(--ink);padding:27px;box-shadow:var(--shadow)}
-    .offer-box .price strong{font-size:44px}
-    .offer-box .button{width:100%}
-    .capacity{margin:13px 0 0;text-align:center;color:var(--muted);font-size:13px}
-    .proof-card{padding:0;overflow:hidden}
-    .proof-card img{width:100%;height:230px;object-fit:cover;background:#eee}
-    .proof-card-body{padding:22px}
-    .proof-card blockquote{margin:0 0 14px;font-family:var(--serif);font-size:18px;line-height:1.4}
-    .proof-card cite{font-size:13px;font-style:normal;color:var(--muted)}
-    .guarantee{background:#ead4c4}
-    .guarantee-box{display:grid;gap:25px;align-items:start}
-    .guarantee-list{display:grid;gap:10px;margin:0;padding:0;list-style:none}
-    .guarantee-list li{position:relative;padding-left:24px;color:var(--soft)}
-    .guarantee-list li::before{content:"✓";position:absolute;left:0;color:var(--rust-dark);font-weight:900}
-    .guarantee-callout{border-radius:18px;background:var(--card);padding:23px}
-    .guarantee-callout strong{display:block;margin-bottom:6px;font-family:var(--serif);font-size:24px}
-    details{border-bottom:1px solid var(--line);padding:18px 0}
-    summary{cursor:pointer;font-weight:800;list-style:none;padding-right:28px;position:relative}
-    summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";position:absolute;right:2px;top:-3px;color:var(--rust);font-size:25px}
-    details[open] summary::after{content:"–"}
-    details p{margin:13px 0 0;color:var(--soft)}
-    .final{text-align:center;background:var(--green);color:#fff}
-    .final h2{color:#fff}
-    .final p{max-width:620px;margin:0 auto 22px;color:rgba(255,255,255,.8)}
-    .final .micro{color:rgba(255,255,255,.68)}
-    footer{padding:26px 0 100px;color:var(--muted);font-size:13px}
-    .footer-row{display:flex;flex-wrap:wrap;gap:13px 25px;justify-content:space-between}
-    .footer-row a{color:var(--muted)}
-    .mobile-buy{position:fixed;z-index:20;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(255,253,250,.96);backdrop-filter:blur(12px);box-shadow:0 -7px 25px rgba(25,15,10,.08)}
-    .mobile-buy strong{display:block;font-size:14px}
-    .mobile-buy span{display:block;color:var(--muted);font-size:11px}
-    .mobile-buy .button{min-height:44px;padding:12px 17px;font-size:13px}
-    @media(min-width:760px){
-      .wrap,.narrow{width:min(1120px,calc(100% - 80px))}
-      .narrow{width:min(760px,calc(100% - 80px))}
-      .hero{padding:78px 0 88px}
-      .hero-grid{grid-template-columns:1.1fr .9fr;gap:58px}
-      .method-strip{grid-template-columns:repeat(4,1fr)}
-      .proof-strip-inner{grid-template-columns:repeat(3,1fr)}
-      section{padding:100px 0}
-      .grid-2{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:repeat(3,1fr)}
-      .grid-4{grid-template-columns:repeat(4,1fr)}
-      .coach{grid-template-columns:1fr 1.4fr;padding:30px}
-      .schedule-row{grid-template-columns:140px 1fr;padding:17px 24px}
-      .offer-grid{grid-template-columns:1.2fr .8fr;gap:55px}
-      .guarantee-box{grid-template-columns:1.2fr .8fr}
-      footer{padding-bottom:30px}
-      .mobile-buy{display:none}
-    }
+    h1,h2,h3,p{margin-top:0}h1,h2{font-family:var(--serif);letter-spacing:-.025em}h1{margin-bottom:20px;font-size:clamp(42px,6.5vw,76px);line-height:.98;font-weight:600}h2{margin-bottom:18px;font-size:clamp(31px,4.4vw,52px);line-height:1.05;font-weight:600}h3{margin-bottom:9px;font-size:19px;line-height:1.25}
+    .hero{padding:62px 0 70px}.hero-grid{display:grid;gap:38px;align-items:center}.hero-copy{max-width:680px}.hero .lede{max-width:610px;margin-bottom:22px;color:var(--soft);font-size:20px;line-height:1.5}
+    .price{display:flex;align-items:end;gap:12px;margin:0 0 13px}.price strong{font-family:var(--serif);font-size:38px;line-height:1}.price span{color:var(--soft);font-size:14px}.hero-offer{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:22px}.hero-offer .price{margin:0}.micro{margin:12px 0 0;color:var(--muted);font-size:13px}
+    .replay-link{margin:17px 0 0;font-size:14px}.replay-link a{color:var(--rust-dark);font-weight:800;text-underline-offset:3px}
+    .hero-card{position:relative;overflow:hidden;width:min(100%,360px);aspect-ratio:9/16;justify-self:center;border-radius:26px;background:#302824;box-shadow:var(--shadow)}.hero-card video{width:100%;height:100%;object-fit:contain;object-position:center}
+    .result-quote{margin-top:26px;border-left:5px solid var(--rust);border-radius:0 18px 18px 0;background:var(--card);padding:22px 24px;box-shadow:var(--shadow)}.result-quote .proof-context{margin:0 0 8px;color:var(--rust-dark);font-size:13px;font-weight:800}.result-quote blockquote{margin:0 0 9px;font-family:var(--serif);font-size:21px;line-height:1.4}.result-quote cite{font-size:13px;font-style:normal;color:var(--muted)}
+    .proof-strip{background:var(--green);color:#fff;padding:25px 0}.proof-strip-inner{display:grid;gap:18px}.proof-stat strong{display:block;font-family:var(--serif);font-size:28px;line-height:1.1}.proof-stat span{font-size:13px;color:rgba(255,255,255,.76)}
+    section{padding:78px 0}.section-intro{max-width:720px;margin-bottom:34px}.section-intro p{color:var(--soft);font-size:18px}.mirror-line{font-family:var(--serif);font-size:clamp(24px,3.5vw,38px);line-height:1.2;color:var(--ink)}
+    .grid-2{display:grid;gap:18px}.card{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:25px}.card p{margin-bottom:0;color:var(--soft);font-size:15px}.fit-card.good{border-top:5px solid var(--green)}.fit-card.redirect{border-top:5px solid var(--rust)}
+    .featured-proof{margin:34px 0 0}.featured-proof img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.featured-proof figcaption{margin-top:10px;text-align:center;color:var(--muted);font-size:13px}
+    .process{background:#efe5d8}.method-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:24px 0}.method-step{border:1px solid var(--line);border-radius:14px;background:var(--card);padding:16px}.method-step strong{display:block;color:var(--rust-dark);font-size:13px;letter-spacing:.08em}.method-step span{display:block;margin-top:5px;color:var(--soft);font-size:14px;line-height:1.35}.coach{margin-top:22px;display:grid;gap:18px;align-items:center;border-radius:20px;background:var(--ink);color:#fff;padding:26px}.coach p{margin:0;color:rgba(255,255,255,.78)}
+    .proof-card{padding:0;overflow:hidden}.proof-card img{width:100%;height:230px;object-fit:cover;background:#eee}.proof-card-body{padding:22px}.proof-card blockquote{margin:0 0 14px;font-family:var(--serif);font-size:18px;line-height:1.4}.proof-card cite{font-size:13px;font-style:normal;color:var(--muted)}
+    .schedule{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:var(--card)}.schedule-row{display:grid;grid-template-columns:95px 1fr;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}.schedule-row:last-child{border-bottom:0}.schedule-row strong{color:var(--rust-dark)}.schedule-row span{color:var(--soft)}
+    .workload{display:grid;gap:22px;align-items:center;margin-top:30px;border:1px solid var(--line);border-radius:22px;background:var(--card);padding:22px}.workload-copy p{color:var(--soft)}.workload-copy ul{margin:0;padding-left:22px;color:var(--soft)}.workload img{width:100%;border-radius:16px}
+    .offer{background:var(--ink);color:#fff}.offer h2,.offer .eyebrow{color:#fff}.offer .section-intro p{color:rgba(255,255,255,.76)}.offer-grid{display:grid;gap:22px;align-items:start}.offer-list{display:grid;gap:12px;margin:0;padding:0;list-style:none}.offer-list li{display:flex;gap:11px;color:rgba(255,255,255,.88)}.check{display:inline-grid;flex:0 0 22px;width:22px;height:22px;place-items:center;border-radius:50%;background:var(--peach);color:var(--rust-dark);font-size:13px;font-weight:900}.offer-box{border-radius:22px;background:#fff;color:var(--ink);padding:27px;box-shadow:var(--shadow)}.offer-box .price strong{font-size:44px}.offer-box .button{width:100%}.capacity{margin:13px 0 0;text-align:center;color:var(--muted);font-size:13px}
+    details{border-bottom:1px solid var(--line);padding:18px 0}summary{cursor:pointer;font-weight:800;list-style:none;padding-right:28px;position:relative}summary::-webkit-details-marker{display:none}summary::after{content:'+';position:absolute;right:2px;top:-3px;color:var(--rust);font-size:25px}details[open] summary::after{content:'–'}details p{margin:13px 0 0;color:var(--soft)}
+    .final{text-align:center;background:var(--green);color:#fff}.final h2{color:#fff}.final p{max-width:620px;margin:0 auto 22px;color:rgba(255,255,255,.8)}.final .micro{color:rgba(255,255,255,.68)}
+    footer{padding:26px 0 100px;color:var(--muted);font-size:13px}.footer-row{display:flex;flex-wrap:wrap;gap:13px 25px;justify-content:space-between}
+    .mobile-buy{position:fixed;z-index:20;right:0;bottom:0;left:0;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:rgba(255,253,250,.96);backdrop-filter:blur(12px);box-shadow:0 -7px 25px rgba(25,15,10,.08)}.mobile-buy strong{display:block;font-size:14px}.mobile-buy span{display:block;color:var(--muted);font-size:11px}.mobile-buy .button{min-height:44px;padding:12px 17px;font-size:13px}
+    @media(min-width:760px){.wrap,.narrow{width:min(1120px,calc(100% - 80px))}.narrow{width:min(760px,calc(100% - 80px))}.hero{padding:78px 0 88px}.hero-grid{grid-template-columns:1.1fr .9fr;gap:58px}.method-strip{grid-template-columns:repeat(4,1fr)}.proof-strip-inner{grid-template-columns:repeat(3,1fr)}section{padding:100px 0}.grid-2{grid-template-columns:repeat(2,1fr)}.coach{grid-template-columns:1fr 1.4fr;padding:30px}.schedule-row{grid-template-columns:140px 1fr;padding:17px 24px}.workload{grid-template-columns:.8fr 1.2fr;padding:30px}.offer-grid{grid-template-columns:1.2fr .8fr;gap:55px}footer{padding-bottom:30px}.mobile-buy{display:none}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
   </style>
 </head>
 <body>
-  <div class="announcement">Enrollment closes <span>September 27 at 11:59 PM Eastern</span> so required preparation can begin September 28.</div>
+  <div class="announcement">Enrollment closes <span>October 15 at 11:59 PM Eastern</span>. Prerequisites open immediately; live coaching begins October 20.</div>
   <nav class="nav wrap" aria-label="Primary navigation">
     <span class="brand">Scoob &amp; I</span>
     <a class="nav-cta checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join Fix the Walk</a>
@@ -211,17 +88,18 @@
     <header class="hero" id="top">
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow">Four weeks of live virtual coaching</p>
+          <p class="eyebrow">Live virtual coaching for your real-life walk</p>
           <h1>A loose leash. A dog who checks in. A walk you can enjoy.</h1>
           <p class="lede">If every walk means pulling, scanning for the next dog, or coming home frustrated, Fix the Walk gives you a clear plan and live help applying it to your dog.</p>
           <div class="hero-offer">
             <div class="price"><strong>$597</strong><span>Third-party financing<br>available at checkout</span></div>
             <a class="button checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join Fix the Walk</a>
           </div>
-          <p class="micro">Starts October 1 · Enrollment closes September 27 · Do-The-Work Guarantee</p>
+          <p class="micro">Enrollment closes October 15 · Live coaching begins October 20 · Do-The-Work Guarantee</p>
+          <p class="replay-link"><a href="https://dogs.scoobandi.com/seminar-replay-page">Not ready yet? Watch the free lesson: “My Dog Is Fine… Until We Go for a Walk.” →</a></p>
         </div>
         <div class="hero-card">
-          <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="https://scoobandi.com/fix-the-walk/geordi-at-airport-hero.webp" aria-label="Dogs progressing from difficult walks toward comfortable, easy walks">
+          <video id="hero-video" autoplay muted loop playsinline preload="metadata" poster="geordi-at-airport-hero.webp" aria-label="Dogs progressing from difficult walks toward comfortable, easy walks">
             <source src="fix-the-walk-hero.mp4" type="video/mp4">
             <source src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/6aac5767867721cb570e76f8.mov" type="video/quicktime">
           </video>
@@ -250,14 +128,8 @@
           <p class="mirror-line">You tighten your grip. You scan ahead. You cross the street. You repeat cues your dog normally knows and wonder why none of it works out here.</p>
         </div>
         <div class="grid-2">
-          <article class="card fit-card good">
-            <h3>Your dog did not forget everything.</h3>
-            <p>The outside world changes what your dog can notice, process, and do. You are often trying to teach while your dog is already taking the test.</p>
-          </article>
-          <article class="card fit-card redirect">
-            <h3>The answer is not a louder command.</h3>
-            <p>We make the work clear enough to learn, build the missing skills, and then bring those skills back into real life so your dog can notice the world without losing you.</p>
-          </article>
+          <article class="card fit-card good"><h3>Your dog did not forget everything.</h3><p>The outside world changes what your dog can notice, process, and do. You are often trying to teach while your dog is already taking the test.</p></article>
+          <article class="card fit-card redirect"><h3>The answer is not a louder command.</h3><p>We make the work clear enough to learn, build the missing skills, and then bring those skills back into real life so your dog can notice the world without losing you.</p></article>
         </div>
         <figure class="featured-proof">
           <img src="jazz-review-dm.webp" loading="lazy" decoding="async" alt="Message from Jazz's owner describing walks that once ended in tears and are now calm, with Jazz checking in instead of barking">
@@ -268,40 +140,23 @@
 
     <section class="process" id="process" data-section="process">
       <div class="wrap">
-        <div class="section-intro">
-          <p class="eyebrow">A clear path forward</p>
-          <h2>Stop guessing what to fix first.</h2>
-          <p>The Trust to Train Relationship Reset turns years of work with difficult dogs into four practical steps.</p>
-        </div>
+        <div class="section-intro"><p class="eyebrow">A clear path forward</p><h2>Stop guessing what to fix first.</h2><p>The Trust to Train Relationship Reset turns years of work with difficult dogs into four practical steps.</p></div>
         <div class="method-strip">
           <div class="method-step"><strong>STOP</strong><span>Make the problem easier.</span></div>
           <div class="method-step"><strong>PLAY</strong><span>Build attention and motivation.</span></div>
           <div class="method-step"><strong>TRAIN</strong><span>Teach the missing skills clearly.</span></div>
           <div class="method-step"><strong>LIVE</strong><span>Bring them into the real world.</span></div>
         </div>
-        <div class="coach">
-          <h3>You will not be left to figure it out alone.</h3>
-          <p>Practice with your dog, submit video before the Q&amp;As, and get specific answers during the live sessions. When something is not working, we adjust the plan.</p>
-        </div>
+        <div class="coach"><h3>You will not be left to figure it out alone.</h3><p>Practice with your dog, submit video before the Q&amp;As, and get specific answers during the live sessions. When something is not working, we adjust the plan.</p></div>
       </div>
     </section>
 
     <section id="proof" data-section="proof">
       <div class="wrap">
-        <div class="section-intro">
-          <p class="eyebrow">Real dogs. Real life.</p>
-          <h2>The work has to hold up outside.</h2>
-          <p>Not only in the living room. Not only when the street is empty. In the challenging world you and your dog actually live in.</p>
-        </div>
+        <div class="section-intro"><p class="eyebrow">Real dogs. Real life.</p><h2>The work has to hold up outside.</h2><p>Not only in the living room. Not only when the street is empty. In the challenging world you and your dog actually live in.</p></div>
         <div class="grid-2">
-          <article class="card proof-card">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" loading="lazy" decoding="async" alt="Google review from virtual training client Megan Wolf">
-            <div class="proof-card-body"><blockquote>“He helped me create a bond where I am more important than the challenging world we live in. The best part is it was all virtual.”</blockquote><cite>Megan Wolf · Google review</cite></div>
-          </article>
-          <article class="card proof-card">
-            <img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" loading="lazy" decoding="async" alt="A client walking calmly past another dog">
-            <div class="proof-card-body"><blockquote>A dog notices another dog, stays connected to their person, and keeps moving.</blockquote><cite>Real client training footage</cite></div>
-          </article>
+          <article class="card proof-card"><img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/65a4713b98a1be1cea0aa8c8.png" loading="lazy" decoding="async" alt="Google review from virtual training client Megan Wolf"><div class="proof-card-body"><blockquote>“He helped me create a bond where I am more important than the challenging world we live in. The best part is it was all virtual.”</blockquote><cite>Megan Wolf · Google review</cite></div></article>
+          <article class="card proof-card"><img src="https://assets.cdn.filesafe.space/ILH4tVyH5NKhdoMewJqZ/media/1513f696-b9cc-4a3f-941e-d003b11f8ffc.gif" loading="lazy" decoding="async" alt="A client walking calmly past another dog"><div class="proof-card-body"><blockquote>A dog notices another dog, stays connected to their person, and keeps moving.</blockquote><cite>Real client training footage</cite></div></article>
         </div>
       </div>
     </section>
@@ -310,60 +165,64 @@
       <div class="narrow">
         <div class="section-intro">
           <p class="eyebrow">Can this fit your life?</p>
-          <h2>Six live sessions across four weeks, plus a follow-up Q&amp;A.</h2>
-          <p>Sessions run from 7:30–8:30 PM Eastern on Zoom. Complete eight required Digital Dog School lessons September 28–30, then practice and submit videos as the course progresses.</p>
+          <h2>Five live lessons, two live Q&amp;As, and time to practice.</h2>
+          <p>Sessions run from 7:30–8:30 PM Eastern on Zoom. Join by October 15, complete less than one hour of prerequisite education before October 20, then practice and submit videos as the course progresses.</p>
         </div>
         <details><summary>See all seven session dates</summary><div class="schedule" aria-label="Fix the Walk session schedule">
-          <div class="schedule-row"><strong>Thu, Oct 1</strong><span>Live Lesson 1</span></div><div class="schedule-row"><strong>Tue, Oct 6</strong><span>Live Lesson 2</span></div><div class="schedule-row"><strong>Thu, Oct 8</strong><span>Live Lesson 3</span></div><div class="schedule-row"><strong>Tue, Oct 13</strong><span>Live Q&amp;A 1</span></div><div class="schedule-row"><strong>Thu, Oct 15</strong><span>Live Lesson 4</span></div><div class="schedule-row"><strong>Thu, Oct 22</strong><span>Live Lesson 5</span></div><div class="schedule-row"><strong>Thu, Nov 19</strong><span>Follow-up Q&amp;A</span></div>
+          <div class="schedule-row"><strong>Tue, Oct 20</strong><span>Live Lesson 1</span></div>
+          <div class="schedule-row"><strong>Thu, Oct 22</strong><span>Live Lesson 2</span></div>
+          <div class="schedule-row"><strong>Tue, Oct 27</strong><span>Live Lesson 3</span></div>
+          <div class="schedule-row"><strong>Thu, Oct 29</strong><span>Live Q&amp;A 1</span></div>
+          <div class="schedule-row"><strong>Tue, Nov 3</strong><span>Live Lesson 4</span></div>
+          <div class="schedule-row"><strong>Tue, Nov 10</strong><span>Live Lesson 5</span></div>
+          <div class="schedule-row"><strong>Thu, Dec 10</strong><span>Follow-up Q&amp;A</span></div>
         </div></details>
+        <div class="workload">
+          <div class="workload-copy">
+            <p class="eyebrow">What the work looks like</p>
+            <h3>This is a short sprint, not a passive video course.</h3>
+            <p>You will learn a small piece, practice it, send video, get feedback, adjust, and keep building.</p>
+            <ul><li>Work with your dog every day during the four-week sprint.</li><li>Three short sessions a week will not be enough to keep pace.</li><li>Submit video before the Q&amp;As so Joel can coach the work you are actually doing.</li></ul>
+          </div>
+          <img src="fix-the-walk-workload.svg" loading="lazy" decoding="async" alt="The Fix the Walk workload: less than one hour of prerequisite education, five live lessons, two live Q and A sessions, daily practice, video submission, and coaching feedback">
+        </div>
       </div>
     </section>
 
     <section class="offer" id="enroll" data-section="offer">
       <div class="wrap offer-grid">
         <div>
-          <div class="section-intro">
-            <p class="eyebrow">Your enrollment includes</p>
-            <h2>Everything you need to do the work and get help when you get stuck.</h2>
-            <p>Digital Dog School gives you the foundation. The live course helps you apply it to the walk in front of you.</p>
-          </div>
-          <ul class="offer-list">
-            <li><span class="check">✓</span><span>Five live lessons and two live Q&amp;As</span></li>
-            <li><span class="check">✓</span><span>Personalized feedback on the videos you submit</span></li>
-            <li><span class="check">✓</span><span>Digital Dog School included with lifetime access</span></li>
-            <li><span class="check">✓</span><span>The Do-The-Work Guarantee</span></li>
-          </ul>
+          <div class="section-intro"><p class="eyebrow">Your enrollment includes</p><h2>Everything you need to do the work and get help when you get stuck.</h2><p>Digital Dog School gives you the foundation. The live course helps you apply it to the walk in front of you.</p></div>
+          <ul class="offer-list"><li><span class="check">✓</span><span>Five live lessons and two live Q&amp;As</span></li><li><span class="check">✓</span><span>Personalized feedback on the videos you submit</span></li><li><span class="check">✓</span><span>Digital Dog School included with lifetime access</span></li><li><span class="check">✓</span><span>The Do-The-Work Guarantee</span></li></ul>
         </div>
         <aside class="offer-box">
           <p class="eyebrow">Fix the Walk</p>
           <div class="price"><strong>$597</strong><span>paid in full</span></div>
           <p style="color:var(--soft);margin-bottom:20px">Third-party financing options are available at checkout.</p>
           <a class="button checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join Fix the Walk</a>
-          <p class="capacity">Enrollment closes September 27 at 11:59 PM Eastern</p>
+          <p class="capacity">Enrollment closes October 15 at 11:59 PM Eastern</p>
         </aside>
       </div>
     </section>
 
     <section id="faq" data-section="faq">
       <div class="narrow">
-        <div class="section-intro">
-          <p class="eyebrow">Before you enroll</p>
-          <h2>Questions that matter.</h2>
-        </div>
-        <details><summary>What happens if I miss a live session?</summary><p>Replays will be available. For guarantee eligibility, watch any missed session within 48 hours and complete the assigned work.</p></details>
+        <div class="section-intro"><p class="eyebrow">Before you enroll</p><h2>Questions that matter.</h2></div>
+        <details><summary>What happens if I miss a live session?</summary><p>Replays will be available. Live attendance and participation are part of the Do-The-Work Guarantee requirements.</p></details>
         <details><summary>How do the video reviews work?</summary><p>Submit your training videos before each Q&amp;A. Joel will review them and give you specific feedback during the live session.</p></details>
-        <details><summary>How much preparation is required?</summary><p>Eight selected Digital Dog School prerequisite lessons must be completed between September 28 and September 30.</p></details>
+        <details><summary>How much preparation is required?</summary><p>Less than one hour of prerequisite education is released as soon as you enroll. Complete it before the first live lesson on October 20.</p></details>
+        <details><summary>How much practice should I expect?</summary><p>Plan to work with your dog every day during the sprint. Twenty minutes three days a week will not be enough to keep pace. This is for owners ready to apply the work, not merely watch the lessons.</p></details>
         <details><summary>Is Digital Dog School really included?</summary><p>Yes. You receive immediate access after purchase and keep Digital Dog School as a lifetime reference. It normally sells for $147.</p></details>
-        <details><summary>What is the Do-The-Work Guarantee?</summary><p>Do the preparation, participate fully, practice, submit your videos, and ask for help. If your walks are not meaningfully better after the complete program, you may request a full refund within seven days after the November 19 Q&amp;A. Missed sessions must be watched within 48 hours.</p></details>
+        <details><summary>What is the Do-The-Work Guarantee?</summary><p>Complete the preparation, show up to the classes, practice wholeheartedly, submit videos, participate in the Q&amp;As, and contact Joel along the way if you need help. If by the end of Fix the Walk you still have not made significant progress toward a more enjoyable walk with your dog, Joel will issue a full refund.</p></details>
         <details><summary>Is this appropriate for serious aggression or bite history?</summary><p>Not as a first step. If your dog has seriously injured someone or cannot be safely handled outside, begin with a <a href="https://scoobandi.com/consult/"><strong>private consult</strong></a>.</p></details>
         <details><summary>Do you offer a payment plan?</summary><p>Fix the Walk is $597. Any financing options shown at checkout are provided by a third party; Scoob &amp; I is not offering an internal installment plan.</p></details>
-        <details><summary>When does enrollment close?</summary><p>September 27 at 11:59 PM Eastern. Required preparation begins September 28.</p></details>
+        <details><summary>When does enrollment close?</summary><p>October 15 at 11:59 PM Eastern. Prerequisites open immediately after purchase, and the first live lesson is October 20.</p></details>
       </div>
     </section>
 
     <section class="final" data-section="final">
       <div class="narrow">
-        <p class="eyebrow">Enrollment closes September 27</p>
+        <p class="eyebrow">Enrollment closes October 15</p>
         <h2>Enjoy walking your dog again.</h2>
         <p>Build the attention, communication, and real-world skills that make the leash feel like connection instead of conflict.</p>
         <a class="button checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join Fix the Walk</a>
@@ -372,67 +231,21 @@
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
-      <strong>Scoob &amp; I Dog Training LLC</strong>
-      <div>© 2026 Scoob &amp; I</div>
-    </div>
-  </footer>
+  <footer><div class="wrap footer-row"><strong>Scoob &amp; I Dog Training LLC</strong><div>© 2026 Scoob &amp; I</div></div></footer>
 
-  <div class="mobile-buy" aria-label="Enroll in Fix the Walk">
-    <div><strong>Fix the Walk · $597</strong><span>Starts October 1 · Enrollment closes September 27</span></div>
-    <a class="button checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join</a>
-  </div>
+  <div class="mobile-buy" aria-label="Enroll in Fix the Walk"><div><strong>Fix the Walk · $597</strong><span>Enroll by October 15 · Starts October 20</span></div><a class="button checkout-link" href="https://checkout.digitaldogschool.com/fixthewalk-page">Join</a></div>
 
   <script>
     (function(){
       var heroVideo=document.getElementById('hero-video');
-      if(heroVideo&&window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-        heroVideo.autoplay=false;
-        heroVideo.pause();
-      }
+      if(heroVideo&&window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){heroVideo.autoplay=false;heroVideo.pause();}
       var trackingKeys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','msclkid','ttclid'];
-      var current=new URLSearchParams(window.location.search);
-      var stored={};
-      trackingKeys.forEach(function(key){
-        var value=current.get(key)||(window.sessionStorage&&window.sessionStorage.getItem('tracking_'+key));
-        if(current.get(key)&&window.sessionStorage)window.sessionStorage.setItem('tracking_'+key,current.get(key));
-        if(value)stored[key]=value;
-      });
-      document.querySelectorAll('a[href]').forEach(function(link){
-        var href=link.getAttribute('href');
-        if(!href||(!href.includes('checkout.digitaldogschool.com')&&!href.includes('/consult')))return;
-        try{
-          var url=new URL(href,window.location.origin);
-          Object.keys(stored).forEach(function(key){if(!url.searchParams.has(key))url.searchParams.set(key,stored[key]);});
-          link.href=url.toString();
-        }catch(e){}
-      });
-
+      var current=new URLSearchParams(window.location.search);var stored={};
+      trackingKeys.forEach(function(key){var value=current.get(key)||(window.sessionStorage&&window.sessionStorage.getItem('tracking_'+key));if(current.get(key)&&window.sessionStorage)window.sessionStorage.setItem('tracking_'+key,current.get(key));if(value)stored[key]=value;});
+      document.querySelectorAll('a[href]').forEach(function(link){var href=link.getAttribute('href');if(!href||(!href.includes('checkout.digitaldogschool.com')&&!href.includes('/consult')))return;try{var url=new URL(href,window.location.origin);Object.keys(stored).forEach(function(key){if(!url.searchParams.has(key))url.searchParams.set(key,stored[key]);});link.href=url.toString();}catch(e){}});
       var checkoutFired=false;
-      document.addEventListener('click',function(event){
-        var link=event.target.closest('a.checkout-link');
-        if(!link||checkoutFired)return;
-        checkoutFired=true;
-        if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Fix the Walk',value:597,currency:'USD'});
-        if(typeof gtag==='function')gtag('event','begin_checkout',{currency:'USD',value:597,items:[{item_name:'Fix the Walk'}]});
-        window.setTimeout(function(){checkoutFired=false;},1500);
-      });
-
-      if('IntersectionObserver' in window){
-        var seen={};
-        var observer=new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){
-            if(!entry.isIntersecting)return;
-            var name=entry.target.getAttribute('data-section');
-            if(!name||seen[name])return;
-            seen[name]=true;
-            if(typeof gtag==='function')gtag('event','section_view',{section_name:name});
-            observer.unobserve(entry.target);
-          });
-        },{threshold:.12});
-        document.querySelectorAll('[data-section]').forEach(function(section){observer.observe(section);});
-      }
+      document.addEventListener('click',function(event){var link=event.target.closest('a.checkout-link');if(!link||checkoutFired)return;checkoutFired=true;if(typeof fbq==='function')fbq('track','InitiateCheckout',{content_name:'Fix the Walk',value:597,currency:'USD'});if(typeof gtag==='function')gtag('event','begin_checkout',{currency:'USD',value:597,items:[{item_name:'Fix the Walk'}]});window.setTimeout(function(){checkoutFired=false;},1500);});
+      if('IntersectionObserver' in window){var seen={};var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(!entry.isIntersecting)return;var name=entry.target.getAttribute('data-section');if(!name||seen[name])return;seen[name]=true;if(typeof gtag==='function')gtag('event','section_view',{section_name:name});observer.unobserve(entry.target);});},{threshold:.12});document.querySelectorAll('[data-section]').forEach(function(section){observer.observe(section);});}
     })();
   </script>
 </body>
