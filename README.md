@@ -1,3 +1,17 @@
+# Scoob & I website deployment
+
+Current release: October 30, 2026. This repository publishes the static
+scoobandi.com site from its root through the existing Netlify Git connection.
+The homepage, About, consultation, resources and consultation thank-you pages
+are the approved character-direction release. Digital Dog School is deployed
+separately to digitaldogschool.com from its own Netlify upload package.
+
+Existing Fix the Walk files, retired-offer redirects and the Netlify function
+are retained for existing links and commitments. The historical handoff below
+does not authorize a new class launch or override current offer decisions.
+
+## Historical handoff
+
 # Fix the Walk GitHub Handoff
 
 The `fix-the-walk/` folder is the current primary offer.

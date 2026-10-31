@@ -1,4 +1,14 @@
+https://www.scoobandi.com/* https://scoobandi.com/:splat 301
+/digital-dog-school https://digitaldogschool.com/ 301
+/digital-dog-school/*  https://digitaldogschool.com/:splat  301!
+/resources/resource-guarding-site/index.html /resources/resource-guarding/ 301
+/resources/resource-guarding-site/ /resources/resource-guarding/ 301
+/resources/anxiety-site/index.html /resources/anxiety/ 301
+/resources/anxiety-site/ /resources/anxiety/ 301
+/resources/stop-walking-site/index.html /resources/stop-walking-your-dog/ 301
+/resources/stop-walking-site/ /resources/stop-walking-your-dog/ 301
+/resources/5-insights-site/index.html /resources/5-insider-insights/ 301
+/resources/5-insights-site/ /resources/5-insider-insights/ 301
 /the-playbook  /fix-the-walk/  301!
 /the-playbook/  /fix-the-walk/  301!
 /the-playbook/*  /fix-the-walk/:splat  301!
-/digital-dog-school/*  https://digitaldogschool.com/:splat  301!

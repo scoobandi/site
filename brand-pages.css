@@ -1,0 +1,93 @@
+/* Shared presentation layer. The captured page copy is not rewritten. */
+body.brand-page{--bg:#fff5e8;--bg-2:#fff5e8;--ink:#201e23;--ink-70:#443f47;--ink-55:#5d5662;--accent:#201e23;--green:#201e23;--card:#fffaf3;--brand-page:#a6baf6;background:var(--bg)!important;color:var(--ink)!important;font-family:Inter,Arial,sans-serif!important;overflow-x:clip}
+body.brand-page[data-page="consult"]{--brand-page:#f37552}
+body.brand-page.brand-resource{--brand-page:#f4cb48}
+body.brand-page[data-page="privacy-policy"],body.brand-page[data-page="terms"]{--brand-page:#81c9ae}
+.brand-page h1,.brand-page h2,.brand-page h3{font-family:Anton,Impact,'Arial Narrow',sans-serif!important;font-weight:400!important;letter-spacing:-.025em!important}
+.brand-page h1{font-size:clamp(42px,5.5vw,80px)!important;line-height:1.06!important}
+.brand-page h2{font-size:clamp(30px,3.5vw,48px)!important;line-height:1.12!important}
+.brand-page h3{font-size:clamp(23px,2.4vw,32px)!important;line-height:1.15!important}
+.brand-page .topbar{position:relative!important;z-index:100!important;background:var(--brand-page)!important;border-bottom:1px solid #201e2333!important;backdrop-filter:none!important;box-shadow:none!important}
+.brand-page .topbar-inner{width:min(1200px,calc(100% - 48px))!important;max-width:1200px!important;margin:auto!important;min-height:112px!important;height:auto!important;padding:12px 0!important;display:flex!important;align-items:center!important;justify-content:space-between!important}
+.brand-page .topbar a.brand{font-size:0!important;line-height:0!important;letter-spacing:0!important;display:block!important;width:86px!important;height:86px!important;min-width:86px!important;background:url('/assets/scoob-and-i-logo.png') center/contain no-repeat!important}
+.brand-page .topbar a.brand>*{display:none!important}
+.brand-page .topbar .topnav,.brand-page .topbar nav.nav,.brand-page .topbar .cta-mini,.brand-page .topbar .bar>nav{display:none!important}
+.brand-page .brand-menu-shell{position:relative;margin-left:auto}
+.brand-page .brand-menu-toggle{font-family:Inter,Arial,sans-serif;display:flex;align-items:center;gap:12px;min-height:44px;border:0;background:transparent;color:#201e23;font-size:14px;font-weight:700;padding:0 3px 0 12px;cursor:pointer}
+.brand-page .brand-menu-toggle span{font-size:22px}
+.brand-page nav.brand-menu{position:absolute;right:0;top:51px;display:block!important;width:285px;max-width:calc(100vw - 40px);padding:14px 20px;background:#201e23;color:#fff5e8;box-shadow:0 16px 40px #201e2333}
+.brand-page nav.brand-menu[hidden]{display:none!important}
+.brand-page .brand-menu a{display:flex!important;align-items:center;justify-content:space-between;gap:18px;min-height:51px;border-bottom:1px solid #ffffff35;color:#fff5e8!important;text-decoration:none!important;font-size:14px!important;font-weight:600!important}
+.brand-page .brand-menu a:last-child{border:0}
+.brand-page a:focus-visible,.brand-page button:focus-visible{outline:3px solid #201e23!important;outline-offset:4px;box-shadow:0 0 0 6px #fff5e8!important}
+.brand-page section.hero{height:auto!important;min-height:0!important;background:var(--brand-page)!important;color:#201e23!important}
+.brand-page .hero h1,.brand-page .hero p,.brand-page .hero-eyebrow,.brand-page .hero-trust,.brand-page .hero-lead,.brand-page .hero-sub,.brand-page .hero-micro{color:#201e23!important;text-shadow:none!important}
+.brand-page .hero h1{max-width:1000px}
+.brand-page .hero::after,.brand-page .hero::before{background:none!important}
+.brand-page .btn,.brand-page .button,.brand-page .cta,.brand-page .nav-cta{font-family:Inter,Arial,sans-serif!important;border-radius:3px!important;box-shadow:none!important;min-height:48px!important;text-shadow:none!important}
+.brand-page .btn-primary,.brand-page .button.primary,.brand-page .cta{background:#201e23!important;color:#fff5e8!important;border-color:#201e23!important}
+.brand-page .btn-secondary,.brand-page .btn-outline,.brand-page .btn-ghost{background:transparent!important;color:#201e23!important;border:1px solid #201e23!important}
+.brand-page .reveal{opacity:1!important;transform:none!important}
+.brand-page .acard,.brand-page .pf-card,.brand-page .proof-card,.brand-page .card,.brand-page .faq-item,.brand-page details{border-radius:0!important;box-shadow:none!important}
+.brand-page .acard{border:0!important;border-top:2px solid #201e23!important;background:transparent!important}
+.brand-page .acard h3{margin-top:12px}
+.brand-page .acard:hover{transform:translateY(-3px)}
+.brand-page .posstrip,.brand-page .dream-band,.brand-page .cta-band,.brand-page section.final,.brand-page .final-cta{background:var(--brand-page)!important;color:#201e23!important;border-radius:0!important}
+.brand-page .dream-band h2,.brand-page .cta-band h2,.brand-page section.final h2,.brand-page .final-cta h2,.brand-page .final-cta p,.brand-page section.final p{color:#201e23!important}
+.brand-page .curric-grid>*,.brand-page .step,.brand-page .pillar{border-radius:0!important;box-shadow:none!important;border-color:#201e2355!important}
+.brand-page img{border-radius:0!important}
+.brand-page footer{background:#201e23!important;color:#fff5e8!important;border-radius:0!important}
+.brand-page footer p,.brand-page footer a,.brand-page footer h2,.brand-page footer h3,.brand-page footer h4,.brand-page footer span,.brand-page footer div{color:#fff5e8!important}
+.brand-page footer h4{font-family:Inter,Arial,sans-serif!important;font-size:12px!important;font-weight:700!important}
+.brand-page footer a{min-height:24px}
+.brand-page.brand-resource .art-head h1{max-width:900px}
+.brand-page.brand-resource .art-head{border-bottom:2px solid #201e23!important;padding-bottom:28px!important;margin-bottom:30px!important}
+.brand-page.brand-resource article:not(.acard):not(.outcome){max-width:850px;margin-inline:auto}
+.brand-page.brand-resource article p,.brand-page.brand-resource article li{font-size:17px!important;line-height:1.8!important}
+.brand-page.brand-resource .acard p{font-size:15px!important;line-height:1.6!important}
+.brand-page.brand-resource article h2,.brand-page.brand-resource article h3{margin-top:35px!important}
+.brand-page.brand-resource .toc,.brand-page.brand-resource .callout,.brand-page.brand-resource aside{border-radius:0!important;box-shadow:none!important}
+.brand-page.brand-resource .progress,.brand-page.brand-resource #progressBar,.brand-page.brand-resource #progress{background:#201e23!important}
+.brand-page.brand-resource .crumb{font-family:Inter,Arial,sans-serif!important;font-size:12px!important}
+.brand-page.brand-resource .outcome{border-radius:0!important;box-shadow:none!important}
+.brand-page.brand-resource .eyebrow{color:#201e23!important}
+.brand-page[data-page="digital-dog-school"] .hero{position:relative!important;isolation:isolate;overflow:hidden!important}
+.brand-page[data-page="digital-dog-school"] .hero-imgwrap{display:none!important}
+.brand-page[data-page="digital-dog-school"] .hero-inner{position:relative!important;z-index:2;width:min(1200px,calc(100% - 64px))!important;max-width:1200px!important;padding:65px 0 80px!important;margin:auto!important}
+.brand-page[data-page="digital-dog-school"] .hero-content-inner{max-width:600px!important;width:52%!important}
+.brand-page[data-page="digital-dog-school"] .hero h1{max-width:14ch!important}
+.brand-page .brand-course-character{position:absolute;z-index:1;right:max(22px,calc((100vw - 1240px)/2));bottom:20px;width:45vw;max-width:600px;height:auto!important;max-height:650px;object-fit:contain}
+.brand-page .brand-load-calendar{display:block;width:min(400px,100%);margin:25px auto;padding:18px 22px;min-height:54px;background:#201e23;color:#fff5e8;border:0;border-radius:3px;font:700 16px Inter,Arial,sans-serif;cursor:pointer}
+.brand-page iframe[hidden]{display:none!important}
+@media(max-width:800px){
+ .brand-page .topbar-inner{width:calc(100% - 40px)!important;min-height:90px!important;padding:10px 0!important}
+ .brand-page .topbar a.brand{width:68px!important;height:68px!important;min-width:68px!important}
+ .brand-page h1{font-size:clamp(38px,10vw,54px)!important}
+ .brand-page h2{font-size:clamp(28px,8vw,38px)!important}
+ .brand-page h3{font-size:25px!important}
+ .brand-page .hero{padding-block:38px!important}
+ .brand-page .hero p{font-size:16px!important;line-height:1.65!important}
+ .brand-page .hero-eyebrow{font-size:11px!important}
+ .brand-page .brand-menu-toggle{font-size:12px}
+ .brand-page.brand-resource article p,.brand-page.brand-resource article li{font-size:16px!important;line-height:1.75!important}
+ .brand-page[data-page="digital-dog-school"] .hero-inner{width:calc(100% - 40px)!important;padding:5px 0 0!important}
+ .brand-page[data-page="digital-dog-school"] .hero-content-inner{width:100%!important;max-width:none!important}
+ .brand-page[data-page="digital-dog-school"] .hero h1{max-width:none!important}
+ .brand-page .brand-course-character{position:relative;display:block;width:calc(100% - 32px);max-width:440px;right:auto;bottom:auto;margin:35px auto -35px;max-height:390px}
+}
+@media(prefers-reduced-motion:reduce){.brand-page *, .brand-page *::before, .brand-page *::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Keep the course opening compact and balance its illustration against the copy. */
+.brand-page .hero-trust strong{color:#201e23!important}
+.brand-page .bleu-proof-frame{border-radius:0!important;box-shadow:none!important}
+@media(min-width:801px){
+ .brand-page[data-page="digital-dog-school"] .hero h1{font-size:clamp(48px,4.75vw,68px)!important;max-width:18ch!important}
+ .brand-page[data-page="digital-dog-school"] .brand-course-character{top:140px;bottom:auto}
+ .brand-page[data-page="digital-dog-school"] .hero-inner{padding-block:48px 55px!important}
+}
+.brand-page .topbar-inner{flex-direction:row!important}
+.brand-page .topbar a.brand{margin:0!important}
+.brand-page[data-page="terms"] main>article,.brand-page[data-page="privacy-policy"] main>article{border:0!important;border-top:2px solid #201e23!important;border-radius:0!important;background:transparent!important;padding-inline:0!important}
+.brand-page[data-page="terms"] main p,.brand-page[data-page="terms"] main li,.brand-page[data-page="privacy-policy"] main p,.brand-page[data-page="privacy-policy"] main li{color:#443f47!important}
+
+.brand-page .topbar a.brand{background-image:url(/assets/optimized/scoob-and-i-logo-192.webp)!important}
+.brand-resource-nav{width:min(1200px,calc(100% - 40px));margin:20px auto;font:600 12px/1.6 Inter,Arial,sans-serif;display:flex;flex-wrap:wrap;gap:10px}.brand-resource-nav .current{max-width:45ch;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

@@ -1,0 +1,20 @@
+/assets/*.mp4
+  Content-Type: video/mp4
+/assets/*.vtt
+  Content-Type: text/vtt; charset=utf-8
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+/consult/thank-you/*
+  X-Robots-Tag: noindex, follow
+
+/resources/resource-guarding/*
+  Link: <https://scoobandi.com/resources/resource-guarding/>; rel="canonical"
+
+/resources/anxiety/*
+  Link: <https://scoobandi.com/resources/anxiety/>; rel="canonical"
+
+/resources/stop-walking-your-dog/*
+  Link: <https://scoobandi.com/resources/stop-walking-your-dog/>; rel="canonical"
+
+/resources/5-insider-insights/*
+  Link: <https://scoobandi.com/resources/5-insider-insights/>; rel="canonical"
